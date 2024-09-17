@@ -11,7 +11,7 @@ if (keyboard_check(vk_left) || keyboard_check(ord("A"))) {
 }
 
 
-if (place_meeting(x, y+2, obj_ground_tile_1)) or  (place_meeting(x, y+2, obj_platform_tile_1))
+if (place_meeting(x, y+2, obj_collision_parent ))
 {
 	move_y = 0;
 	if (keyboard_check(vk_space)) move_y = -jump_speed;
@@ -48,14 +48,7 @@ move_y = 0;
 }
 
 // Horizontal collision check
-if (place_meeting(x + move_x, y, obj_collision_parent)) {
-    move_x = 0; // Stop movement when colliding with ground
-}
 
-// Vertical collision check
-if (place_meeting(x, y + move_y, obj_collision_parent)) {
-    move_y = 0; // Stop vertical movement when hitting ground
-}
 
 if (place_meeting(x + move_x, y, obj_collision_parent)) {
     move_x = 0; // Stop movement when colliding with ground
