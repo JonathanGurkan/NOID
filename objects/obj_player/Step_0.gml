@@ -19,6 +19,7 @@ if (place_meeting(x, y+2, obj_ground_tile_1)) or  (place_meeting(x, y+2, obj_pla
 else if (move_y < 15) move_y += 1;
 
 // Dashing (Shift key)
+
 if (keyboard_check_pressed(vk_shift) && dash_ready && dash_time == 0) {
     if (move_x != 0) { // Only dash if moving horizontally
         dash_ready = false;
