@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"ground_tile_1",
   "bboxMode":0,
-  "bbox_bottom":5,
+  "bbox_bottom":63,
   "bbox_left":0,
-  "bbox_right":299,
+  "bbox_right":63,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":6,
+  "height":64,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"322e2722-1ecf-457d-ad9b-770fa815a297","blendMode":0,"displayName":"default","isLocked":false,"name":"322e2722-1ecf-457d-ad9b-770fa815a297","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Informatica GameMaker Project",
+    "path":"Informatica GameMaker Project.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":300,
+  "width":64,
 }
