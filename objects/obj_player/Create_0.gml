@@ -9,6 +9,14 @@ dash_cooldown = 30; // cooldown before next dash
 dash_time = 0; // time left to dash
 dash_ready = true; // whether the dash is ready to use
 
+//hp variables
+hp_max = 100;
+hp_current = hp_max;
+healthbar_width = 100;
+healthbar_height = 10;
+healthbar_x = 0;
+healthbar_y = 0;
+
 
 // Collision settings
 ground_normal = 1; // represents ground object

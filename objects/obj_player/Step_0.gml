@@ -59,6 +59,9 @@ if (place_meeting(x, y + move_y, obj_collision_parent)) {
     move_y = 0; // Stop vertical movement when hitting ground
 }
 
+if (keyboard_check(vk_space)) {hp_current =- 10}
+
+
 // Apply movement
 x += move_x;
 y += move_y;
