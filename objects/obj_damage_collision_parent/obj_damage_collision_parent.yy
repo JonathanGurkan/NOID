@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy_ground_1",
+  "%Name":"obj_damage_collision_parent",
   "eventList":[],
   "managed":true,
-  "name":"obj_enemy_ground_1",
+  "name":"obj_damage_collision_parent",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_collision_parent",
-    "path":"objects/obj_collision_parent/obj_collision_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"enemy_ground_1",
-    "path":"sprites/enemy_ground_1/enemy_ground_1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

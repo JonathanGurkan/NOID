@@ -59,7 +59,9 @@ if (place_meeting(x, y + move_y, obj_collision_parent)) {
     move_y = 0; // Stop vertical movement when hitting ground
 }
 
-if (keyboard_check(vk_space)) {hp_current =- 10}
+if (place_meeting(x, y, obj_enemy_ground_1)) {
+	hp_current -= 10;
+}
 
 
 // Apply movement

@@ -35,11 +35,12 @@
   "name":"Informatica GameMaker Project",
   "resources":[
     {"id":{"name":"obj_collision_parent","path":"objects/obj_collision_parent/obj_collision_parent.yy",},},
+    {"id":{"name":"obj_damage_collision_parent","path":"objects/obj_damage_collision_parent/obj_damage_collision_parent.yy",},},
     {"id":{"name":"obj_enemy_ground_1","path":"objects/obj_enemy_ground_1/obj_enemy_ground_1.yy",},},
     {"id":{"name":"obj_ground_tile_1","path":"objects/obj_ground_tile_1/obj_ground_tile_1.yy",},},
     {"id":{"name":"obj_platform_tile_1","path":"objects/obj_platform_tile_1/obj_platform_tile_1.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"tutorial","path":"rooms/tutorial/tutorial.yy",},},
     {"id":{"name":"walk_player","path":"sequences/walk_player/walk_player.yy",},},
     {"id":{"name":"enemy_ground_1","path":"sprites/enemy_ground_1/enemy_ground_1.yy",},},
     {"id":{"name":"ground_tile_1","path":"sprites/ground_tile_1/ground_tile_1.yy",},},
@@ -52,7 +53,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"tutorial","path":"rooms/tutorial/tutorial.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

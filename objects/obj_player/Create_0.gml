@@ -10,13 +10,12 @@ dash_time = 0; // time left to dash
 dash_ready = true; // whether the dash is ready to use
 
 //hp variables
-hp_max = 100;
-hp_current = hp_max;
+hp_current = 100;
+hp_max = hp_current;
 healthbar_width = 100;
 healthbar_height = 10;
-healthbar_x = 0;
-healthbar_y = 0;
-
+healthbar_x = 10;
+healthbar_y = 20;
 
 // Collision settings
 ground_normal = 1; // represents ground object
