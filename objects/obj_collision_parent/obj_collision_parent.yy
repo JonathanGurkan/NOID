@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_platform_tile_1",
+  "%Name":"obj_collision_parent",
   "eventList":[],
   "managed":true,
-  "name":"obj_platform_tile_1",
+  "name":"obj_collision_parent",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_player",
-    "path":"objects/obj_player/obj_player.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"platform_tile_1",
-    "path":"sprites/platform_tile_1/platform_tile_1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
