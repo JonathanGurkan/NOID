@@ -4,8 +4,11 @@
 move_x = 0;
 
 // Basic horizontal movement (A and D for left and right)
+
+
 if (keyboard_check(vk_left) || keyboard_check(ord("A"))) {
     move_x = -walk_speed;
+
 } else if (keyboard_check(vk_right) || keyboard_check(ord("D"))) {
     move_x = walk_speed;
 }
@@ -14,7 +17,7 @@ if (keyboard_check(vk_left) || keyboard_check(ord("A"))) {
 if (place_meeting(x, y+2, obj_collision_parent ))
 {
 	move_y = 0;
-	if (keyboard_check(vk_space)) move_y = -jump_speed;
+	if (keyboard_check(vk_space)) || keyboard_check(ord("W")) move_y = -jump_speed;
 }
 else if (move_y < 15) move_y += 1;
 
@@ -24,7 +27,6 @@ if (keyboard_check_pressed(vk_shift) && dash_ready && dash_time == 0) {
     if (move_x != 0) { // Only dash if moving horizontally
         dash_ready = false;
         dash_time = dash_duration;
-		
     }
 }
 
@@ -77,7 +79,24 @@ if (invincible) {
     }
 }
 
+// Initialize movement variables
+var move_x = 0;
+var move_y = 0;
 
+// Check keyboard input and set movement direction
+if (keyboard_check(vk_up))    move_y = -1;
+if (keyboard_check(vk_down))  move_y = 1;
+if (keyboard_check(vk_left))  move_x = -1;
+if (keyboard_check(vk_right)) move_x = 1;
+
+// Move the player
+x += move_x * speed;
+y += move_y * speed;
+
+// If the player is moving, update the sprite's direction
+if (move_x != 0 || move_y != 0) {
+    image_angle = point_direction(0, 0, move_x, move_y);
+}
 
 
 // Apply movement
