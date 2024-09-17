@@ -11,6 +11,7 @@ if (keyboard_check(vk_left) || keyboard_check(ord("A"))) {
 }
 
 
+
 if (place_meeting(x, y+2, obj_ground_tile_1)) or  (place_meeting(x, y+2, obj_platform_tile_1))
 {
 	move_y = 0;
