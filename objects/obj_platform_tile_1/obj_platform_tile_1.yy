@@ -10,8 +10,8 @@
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_ground_tile_1",
-    "path":"objects/obj_ground_tile_1/obj_ground_tile_1.yy",
+    "name":"obj_collision_parent",
+    "path":"objects/obj_collision_parent/obj_collision_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
