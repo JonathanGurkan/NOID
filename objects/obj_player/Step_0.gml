@@ -60,8 +60,24 @@ if (place_meeting(x, y + move_y, obj_collision_parent)) {
 }
 
 if (place_meeting(x, y, obj_enemy_ground_1)) {
-	hp_current -= 10;
+	if (!invincible) {
+        hp_current -= 10; // Apply damage to the player
+        invincible = true; // Set the player as invincible
+        invincibility_timer = invincibility_duration; // Start invincibility timer
+    }
+	
 }
+
+if (invincible) {
+    invincibility_timer -= 1; // Countdown the timer
+
+    // Once the timer reaches 0, remove invincibility
+    if (invincibility_timer <= 0) {
+        invincible = false;
+    }
+}
+
+
 
 
 // Apply movement

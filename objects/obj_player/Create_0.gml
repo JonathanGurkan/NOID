@@ -17,5 +17,10 @@ healthbar_height = 10;
 healthbar_x = 10;
 healthbar_y = 20;
 
+//damage variables
+ invincible = false; 
+ invincibility_timer = 0;  
+ invincibility_duration = 60;
+
 // Collision settings
 ground_normal = 1; // represents ground object
