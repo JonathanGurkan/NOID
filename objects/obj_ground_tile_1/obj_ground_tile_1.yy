@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ground_tile_1",
-    "path":"sprites/spr_ground_tile_1/spr_ground_tile_1.yy",
+    "name":"ground_tile_1",
+    "path":"sprites/ground_tile_1/ground_tile_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

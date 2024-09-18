@@ -21,12 +21,6 @@ healthbar_y = 20;
  invincible = false; 
  invincibility_timer = 0;  
  invincibility_duration = 60;
- knockback = false;
- knockback_timer = 0;
- knockback_duration = 10;
- knockback_x = 0;
- knockback_y = 0;
- knockback_strength = 0.7;
 
 // Collision settings
 ground_normal = 1; // represents ground object

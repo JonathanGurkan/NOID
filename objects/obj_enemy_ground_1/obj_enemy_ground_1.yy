@@ -12,8 +12,8 @@
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_collision_parent",
-    "path":"objects/obj_collision_parent/obj_collision_parent.yy",
+    "name":"obj_damage_collision_parent",
+    "path":"objects/obj_damage_collision_parent/obj_damage_collision_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_ground_1",
-    "path":"sprites/spr_enemy_ground_1/spr_enemy_ground_1.yy",
+    "name":"enemy_ground_1",
+    "path":"sprites/enemy_ground_1/enemy_ground_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
