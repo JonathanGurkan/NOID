@@ -51,25 +51,25 @@ if (dash_time > 0) {
     }
 }
 
-// Horizontal collision check
-
-
-if (place_meeting(x + move_x, y, obj_collision_parent)) {
-    move_x = 0; // Stop movement when colliding with ground
-}
-
-// Vertical collision check
-if (place_meeting(x, y + move_y, obj_collision_parent)) {
-    move_y = 0; // Stop vertical movement when hitting ground
-}
-
-if (place_meeting(x, y, obj_enemy_ground_1)) {
-	if (!invincible) {
-        hp_current -= 10; // Apply damage to the player
-        invincible = true; // Set the player as invincible
-        invincibility_timer = invincibility_duration; // Start invincibility timer
-    }
-}
+//// Horizontal collision check
+//
+//
+//if (place_meeting(x + move_x, y, obj_collision_parent)) {
+    //move_x = 0; // Stop movement when colliding with ground
+//}
+//
+//// Vertical collision check
+//if (place_meeting(x, y + move_y, obj_collision_parent)) {
+    //move_y = 0; // Stop vertical movement when hitting ground
+//}
+//
+//if (place_meeting(x, y, obj_enemy_ground_1)) {
+	//if (!invincible) {
+        //hp_current -= 10; // Apply damage to the player
+        //invincible = true; // Set the player as invincible
+        //invincibility_timer = invincibility_duration; // Start invincibility timer
+    //}
+//}
 
 if (invincible) {
     invincibility_timer -= 1; // Countdown the timer
