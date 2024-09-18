@@ -63,39 +63,41 @@ if (place_meeting(x, y + move_y, obj_collision_parent)) {
 
 if (place_meeting(x, y, obj_enemy_ground_1)) {
 	if (!invincible) {
-        hp_current -= 10; // Apply damage to the player
-        invincible = true; // Set the player as invincible
-        invincibility_timer = invincibility_duration; // Start invincibility timer
+        hp_current -= 10; 
+        invincible = true; 
+        invincibility_timer = invincibility_duration;
     }
 	
+if (!knockback) {
+	x += knockback_x;
+    y += knockback_y;
+	knockback_timer = knockback_duration;
+	knockback = true;
+	knockback_x *= knockback_strength;
+		
+if (abs(knockback_x) < 0.1) knockback_x = 0;
+if (abs(knockback_y) < 0.1) knockback_y = 0;
+knockback_x *= knockback_strength;
+knockback_y *= knockback_strength;
+
+	}
+
+if (knockback)
+knockback_timer -= 1;
+  
+  if (knockback_timer <= 0) {
+      knockback = false;
+    }
 }
 
+
 if (invincible) {
-    invincibility_timer -= 1; // Countdown the timer
+    invincibility_timer -= 1; 
 
     // Once the timer reaches 0, remove invincibility
     if (invincibility_timer <= 0) {
         invincible = false;
     }
-}
-
-// Initialize movement variables
-var move_x = 0;
-var move_y = 0;
-
-// Check keyboard input and set movement direction
-if (keyboard_check(vk_up))    move_y = -1;
-if (keyboard_check(vk_down))  move_y = 1;
-if (keyboard_check(vk_left))  move_x = -1;
-if (keyboard_check(vk_right)) move_x = 1;
-
-// Move the player
-x += move_x * speed;
-y += move_y * speed;
-
-// If the player is moving, update the sprite's direction
-if (move_x != 0 || move_y != 0) {
-    image_angle = point_direction(0, 0, move_x, move_y);
 }
 
 
