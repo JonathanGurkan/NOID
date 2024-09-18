@@ -18,9 +18,15 @@ healthbar_x = 10;
 healthbar_y = 20;
 
 //damage variables
- invincible = false; 
- invincibility_timer = 0;  
- invincibility_duration = 60;
+invincible = false; 
+invincibility_timer = 0;  
+invincibility_duration = 60;
+ 
+ //knockback variables
+knockback_speed = 5;    // Adjust speed for knockback
+knockback_time = 20;    // How long knockback lasts
+knockback_dir = 0;          // Direction of the knockback
+knockback_timer = 0; 
 
 // Collision settings
 ground_normal = 1; // represents ground object

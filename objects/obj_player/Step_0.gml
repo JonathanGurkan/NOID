@@ -80,24 +80,32 @@ if (invincible) {
 }
 
 // Initialize movement variables
-var move_x = 0;
-var move_y = 0;
 
-// Check keyboard input and set movement direction
-if (keyboard_check(vk_up))    move_y = -1;
-if (keyboard_check(vk_down))  move_y = 1;
-if (keyboard_check(vk_left))  move_x = -1;
-if (keyboard_check(vk_right)) move_x = 1;
 
-// Move the player
-x += move_x * speed;
-y += move_y * speed;
+// Check for collision with enemy
+if (place_meeting(x, y, obj_enemy_ground_1) && knockback_timer == 0) {
+    // Determine knockback direction (push player away from enemy)
+    if (obj_enemy_ground_1.x > x) {
+        knockback_dir = -1;  // Knockback left
+    } else {
+        knockback_dir = 1;   // Knockback right
+    }
 
-// If the player is moving, update the sprite's direction
-if (move_x != 0 || move_y != 0) {
-    image_angle = point_direction(0, 0, move_x, move_y);
+    // Apply vertical knockback (optional)
+    move_y = -2;  // Push the player up (tweak as needed)
+
+    // Start knockback
+    knockback_timer = knockback_time;
 }
 
+// Apply knockback if it's active
+if (knockback_timer > 0) {
+    // Move the player horizontally during knockback
+    x += knockback_dir * knockback_speed;
+
+    // Decrease the knockback timer
+    knockback_timer -= 1;
+}
 
 // Apply movement
 x += move_x;
