@@ -11,10 +11,7 @@
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_damage_collision_parent",
-    "path":"objects/obj_damage_collision_parent/obj_damage_collision_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,7 +28,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"spr_enemy_ground_med",
     "path":"sprites/spr_enemy_ground_med/spr_enemy_ground_med.yy",

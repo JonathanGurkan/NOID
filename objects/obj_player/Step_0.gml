@@ -1,118 +1,91 @@
 //MOVEMENT PLAYER
 
-// Reset horizontal movement
-move_x = 0;
+//imput
+var key_left = keyboard_check(ord("A"));
+var key_right = keyboard_check(ord("D"));
+var key_jump = keyboard_check_pressed(vk_space);
+var key_dash = keyboard_check_pressed(vk_shift);
 
-// Basic horizontal movement (A and D for left and right)
 
+//move_calc
+var move = key_right - key_left;
 
-if (keyboard_check(vk_left) || keyboard_check(ord("A"))) {
-    move_x = -walk_speed;
+move_x = move * walk_speed;
+move_y = move_y + grv;
 
-} else if (keyboard_check(vk_right) || keyboard_check(ord("D"))) {
-    move_x = walk_speed;
+if (place_meeting(x,y+1, obj_platform_tile_1)) && (key_jump){
+    
+    move_y = -jump_speed;
+    
 }
 
-
-if (place_meeting(x, y+2, obj_collision_parent )) {
-	move_y = 0;
-	if (keyboard_check(vk_space)) || keyboard_check(ord("W")) { 
-		move_y = -jump_speed;
-	}
-} else if (move_y < 15) { 
-	move_y += 1;
-}
-
-// Dashing (Shift key)
-
-if (keyboard_check_pressed(vk_shift) && dash_ready && dash_time == 0) {
-    if (move_x != 0) { // Only dash if moving horizontally
-        dash_ready = false;
-        dash_time = dash_duration;
+// x-collision
+if (place_meeting(x+move_x,y,obj_platform_tile_1)){
+    
+    while (!place_meeting(x+sign(move_x),y,obj_platform_tile_1)){
+       
+        x = x + sign(move_x);
     }
+    
+    move_x = 0;
 }
 
-// Handle the dash when active
-if (dash_time > 0) {
+x = x + move_x;
+
+// y-collision
+if (place_meeting(x,y+move_y,obj_platform_tile_1)){
+    
+    while (!place_meeting(x,y+sign(move_y),obj_platform_tile_1)){
+        
+        y = y + sign(move_y);
+    }
+    move_y = 0;
+    
+}
+
+y = y + move_y;
+
+// Dash logic
+if (key_dash && !dash_ready && dash_cooldown <= 0) {
+    dash_ready = true;
+    dash_time = dash_duration;
+}
+
+if (dash_ready) {
+    move_x = move_x * dash_speed;
     dash_time -= 1;
-	move_y = 0;
-    if (move_x > 0) {
-        move_x = dash_speed; // Dash to the right
-    } else if (move_x < 0) {
-        move_x = -dash_speed; // Dash to the left
+    move_y = 0;
+    
+    if (dash_time <= 0) {
+        dash_ready= false;
+        dash_cooldown = 30; // Cooldown before dash can be used again
     }
-} else if (dash_time == 0 && !dash_ready) {
-    // Start cooldown after dash ends
+}
+
+if (dash_cooldown > 0 && !dash_ready) {
     dash_cooldown -= 1;
-
-    if (dash_cooldown <= 0) {
-        dash_ready = true; // Reset dash
-        dash_cooldown = 30; // Reset cooldown
-    }
 }
 
-// Horizontal collision check
-
-
-if (place_meeting(x + move_x, y, obj_collision_parent)) {
-    move_x = 0; // Stop movement when colliding with ground
-}
-
-// Vertical collision check
-if (place_meeting(x, y + move_y, obj_collision_parent)) {
-    move_y = 0; // Stop vertical movement when hitting ground
-}
-
+//damage + invincibility
 if (place_meeting(x, y, obj_enemy_ground_1)) {
 	if (!invincible) {
-        hp_current -= 10; // Apply damage to the player
-        invincible = true; // Set the player as invincible
-        invincibility_timer = invincibility_duration; // Start invincibility timer
+        hp_current -= 10; 
+        invincible = true; 
+        invincibility_timer = invincibility_duration; 
     }
 }
 
 if (invincible) {
-    invincibility_timer -= 1; // Countdown the timer
-
-    // Once the timer reaches 0, remove invincibility
+    invincibility_timer -= 1; 
     if (invincibility_timer <= 0) {
         invincible = false;
     }
 }
 
 
-
-
-// Check for collision with enemy
-if (place_meeting(x, y, obj_enemy_ground_1) && knockback_timer == 0) {
-    // Determine knockback direction (push player away from enemy)
-    if (obj_enemy_ground_1.x > x) {
-        knockback_dir = -1;  // Knockback left
-    } else {
-        knockback_dir = 1;   // Knockback right
-    }
-
-    // Apply vertical knockback (optional)
-    move_y = -2;  // Push the player up (tweak as needed)
-
-    // Start knockback
-    knockback_timer = knockback_time;
-}
-
-// Apply knockback if it's active
-if (knockback_timer > 0) {
-    // Move the player horizontally during knockback
-    x += knockback_dir * knockback_speed;
-
-    // Decrease the knockback timer
-    knockback_timer -= 1;
-}
-
+   
+//reset room om 0 hp / r pressed
 if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
     room_restart()
 
 }
-
-// Apply movement
-x += move_x;
-y += move_y;
