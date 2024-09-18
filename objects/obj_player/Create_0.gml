@@ -23,7 +23,7 @@ invincibility_timer = 0;
 invincibility_duration = 60;
  
  //knockback variables
-knockback_speed = 5;    // Adjust speed for knockback
+knockback_speed = 10;    // Adjust speed for knockback
 knockback_time = 20;    // How long knockback lasts
 knockback_dir = 0;          // Direction of the knockback
 knockback_timer = 0; 

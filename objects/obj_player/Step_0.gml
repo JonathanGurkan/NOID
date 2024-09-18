@@ -80,7 +80,7 @@ if (invincible) {
     }
 }
 
-// Initialize movement variables
+
 
 
 // Check for collision with enemy
@@ -106,6 +106,11 @@ if (knockback_timer > 0) {
 
     // Decrease the knockback timer
     knockback_timer -= 1;
+}
+
+if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
+    room_restart()
+
 }
 
 // Apply movement
