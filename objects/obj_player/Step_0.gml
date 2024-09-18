@@ -14,12 +14,14 @@ if (keyboard_check(vk_left) || keyboard_check(ord("A"))) {
 }
 
 
-if (place_meeting(x, y+2, obj_collision_parent ))
-{
+if (place_meeting(x, y+2, obj_collision_parent )) {
 	move_y = 0;
-	if (keyboard_check(vk_space)) || keyboard_check(ord("W")) move_y = -jump_speed;
+	if (keyboard_check(vk_space)) || keyboard_check(ord("W")) { 
+		move_y = -jump_speed;
+	}
+} else if (move_y < 15) { 
+	move_y += 1;
 }
-else if (move_y < 15) move_y += 1;
 
 // Dashing (Shift key)
 
@@ -33,7 +35,7 @@ if (keyboard_check_pressed(vk_shift) && dash_ready && dash_time == 0) {
 // Handle the dash when active
 if (dash_time > 0) {
     dash_time -= 1;
-move_y = 0;
+	move_y = 0;
     if (move_x > 0) {
         move_x = dash_speed; // Dash to the right
     } else if (move_x < 0) {
@@ -67,7 +69,6 @@ if (place_meeting(x, y, obj_enemy_ground_1)) {
         invincible = true; // Set the player as invincible
         invincibility_timer = invincibility_duration; // Start invincibility timer
     }
-	
 }
 
 if (invincible) {

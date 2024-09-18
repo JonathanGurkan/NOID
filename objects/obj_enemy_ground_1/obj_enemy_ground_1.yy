@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"enemy_ground_1",
-    "path":"sprites/enemy_ground_1/enemy_ground_1.yy",
+    "name":"spr_enemy_ground_med",
+    "path":"sprites/spr_enemy_ground_med/spr_enemy_ground_med.yy",
   },
   "spriteMaskId":null,
   "visible":true,
