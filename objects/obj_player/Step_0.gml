@@ -1,12 +1,11 @@
 //MOVEMENT PLAYER
 
-//imput
+
 
 var key_left = keyboard_check(ord("A"));
 var key_right = keyboard_check(ord("D"));
 var key_jump = keyboard_check_pressed(vk_space);
 var key_dash = keyboard_check_pressed(vk_shift);
-
 
 //move_calc
 var move = key_right - key_left;
@@ -20,6 +19,7 @@ if (place_meeting(x,y+1, obj_platform_tile_1)) && (key_jump){
     move_y = -jump_speed;
     
 }
+
 
 // x-collision
 if (place_meeting(x+move_x,y,obj_platform_tile_1)){
@@ -95,7 +95,6 @@ else {
 }
 
 
-
 //damage + invincibility
 if (place_meeting(x, y, obj_enemy_ground_1)) {
 	if (!invincible) {
@@ -118,6 +117,8 @@ if (invincible) {
 if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
     room_restart()
 
+
 }
 
 show_debug_message("Player X: " + string(x) + " Move X: " + string(move_x) + " dash_cooldown: " + string(dash_cooldown_timer) + " dash_timer: " + string(dash_timer)+ " move_ " + string(move));
+

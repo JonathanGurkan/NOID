@@ -29,5 +29,3 @@ invincibility_duration = 60;
 
 
 
-
-
