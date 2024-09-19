@@ -35,13 +35,11 @@
   "name":"Informatica GameMaker Project",
   "resources":[
     {"id":{"name":"obj_enemy_ground_1","path":"objects/obj_enemy_ground_1/obj_enemy_ground_1.yy",},},
-    {"id":{"name":"obj_ground_tile_1","path":"objects/obj_ground_tile_1/obj_ground_tile_1.yy",},},
     {"id":{"name":"obj_platform_tile_1","path":"objects/obj_platform_tile_1/obj_platform_tile_1.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"test","path":"rooms/test/test.yy",},},
     {"id":{"name":"walk_player","path":"sequences/walk_player/walk_player.yy",},},
     {"id":{"name":"spr_enemy_ground_med","path":"sprites/spr_enemy_ground_med/spr_enemy_ground_med.yy",},},
-    {"id":{"name":"spr_ground_tile_1","path":"sprites/spr_ground_tile_1/spr_ground_tile_1.yy",},},
     {"id":{"name":"spr_healthbar_health","path":"sprites/spr_healthbar_health/spr_healthbar_health.yy",},},
     {"id":{"name":"spr_healthbar_shadow","path":"sprites/spr_healthbar_shadow/spr_healthbar_shadow.yy",},},
     {"id":{"name":"spr_healthbar","path":"sprites/spr_healthbar/spr_healthbar.yy",},},

@@ -1,9 +1,12 @@
 /// @Movement variables
-move_x = 0; // horizontal speed
+move_x= 0; // horizontal speed
 move_y = 0; // vertical speed
 walk_speed = 8; // walking speed
-jump_speed = 18; // jump strength
-dash_speed = 15; // speed when dashing
+jump_speed = 12; // jump strength
+dash_speed = 30; // speed when dashing
+grv = 0.5;
+
+//dash variables
 dash_duration = 10; // how long the dash lasts (in frames)
 dash_cooldown = 30; // cooldown before next dash
 dash_time = 0; // time left to dash
@@ -21,12 +24,20 @@ healthbar_y = 20;
 invincible = false; 
 invincibility_timer = 0;  
 invincibility_duration = 60;
- 
- //knockback variables
-knockback_speed = 5;    // Adjust speed for knockback
-knockback_time = 20;    // How long knockback lasts
-knockback_dir = 0;          // Direction of the knockback
-knockback_timer = 0; 
 
-// Collision settings
-ground_normal = 1; // represents ground object
+key_left = keyboard_check(ord("A"));
+key_right = keyboard_check(ord("D"));
+key_jump = keyboard_check_pressed(vk_space);
+
+move_ = key_right - key_left;
+
+
+//dash_input
+if (keyboard_check_pressed(vk_shift) && dash_ready && dash_time == 0) {
+    if (move_x != 0) { 
+        dash_ready = false;
+        dash_time = dash_duration;
+    }
+}
+
+
