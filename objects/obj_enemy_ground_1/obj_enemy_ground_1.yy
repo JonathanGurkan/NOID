@@ -29,7 +29,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_enemy_ground_med",
     "path":"sprites/spr_enemy_ground_med/spr_enemy_ground_med.yy",
