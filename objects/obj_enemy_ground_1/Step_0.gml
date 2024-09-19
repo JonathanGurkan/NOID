@@ -12,8 +12,7 @@ if (x > obj_player.x) {
 
 if (!place_meeting(x, y, obj_platform_tile_1)) {
     do {
-        moveY = 1
-        
+        y = y  1
     } until 
         place_meeting(x, y, obj_platform_tile_1)
 }
