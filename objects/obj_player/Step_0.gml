@@ -1,6 +1,7 @@
 //MOVEMENT PLAYER
 
 //imput
+
 var key_left = keyboard_check(ord("A"));
 var key_right = keyboard_check(ord("D"));
 var key_jump = keyboard_check_pressed(vk_space);
@@ -12,6 +13,7 @@ var move = key_right - key_left;
 
 move_x = move * walk_speed;
 move_y = move_y + grv;
+
 
 if (place_meeting(x,y+1, obj_platform_tile_1)) && (key_jump){
     
@@ -46,25 +48,53 @@ if (place_meeting(x,y+move_y,obj_platform_tile_1)){
 y = y + move_y;
 
 // Dash logic
-if (key_dash && !dash_ready && dash_cooldown <= 0) {
-    dash_ready = true;
-    dash_time = dash_duration;
+if (key_dash && dash_cooldown_timer <= 0 && !is_dashing) {
+    // Start dash
+    is_dashing = true;
+    dash_timer = dash_duration;
+ 
+    
+    // Set dash direction based on current movement
+    if (move != 0) {
+        dash_direction = sign(move); // Dash in the current movement direction
+    } else {
+        dash_direction = 1; // Default to dashing to the right if no movement is pressed
+    }
+    
+    dash_cooldown_timer = dash_cooldown;  // Set cooldown timer after dash ends
 }
 
-if (dash_ready) {
-    move_x = move_x * dash_speed;
-    dash_time -= 1;
+if (is_dashing) {
+    
+    dash_timer -= 1;
     move_y = 0;
     
-    if (dash_time <= 0) {
-        dash_ready= false;
-        dash_cooldown = 30; // Cooldown before dash can be used again
+    
+    if (move = 1) or (move = -1) {
+        walk_speed = dash_speed;
     }
+    
+    
+    // Check if the dash duration has ended
+    if (dash_timer <= 0) {
+        is_dashing = false;
+        
+    }
+    
+} 
+
+else {
+    walk_speed = 8;
+   
+    
+    if (dash_cooldown_timer >= 0){
+    dash_cooldown_timer -= 1;
+    }
+    
+    
 }
 
-if (dash_cooldown > 0 && !dash_ready) {
-    dash_cooldown -= 1;
-}
+
 
 //damage + invincibility
 if (place_meeting(x, y, obj_enemy_ground_1)) {
@@ -89,3 +119,5 @@ if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
     room_restart()
 
 }
+
+show_debug_message("Player X: " + string(x) + " Move X: " + string(move_x) + " dash_cooldown: " + string(dash_cooldown_timer) + " dash_timer: " + string(dash_timer)+ " move_ " + string(move));
