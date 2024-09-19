@@ -1,1 +1,19 @@
-move_towards_point(obj_player.x, obj_player.y, 2)
+/// @description Insert your description here
+
+if (x < obj_player.x) {
+    moveX = 1;
+    x = x + moveX
+}  
+    
+if (x > obj_player.x) {
+    moveX = - 1;
+    x = x + moveX
+}  
+
+if (!place_meeting(x, y, obj_platform_tile_1)) {
+    do {
+        moveY = 1
+        
+    } until 
+        place_meeting(x, y, obj_platform_tile_1)
+}
