@@ -3,14 +3,16 @@ move_x= 0; // horizontal speed
 move_y = 0; // vertical speed
 walk_speed = 8; // walking speed
 jump_speed = 12; // jump strength
-dash_speed = 30; // speed when dashing
 grv = 0.5;
 
 //dash variables
-dash_duration = 10; // how long the dash lasts (in frames)
-dash_cooldown = 30; // cooldown before next dash
-dash_time = 0; // time left to dash
-dash_ready = true; // whether the dash is ready to use
+dash_speed = 15;      // How fast the dash is
+dash_duration = 15;   // How many frames the dash lasts
+dash_cooldown = 30;   // How long to wait before dashing again
+is_dashing = false;   // Whether the player is currently dashing
+dash_timer = 0;       // Timer for dash duration
+dash_cooldown_timer = 0;  // Timer for cooldown
+dash_direction = 0;   // -1 for left, 1 for right
 
 //hp variables
 hp_current = 100;
@@ -25,19 +27,5 @@ invincible = false;
 invincibility_timer = 0;  
 invincibility_duration = 60;
 
-key_left = keyboard_check(ord("A"));
-key_right = keyboard_check(ord("D"));
-key_jump = keyboard_check_pressed(vk_space);
-
-move_ = key_right - key_left;
-
-
-//dash_input
-if (keyboard_check_pressed(vk_shift) && dash_ready && dash_time == 0) {
-    if (move_x != 0) { 
-        dash_ready = false;
-        dash_time = dash_duration;
-    }
-}
 
 
