@@ -1,7 +1,7 @@
 /// @description Insert your description here
 
 
-moveX = 0;
-moveY = 0;
+move_x = 0;
+move_y = 0;
 
 grv = 0.5
