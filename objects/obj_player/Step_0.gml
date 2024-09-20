@@ -1,7 +1,4 @@
 //MOVEMENT PLAYER
-
-
-
 var key_left = keyboard_check(ord("A"));
 var key_right = keyboard_check(ord("D"));
 var key_jump = keyboard_check_pressed(vk_space);
@@ -105,7 +102,7 @@ if (place_meeting(x, y, obj_enemy_ground_1)) {
 }
 
 if (invincible) {
-    invincibility_timer -= 1; 
+    invincibility_timer -= 1;
     if (invincibility_timer <= 0) {
         invincible = false;
     }
@@ -120,5 +117,5 @@ if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
 
 }
 
-show_debug_message("Player X: " + string(x) + " Move X: " + string(move_x) + " Dash Cooldown: " + string(dash_cooldown_timer) + " Dash Timer: " + string(dash_timer)+ "Move" + string(move));
 
+show_debug_message("Player X: " + string(x) + " Move X: " + string(move_x) + " Dash Cooldown: " + string(dash_cooldown_timer) + " Dash Timer: " + string(dash_timer)+ " Move " + string(move) + " HP: " + string(hp_current));
