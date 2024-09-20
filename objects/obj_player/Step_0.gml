@@ -120,5 +120,4 @@ if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
 
 }
 
-show_debug_message("Player X: " + string(x) + " Move X: " + string(move_x) + " dash_cooldown: " + string(dash_cooldown_timer) + " dash_timer: " + string(dash_timer)+ " move_ " + string(move));
 

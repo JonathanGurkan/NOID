@@ -1,6 +1,6 @@
 /// @description Insert your description here
 
-move_y = move_y + grv; 
+move_y = move_y + grv;
 
 if (x < obj_player.x) {
     move_x = 1;
@@ -24,3 +24,15 @@ if (place_meeting(x, y + move_y, obj_platform_tile_1)) {
 }
 
 y = y + move_y; 
+
+if (hp <= 0){
+    
+    instance_destroy();
+    
+}
+
+
+
+
+show_debug_message(string(hp));
+
