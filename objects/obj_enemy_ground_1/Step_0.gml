@@ -28,11 +28,6 @@ y = y + move_y;
 if (hp <= 0){
     
     instance_destroy();
-    
 }
-
-
-
-
 show_debug_message(string(hp));
 

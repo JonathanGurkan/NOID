@@ -16,3 +16,15 @@ if (mouse_check_button(mb_left)) && (firing_delay < 0){
         image_angle = direction;
     }
 }
+    var angle = point_direction(x, y, mouse_x, mouse_y);
+
+// Constrain the angle between -90 and 90 degrees
+if (angle > 90 && angle < 270) {
+    // Flip the sprite horizontally (aiming backwards)
+    image_xscale = -1;
+    image_angle = angle - 180;  // Adjust the angle for the flipped orientation
+} else {
+    // Normal orientation (aiming forwards)
+    image_xscale = 1;
+    image_angle = angle;
+}
