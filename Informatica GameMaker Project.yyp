@@ -49,6 +49,8 @@
     {"id":{"name":"spr_healthbar_shadow","path":"sprites/spr_healthbar_shadow/spr_healthbar_shadow.yy",},},
     {"id":{"name":"spr_healthbar","path":"sprites/spr_healthbar/spr_healthbar.yy",},},
     {"id":{"name":"spr_platform_tile_1","path":"sprites/spr_platform_tile_1/spr_platform_tile_1.yy",},},
+    {"id":{"name":"spr_player_r","path":"sprites/spr_player_r/spr_player_r.yy",},},
+    {"id":{"name":"spr_player_up","path":"sprites/spr_player_up/spr_player_up.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
   ],
   "resourceType":"GMProject",

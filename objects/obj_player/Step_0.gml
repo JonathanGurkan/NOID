@@ -112,12 +112,22 @@ if (invincible) {
 }
 
 
+//animation
+if(!place_meeting(x,y+1,obj_platform_tile_1)){
+    
+    sprite_index = spr_player_up;
+    image_speed = 0;
+    if (sign(move_y) > 0) image_index = 1; else image_index = 0;
+        
+    
+}
+    
+
+
    
 //reset room om 0 hp / r pressed
 if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
     room_restart()
-
-
 }
 
 
