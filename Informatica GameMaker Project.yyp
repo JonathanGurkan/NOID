@@ -42,7 +42,6 @@
     {"id":{"name":"walk_player","path":"sequences/walk_player/walk_player.yy",},},
     {"id":{"name":"spr_enemy_ground_med","path":"sprites/spr_enemy_ground_med/spr_enemy_ground_med.yy",},},
     {"id":{"name":"spr_healthbar_health","path":"sprites/spr_healthbar_health/spr_healthbar_health.yy",},},
-    {"id":{"name":"spr_healthbar_shadow","path":"sprites/spr_healthbar_shadow/spr_healthbar_shadow.yy",},},
     {"id":{"name":"spr_healthbar","path":"sprites/spr_healthbar/spr_healthbar.yy",},},
     {"id":{"name":"spr_platform_tile_1","path":"sprites/spr_platform_tile_1/spr_platform_tile_1.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
