@@ -6,9 +6,8 @@ var key_left = keyboard_check(ord("A"));
 var key_right = keyboard_check(ord("D"));
 var key_jump = keyboard_check_pressed(vk_space);
 var key_dash = keyboard_check_pressed(vk_shift);
-
-//move_calc
 var move = key_right - key_left;
+var obj_list = [obj_enemy_ground_1, obj_platform_tile_1];
 
 move_x = move * walk_speed;
 move_y = move_y + grv;
@@ -21,10 +20,14 @@ if (place_meeting(x,y+1, obj_platform_tile_1)) && (key_jump){
 }
 
 
+
+
+
+
 // x-collision
 if (place_meeting(x+move_x,y,obj_platform_tile_1)){
     
-    while (!place_meeting(x+sign(move_x),y,obj_platform_tile_1)){
+    while (!place_meeting(x+sign(move_x),y,obj_list)){
        
         x = x + sign(move_x);
     }
@@ -37,7 +40,7 @@ x = x + move_x;
 // y-collision
 if (place_meeting(x,y+move_y,obj_platform_tile_1)) {
     
-    while (!place_meeting(x,y+sign(move_y),obj_platform_tile_1)){
+    while (!place_meeting(x,y+sign(move_y),obj_list)){
         
         y = y + sign(move_y);
     }

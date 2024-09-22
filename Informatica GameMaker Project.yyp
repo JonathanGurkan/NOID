@@ -42,6 +42,7 @@
     {"id":{"name":"test","path":"rooms/test/test.yy",},},
     {"id":{"name":"walk_player","path":"sequences/walk_player/walk_player.yy",},},
     {"id":{"name":"sh_white","path":"shaders/sh_white/sh_white.yy",},},
+    {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"spr_bullet_1","path":"sprites/spr_bullet_1/spr_bullet_1.yy",},},
     {"id":{"name":"spr_enemy_ground_med","path":"sprites/spr_enemy_ground_med/spr_enemy_ground_med.yy",},},
     {"id":{"name":"spr_gun","path":"sprites/spr_gun/spr_gun.yy",},},

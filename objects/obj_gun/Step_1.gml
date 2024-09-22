@@ -1,7 +1,8 @@
 /// @description Insert description here
 
 
-y = obj_player.y  + 35;
+y = obj_player.y;
+x = obj_player.x;
 
 image_angle = point_direction(x,y,mouse_x,mouse_y)
 
@@ -20,12 +21,11 @@ if (mouse_check_button(mb_left)) && (firing_delay < 0){
 
 // Constrain the angle between -90 and 90 degrees
 if (angle > 90 && angle < 270) {
-    x = obj_player.x - 30;
    
     image_xscale = -1;
     image_angle = angle - 180;  // Adjust the angle for the flipped orientation
 } else {
-    x = obj_player.x + 30;
+   
   
     image_xscale = 1;
     image_angle = angle;
