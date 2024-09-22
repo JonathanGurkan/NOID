@@ -18,8 +18,8 @@ dash_direction = 0;   // -1 for left, 1 for right
 hp_current = 100;
 hp_max = hp_current;
 healthbar_width = 136;
-healthbar_height = 16;
-healthbar_x = 10;
+healthbar_height = 14;
+healthbar_x = 12;
 healthbar_y = 20;
 
 //damage variables
