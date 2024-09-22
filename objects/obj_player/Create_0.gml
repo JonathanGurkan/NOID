@@ -26,6 +26,3 @@ healthbar_y = 20;
 invincible = false; 
 invincibility_timer = 0;  
 invincibility_duration = 60;
-
-
-

@@ -35,7 +35,7 @@ if (place_meeting(x+move_x,y,obj_platform_tile_1)){
 x = x + move_x;
 
 // y-collision
-if (place_meeting(x,y+move_y,obj_platform_tile_1)){
+if (place_meeting(x,y+move_y,obj_platform_tile_1)) {
     
     while (!place_meeting(x,y+sign(move_y),obj_platform_tile_1)){
         
@@ -65,7 +65,7 @@ if (key_dash && dash_cooldown_timer <= 0 && !is_dashing) {
 }
 
 if (is_dashing) {
-    
+    invincible = true;
     dash_timer -= 1;
     move_y = 0;
     
@@ -113,21 +113,44 @@ if (invincible) {
 
 
 //animation
+
+
 if(!place_meeting(x,y+1,obj_platform_tile_1)){
-    
     sprite_index = spr_player_up;
     image_speed = 0;
     if (sign(move_y) > 0) image_index = 1; else image_index = 0;
+    }
+else {
+image_speed = 1;
+    if(move_x == 0){
+        sprite_index = spr_player;
+    }
+    else {
+        image_speed = 1;
+        sprite_index =  spr_player_r;
         
+        
+    }
     
 }
-    
+
+var angle = point_direction(x, y, mouse_x, mouse_y);
+
+// Constrain the angle between -90 and 90 degrees
+if (angle > 90 && angle < 270) {
+    image_xscale = -1;
+} else {
+    image_xscale = 1;
+}
 
 
-   
+
+if (is_dashing){
+    sprite_index = spr_player_dash;
+}
+
 //reset room om 0 hp / r pressed
 if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
-    room_restart()
+    room_restart();
 }
-
-
+    

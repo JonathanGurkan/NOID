@@ -30,4 +30,3 @@ if (hp <= 0){
     instance_destroy();
 }
 show_debug_message(string(hp));
-

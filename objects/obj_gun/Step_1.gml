@@ -1,7 +1,7 @@
 /// @description Insert description here
 
-x = obj_player.x ;
-y = obj_player.y ;
+
+y = obj_player.y  + 35;
 
 image_angle = point_direction(x,y,mouse_x,mouse_y)
 
@@ -20,11 +20,13 @@ if (mouse_check_button(mb_left)) && (firing_delay < 0){
 
 // Constrain the angle between -90 and 90 degrees
 if (angle > 90 && angle < 270) {
-    // Flip the sprite horizontally (aiming backwards)
+    x = obj_player.x - 30;
+   
     image_xscale = -1;
     image_angle = angle - 180;  // Adjust the angle for the flipped orientation
 } else {
-    // Normal orientation (aiming forwards)
+    x = obj_player.x + 30;
+  
     image_xscale = 1;
     image_angle = angle;
 }
