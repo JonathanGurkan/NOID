@@ -1,10 +1,7 @@
 //MOVEMENT PLAYER
-
-
-
-var key_left = keyboard_check(ord("A")) 
-var key_right = keyboard_check(ord("D"))
-var key_jump = keyboard_check_pressed(vk_space) 
+var key_left = keyboard_check(ord("A"));
+var key_right = keyboard_check(ord("D"));
+var key_jump = keyboard_check_pressed(vk_space);
 var key_dash = keyboard_check_pressed(vk_shift);
 var move = key_right - key_left;
 var obj_list = [obj_platform_tile_1];
@@ -131,7 +128,6 @@ if (angle > 90 && angle < 270) {
 }
 
 
-
 if (is_dashing){
     sprite_index = spr_player_dash;
 }
@@ -141,5 +137,5 @@ if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
     room_restart();
 }
 
-show_debug_message("Player X: " + string(x) + " Move X: " + string(move_x) + " Dash Cooldown: " + string(dash_cooldown_timer) + " Dash Timer: " + string(dash_timer)+ "Move" + string(move));
 
+show_debug_message("Player X: " + string(x) + " Move X: " + string(move_x) + " Dash Cooldown: " + string(dash_cooldown_timer) + " Dash Timer: " + string(dash_timer)+ " Move " + string(move) + " HP: " + string(hp_current));
