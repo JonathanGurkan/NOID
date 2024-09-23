@@ -14,12 +14,17 @@ if (x < obj_player.x) && (!place_meeting(x, y, obj_player)){
 
 
 
-if (!place_meeting(x + move_x, y, obj_list)) {
-    x = x + move_x; 
+if (place_meeting(x + move_x, y, obj_list)) {
+    while (!place_meeting(x+sign(move_x),y,obj_list)){
+        
+        x = x + sign(move_x);
+    }
+    move_x = 0;
+   
 }
+x = x + move_x; 
 
-
-if (place_meeting(x, y + move_y, obj_platform_tile_1)) {
+if (place_meeting(x, y + move_y, obj_list)) {
     while (!place_meeting(x, y + sign(move_y), obj_list)) {
         y = y + sign(move_y); 
     }
@@ -30,9 +35,7 @@ y = y + move_y;
 
 
 
-
 if (hp <= 0){
     
     instance_destroy();
 }
-show_debug_message(string(hp));

@@ -4,6 +4,7 @@ move_y = 0; // vertical speed
 walk_speed = 8; // walking speed
 jump_speed = 12; // jump strength
 grv = 0.5;
+collision_speed = walk_speed + 2;
 
 //dash variables
 dash_speed = 15;      // How fast the dash is
@@ -26,5 +27,3 @@ healthbar_y = 20;
 invincible = false; 
 invincibility_timer = 0;  
 invincibility_duration = 60;
-
-collision_found =false;

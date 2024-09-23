@@ -26,7 +26,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_platform_tile_1",
     "path":"sprites/spr_platform_tile_1/spr_platform_tile_1.yy",
