@@ -132,6 +132,8 @@ if (is_dashing){
     sprite_index = spr_player_dash;
 }
 
+
+
 //reset room om 0 hp / r pressed
 if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
     room_restart();

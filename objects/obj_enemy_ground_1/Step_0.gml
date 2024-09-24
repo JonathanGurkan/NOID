@@ -4,10 +4,10 @@ var obj_list = [obj_enemy_ground_1, obj_platform_tile_1, obj_player];
 
 move_y = move_y + grv;
 
-if (x < obj_player.x) && (!place_meeting(x, y, obj_player)){
-    move_x = 1;
-} else if (x > obj_player.x) {
-    move_x = -1;
+if (x < obj_player.x ) && (!place_meeting(x, y, obj_player)){
+    move_x = 4;
+} else if (x > obj_player.x ) {
+    move_x = -4;
 } else {
     move_x = 0;
 }

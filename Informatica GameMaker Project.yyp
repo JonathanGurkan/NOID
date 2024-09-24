@@ -39,6 +39,7 @@
     {"id":{"name":"obj_gun","path":"objects/obj_gun/obj_gun.yy",},},
     {"id":{"name":"obj_platform_tile_1","path":"objects/obj_platform_tile_1/obj_platform_tile_1.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"r_start_castle","path":"rooms/r_start_castle/r_start_castle.yy",},},
     {"id":{"name":"test","path":"rooms/test/test.yy",},},
     {"id":{"name":"walk_player","path":"sequences/walk_player/walk_player.yy",},},
     {"id":{"name":"sh_white","path":"shaders/sh_white/sh_white.yy",},},
@@ -53,11 +54,14 @@
     {"id":{"name":"spr_player_r","path":"sprites/spr_player_r/spr_player_r.yy",},},
     {"id":{"name":"spr_player_up","path":"sprites/spr_player_up/spr_player_up.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
+    {"id":{"name":"spr_tile_1","path":"sprites/spr_tile_1/spr_tile_1.yy",},},
+    {"id":{"name":"Sprite12","path":"sprites/Sprite12/Sprite12.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"test","path":"rooms/test/test.yy",},},
+    {"roomId":{"name":"r_start_castle","path":"rooms/r_start_castle/r_start_castle.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
