@@ -53,6 +53,7 @@ if (key_dash && dash_cooldown_timer <= 0 && !is_dashing) {
     // Start dash
     is_dashing = true;
     dash_timer = dash_duration;
+	dash_amount -= 1
  
     
     // Set dash direction based on current movement
