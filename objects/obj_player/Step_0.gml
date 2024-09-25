@@ -66,7 +66,7 @@ if (key_dash && dash_cooldown_timer <= 0 && !is_dashing) {
     dash_cooldown_timer = dash_cooldown;  // Set cooldown timer after dash ends
 }
 
-if (is_dashing) {
+if (is_dashing && dash_amount > 0) {
     invincible = true;
     dash_timer -= 1;
     move_y = 0;
