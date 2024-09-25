@@ -49,7 +49,7 @@ y = y + move_y;
 
 
 // Dash logic
-if (key_dash && dash_cooldown_timer <= 0 && !is_dashing) {
+if (key_dash && dash_cooldown_timer <= 0 && !is_dashing && dash_amount > 0) {
     // Start dash
     is_dashing = true;
     dash_timer = dash_duration;
