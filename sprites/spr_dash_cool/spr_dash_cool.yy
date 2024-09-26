@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_dash_cool",
   "bboxMode":0,
-  "bbox_bottom":47,
+  "bbox_bottom":31,
   "bbox_left":0,
-  "bbox_right":47,
+  "bbox_right":31,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -45,7 +45,7 @@
   ],
   "gridX":1,
   "gridY":1,
-  "height":48,
+  "height":32,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"f9c06c31-29e8-43e0-9334-a4e4b666fc60","blendMode":0,"displayName":"default","isLocked":false,"name":"f9c06c31-29e8-43e0-9334-a4e4b666fc60","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -202,5 +202,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":48,
+  "width":32,
 }
