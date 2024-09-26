@@ -9,7 +9,7 @@ collision_speed = walk_speed + 2;
 //Dash variables
 dash_speed = 15;      // How fast the dash is
 dash_duration = 15;   // How many frames the dash lasts
-dash_cooldown = 30;   // How long to wait before dashing again
+dash_cooldown = 60;   // How long to wait before dashing again
 is_dashing = false;   // Whether the player is currently dashing
 dash_timer = 0;       // Timer for dash duration
 dash_cooldown_timer = 0;  // Timer for cooldown
