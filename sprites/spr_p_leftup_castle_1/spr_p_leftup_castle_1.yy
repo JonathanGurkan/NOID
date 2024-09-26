@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_p_leftup_castle_1",
   "bboxMode":0,
-  "bbox_bottom":16,
+  "bbox_bottom":67,
   "bbox_left":0,
-  "bbox_right":16,
+  "bbox_right":67,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":17,
+  "height":68,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"2ca3c227-7941-4e74-a9b6-6c2465894133","blendMode":0,"displayName":"default","isLocked":false,"name":"2ca3c227-7941-4e74-a9b6-6c2465894133","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":17,
+  "width":68,
 }
