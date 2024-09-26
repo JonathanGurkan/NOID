@@ -15,7 +15,6 @@ dash_timer = 0;       // Timer for dash duration
 dash_cooldown_timer = 0;  // Timer for cooldown
 dash_direction = 0;   // -1 for left, 1 for right
 
-dash_amount = 8;
 dash_cool_x = 12;
 dash_cool_y = 50;
 

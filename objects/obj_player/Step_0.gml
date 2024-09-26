@@ -49,12 +49,10 @@ y = y + move_y;
 
 
 // Dash logic
-if (key_dash && dash_cooldown_timer <= 0 && !is_dashing && dash_amount > 0) {
+if (key_dash && dash_cooldown_timer <= 0 && !is_dashing) {
     // Start dash
     is_dashing = true;
     dash_timer = dash_duration;
-	dash_amount -= 1
- 
     
     // Set dash direction based on current movement
     if (move != 0) {
@@ -66,7 +64,7 @@ if (key_dash && dash_cooldown_timer <= 0 && !is_dashing && dash_amount > 0) {
     dash_cooldown_timer = dash_cooldown;  // Set cooldown timer after dash ends
 }
 
-if (is_dashing && dash_amount > 0) {
+if (is_dashing) {
     invincible = true;
     dash_timer -= 1;
     move_y = 0;
@@ -78,7 +76,7 @@ if (is_dashing && dash_amount > 0) {
     
     
     // Check if the dash duration has ended
-    if (dash_timer <= 0) {
+    if (dash_timer == 0) {
         is_dashing = false;
         
     }
@@ -89,7 +87,7 @@ else {
     walk_speed = 8;
    
     
-    if (dash_cooldown_timer >= 0){
+    if (dash_cooldown_timer > 0){
     dash_cooldown_timer -= 1;
     }
     
@@ -139,4 +137,4 @@ if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
 }
 
 
-show_debug_message("Player X: " + string(x) + " Move X: " + string(move_x) + " Dash Cooldown: " + string(dash_cooldown_timer) + " Dash Timer: " + string(dash_timer)+ " Move " + string(move) + " HP: " + string(hp_current));
+show_debug_message("Player X: " + string(x) + " Move X: " + string(move_x) + " Dash Cooldown: " + string(dash_cooldown_timer) + " Dash Timer: " + string(dash_timer)+ " Move " + string(move) + " HP: " + string(hp_current) + " Cooldown: " + string(dash_cooldown_timer));
