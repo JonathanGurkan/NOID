@@ -27,11 +27,3 @@ healthbar_y = 20;
 invincible = false; 
 invincibility_timer = 0;  
 invincibility_duration = 60;
-
-//knockback
-knockback_x = 0;
-knockback_y = 0;
-knockback_duration = 30;
-knockback_strength = 10;
-knockback_timer = 0;
-enemy_x = obj_enemy_ground_1.x

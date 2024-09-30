@@ -33,8 +33,8 @@ if (angle > 90 && angle < 270) {
 
 if (mouse_check_button(mb_left)) {
     image_index = spr_gun_animation;
+    image_speed = 1;
 }
 else{
     image_index = spr_gun_base;
-    spr_gun_animation.image_index = 0;
 }

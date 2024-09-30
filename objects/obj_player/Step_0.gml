@@ -133,10 +133,7 @@ if (is_dashing){
     sprite_index = spr_player_dash;
 }
 
-if (key_ability){
-    sprite_index =
-    
-}
+
 
 
 
@@ -144,6 +141,3 @@ if (key_ability){
 if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
     room_restart();
 }
-
-
-show_debug_message("Player X: " + string(x) + " Move X: " + string(move_x) + " Dash Cooldown: " + string(dash_cooldown_timer) + " Dash Timer: " + string(dash_timer)+ " Move " + string(move) + " HP: " + string(hp_current));

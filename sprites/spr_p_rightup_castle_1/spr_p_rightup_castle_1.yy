@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"platforms",
-    "path":"folders/Sprites/platforms.yy",
+    "name":"castle",
+    "path":"folders/Sprites/platforms/castle.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

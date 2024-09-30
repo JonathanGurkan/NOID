@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_ground_med",
-    "path":"sprites/spr_enemy_ground_med/spr_enemy_ground_med.yy",
+    "name":"spr_slime",
+    "path":"sprites/spr_slime/spr_slime.yy",
   },
   "spriteMaskId":null,
   "visible":true,
