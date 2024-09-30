@@ -80,9 +80,4 @@ if (move_x != 0) {
     image_xscale = sign(move_x);  
 }
 
-// Destroy the enemy when HP is zero or less
-if (hp <= 0) {
-    instance_destroy();
-}
 
-show_debug_message("Move X: " + string(move_x) + " | Move Y: " + string(move_y) + " | On Ground: " + string(on_ground));

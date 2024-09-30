@@ -44,7 +44,8 @@
   "name":"Informatica GameMaker Project",
   "resources":[
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
-    {"id":{"name":"obj_enemy_ground_1","path":"objects/obj_enemy_ground_1/obj_enemy_ground_1.yy",},},
+    {"id":{"name":"obj_enemy_slime_d","path":"objects/obj_enemy_slime_d/obj_enemy_slime_d.yy",},},
+    {"id":{"name":"obj_enemy_slime","path":"objects/obj_enemy_slime/obj_enemy_slime.yy",},},
     {"id":{"name":"obj_gun","path":"objects/obj_gun/obj_gun.yy",},},
     {"id":{"name":"obj_platform_tile_1","path":"objects/obj_platform_tile_1/obj_platform_tile_1.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
@@ -87,6 +88,7 @@
     {"id":{"name":"spr_player_r","path":"sprites/spr_player_r/spr_player_r.yy",},},
     {"id":{"name":"spr_player_up","path":"sprites/spr_player_up/spr_player_up.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
+    {"id":{"name":"spr_slime_d","path":"sprites/spr_slime_d/spr_slime_d.yy",},},
     {"id":{"name":"spr_slime_r","path":"sprites/spr_slime_r/spr_slime_r.yy",},},
     {"id":{"name":"spr_slime_up","path":"sprites/spr_slime_up/spr_slime_up.yy",},},
     {"id":{"name":"spr_slime","path":"sprites/spr_slime/spr_slime.yy",},},
