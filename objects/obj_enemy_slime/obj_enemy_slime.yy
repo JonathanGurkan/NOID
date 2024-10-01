@@ -11,8 +11,8 @@
   "name":"obj_enemy_slime",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"slime",
+    "path":"folders/Objects/enemy/slime.yy",
   },
   "parentObjectId":null,
   "persistent":false,

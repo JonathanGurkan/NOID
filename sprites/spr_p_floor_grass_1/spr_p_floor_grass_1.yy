@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_p_floor_grass_1",
   "bboxMode":0,
-  "bbox_bottom":0,
+  "bbox_bottom":67,
   "bbox_left":0,
-  "bbox_right":0,
+  "bbox_right":67,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":64,
+  "height":68,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"b3d2c3da-c022-4683-ba82-69714a956a59","blendMode":0,"displayName":"default","isLocked":false,"name":"b3d2c3da-c022-4683-ba82-69714a956a59","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":64,
+  "width":68,
 }
