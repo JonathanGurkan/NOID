@@ -28,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_platform_tile_1",
-    "path":"sprites/spr_platform_tile_1/spr_platform_tile_1.yy",
+    "name":"spr_obj_platform",
+    "path":"sprites/spr_obj_platform/spr_obj_platform.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

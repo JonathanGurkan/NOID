@@ -9,8 +9,8 @@
   "name":"obj_gun",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"guns",
+    "path":"folders/Objects/guns.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,12 +31,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gun",
-    "path":"sprites/spr_gun/spr_gun.yy",
+    "name":"spr_gun_animation",
+    "path":"sprites/spr_gun_animation/spr_gun_animation.yy",
   },
   "spriteMaskId":{
-    "name":"spr_gun",
-    "path":"sprites/spr_gun/spr_gun.yy",
+    "name":"spr_gun_animation",
+    "path":"sprites/spr_gun_animation/spr_gun_animation.yy",
   },
   "visible":true,
 }
