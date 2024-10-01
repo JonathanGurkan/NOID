@@ -54,7 +54,6 @@ if (key_dash && dash_cooldown_timer <= 0 && !is_dashing) {
     // Start dash
     is_dashing = true;
     dash_timer = dash_duration;
- 
     
     // Set dash direction based on current movement
     if (move != 0) {
@@ -78,7 +77,7 @@ if (is_dashing) {
     
     
     // Check if the dash duration has ended
-    if (dash_timer <= 0) {
+    if (dash_timer == 0) {
         is_dashing = false;
         
     }
@@ -89,7 +88,7 @@ else {
     walk_speed = 8;
    
     
-    if (dash_cooldown_timer >= 0){
+    if (dash_cooldown_timer > 0){
     dash_cooldown_timer -= 1;
     }
     
@@ -140,4 +139,3 @@ if (is_dashing){
 //reset room om 0 hp / r pressed
 if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
     room_restart();
-}

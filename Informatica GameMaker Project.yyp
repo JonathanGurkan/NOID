@@ -71,6 +71,7 @@
     {"id":{"name":"spr_b_tree_2","path":"sprites/spr_b_tree_2/spr_b_tree_2.yy",},},
     {"id":{"name":"spr_bullet_1","path":"sprites/spr_bullet_1/spr_bullet_1.yy",},},
     {"id":{"name":"spr_castle_background","path":"sprites/spr_castle_background/spr_castle_background.yy",},},
+    {"id":{"name":"spr_dash_cool","path":"sprites/spr_dash_cool/spr_dash_cool.yy",},},
     {"id":{"name":"spr_enemy_ground_med","path":"sprites/spr_enemy_ground_med/spr_enemy_ground_med.yy",},},
     {"id":{"name":"spr_gun_animation","path":"sprites/spr_gun_animation/spr_gun_animation.yy",},},
     {"id":{"name":"spr_gun_base","path":"sprites/spr_gun_base/spr_gun_base.yy",},},
