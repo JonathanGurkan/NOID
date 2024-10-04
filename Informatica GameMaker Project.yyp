@@ -45,7 +45,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.800.0.618",
+    "IDEVersion":"2024.8.0.169",
   },
   "name":"Informatica GameMaker Project",
   "resources":[
@@ -60,7 +60,6 @@
     {"id":{"name":"r_start_castle","path":"rooms/r_start_castle/r_start_castle.yy",},},
     {"id":{"name":"r_start_forest","path":"rooms/r_start_forest/r_start_forest.yy",},},
     {"id":{"name":"test","path":"rooms/test/test.yy",},},
-    {"id":{"name":"walk_player","path":"sequences/walk_player/walk_player.yy",},},
     {"id":{"name":"sh_white","path":"shaders/sh_white/sh_white.yy",},},
     {"id":{"name":"_48x48_trees","path":"sprites/_48x48_trees/_48x48_trees.yy",},},
     {"id":{"name":"Adventurer_Sprite_Sheet_v1_5","path":"sprites/Adventurer_Sprite_Sheet_v1_5/Adventurer_Sprite_Sheet_v1_5.yy",},},
@@ -99,6 +98,7 @@
     {"id":{"name":"spr_p_up_grass_1","path":"sprites/spr_p_up_grass_1/spr_p_up_grass_1.yy",},},
     {"id":{"name":"spr_player_abil","path":"sprites/spr_player_abil/spr_player_abil.yy",},},
     {"id":{"name":"spr_player_dash","path":"sprites/spr_player_dash/spr_player_dash.yy",},},
+    {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
     {"id":{"name":"spr_player_r","path":"sprites/spr_player_r/spr_player_r.yy",},},
     {"id":{"name":"spr_player_up","path":"sprites/spr_player_up/spr_player_up.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},

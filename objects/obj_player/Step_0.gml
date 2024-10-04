@@ -99,23 +99,18 @@ else {
 //animation
 
 
-if(!place_meeting(x,y+1,obj_platform_tile_1)){
+if (!place_meeting(x,y+1,obj_platform_tile_1)) {
     sprite_index = spr_player_up;
     image_speed = 0;
     if (sign(move_y) > 0) image_index = 1; else image_index = 0;
-    }
-else {
+    } else {
 image_speed = 1;
-    if(move_x == 0){
-        sprite_index = spr_player;
-    }
-    else {
+    if (move_x == 0) {
+        sprite_index = spr_player_idle;
+    } else {
         image_speed = 1;
         sprite_index =  spr_player_r;
-        
-        
-    }
-    
+    } 
 }
 
 var angle = point_direction(x, y, mouse_x, mouse_y);
@@ -128,7 +123,7 @@ if (angle > 90 && angle < 270) {
 }
 
 
-if (is_dashing){
+if (is_dashing) {
     sprite_index = spr_player_dash;
 }
 
