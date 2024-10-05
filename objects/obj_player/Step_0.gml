@@ -124,7 +124,13 @@ if (angle > 90 && angle < 270) {
 
 
 if (is_dashing) {
-    sprite_index = spr_player_dash;
+    if(!place_meeting(x,y+1,obj_platform_tile_1)){
+        sprite_index = spr_player_dash_air;
+    } else {
+        image_speed = 1
+        sprite_index = spr_player_dash_ground;
+    }
+    
 }
 
 

@@ -45,7 +45,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.0.169",
+    "IDEVersion":"2024.1100.0.634",
   },
   "name":"Informatica GameMaker Project",
   "resources":[
@@ -97,7 +97,8 @@
     {"id":{"name":"spr_p_up_castle_3","path":"sprites/spr_p_up_castle_3/spr_p_up_castle_3.yy",},},
     {"id":{"name":"spr_p_up_grass_1","path":"sprites/spr_p_up_grass_1/spr_p_up_grass_1.yy",},},
     {"id":{"name":"spr_player_abil","path":"sprites/spr_player_abil/spr_player_abil.yy",},},
-    {"id":{"name":"spr_player_dash","path":"sprites/spr_player_dash/spr_player_dash.yy",},},
+    {"id":{"name":"spr_player_dash_air","path":"sprites/spr_player_dash_air/spr_player_dash_air.yy",},},
+    {"id":{"name":"spr_player_dash_ground","path":"sprites/spr_player_dash_ground/spr_player_dash_ground.yy",},},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
     {"id":{"name":"spr_player_r","path":"sprites/spr_player_r/spr_player_r.yy",},},
     {"id":{"name":"spr_player_up","path":"sprites/spr_player_up/spr_player_up.yy",},},
