@@ -25,6 +25,7 @@ healthbar_width = 136;
 healthbar_height = 14;
 healthbar_x = 12;
 healthbar_y = 20;
+death_triggered = false;
 
 //Damage variables
 invincible = false; 
