@@ -138,6 +138,6 @@ if (is_dashing) {
 
 
 //reset room om 0 hp / r pressed
-if  (keyboard_check(ord("R"))) {
+if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
     room_restart();
 }
