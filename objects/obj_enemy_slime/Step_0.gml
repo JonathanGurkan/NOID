@@ -1,6 +1,7 @@
 // Physics and movement logic remains unchanged
 var obj_list = [obj_platform_tile_1, obj_player];  // Include the player in collisions
 
+
 // Check if the player still exists
 if (instance_exists(obj_player)) {
     var dist_to_player = point_distance(x, y, player.x, player.y);
