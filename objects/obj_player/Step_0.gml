@@ -138,6 +138,11 @@ if (is_dashing) {
 
 
 //reset room om 0 hp / r pressed
-if  (keyboard_check(ord("R")) or (hp_current <= 1)) {
+if  (keyboard_check(ord("R"))){
     room_restart();
+}
+
+if (hp_current <= 0) {
+    instance_destroy()
+    instance_destroy(obj_gun)
 }

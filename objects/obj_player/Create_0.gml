@@ -1,4 +1,6 @@
 /// @Movement variables
+last_x = 0;
+last_y = 0;
 move_x= 0; // horizontal speed
 move_y = 0; // vertical speed
 walk_speed = 8; // walking speed
