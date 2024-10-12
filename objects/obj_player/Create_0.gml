@@ -33,3 +33,7 @@ death_triggered = false;
 invincible = false; 
 invincibility_timer = 0;  
 invincibility_duration = 60;
+
+
+weapon = noone;
+pickup_radius = 50;
