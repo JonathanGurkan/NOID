@@ -1,11 +1,11 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_weapon_orb",
+  "%Name":"spr_gun_base",
   "bboxMode":0,
-  "bbox_bottom":23,
-  "bbox_left":0,
-  "bbox_right":23,
-  "bbox_top":0,
+  "bbox_bottom":15,
+  "bbox_left":8,
+  "bbox_right":15,
+  "bbox_top":8,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -21,7 +21,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"c965b524-c7a1-460c-81f2-ad4bc25a8f50","blendMode":0,"displayName":"default","isLocked":false,"name":"c965b524-c7a1-460c-81f2-ad4bc25a8f50","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_weapon_orb",
+  "name":"spr_gun_base",
   "nineSlice":null,
   "origin":3,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_weapon_orb",
+    "%Name":"spr_gun_base",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_weapon_orb",
+    "name":"spr_gun_base",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,7 +69,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"33ab12ac-4382-474d-9ee0-12a4ad9c6df0","path":"sprites/spr_weapon_orb/spr_weapon_orb.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"33ab12ac-4382-474d-9ee0-12a4ad9c6df0","path":"sprites/spr_gun_base/spr_gun_base.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"551012f0-e2d7-435a-8aeb-e784dd8c3640","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

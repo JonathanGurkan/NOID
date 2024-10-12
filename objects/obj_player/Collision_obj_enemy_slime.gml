@@ -1,3 +1,8 @@
+
+
+
+
+
 if (!invincible) {
     hp_current -= 50; 
     invincible = true; 

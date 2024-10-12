@@ -1,12 +1,12 @@
+//MOVEMENT PLAYER
 var key_left = keyboard_check(ord("A"));
 var key_right = keyboard_check(ord("D"));
 var key_jump = keyboard_check_pressed(vk_space) || keyboard_check(ord("W"));
 var key_dash = keyboard_check_pressed(vk_shift);
-var key_pickup = keyboard_check(ord("E"));
+var key_ability = keyboard_check(ord("E"));
+var move = key_right - key_left;
 var obj_list = [obj_platform_tile_1];
 
-//MOVEMENT PLAYER
-var move = key_right - key_left;
 move_x = move * walk_speed;
 move_y = move_y + grv;
 
@@ -47,8 +47,6 @@ if (place_meeting(x,y+move_y,obj_list)) {
 }
 
 y = y + move_y;
-
-//weapon pickup
 
 
 // Dash logic
@@ -129,42 +127,14 @@ if (is_dashing) {
     if(!place_meeting(x,y+1,obj_platform_tile_1)){
         sprite_index = spr_player_dash_air;
     } else {
-        image_speed = 1;
+        image_speed = 1
         sprite_index = spr_player_dash_ground;
     }
     
 }
 
 
-if(keyboard_check_pressed(key_pickup)){
-    var pickup_list = ds_list_create();
-    var pickup_count = collision_circle_list(x, y, pickup_radius, obj_weapon, false, true, pickup_list, true);
-    
-    if(pickup_count > 0){
-        
-        if(weapon == noone){
-            weapon = pickup_list[| 0];
-            
-            weapon.target = id;
-            weapon.is_being_carried = true;
-        } else{
-            for(var index = 0; index < pickup_count; index ++){
-                if(pickup_list[| index] != weapon){
-                    weapon.target = noone;
-                    weapon.is_being_carried = false;
-                    
-                    weapon = pickup_list[| index];
-                    weapon.target = id;
-                    weapon.is_being_carried = true
-                    
-                    break;
-                }
-            }
-                
-        }
-    }
-     ds_list_destroy(pickup_list);
-}
+
 
 
 //reset room om 0 hp / r pressed
