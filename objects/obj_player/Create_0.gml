@@ -10,7 +10,7 @@ collision_speed = walk_speed + 2;
 
 //Dash variables
 dash_speed = 15;      // How fast the dash is
-dash_duration = 15;   // How many frames the dash lasts
+dash_duration = 25;   // How many frames the dash lasts
 dash_cooldown = 60;   // How long to wait before dashing again
 is_dashing = false;   // Whether the player is currently dashing
 dash_timer = 0;       // Timer for dash duration
@@ -33,3 +33,8 @@ death_triggered = false;
 invincible = false; 
 invincibility_timer = 0;  
 invincibility_duration = 60;
+
+
+
+weapon = noone;
+pickup_radius = 50;

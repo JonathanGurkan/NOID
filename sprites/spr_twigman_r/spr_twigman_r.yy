@@ -30,7 +30,7 @@
   ],
   "name":"spr_twigman_r",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"twigman",
     "path":"folders/Sprites/enemy/twigman.yy",
@@ -104,7 +104,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":36,
-    "yorigin":40,
+    "yorigin":50,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
