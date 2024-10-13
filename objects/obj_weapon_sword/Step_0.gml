@@ -1,6 +1,4 @@
-/// @description Update gun position and handle firing
-
-
+/// @description Insert description here
 if(is_being_carried && instance_exists(obj_player)){
     if (target != noone){
     
@@ -55,3 +53,4 @@ if(interaction_object != noone) {
         interaction_object.x = x;
         interaction_object.y = y - 16;
     }
+

@@ -137,7 +137,7 @@ if (is_dashing) {
 
 
 // weapon system
-if(keyboard_check_pressed(key_pickup)){
+if(key_pickup){
     var pickup_list = ds_list_create();
     var pickup_count = collision_circle_list(x, y, pickup_radius, obj_weapon, false, true, pickup_list, true);
     

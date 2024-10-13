@@ -1,4 +1,4 @@
-if (obj_player.is_dashing && is_being_carried){
+if (instance_exists(obj_player) && obj_player.is_dashing && is_being_carried){
 } else {
-    draw_self(); // Draw the object only if the player is not dashing
+    draw_self(); 
 }

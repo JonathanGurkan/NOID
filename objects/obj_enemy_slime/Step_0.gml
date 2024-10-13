@@ -27,3 +27,28 @@ if (instance_exists(obj_player)) {
     move_x = 0;
 }
 
+if (move_y = 0) {
+    // Enemy is on the ground
+    if (move_x == 0) {
+        sprite_index = spr_slime;  
+        image_speed = 0;  
+    } else {
+        sprite_index = spr_slime_r; 
+        image_speed = 1;  
+    }
+} else {
+    
+    sprite_index = spr_slime_up;  
+    image_speed = 0;  
+    if (move_y > 0) {
+        image_index = 1;  
+    } else {
+        image_index = 0;  
+    }
+}
+
+
+if (move_x != 0) {
+    image_xscale = sign(move_x);
+}
+

@@ -1,9 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_weapon_2",
-  "eventList":[],
+  "%Name":"obj_weapon_sword",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_weapon_2",
+  "name":"obj_weapon_sword",
   "overriddenProperties":[],
   "parent":{
     "name":"weapons",
@@ -30,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_gun_base",
+    "path":"sprites/spr_gun_base/spr_gun_base.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
