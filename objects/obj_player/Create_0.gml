@@ -28,6 +28,7 @@ healthbar_height = 14;
 healthbar_x = 12;
 healthbar_y = 20;
 death_triggered = false;
+flash = 0;
 
 //Damage variables
 invincible = false; 
@@ -37,3 +38,4 @@ invincibility_duration = 60;
 
 weapon = noone;
 pickup_radius = 50;
+

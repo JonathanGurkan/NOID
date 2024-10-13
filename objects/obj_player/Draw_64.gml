@@ -6,3 +6,4 @@ draw_sprite_stretched(spr_healthbar_health, abs((hp_current / 10) - 1), healthba
 
 //Dash cooldown
 draw_sprite(spr_dash_cool, dash_cooldown_timer / 2, dash_cool_x, dash_cool_y)
+

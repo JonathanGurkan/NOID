@@ -39,7 +39,6 @@ if(is_being_carried && instance_exists(obj_player)){
 
     }
 }
-show_debug_message("is being carried: " + string(is_being_carried));
 
 
 if(interaction_object != noone) {

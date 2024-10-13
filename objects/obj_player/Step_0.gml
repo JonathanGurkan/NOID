@@ -51,13 +51,45 @@ y = y + move_y;
 
 
 
+// weapon system
+if(key_pickup){
+    var pickup_list = ds_list_create();
+    var weapons = [obj_weapon, obj_weapon_sword]
+    var pickup_count = collision_circle_list(x, y, pickup_radius, weapons, false, true, pickup_list, true);
+    
+    if(pickup_count > 0){
+        
+        if(weapon == noone){
+            weapon = pickup_list[| 0];
+            
+            weapon.target = id;
+            weapon.is_being_carried = true;
+        } else{
+            for(var index = 0; index < pickup_count; index ++){
+                if(pickup_list[| index] != weapon){
+                    weapon.target = noone;
+                    weapon.is_being_carried = false;
+                    
+                    weapon = pickup_list[| index];
+                    weapon.target = id;
+                    weapon.is_being_carried = true
+                    
+                    break;
+                }
+            }
+                
+        }
+    }
+    ds_list_destroy(pickup_list);
+}
+
 // Dash logic
 if (key_dash && dash_cooldown_timer <= 0 && !is_dashing) {
     // Start dash
     is_dashing = true;
     dash_timer = dash_duration;
     
-    // Set dash direction based on current movement
+
     if (move != 0) {
         dash_direction = sign(move); // Dash in the current movement direction
     } else {
@@ -88,8 +120,6 @@ if (is_dashing) {
 
 else {
     walk_speed = 8;
-   
-    
     if (dash_cooldown_timer > 0){
     dash_cooldown_timer -= 1;
     }
@@ -100,7 +130,11 @@ else {
 
 //animation
 
-
+if (obj_weapon_sword.sword_use){
+    image_speed = 1;
+    sprite_index = spr_sword_a;
+}
+else{
 if (!place_meeting(x,y+1,obj_platform_tile_1)) {
     sprite_index = spr_player_up;
     image_speed = 0;
@@ -134,38 +168,11 @@ if (is_dashing) {
     }
     
 }
-
-
-// weapon system
-if(key_pickup){
-    var pickup_list = ds_list_create();
-    var pickup_count = collision_circle_list(x, y, pickup_radius, obj_weapon, false, true, pickup_list, true);
-    
-    if(pickup_count > 0){
-        
-        if(weapon == noone){
-            weapon = pickup_list[| 0];
-            
-            weapon.target = id;
-            weapon.is_being_carried = true;
-        } else{
-            for(var index = 0; index < pickup_count; index ++){
-                if(pickup_list[| index] != weapon){
-                    weapon.target = noone;
-                    weapon.is_being_carried = false;
-                    
-                    weapon = pickup_list[| index];
-                    weapon.target = id;
-                    weapon.is_being_carried = true
-                    
-                    break;
-                }
-            }
-                
-        }
-    }
-    ds_list_destroy(pickup_list);
 }
+
+
+
+
 
 
 
@@ -178,3 +185,4 @@ if (hp_current <= 0) {
     instance_destroy()
     instance_destroy(weapon)
 }
+

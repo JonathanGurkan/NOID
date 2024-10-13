@@ -1,5 +1,6 @@
 if (!invincible) {
     hp_current -= 50; 
+    flash = 5;
     invincible = true; 
     invincibility_timer = invincibility_duration; 
 }
