@@ -1,5 +1,5 @@
 // Physics and movement logic remains unchanged
-var obj_list = [obj_platform_tile_1, obj_player];  // Include the player in collisions
+var obj_list = [obj_platform_tile, obj_platform_tile_flat];  // Include the player in collisions
 
 
 move_y = move_y + grv;

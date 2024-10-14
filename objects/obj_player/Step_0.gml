@@ -3,9 +3,9 @@ var key_left = keyboard_check(ord("A"));
 var key_right = keyboard_check(ord("D"));
 var key_jump = keyboard_check_pressed(vk_space) || keyboard_check(ord("W"));
 var key_dash = keyboard_check_pressed(vk_shift);
-var key_pickup = keyboard_check(ord("E"));
+var key_pickup = keyboard_check_pressed(ord("E"));
 var move = key_right - key_left;
-var obj_list = [obj_platform_tile_1];
+var obj_list = [obj_platform_tile, obj_platform_tile_flat];
 
 //MOVEMENT PLAYER
 move_x = move * walk_speed;
@@ -135,7 +135,7 @@ if (obj_weapon_sword.sword_use){
     sprite_index = spr_sword_a;
 }
 else{
-if (!place_meeting(x,y+1,obj_platform_tile_1)) {
+if (!place_meeting(x,y+1,obj_platform_tile)) {
     sprite_index = spr_player_up;
     image_speed = 0;
     if (sign(move_y) > 0) image_index = 1; else image_index = 0;
@@ -160,7 +160,7 @@ if (angle > 90 && angle < 270) {
 
 
 if (is_dashing) {
-    if(!place_meeting(x,y+1,obj_platform_tile_1)){
+    if(!place_meeting(x,y+1,obj_platform_tile)){
         sprite_index = spr_player_dash_air;
     } else {
         image_speed = 1

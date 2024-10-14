@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_platform_tile_1",
+  "%Name":"obj_platform_tile_flat",
   "eventList":[],
   "managed":true,
-  "name":"obj_platform_tile_1",
+  "name":"obj_platform_tile_flat",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_obj_platform",
-    "path":"sprites/spr_obj_platform/spr_obj_platform.yy",
+    "name":"spr_obj_platform_flat",
+    "path":"sprites/spr_obj_platform_flat/spr_obj_platform_flat.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
