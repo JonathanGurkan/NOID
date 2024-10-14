@@ -2,6 +2,37 @@
 var obj_list = [obj_platform_tile_1, obj_player];  // Include the player in collisions
 
 
+move_y = move_y + grv;
+// x-collision
+if (place_meeting(x+move_x,y,obj_list)){
+    
+    while (!place_meeting(x+sign(move_x),y,obj_list)){
+    
+        x = x + sign(move_x);
+    
+    }
+    move_x = 0;
+
+}
+
+x = x + move_x;
+
+
+
+// y-collision
+if (place_meeting(x,y+move_y,obj_list)) {
+    
+    while (!place_meeting(x,y+sign(move_y),obj_list)){
+        
+        y = y + sign(move_y);
+    
+    }
+    move_y = 0;
+    
+}
+
+y = y + move_y;
+
 // Check if the player still exists
 if (instance_exists(obj_player)) {
     var dist_to_player = point_distance(x, y, player.x, player.y);
@@ -52,3 +83,4 @@ if (move_x != 0) {
     image_xscale = sign(move_x);
 }
 
+show_debug_message(string(hp))

@@ -20,6 +20,13 @@ if(is_being_carried && instance_exists(obj_player)){
                 sword_use = false;
              
             }
+        var angle = point_direction(x, y, mouse_x, mouse_y);
+        // Constrain the angle between -90 and 90 degrees
+        if (angle > 90 && angle < 270) {
+            image_xscale = -1;
+        } else {
+            image_xscale = 1;
+        }
             
         
     }
@@ -41,3 +48,6 @@ if(interaction_object != noone) {
     }
 
 show_debug_message("sword: " + string(sword_use) +  " delay"+ string(firing_delay));
+
+
+

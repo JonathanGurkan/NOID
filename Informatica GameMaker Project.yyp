@@ -68,6 +68,7 @@
     {"id":{"name":"r_start_castle","path":"rooms/r_start_castle/r_start_castle.yy",},},
     {"id":{"name":"r_start_forest","path":"rooms/r_start_forest/r_start_forest.yy",},},
     {"id":{"name":"test","path":"rooms/test/test.yy",},},
+    {"id":{"name":"sh_red_p","path":"shaders/sh_red_p/sh_red_p.yy",},},
     {"id":{"name":"sh_white","path":"shaders/sh_white/sh_white.yy",},},
     {"id":{"name":"_48x48_trees","path":"sprites/_48x48_trees/_48x48_trees.yy",},},
     {"id":{"name":"Adventurer_Sprite_Sheet_v1_5","path":"sprites/Adventurer_Sprite_Sheet_v1_5/Adventurer_Sprite_Sheet_v1_5.yy",},},

@@ -1,6 +1,6 @@
 if (sword_use){
 with (other){
-    hp --;
+    hp -= 0.1;
     flash = 3;
 }
 }
