@@ -47,7 +47,6 @@ if(interaction_object != noone) {
         interaction_object.y = y - 16;
     }
 
-show_debug_message("sword: " + string(sword_use) +  " delay"+ string(firing_delay));
 
 
 

@@ -8,30 +8,72 @@ var move = key_right - key_left;
 var obj_list = [obj_platform_tile, obj_platform_tile_flat];
 
 //MOVEMENT PLAYER
-move_x = move * walk_speed;
-move_y = move_y + grv;
 
 
-if (place_meeting(x,y+1, obj_list)) && (key_jump){
+//movement_x
+walljump_delay = max(walljump_delay - 1, 0);
+if (walljump_delay == 0){
+    var dir = key_right - key_left;
+    move_x += dir * walk_acc;
+    var move_x_friction_final = fric_ground_speed;
     
-    move_y = -jump_speed;
+    if (!on_ground) move_x_friction_final = fric_air_speed;
+    
+    if (dir == 0) {
+        move_x = lerp(move_x, 0, move_x_friction_final); 
+    }
+    move_x = clamp(move_x, -walk_speed, walk_speed); 
+}
+
+
+//walljump
+if (on_wall != 0) && (!on_ground) && (on_jump_wall != 0) && (key_jump){
+    
+    walljump_delay = walljump_delay_max;
+    move_x = -on_wall * wall_speed_x;
+    move_y = wall_speed_y;
+}
+var grv_final = grv;
+var move_y_max_final = move_y_max;
+if (on_wall != 0) && (move_y > 0){
+    grv_final = grv_onwall;
+    move_y_max_final = wall_move_y_max;
     
 }
 
+
+//movement_y
+move_y += grv_final;
+move_y = clamp(move_y,-move_y_max_final,move_y_max_final);
+
+if(jump_buffer > 0){
+    
+    jump_buffer --;
+    if (key_jump){
+        
+        jump_buffer = 0;
+        move_y = jump_speed;
+    }
+    
+}
+
+move_x += move_x_frac;
+move_x_frac = frac(move_x)
+move_x -= move_x_frac;
 
 // x-collision
 if (place_meeting(x+move_x,y,obj_list)){
     
     while (!place_meeting(x+sign(move_x),y,obj_list)){
        
-        x = x + sign(move_x);
+        x += sign(move_x);
        
     }
     move_x = 0;
    
 }
 
-x = x + move_x;
+x += move_x;
 
 
 
@@ -40,14 +82,22 @@ if (place_meeting(x,y+move_y,obj_list)) {
     
     while (!place_meeting(x,y+sign(move_y),obj_list)){
         
-        y = y + sign(move_y);
+        y += sign(move_y);
        
     }
     move_y = 0;
     
 }
 
-y = y + move_y;
+y += move_y;
+
+
+
+
+on_ground = place_meeting(x,y+1,obj_list);
+on_wall = place_meeting(x+1,y,obj_list) - place_meeting(x-1,y,obj_list); 
+on_jump_wall = place_meeting(x+1,y,obj_wallclimb); 
+if (on_ground) jump_buffer = 6;
 
 
 
@@ -186,3 +236,5 @@ if (hp_current <= 0) {
     instance_destroy(weapon)
 }
 
+
+show_debug_message("jump: " + string(on_jump_wall) +  " wall"+ string(on_wall));
