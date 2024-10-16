@@ -61,4 +61,5 @@ invincibility_duration = 60;
 weapon = noone;
 pickup_radius = 50;
 
+
 collision_speed = walk_speed + 2;

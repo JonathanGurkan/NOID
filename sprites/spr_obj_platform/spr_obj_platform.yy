@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"platforms",
-    "path":"folders/Sprites/platforms.yy",
+    "name":"colliders",
+    "path":"folders/Sprites/colliders.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

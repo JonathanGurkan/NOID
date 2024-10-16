@@ -6,8 +6,8 @@
   "name":"obj_spikes_flat",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"colliders",
+    "path":"folders/Objects/colliders.yy",
   },
   "parentObjectId":null,
   "persistent":false,

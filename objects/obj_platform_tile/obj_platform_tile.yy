@@ -6,8 +6,8 @@
   "name":"obj_platform_tile",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"colliders",
+    "path":"folders/Objects/colliders.yy",
   },
   "parentObjectId":null,
   "persistent":false,

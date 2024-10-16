@@ -1,9 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_wallclimb",
-  "eventList":[],
+  "%Name":"obj_jump_orb",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_wallclimb",
+  "name":"obj_jump_orb",
   "overriddenProperties":[],
   "parent":{
     "name":"colliders",
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_obj_wallclimb",
-    "path":"sprites/spr_obj_wallclimb/spr_obj_wallclimb.yy",
+    "name":"spr_obj_jump_orb",
+    "path":"sprites/spr_obj_jump_orb/spr_obj_jump_orb.yy",
   },
   "spriteMaskId":null,
   "visible":true,

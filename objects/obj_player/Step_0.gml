@@ -49,6 +49,7 @@ move_y = clamp(move_y,-move_y_max_final,move_y_max_final);
 if(jump_buffer > 0){
     
     jump_buffer --;
+    
     if (key_jump){
         
         jump_buffer = 0;
@@ -96,8 +97,11 @@ y += move_y;
 
 on_ground = place_meeting(x,y+1,obj_list);
 on_wall = place_meeting(x+1,y,obj_list) - place_meeting(x-1,y,obj_list); 
-on_jump_wall = place_meeting(x+1,y,obj_wallclimb); 
+on_jump_wall = place_meeting(x+1,y,obj_wallclimb);
+
 if (on_ground) jump_buffer = 6;
+    
+
 
 
 
@@ -237,4 +241,3 @@ if (hp_current <= 0) {
 }
 
 
-show_debug_message("jump: " + string(on_jump_wall) +  " wall"+ string(on_wall));
