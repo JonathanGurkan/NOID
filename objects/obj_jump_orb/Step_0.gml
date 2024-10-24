@@ -8,6 +8,10 @@ if (in_jump_orb) && (orb_time <= 0) && (key_jump){
 
 if (orb_time > 0){
     orb_time -= 0.1;
+    image_index = 1;
+}
+else{
+    image_index = 0;
 }
 
 

@@ -10,7 +10,6 @@ on_ground = false;
 
 //gravity
 grv = 0.5;
-grv_onwall = 0.2;
 
 //movement speeds
 walk_speed = 8; // walking speed
@@ -21,15 +20,17 @@ fric_air_speed = 0.15;
 
 
 //max speed
-wall_move_y_max = 5;
+wall_move_y_max = 0;
 
 //walljump
-wall_speed_x = 4;
+wall_speed_x = 10;
 wall_speed_y = -8;
 on_wall = 0;
 walljump_delay = 0;
 walljump_delay_max = -17;
 on_jump_wall = 0;
+grv_onwall = 0;
+
 
 //Dash variables
 dash_speed = 15;      // How fast the dash is

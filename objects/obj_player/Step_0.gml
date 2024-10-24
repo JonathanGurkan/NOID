@@ -35,10 +35,17 @@ if (on_wall != 0) && (!on_ground) && (on_jump_wall != 0) && (key_jump){
 }
 var grv_final = grv;
 var move_y_max_final = move_y_max;
-if (on_wall != 0) && (move_y > 0){
-    grv_final = grv_onwall;
-    move_y_max_final = wall_move_y_max;
+
+
+if(on_jump_wall != 0) && (move_y > 0){
+    grv_final = 0;
+    move_y_max_final = 0;
     
+}
+
+if (on_wall != 0) && (move_y > 0) && (on_jump_wall = 0){
+    grv_final = grv_onwall;
+    move_y_max_final = 5;
 }
 
 
@@ -92,51 +99,6 @@ if (place_meeting(x,y+move_y,obj_list)) {
 
 y += move_y;
 
-
-
-
-on_ground = place_meeting(x,y+1,obj_list);
-on_wall = place_meeting(x+1,y,obj_list) - place_meeting(x-1,y,obj_list); 
-on_jump_wall = place_meeting(x+1,y,obj_wallclimb);
-
-if (on_ground) jump_buffer = 6;
-    
-
-
-
-
-// weapon system
-if(key_pickup){
-    var pickup_list = ds_list_create();
-    var weapons = [obj_weapon, obj_weapon_sword]
-    var pickup_count = collision_circle_list(x, y, pickup_radius, weapons, false, true, pickup_list, true);
-    
-    if(pickup_count > 0){
-        
-        if(weapon == noone){
-            weapon = pickup_list[| 0];
-            
-            weapon.target = id;
-            weapon.is_being_carried = true;
-        } else{
-            for(var index = 0; index < pickup_count; index ++){
-                if(pickup_list[| index] != weapon){
-                    weapon.target = noone;
-                    weapon.is_being_carried = false;
-                    
-                    weapon = pickup_list[| index];
-                    weapon.target = id;
-                    weapon.is_being_carried = true
-                    
-                    break;
-                }
-            }
-                
-        }
-    }
-    ds_list_destroy(pickup_list);
-}
-
 // Dash logic
 if (key_dash && dash_cooldown_timer <= 0 && !is_dashing) {
     // Start dash
@@ -182,6 +144,55 @@ else {
 }
 
 
+on_ground = place_meeting(x,y+1,obj_list);
+on_wall = place_meeting(x+1,y,obj_list) - place_meeting(x-1,y,obj_list); 
+on_jump_wall = place_meeting(x+1,y,obj_wallclimb);
+
+if (on_ground) jump_buffer = 6;
+    
+
+
+
+
+// weapon system
+if(key_pickup){
+    var pickup_list = ds_list_create();
+    var weapons = [obj_weapon, obj_weapon_sword]
+    var pickup_count = collision_circle_list(x, y, pickup_radius, weapons, false, true, pickup_list, true);
+    
+    if(pickup_count > 0){
+        
+        if(weapon == noone){
+            weapon = pickup_list[| 0];
+            
+            weapon.target = id;
+            weapon.is_being_carried = true;
+        } else{
+            for(var index = 0; index < pickup_count; index ++){
+                if(pickup_list[| index] != weapon){
+                    weapon.target = noone;
+                    weapon.is_being_carried = false;
+                    
+                    weapon = pickup_list[| index];
+                    weapon.target = id;
+                    weapon.is_being_carried = true
+                    
+                    break;
+                }
+            }
+                
+        }
+    }
+    ds_list_destroy(pickup_list);
+}
+
+
+//damage system
+
+
+
+
+
 //animation
 
 if (obj_weapon_sword.sword_use){
@@ -189,7 +200,7 @@ if (obj_weapon_sword.sword_use){
     sprite_index = spr_sword_a;
 }
 else{
-if (!place_meeting(x,y+1,obj_platform_tile)) {
+if (!on_ground) {
     sprite_index = spr_player_up;
     image_speed = 0;
     if (sign(move_y) > 0) image_index = 1; else image_index = 0;
