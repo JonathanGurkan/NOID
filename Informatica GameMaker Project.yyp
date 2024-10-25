@@ -31,10 +31,10 @@
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"backgrounds","folderPath":"folders/Sprites/backgrounds.yy","name":"backgrounds","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"colliders","folderPath":"folders/Sprites/colliders.yy","name":"colliders","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"enemy","folderPath":"folders/Sprites/enemy.yy","name":"enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"slime","folderPath":"folders/Sprites/enemy/slime.yy","name":"slime","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"twigman","folderPath":"folders/Sprites/enemy/twigman.yy","name":"twigman","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"colliders","folderPath":"folders/Sprites/colliders.yy","name":"colliders","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"interactables","folderPath":"folders/Sprites/interactables.yy","name":"interactables","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"platforms","folderPath":"folders/Sprites/platforms.yy","name":"platforms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"castle","folderPath":"folders/Sprites/platforms/castle.yy","name":"castle","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -50,7 +50,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1100.0.634",
+    "IDEVersion":"2024.800.0.618",
   },
   "name":"Informatica GameMaker Project",
   "resources":[
@@ -143,9 +143,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"r_start_forest","path":"rooms/r_start_forest/r_start_forest.yy",},},
     {"roomId":{"name":"r_down","path":"rooms/r_down/r_down.yy",},},
     {"roomId":{"name":"test","path":"rooms/test/test.yy",},},
-    {"roomId":{"name":"r_start_forest","path":"rooms/r_start_forest/r_start_forest.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
