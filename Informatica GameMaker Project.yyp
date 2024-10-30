@@ -50,7 +50,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1100.0.634",
+    "IDEVersion":"2024.800.0.618",
   },
   "name":"Informatica GameMaker Project",
   "resources":[
@@ -144,9 +144,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"r_start_forest","path":"rooms/r_start_forest/r_start_forest.yy",},},
     {"roomId":{"name":"r_down","path":"rooms/r_down/r_down.yy",},},
     {"roomId":{"name":"test","path":"rooms/test/test.yy",},},
-    {"roomId":{"name":"r_start_forest","path":"rooms/r_start_forest/r_start_forest.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
