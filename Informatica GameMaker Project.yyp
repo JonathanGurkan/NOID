@@ -19,6 +19,7 @@
     {"$GMFolder":"","%Name":"enemy","folderPath":"folders/Objects/enemy.yy","name":"enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"slime","folderPath":"folders/Objects/enemy/slime.yy","name":"slime","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"twigman","folderPath":"folders/Objects/enemy/twigman.yy","name":"twigman","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"lighting","folderPath":"folders/Objects/lighting.yy","name":"lighting","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"GUI","folderPath":"folders/Objects/GUI.yy","name":"GUI","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"player","folderPath":"folders/Objects/player.yy","name":"player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"weapons","folderPath":"folders/Objects/weapons.yy","name":"weapons","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -62,6 +63,9 @@
     {"id":{"name":"obj_gameover","path":"objects/obj_gameover/obj_gameover.yy",},},
     {"id":{"name":"obj_interact","path":"objects/obj_interact/obj_interact.yy",},},
     {"id":{"name":"obj_jump_orb","path":"objects/obj_jump_orb/obj_jump_orb.yy",},},
+    {"id":{"name":"obj_light_m","path":"objects/obj_light_m/obj_light_m.yy",},},
+    {"id":{"name":"obj_light_setup","path":"objects/obj_light_setup/obj_light_setup.yy",},},
+    {"id":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},},
     {"id":{"name":"obj_platform_tile_flat","path":"objects/obj_platform_tile_flat/obj_platform_tile_flat.yy",},},
     {"id":{"name":"obj_platform_tile","path":"objects/obj_platform_tile/obj_platform_tile.yy",},},
     {"id":{"name":"obj_player_d","path":"objects/obj_player_d/obj_player_d.yy",},},
@@ -71,9 +75,10 @@
     {"id":{"name":"obj_weapon_orb","path":"objects/obj_weapon_orb/obj_weapon_orb.yy",},},
     {"id":{"name":"obj_weapon_sword","path":"objects/obj_weapon_sword/obj_weapon_sword.yy",},},
     {"id":{"name":"obj_weapon","path":"objects/obj_weapon/obj_weapon.yy",},},
-    {"id":{"name":"r_down","path":"rooms/r_down/r_down.yy",},},
     {"id":{"name":"r_start_forest","path":"rooms/r_start_forest/r_start_forest.yy",},},
+    {"id":{"name":"r_up","path":"rooms/r_up/r_up.yy",},},
     {"id":{"name":"test","path":"rooms/test/test.yy",},},
+    {"id":{"name":"sh_light","path":"shaders/sh_light/sh_light.yy",},},
     {"id":{"name":"sh_red_p","path":"shaders/sh_red_p/sh_red_p.yy",},},
     {"id":{"name":"sh_white","path":"shaders/sh_white/sh_white.yy",},},
     {"id":{"name":"_48x48_trees","path":"sprites/_48x48_trees/_48x48_trees.yy",},},
@@ -144,8 +149,12 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+<<<<<<< Updated upstream
     {"roomId":{"name":"r_start_forest","path":"rooms/r_start_forest/r_start_forest.yy",},},
     {"roomId":{"name":"r_down","path":"rooms/r_down/r_down.yy",},},
+=======
+    {"roomId":{"name":"r_up","path":"rooms/r_up/r_up.yy",},},
+>>>>>>> Stashed changes
     {"roomId":{"name":"test","path":"rooms/test/test.yy",},},
   ],
   "templateType":"game",
