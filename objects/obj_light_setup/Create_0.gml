@@ -1,1 +1,0 @@
-u_pos = shader_get_uniform(sh_light,"u_pos")
