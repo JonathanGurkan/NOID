@@ -16,4 +16,3 @@ else{
 
 
 
-show_debug_message(" orb"+ string(orb_time));

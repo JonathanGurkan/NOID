@@ -1,7 +1,7 @@
 {
   "$GMShader":"",
-  "%Name":"sh_white",
-  "name":"sh_white",
+  "%Name":"sh_damage_p",
+  "name":"sh_damage_p",
   "parent":{
     "name":"Shaders",
     "path":"folders/Shaders.yy",

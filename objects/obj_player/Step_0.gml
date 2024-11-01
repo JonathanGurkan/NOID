@@ -199,6 +199,7 @@ if (obj_weapon_sword.sword_use){
     image_speed = 1;
     sprite_index = spr_sword_a;
 }
+
 else{
 if (!on_ground) {
     sprite_index = spr_player_up;
