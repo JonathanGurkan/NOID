@@ -81,6 +81,7 @@
     {"id":{"name":"sh_damage_e","path":"shaders/sh_damage_e/sh_damage_e.yy",},},
     {"id":{"name":"sh_damage_p","path":"shaders/sh_damage_p/sh_damage_p.yy",},},
     {"id":{"name":"sh_lighting","path":"shaders/sh_lighting/sh_lighting.yy",},},
+    {"id":{"name":"sh_shadow","path":"shaders/sh_shadow/sh_shadow.yy",},},
     {"id":{"name":"_48x48_trees","path":"sprites/_48x48_trees/_48x48_trees.yy",},},
     {"id":{"name":"Adventurer_Sprite_Sheet_v1_5","path":"sprites/Adventurer_Sprite_Sheet_v1_5/Adventurer_Sprite_Sheet_v1_5.yy",},},
     {"id":{"name":"interaction","path":"sprites/interaction/interaction.yy",},},
