@@ -13,3 +13,4 @@ void main(){
     vec4 object_space_pos = vec4( pos.x, pos.y, u_z-0.5, 1.0); //shadow is drawn at a z-value closer to the screen than its corresponding light.
     gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * object_space_pos;
 }
+//
