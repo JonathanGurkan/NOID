@@ -4,27 +4,29 @@ last_y = 0;
 move_x= 0; 
 move_y = 0; 
 move_x_frac = 0;
-move_y_max = 14;
+move_y_frac = 0;
 jump_buffer = 0;
 on_ground = false;
 
+
 //gravity
-grv = 0.5;
+grv = 0.25;
 
 //movement speeds
-walk_speed = 8; // walking speed
-jump_speed = -12; // jump strength
-walk_acc = 1;
+walk_speed = 0; // walking speed
+jump_speed = -6; // jump strength
+walk_acc = 0.4;
 fric_ground_speed = 0.70;
-fric_air_speed = 0.15;
+fric_air_speed = 0.3;
 
 
 //max speed
 wall_move_y_max = 0;
+move_y_max = 13;
 
 //walljump
-wall_speed_x = 10;
-wall_speed_y = -8;
+wall_speed_x = 5;
+wall_speed_y = -4;
 on_wall = 0;
 walljump_delay = 0;
 walljump_delay_max = -17;
@@ -33,7 +35,7 @@ grv_onwall = 0;
 
 
 //Dash variables
-dash_speed = 15;      // How fast the dash is
+dash_speed = 5;      // How fast the dash is
 dash_duration = 15;   // How many frames the dash lasts
 dash_cooldown = 60;   // How long to wait before dashing again
 is_dashing = false;   // Whether the player is currently dashing
@@ -56,7 +58,7 @@ flash = 0;
 //Damage variables
 invincible = false; 
 invincibility_timer = 0;  
-invincibility_duration = 60;
+inviancibility_duration = 60;
 
 
 weapon = noone;

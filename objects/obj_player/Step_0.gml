@@ -1,11 +1,10 @@
-
 var key_left = keyboard_check(ord("A"));
 var key_right = keyboard_check(ord("D"));
-var key_jump = keyboard_check_pressed(vk_space) || keyboard_check(ord("W"));
+var key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"));
+var key_jump_held = keyboard_check(vk_space) || keyboard_check(ord("W"));
 var key_dash = keyboard_check_pressed(vk_shift);
 var key_pickup = keyboard_check_pressed(ord("E"));
 var move = key_right - key_left;
-var obj_list = [obj_platform_tile, obj_platform_tile_flat];
 
 //MOVEMENT PLAYER
 
@@ -53,26 +52,32 @@ if (on_wall != 0) && (move_y > 0) && (on_jump_wall = 0){
 move_y += grv_final;
 move_y = clamp(move_y,-move_y_max_final,move_y_max_final);
 
-if(jump_buffer > 0){
-    
-    jump_buffer --;
-    
-    if (key_jump){
-        
+if (jump_buffer > 0) {
+    jump_buffer--;
+
+    if (key_jump) {
         jump_buffer = 0;
         move_y = jump_speed;
     }
-    
 }
+    
+if (move_y < 0) && (!key_jump_held){
+    move_y = max(move_y, -jump_speed/4);
+}
+
 
 move_x += move_x_frac;
 move_x_frac = frac(move_x)
 move_x -= move_x_frac;
 
+move_y+= move_y_frac;
+move_y_frac = frac(move_y)
+move_y -= move_y_frac;
+
 // x-collision
-if (place_meeting(x+move_x,y,obj_list)){
+if (place_meeting(x+move_x,y,obj_platform_tile)){
     
-    while (!place_meeting(x+sign(move_x),y,obj_list)){
+    while (!place_meeting(x+sign(move_x),y,obj_platform_tile)){
        
         x += sign(move_x);
        
@@ -86,9 +91,9 @@ x += move_x;
 
 
 // y-collision
-if (place_meeting(x,y+move_y,obj_list)) {
+if (place_meeting(x,y+move_y,obj_platform_tile)) {
     
-    while (!place_meeting(x,y+sign(move_y),obj_list)){
+    while (!place_meeting(x,y+sign(move_y),obj_platform_tile)){
         
         y += sign(move_y);
        
@@ -129,13 +134,12 @@ if (is_dashing) {
     // Check if the dash duration has ended
     if (dash_timer == 0) {
         is_dashing = false;
-        
     }
     
 } 
 
 else {
-    walk_speed = 8;
+    walk_speed = 3;
     if (dash_cooldown_timer > 0){
     dash_cooldown_timer -= 1;
     }
@@ -144,12 +148,13 @@ else {
 }
 
 
-on_ground = place_meeting(x,y+1,obj_list);
-on_wall = place_meeting(x+1,y,obj_list) - place_meeting(x-1,y,obj_list); 
+on_ground = place_meeting(x,y+1,obj_platform_tile);
+on_wall = place_meeting(x+1,y,obj_platform_tile) - place_meeting(x-1,y,obj_platform_tile); 
 on_jump_wall = place_meeting(x+1,y,obj_wallclimb);
 
-if (on_ground) jump_buffer = 6;
-    
+    if (on_ground) {
+        jump_buffer = 20;
+    }
 
 
 
@@ -208,7 +213,7 @@ if (!on_ground) {
     } else {
 image_speed = 1;
     if (move_x == 0) {
-        sprite_index = spr_player_idle;
+        sprite_index = spr_player;
     } else {
         image_speed = 1;
         sprite_index =  spr_player_r;
@@ -251,5 +256,4 @@ if (hp_current <= 0) {
     instance_destroy()
     instance_destroy(weapon)
 }
-
 
