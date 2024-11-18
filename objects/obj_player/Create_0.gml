@@ -13,7 +13,7 @@ on_ground = false;
 grv = 0.25;
 
 //movement speeds
-walk_speed = 0; // walking speed
+walk_speed = 2; // walking speed
 jump_speed = -6; // jump strength
 walk_acc = 0.4;
 fric_ground_speed = 0.70;
@@ -66,3 +66,15 @@ pickup_radius = 50;
 
 
 collision_speed = walk_speed + 2;
+
+
+
+//enums
+state = PLAYERSTATE.FREE;
+hit_by_attack = ds_list_create();
+
+enum PLAYERSTATE{
+    FREE,
+    ATTACK,
+    ATTACK_COMBO
+}
