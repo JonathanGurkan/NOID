@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_p_attack_bow",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_p_attack_bow",
+  "parent":{
+    "name":"player_states",
+    "path":"folders/Scripts/player_states.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

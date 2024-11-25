@@ -1,60 +1,31 @@
+key_left = keyboard_check(ord("A"));
+key_right = keyboard_check(ord("D"));
+key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"));
+key_jump_held = keyboard_check(vk_space) || keyboard_check(ord("W"));
+key_dash = keyboard_check_pressed(vk_shift);
+key_use = keyboard_check_pressed(ord("E"));
+key_sword = mouse_check_button_pressed(mb_left);
+key_bow = mouse_check_button(mb_right);
+move = key_right - key_left;
 
-var key_pickup = keyboard_check_pressed(ord("E"));
-var key_attack = mouse_check_button(mb_left);
-
-switch (state){
-    case PLAYERSTATE.FREE: player_st_free();  break; 
-    case PLAYERSTATE.ATTACK: player_st_attack(); break;
-    case PLAYERSTATE.ATTACK_COMBO: player_st_attack_combo(); break;
+  switch (state){
+    case PLAYERSTATE.FREE: scr_p_free(); break;
+    case PLAYERSTATE.ATTACK: scr_p_attack(); break;
+    case PLAYERSTATE.ATTACK_COMBO: scr_p_attack_combo(); break; 
+    case PLAYERSTATE.DASH: scr_p_dash(); break;
+    case PLAYERSTATE.ATTACK_BOW: scr_p_attack_bow(); break;
 }
 
 
 
-// weapon system
-if(key_pickup){
-    var pickup_list = ds_list_create();
-    var weapons = [obj_weapon, obj_weapon_sword]
-    var pickup_count = collision_circle_list(x, y, pickup_radius, weapons, false, true, pickup_list, true);
+on_ground = place_meeting(x,y+1,obj_platform_tile);
+on_wall = place_meeting(x+1,y,obj_platform_tile) - place_meeting(x-1,y,obj_platform_tile); 
+on_jump_wall = place_meeting(x+1,y,obj_wallclimb);
     
-    if(pickup_count > 0){
-        
-        if(weapon == noone){
-            weapon = pickup_list[| 0];
-            
-            weapon.target = id;
-            weapon.is_being_carried = true;
-        } else{
-            for(var index = 0; index < pickup_count; index ++){
-                if(pickup_list[| index] != weapon){
-                    weapon.target = noone;
-                    weapon.is_being_carried = false;
-                    
-                    weapon = pickup_list[| index];
-                    weapon.target = id;
-                    weapon.is_being_carried = true
-                    
-                    break;
-                }
-            }
-                
-        }
-    }
-    ds_list_destroy(pickup_list);
-}
-
-
-//damage system
 
 
 
 
-
-//animation
-
-
-
-
-if (key_attack) state = PLAYERSTATE.ATTACK;
 
 
 //reset room om 0 hp / r pressed
@@ -63,7 +34,8 @@ if  (keyboard_check(ord("R"))){
 }
 
 if (hp_current <= 0) {
-    instance_destroy()
-    instance_destroy(weapon)
+    instance_destroy();
+    instance_destroy(weapon);
 }
 
+show_debug_message(string(move_x))

@@ -1,3 +1,22 @@
+state = PLAYERSTATE.FREE;
+
+//keybinds
+key_left = false;
+key_bow = false;
+key_dash = false;
+key_jump = false;
+key_right = false;
+key_jump_held = false;
+move = false;
+key_use = false;
+key_sword = false;
+
+//prites
+sprite_run = spr_player_w;
+sprite_idle = spr_player;
+
+
+
 //Movement variables
 last_x = 0;
 last_y = 0;
@@ -6,7 +25,7 @@ move_y = 0;
 move_x_frac = 0;
 move_y_frac = 0;
 jump_buffer = 0;
-on_ground = false;
+on_ground = 0;
 
 
 //gravity
@@ -35,13 +54,9 @@ grv_onwall = 0;
 
 
 //Dash variables
-dash_speed = 5;      // How fast the dash is
-dash_duration = 15;   // How many frames the dash lasts
-dash_cooldown = 60;   // How long to wait before dashing again
-is_dashing = false;   // Whether the player is currently dashing
-dash_timer = 0;       // Timer for dash duration
-dash_cooldown_timer = 0;  // Timer for cooldown
-dash_direction = 0;   // -1 for left, 1 for right
+can_dash = 1;
+dash_distance = 96;
+dash_time = 12;
 dash_cool_x = 12;
 dash_cool_y = 50;
 
@@ -66,15 +81,20 @@ pickup_radius = 50;
 
 
 collision_speed = walk_speed + 2;
-
+can_attack = true;
 
 
 //enums
-state = PLAYERSTATE.FREE;
-hit_by_attack = ds_list_create();
 
+hit_by_attack = ds_list_create();
 enum PLAYERSTATE{
     FREE,
     ATTACK,
-    ATTACK_COMBO
+    ATTACK_COMBO,
+    ATTACK_BOW,
+    DASH
 }
+
+
+
+
