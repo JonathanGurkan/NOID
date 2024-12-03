@@ -43,4 +43,7 @@ if(!global.gamepaused) {
         case PLAYERSTATE.DASH: scr_p_dash(); break;
         case PLAYERSTATE.ATTACK_BOW: scr_p_attack_bow(); break;
     }
+	
+	var frames = game_get_speed(gamespeed_fps);
+show_debug_message("Game FPS: " + string(room_speed));
 }

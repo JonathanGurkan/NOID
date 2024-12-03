@@ -20,8 +20,8 @@
     {"$GMFolder":"","%Name":"enemy","folderPath":"folders/Objects/enemy.yy","name":"enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"slime","folderPath":"folders/Objects/enemy/slime.yy","name":"slime","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"twigman","folderPath":"folders/Objects/enemy/twigman.yy","name":"twigman","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"interactables","folderPath":"folders/Objects/interactables.yy","name":"interactables","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"GUI","folderPath":"folders/Objects/GUI.yy","name":"GUI","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"interactables","folderPath":"folders/Objects/interactables.yy","name":"interactables","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"parents","folderPath":"folders/Objects/parents.yy","name":"parents","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"player","folderPath":"folders/Objects/player.yy","name":"player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"weapons","folderPath":"folders/Objects/weapons.yy","name":"weapons","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -57,7 +57,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1100.0.634",
+    "IDEVersion":"2024.8.0.169",
   },
   "name":"Informatica GameMaker Project",
   "resources":[
