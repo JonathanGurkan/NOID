@@ -1,3 +1,4 @@
+
 key_left = keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
 key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"));
@@ -9,7 +10,7 @@ key_bow = mouse_check_button(mb_right);
 move = key_right - key_left;
 
  
-
+activate = 0;
 
 
 on_ground = place_meeting(x,y+1,collision_map);

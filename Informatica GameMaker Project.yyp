@@ -105,6 +105,7 @@
     {"id":{"name":"scr_p_free","path":"scripts/scr_p_free/scr_p_free.yy",},},
     {"id":{"name":"scr_p_process_attack","path":"scripts/scr_p_process_attack/scr_p_process_attack.yy",},},
     {"id":{"name":"screenshake","path":"scripts/screenshake/screenshake.yy",},},
+    {"id":{"name":"Script17","path":"scripts/Script17/Script17.yy",},},
     {"id":{"name":"Script5","path":"scripts/Script5/Script5.yy",},},
     {"id":{"name":"sh_damage_e","path":"shaders/sh_damage_e/sh_damage_e.yy",},},
     {"id":{"name":"sh_damage_p","path":"shaders/sh_damage_p/sh_damage_p.yy",},},

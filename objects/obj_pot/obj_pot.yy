@@ -9,7 +9,10 @@
     "name":"interactables",
     "path":"folders/Objects/interactables.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_entity",
+    "path":"objects/par_entity/par_entity.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_pot",
+    "path":"sprites/spr_pot/spr_pot.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

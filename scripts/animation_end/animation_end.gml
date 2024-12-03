@@ -21,7 +21,7 @@ function animation_end(){
     var _type=sprite_get_speed_type(sprite_index);
     var _spd=sprite_get_speed(sprite_index)*image_speed;
     if(_type == spritespeed_framespersecond)
-        _spd = _spd/game_get_speed();
+        _spd = _spd/game_get_speed(gamespeed_fps);
     if(argument_count > 2) _spd=argument[2];
     return _image+_spd >= sprite_get_number(_sprite);
 }
