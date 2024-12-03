@@ -8,7 +8,7 @@ collision();
     move_y = 0;
     
     dash_energy -= dash_speed
-                if(!place_meeting(x,y+1,obj_platform_tile)){
+                if(!place_meeting(x,y+1,collision_map)){
                     sprite_index = spr_player_dash_air;
                 } else {
                     image_speed = 1

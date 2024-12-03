@@ -2,9 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function collision(){
     //x-collision
-    if (place_meeting(x+move_x,y,obj_platform_tile)){
+    if (place_meeting(x+move_x,y,collision_map)){
         
-        while (!place_meeting(x+sign(move_x),y,obj_platform_tile)){
+        while (!place_meeting(x+sign(move_x),y,collision_map)){
         
             x += sign(move_x);
         
@@ -18,9 +18,9 @@ function collision(){
     
     
     // y-collision
-    if (place_meeting(x,y+move_y,obj_platform_tile)) {
+    if (place_meeting(x,y+move_y,collision_map)) {
         
-        while (!place_meeting(x,y+sign(move_y),obj_platform_tile)){
+        while (!place_meeting(x,y+sign(move_y),collision_map)){
             
             y += sign(move_y);
         

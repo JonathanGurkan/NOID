@@ -1,1 +1,5 @@
 #macro FRAME_RATE 60 
+#macro ROOM_START r_hub
+
+#macro RESOLUTION_W 640
+#macro RESOLUTION_H 360

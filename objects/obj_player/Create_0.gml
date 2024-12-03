@@ -1,4 +1,6 @@
 state = PLAYERSTATE.FREE;
+collision_map = layer_tilemap_get_id(layer_get_id("col"))
+
 
 //keybinds
 key_left = false;
@@ -11,7 +13,7 @@ move = false;
 key_use = false;
 key_sword = false;
 
-//prites
+//sprites
 sprite_run = spr_player_w;
 sprite_idle = spr_player;
 
@@ -55,18 +57,21 @@ grv_onwall = 0;
 
 //Dash variables
 can_dash = 1;
-dash_distance = 96;
-dash_time = 12;
+dash_distance = 64;
+dash_time = 10;
+dash_duration = 20;
+dash_cooldown = 0;
 dash_cool_x = 12;
 dash_cool_y = 50;
+dash_energy = 0;
 
 //HP variables
 hp_current = 100;
 hp_max = hp_current;
 healthbar_width = 136;
-healthbar_height = 14;
-healthbar_x = 12;
-healthbar_y = 20;
+healthbar_height = 7;
+healthbar_x = 6;
+healthbar_y = 15;
 death_triggered = false;
 flash = 0;
 
@@ -82,6 +87,7 @@ pickup_radius = 50;
 
 collision_speed = walk_speed + 2;
 can_attack = true;
+
 
 
 //enums

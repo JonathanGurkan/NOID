@@ -74,7 +74,19 @@ function scr_p_free(){
     
     
     //key inputs
+    
+    
+    if (dash_cooldown <= 0){
+        can_dash = true
+    }
+    else {
+        can_dash = false;
+        -- dash_cooldown;
+    }
+    
+    
     if (can_dash && key_dash &&  move_x != 0){
+        dash_cooldown = dash_duration;
         can_dash = false;
         dash_direction =  point_direction(0,0,key_right-key_left,0);
         dash_speed = dash_distance / dash_time;

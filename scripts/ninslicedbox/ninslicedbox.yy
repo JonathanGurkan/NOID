@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ninslicedbox",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ninslicedbox",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
