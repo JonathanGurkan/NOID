@@ -26,12 +26,7 @@ if  (keyboard_check(ord("R"))){
 
 if  (keyboard_check_pressed(ord("H"))){
     screenshake(3, 60);
-    show_debug_message(string("aaaaaaa"));
-}
-
-if (hp_current <= 0) {
-    instance_destroy();
-    instance_destroy(weapon);
+    
 }
 
 
@@ -45,5 +40,9 @@ if(!global.gamepaused) {
     }
 	
 	var frames = game_get_speed(gamespeed_fps);
+    
+    
+    invincible = max(invincible-1,0)
+    flash = max(flash-0.05,0)
 
 }

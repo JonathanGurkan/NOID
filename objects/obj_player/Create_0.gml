@@ -65,19 +65,18 @@ dash_cooldown = 0;
 dash_cool_x = 12;
 dash_cool_y = 50;
 dash_energy = 0;
+stun_distance = 40;
+stun_height_distance = 12;
+stun_speed = 1.5;
 
 //HP variables
-hp_current = 100;
-hp_max = hp_current;
-healthbar_width = 136;
-healthbar_height = 7;
-healthbar_x = 6;
-healthbar_y = 15;
 death_triggered = false;
 flash = 0;
+flash_shader = sh_white;
+
 
 //Damage variables
-invincible = false; 
+invincible =0; 
 invincibility_timer = 0;  
 inviancibility_duration = 60;
  

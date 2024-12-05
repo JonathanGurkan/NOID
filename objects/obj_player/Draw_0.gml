@@ -1,8 +1,8 @@
-draw_self();
-
-if (flash > 0){
-    flash--
-shader_set(sh_damage_p);
-    draw_self ();
-shader_reset();
-    }
+if (invincible != 0) && ((invincible mod 16 < 4 ) == 0) && (flash == 0){
+    
+}
+else{
+    
+    draw_self();
+    
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_p_stun",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_p_stun",
+  "parent":{
+    "name":"player_states",
+    "path":"folders/Scripts/player_states.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

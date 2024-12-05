@@ -32,5 +32,5 @@
     "path":"sprites/spr_obj_spikes_flat/spr_obj_spikes_flat.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
