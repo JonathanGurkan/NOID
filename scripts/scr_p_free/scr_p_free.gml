@@ -4,7 +4,7 @@ function scr_p_free(){
     //movement_x
     walljump_delay = max(walljump_delay - 1, 0);
     if (walljump_delay == 0){
-        var dir = key_right - key_left;
+        dir = key_right - key_left;
         move_x += dir * walk_acc;
         var move_x_friction_final = fric_ground_speed;
         
@@ -15,6 +15,7 @@ function scr_p_free(){
         }
         move_x = clamp(move_x, -walk_speed, walk_speed); 
     }
+    
     
     
     //walljump
@@ -85,6 +86,8 @@ function scr_p_free(){
     }
     
     
+    
+    
     if (can_dash && key_dash &&  move_x != 0){
         dash_cooldown = dash_duration;
         can_dash = false;
@@ -102,41 +105,15 @@ function scr_p_free(){
     if (key_bow){
         state = PLAYERSTATE.ATTACK_BOW
     }
+
     
-	// Activate key logic
-if (key_use) {
-    // 1. Check for an entity to activate
-    // 2. If there is nothing, or there is something, but it has no script - roll!
-    //    Otherwise, there is something and it has a script! Activate it!
-    // 3. If the thing we activate is an NPC, make it face towards us!
-
-    var _activate_x = lengthdir_x(10, direction);
-    var _activate_y = lengthdir_y(10, direction);
-    activate = instance_position(x + _activate_x, y + _activate_y, p_entity);
-
-    if (activate == noone || activate.entity_activate_script == -1) {
-        state = player_state_roll;
-        move_distance_remaining = distance_roll;
-    } else {
-        // Activate the entity
-        script_execute_array(activate.entity_activate_script, activate.entity_activate_args);
-
-        // Make an NPC face the player
-        if (activate.entity_npc) {
-            with (activate) {
-                direction = point_direction(x, y, other.x, other.y);
-                image_index = cardinal_dir;
-            }
+    if (key_use) {
+            // Make an NPC face the player
         }
-    }
-}
+    
+    
+	
 
-	
-	
   
      scr_p_animation();
-    
-
-    
-    
 }

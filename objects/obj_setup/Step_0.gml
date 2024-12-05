@@ -11,7 +11,7 @@ function Quad(_vb,_x1,_y1,_x2,_y2){
 
 vertex_begin(vb,vf);
 var _vb = vb;
-with(obj_platform_tile){
+with(layer_tilemap_get_id(layer_get_id("col"))){
     Quad(_vb,x,y,x+sprite_width,y+sprite_height); //Negative Slope Diagonal Wall
     Quad(_vb,x+sprite_width,y,x,y+sprite_height); //Positive Slope Diagonal Wall
 }

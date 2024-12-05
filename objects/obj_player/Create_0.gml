@@ -28,6 +28,7 @@ move_x_frac = 0;
 move_y_frac = 0;
 jump_buffer = 0;
 on_ground = 0;
+dir =0;
 
 
 //gravity
@@ -79,7 +80,7 @@ flash = 0;
 invincible = false; 
 invincibility_timer = 0;  
 inviancibility_duration = 60;
-
+ 
 
 weapon = noone;
 pickup_radius = 50;
@@ -89,17 +90,18 @@ collision_speed = walk_speed + 2;
 can_attack = true;
 
 
+if(global.target_x != -1){
+    
+    x = global.target_y;
+    y = global.target_x;
+    direction = global.target_direction;
+    
+}
 
 //enums
 
 hit_by_attack = ds_list_create();
-enum PLAYERSTATE{
-    FREE,
-    ATTACK,
-    ATTACK_COMBO,
-    ATTACK_BOW,
-    DASH
-}
+
 
 
 

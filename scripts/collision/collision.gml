@@ -12,8 +12,8 @@ function collision(){
         move_x = 0;
     
     }
-    
     x += move_x;
+    
     
     
     

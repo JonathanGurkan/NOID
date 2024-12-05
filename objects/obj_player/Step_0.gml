@@ -9,8 +9,7 @@ key_sword = mouse_check_button_pressed(mb_left);
 key_bow = mouse_check_button(mb_right);
 move = key_right - key_left;
 
- 
-activate = 0;
+
 
 
 on_ground = place_meeting(x,y+1,collision_map);
@@ -46,5 +45,5 @@ if(!global.gamepaused) {
     }
 	
 	var frames = game_get_speed(gamespeed_fps);
-show_debug_message("Game FPS: " + string(room_speed));
+
 }

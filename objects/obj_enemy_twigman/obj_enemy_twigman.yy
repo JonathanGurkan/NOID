@@ -13,10 +13,7 @@
     "name":"twigman",
     "path":"folders/Objects/enemy/twigman.yy",
   },
-  "parentObjectId":{
-    "name":"obj_enemy_slime",
-    "path":"objects/obj_enemy_slime/obj_enemy_slime.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
