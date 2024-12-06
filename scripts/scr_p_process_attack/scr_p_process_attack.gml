@@ -6,7 +6,7 @@ function process_attack(sprite, mask) {
         }
         mask_index = mask;
         var hit_by_attack_now = ds_list_create();
-        var hits = instance_place_list(x,y,obj_enemy,hit_by_attack_now,false)
+        var hits = instance_place_list(x,y,obj_enemy_slime,hit_by_attack_now,false)
         if (hits > 0){
             for (var i = 0; i < hits; i++){
                 var hit_id = hit_by_attack_now[| i];

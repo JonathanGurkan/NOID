@@ -56,7 +56,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1100.0.703",
+    "IDEVersion":"2024.1100.0.634",
   },
   "name":"Informatica GameMaker Project",
   "resources":[
@@ -64,7 +64,6 @@
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_enemy_twigman_d","path":"objects/obj_enemy_twigman_d/obj_enemy_twigman_d.yy",},},
     {"id":{"name":"obj_enemy_twigman","path":"objects/obj_enemy_twigman/obj_enemy_twigman.yy",},},
-    {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"obj_gameover","path":"objects/obj_gameover/obj_gameover.yy",},},
     {"id":{"name":"obj_jump_orb","path":"objects/obj_jump_orb/obj_jump_orb.yy",},},
