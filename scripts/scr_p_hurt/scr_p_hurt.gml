@@ -1,8 +1,8 @@
-function scr_p_hurt(_damage) {
+function scr_p_hurt(damage) {
     scr_p_animation();
                 collision();
         if (invincible <= 0) { // Check if player is invincible
-            global.player_health = max(0, global.player_health - _damage); // Reduce health
+            global.player_health = max(0, global.player_health - damage); // Reduce health
             show_debug_message(string(global.player_health)); // Debug output
 
             if (global.player_health > 0) { // If player survives the hit

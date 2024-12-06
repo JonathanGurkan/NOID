@@ -1,8 +1,6 @@
 if (instance_exists(follow)){ 
-    
     x_to = follow.x; 
     y_to = follow.y;
-    
 }
 
 x += (x_to - x) /15;
