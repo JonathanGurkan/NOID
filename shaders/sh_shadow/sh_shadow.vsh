@@ -3,7 +3,7 @@ attribute vec3 in_Position;                  // (x,y,z)
 uniform vec2 u_pos; //light source positon
 uniform float u_z; //depth position
 
-void main(){
+void main() {
     vec2 pos = in_Position.xy;
 
     if (in_Position.z > 0.){ //check if vertex requires repositioning
