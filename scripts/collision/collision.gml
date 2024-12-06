@@ -7,8 +7,8 @@ function collision() {
             x += sign(move_x)
 		}
     move_x = 0;
-}
-	x += move_x;
+    }
+    x += move_x;
 
     // y-collision
     if (place_meeting(x,y+move_y,collision_map)) {

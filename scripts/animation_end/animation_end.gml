@@ -1,6 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function animation_end(){
+function animation_end() {
 	var _sprite = sprite_index;
     var _image = image_index;
     if(argument_count > 0)   _sprite=argument[0];

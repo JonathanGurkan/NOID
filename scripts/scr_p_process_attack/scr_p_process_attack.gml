@@ -1,10 +1,10 @@
-function process_attack(){
-    if (sprite_index != argument0){
-            sprite_index = argument0;
+function process_attack(sprite, mask) {
+    if (sprite_index != sprite){
+            sprite_index = sprite;
             image_index = 0;
             ds_list_clear(hit_by_attack)
         }
-        mask_index = argument1;
+        mask_index = mask;
         var hit_by_attack_now = ds_list_create();
         var hits = instance_place_list(x,y,obj_enemy_slime,hit_by_attack_now,false)
         if (hits > 0){
@@ -17,10 +17,7 @@ function process_attack(){
                     }
                 }
             }
-                
-            
         }
         ds_list_destroy(hit_by_attack_now)
         mask_index = spr_player_idle;
-        
 }

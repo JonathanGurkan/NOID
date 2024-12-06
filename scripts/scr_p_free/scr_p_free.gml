@@ -1,4 +1,4 @@
-function scr_p_free(){
+function scr_p_free() {
     //movement_x
     var _move_x_max_final = move_x_max_final;
     dir = key_right - key_left;

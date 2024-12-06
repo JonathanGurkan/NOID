@@ -11,6 +11,5 @@ function scr_p_attack_combo() {
         state = PLAYERSTATE.FREE;
         can_attack = true;
     }
-    
 }
 

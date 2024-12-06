@@ -1,3 +1,3 @@
-function do_nothing(){
-	//ye, just do noh
+function do_nothing() {
+	//ye, just do nothing
 }

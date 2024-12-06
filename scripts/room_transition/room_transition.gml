@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function room_transition(in_type, in_target){
+function room_transition(in_type, in_target) {
 show_debug_message("trans")
     move_x = move_x
     if(!instance_exists(obj_transition)) {  
