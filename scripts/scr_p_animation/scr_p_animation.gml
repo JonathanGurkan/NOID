@@ -2,9 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_p_animation() {
     if (!on_ground) {
-		sprite_index = spr_player_up;
-        image_speed = 0;
-        if (sign(move_y) > 0) image_index = 1; else image_index = 0;
+        sprite_index = spr_player_up
+   
+        
+        
+        
+        
     } else {
         image_speed = 1;
         if (move_x == 0) {

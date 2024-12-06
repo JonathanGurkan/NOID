@@ -19,5 +19,5 @@ function process_attack(sprite, mask) {
             }
         }
         ds_list_destroy(hit_by_attack_now)
-        mask_index = spr_player_idle;
+        mask_index = spr_player;
 }

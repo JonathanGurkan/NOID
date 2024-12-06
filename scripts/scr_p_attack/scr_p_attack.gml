@@ -7,7 +7,7 @@ function scr_p_attack() {
     }
 	
 	if (animation_end()) {
-	    sprite_index = spr_player_idle;
+	    sprite_index = spr_player;
 	    state = PLAYERSTATE.FREE
 	     can_attack = true;
 	}
