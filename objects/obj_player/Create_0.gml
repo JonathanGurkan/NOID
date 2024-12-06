@@ -75,19 +75,12 @@ inviancibility_duration = 60;
 can_attack = true;
 
 
-if(global.target_x != -1){
-    
+if (global.target_x != -1) {
     x = global.target_y;
     y = global.target_x;
     direction = global.target_direction;
-    
 }
 
 //enums
 
 hit_by_attack = ds_list_create();
-
-
-
-
-

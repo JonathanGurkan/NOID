@@ -1,5 +1,3 @@
-if(!global.gamepaused){
-    
+if (!global.gamepaused) {
     depth = -bbox_bottom;
-    
 }

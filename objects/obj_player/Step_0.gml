@@ -1,4 +1,3 @@
-
 key_left = keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
 key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"));
@@ -8,12 +7,7 @@ key_use = keyboard_check_pressed(ord("E"));
 key_sword = mouse_check_button_pressed(mb_left);
 key_bow = mouse_check_button(mb_right);
 move = key_right - key_left;
-
-
-
-
 on_ground = place_meeting(x,y+1,collision_map);
-
 
 
 //reset room om 0 hp / r pressed
@@ -28,8 +22,8 @@ if  (keyboard_check_pressed(ord("H"))){
 }
 
 
-if(!global.gamepaused) {
-    switch (state){
+if (!global.gamepaused) {
+    switch (state) {
         case PLAYERSTATE.FREE: scr_p_free(); break;
         case PLAYERSTATE.ATTACK: scr_p_attack(); break;
         case PLAYERSTATE.ATTACK_COMBO: scr_p_attack_combo(); break; 
@@ -38,5 +32,4 @@ if(!global.gamepaused) {
     }
     invincible = max(invincible-1,0)
     flash = max(flash-0.05,0)
-
 }

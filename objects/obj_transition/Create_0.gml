@@ -1,8 +1,6 @@
 enum TRANS_TYPE{
-    
     SLIDE,
     FADE
-    
 }
 
 width = RESOLUTION_W;

@@ -14,7 +14,5 @@ for (var i = 1; i <= _player_health_max; i++){
         _image_index += (_player_health_frac > 0.5);
         
     }
-    
     draw_sprite(spr_health,_image_index,8 + ((i-1) * 32), 8);
-    
 }

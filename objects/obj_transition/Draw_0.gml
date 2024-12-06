@@ -4,6 +4,5 @@ if (type == TRANS_TYPE.FADE) {
     draw_rectangle(0, 0, width, height, false);
     
     draw_set_alpha(1);
-    
 }
 
