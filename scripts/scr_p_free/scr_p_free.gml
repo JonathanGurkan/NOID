@@ -2,46 +2,25 @@ function scr_p_free(){
     
 
     //movement_x
-    walljump_delay = max(walljump_delay - 1, 0);
-    if (walljump_delay == 0){
-        dir = key_right - key_left;
-        move_x += dir * walk_acc;
-        var move_x_friction_final = fric_ground_speed;
-        
-        if (!on_ground) move_x_friction_final = fric_air_speed;
-        
-        if (dir == 0) {
-            move_x = lerp(move_x, 0, move_x_friction_final); 
-        }
-        move_x = clamp(move_x, -walk_speed, walk_speed); 
+
+    var _move_x_max_final = move_x_max_final;
+    dir = key_right - key_left;
+
+    move_x += dir * walk_acc;
+    move_x = clamp(move_x,-move_x_max_final,move_x_max_final);
+
+
+    var move_x_friction_final = fric_ground_speed;
+    if (!on_ground) move_x_friction_final = fric_air_speed;
+    
+    if (dir == 0) {
+        move_x = lerp(move_x, 0, move_x_friction_final); 
     }
-    
-    
-    
-    //walljump
-    if (on_wall != 0) && (!on_ground) && (on_jump_wall != 0) && (key_jump){
-        
-        walljump_delay = walljump_delay_max;
-        move_x = -on_wall * wall_speed_x;
-        move_y = wall_speed_y;
-    }
-    var grv_final = grv;
-    var move_y_max_final = move_y_max;
-    
-    
-    if(on_jump_wall != 0) && (move_y > 0){
-        grv_final = 0;
-        move_y_max_final = 0;
-        
-    }
-    
-    if (on_wall != 0) && (move_y > 0) && (on_jump_wall = 0){
-        grv_final = grv_onwall;
-        move_y_max_final = 5;
-    }
-    
+
     
     //movement_y
+    var grv_final = grv;
+    var move_y_max_final = move_y_max;
     move_y += grv_final;
     move_y = clamp(move_y,-move_y_max_final,move_y_max_final);
     

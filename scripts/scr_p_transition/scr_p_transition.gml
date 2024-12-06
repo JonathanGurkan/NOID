@@ -4,5 +4,4 @@ function scr_p_transition(){
 
     scr_p_animation();
         collision();
-    show_debug_message("OUT")
 }

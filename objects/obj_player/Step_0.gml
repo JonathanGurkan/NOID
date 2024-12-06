@@ -13,8 +13,6 @@ move = key_right - key_left;
 
 
 on_ground = place_meeting(x,y+1,collision_map);
-on_wall = place_meeting(x+1,y,collision_map) - place_meeting(x-1,y,collision_map); 
-on_jump_wall = place_meeting(x+1,y,obj_wallclimb);
 
 
 
@@ -38,10 +36,6 @@ if(!global.gamepaused) {
         case PLAYERSTATE.DASH: scr_p_dash(); break;
         case PLAYERSTATE.ATTACK_BOW: scr_p_attack_bow(); break;
     }
-	
-	var frames = game_get_speed(gamespeed_fps);
-    
-    
     invincible = max(invincible-1,0)
     flash = max(flash-0.05,0)
 
