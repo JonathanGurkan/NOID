@@ -14,7 +14,7 @@ key_use = false;
 key_sword = false;
 
 //sprites
-sprite_run = spr_player_w;
+sprite_run = spr_player_r;
 sprite_idle = spr_player;
 
 
@@ -22,7 +22,7 @@ sprite_idle = spr_player;
 //Movement variables
 last_x = 0;
 last_y = 0;
-move_x= 0; 
+move_x= 0 +1; 
 move_y = 0; 
 move_x_frac = 0;
 move_y_frac = 0;

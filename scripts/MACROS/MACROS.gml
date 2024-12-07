@@ -22,5 +22,6 @@ enum ENEMYSTATE{
     ATTACK,
     HURT,
     DIE,
-    WAIT
+    WAIT,
+    AWAKEN
 }
