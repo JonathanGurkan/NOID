@@ -8,7 +8,7 @@
     "TileSerialiseData":[],
   },
   "name":"TileSet3",
-  "out_columns":7,
+  "out_columns":17,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"tiles_modern",
-    "path":"sprites/tiles_modern/tiles_modern.yy",
+    "name":"DARK_Edition_Tileset_No_background",
+    "path":"sprites/DARK_Edition_Tileset_No_background/DARK_Edition_Tileset_No_background.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
@@ -28,11 +28,11 @@
   },
   "tileAnimationFrames":[],
   "tileAnimationSpeed":15.0,
-  "tileHeight":32,
+  "tileHeight":16,
   "tilehsep":0,
   "tilevsep":0,
-  "tileWidth":32,
+  "tileWidth":16,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":50,
+  "tile_count":288,
 }
