@@ -31,12 +31,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"flower_static_idle",
-    "path":"sprites/flower_static_idle/flower_static_idle.yy",
+    "name":"spr_flower_idle",
+    "path":"sprites/spr_flower_idle/spr_flower_idle.yy",
   },
   "spriteMaskId":{
-    "name":"flower_static_idle",
-    "path":"sprites/flower_static_idle/flower_static_idle.yy",
+    "name":"spr_flower_idle",
+    "path":"sprites/spr_flower_idle/spr_flower_idle.yy",
   },
   "visible":true,
 }

@@ -44,7 +44,7 @@ fric_air_speed = 0.3;
 
 
 //max speed
-move_y_max = 13;
+move_y_max = 6;
 move_x_max_final = 2;
 
 

@@ -3,6 +3,8 @@ if (!global.gamepaused) {
         case ENEMYSTATE.IDLE: enemy_idle(); break;
         case ENEMYSTATE.WAKEUP: enemy_awaken(); break;
         case ENEMYSTATE.DEATH: enemy_death(); break;
+        case ENEMYSTATE.WALK: enemy_movement(); break;    
+        case ENEMYSTATE.ATTACK: enemy_attack(); break;
     }
 }
 
