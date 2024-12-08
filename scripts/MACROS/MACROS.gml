@@ -17,11 +17,6 @@ enum PLAYERSTATE{
 
 enum ENEMYSTATE{
     IDLE,
-    WANDER,
-    CHASE,
-    ATTACK,
-    HURT,
-    DIE,
-    WAIT,
-    AWAKEN
+    WAKEUP,
+    DEATH
 }

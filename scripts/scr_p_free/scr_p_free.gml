@@ -11,10 +11,6 @@ function scr_p_free() {
     }
 
     //movement_y
-    var grv_final = grv;
-    var move_y_max_final = move_y_max;
-    move_y += grv_final;
-    move_y = clamp(move_y,-move_y_max_final,move_y_max_final);
     if (jump_buffer > 0) {
         jump_buffer--;
         if (key_jump) {

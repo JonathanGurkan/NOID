@@ -1,6 +1,6 @@
 function scr_p_dash() {
 	collision();
-    show_debug_message(string("aaaaaa"))
+   
  
     move_x = lengthdir_x(dash_speed,dash_direction)
     move_y = 0;

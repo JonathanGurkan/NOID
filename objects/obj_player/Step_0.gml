@@ -30,6 +30,4 @@ if (!global.gamepaused) {
         case PLAYERSTATE.DASH: scr_p_dash(); break;
         case PLAYERSTATE.ATTACK_BOW: scr_p_attack_bow(); break;
     }
-    invincible = max(invincible-1,0)
-    flash = max(flash-0.05,0)
 }

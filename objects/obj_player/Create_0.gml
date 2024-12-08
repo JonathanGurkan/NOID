@@ -22,7 +22,7 @@ sprite_idle = spr_player;
 //Movement variables
 last_x = 0;
 last_y = 0;
-move_x= 0 +1; 
+move_x= 0; 
 move_y = 0; 
 move_x_frac = 0;
 move_y_frac = 0;
@@ -80,7 +80,5 @@ if (global.target_x != -1) {
     y = global.target_x;
     direction = global.target_direction;
 }
-
-//enums
 
 hit_by_attack = ds_list_create();
