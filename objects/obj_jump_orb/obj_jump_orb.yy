@@ -9,8 +9,8 @@
   "name":"obj_jump_orb",
   "overriddenProperties":[],
   "parent":{
-    "name":"colliders",
-    "path":"folders/Objects/colliders.yy",
+    "name":"Colliders",
+    "path":"folders/Objects/Colliders.yy",
   },
   "parentObjectId":null,
   "persistent":false,
