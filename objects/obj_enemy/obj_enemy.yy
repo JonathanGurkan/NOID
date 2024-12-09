@@ -9,10 +9,8 @@
   "name":"obj_enemy",
   "overriddenProperties":[],
   "parent":{
-
     "name":"enemy",
     "path":"folders/Objects/enemy.yy",
-
   },
   "parentObjectId":null,
   "persistent":false,

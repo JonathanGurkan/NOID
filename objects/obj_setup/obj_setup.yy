@@ -10,8 +10,8 @@
   "name":"obj_setup",
   "overriddenProperties":[],
   "parent":{
-    "name":"Dynamic Light",
-    "path":"folders/Objects/Dynamic Light.yy",
+    "name":"dynamic_light",
+    "path":"folders/Objects/dynamic_light.yy",
   },
   "parentObjectId":null,
   "persistent":false,

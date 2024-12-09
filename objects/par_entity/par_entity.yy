@@ -9,8 +9,8 @@
   "name":"par_entity",
   "overriddenProperties":[],
   "parent":{
-    "name":"Parents",
-    "path":"folders/Objects/Parents.yy",
+    "name":"parents",
+    "path":"folders/Objects/parents.yy",
   },
   "parentObjectId":null,
   "persistent":false,

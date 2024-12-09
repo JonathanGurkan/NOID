@@ -23,7 +23,7 @@
   ],
   "name":"spr_textbox",
   "nineSlice":null,
-  "origin":9,
+  "origin":4,
   "parent":{
     "name":"UI",
     "path":"folders/Sprites/UI.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":40,
+    "xorigin":12,
     "yorigin":12,
   },
   "swatchColours":null,
