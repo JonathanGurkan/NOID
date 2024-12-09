@@ -6,8 +6,8 @@
   "name":"obj_light",
   "overriddenProperties":[],
   "parent":{
-    "name":"dynamic_light",
-    "path":"folders/Objects/dynamic_light.yy",
+    "name":"Dynamic Light",
+    "path":"folders/Objects/Dynamic Light.yy",
   },
   "parentObjectId":null,
   "persistent":false,

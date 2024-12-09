@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"tutorial_text",
+  "%Name":"movement_text",
   "eventList":[],
   "managed":true,
-  "name":"tutorial_text",
+  "name":"movement_text",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"GUI",
+    "path":"folders/Objects/GUI.yy",
   },
   "parentObjectId":null,
   "persistent":false,
