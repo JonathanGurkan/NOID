@@ -12,6 +12,7 @@ enum PLAYERSTATE{
     ATTACK,
     ATTACK_COMBO,
     ATTACK_BOW,
+    ATTACK_STRONG,
     DASH
 }
 

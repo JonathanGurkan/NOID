@@ -52,12 +52,12 @@ function scr_p_free() {
         dash_energy = dash_distance;
         state = PLAYERSTATE.DASH;
     }
-    if (key_sword && on_ground && can_attack) {
+    if (key_attack && on_ground && can_attack) {
         state = PLAYERSTATE.ATTACK
         can_attack = false; 
     }
-    if (key_bow){
-        state = PLAYERSTATE.ATTACK_BOW
+    if (key_attack_strong){
+        state = PLAYERSTATE.ATTACK_STRONG;
     }
 	if (key_use) {
             // Make an NPC face the player

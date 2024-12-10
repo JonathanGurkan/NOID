@@ -4,14 +4,14 @@ collision_map = layer_tilemap_get_id(layer_get_id("col"))
 
 //keybinds
 key_left = false;
-key_bow = false;
 key_dash = false;
 key_jump = false;
 key_right = false;
 key_jump_held = false;
 move = false;
 key_use = false;
-key_sword = false;
+key_attack = false;
+key_attack_strong = false;
 
 //sprites
 sprite_run = spr_player_r;
