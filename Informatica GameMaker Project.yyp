@@ -82,7 +82,6 @@
     {"id":{"name":"obj_ui","path":"objects/obj_ui/obj_ui.yy",},},
     {"id":{"name":"obj_wallclimb","path":"objects/obj_wallclimb/obj_wallclimb.yy",},},
     {"id":{"name":"par_entity","path":"objects/par_entity/par_entity.yy",},},
-    {"id":{"name":"tutorial_text","path":"objects/tutorial_text/tutorial_text.yy",},},
     {"id":{"name":"initial","path":"rooms/initial/initial.yy",},},
     {"id":{"name":"r_parent","path":"rooms/r_parent/r_parent.yy",},},
     {"id":{"name":"r_tutorial_1","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},},
