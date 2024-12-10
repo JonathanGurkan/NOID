@@ -12,6 +12,4 @@ if (!global.gamepaused) {
 enemy_logic();
 enemy_movement();
 collision();
-    show_debug_message(string(distance_to_p))
-	
-	if(enemy_hp <= 0) enemy_state = ENEMYSTATE.DEATH;
+    show_debug_message(string(enemy_state))
