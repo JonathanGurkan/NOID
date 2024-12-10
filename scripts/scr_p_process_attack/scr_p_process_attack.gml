@@ -13,7 +13,8 @@ function process_attack(sprite, mask) {
                 if(ds_list_find_index(hit_by_attack,hit_id) == -1){
                     ds_list_add(hit_by_attack,hit_id);
                     with(hit_id){
-                        enemy_death()
+                        --enemy_hp
+						
                     }
                 }
             }
