@@ -1,7 +1,9 @@
 {
   "$GMTileSet":"v1",
   "%Name":"TileSet3",
-  "autoTileSets":[],
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"autotile_1","closed_edge":false,"name":"autotile_1","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[0,163,165,164,199,181,0,201,0,0,183,0,200,0,0,182,],},
+  ],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
