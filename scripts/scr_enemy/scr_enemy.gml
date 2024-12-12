@@ -17,11 +17,9 @@ function enemy_logic(){
     
     if (distance_to_p < attack_distance){
             attack = true;
-        
         } else { 
             attack = false;
         }
-    
 
     if (direction_p > 90) {
         direction = -1
@@ -30,53 +28,52 @@ function enemy_logic(){
         direction = 1;
         image_xscale = 1;
     }
-    
-    
+ 
 }
 
-function  enemy_idle(){
-    sprite_index = spr_flower_idle;
-     
+function  enemy_idle(idle_sprite){
+    sprite_index = idle_sprite;
+    
     if(found_player){
         enemy_state = ENEMYSTATE.WAKEUP;
     }
 }
 
-function  enemy_awaken(){
-    sprite_index = spr_flower_acitvate;
+function  enemy_awaken(activate_sprite){
+    sprite_index = activate_sprite;
     
     if(!found_player){
         enemy_state = ENEMYSTATE.IDLE;
     }
-    if(follow_player){
-    enemy_state = ENEMYSTATE.WALK;
-    } 
 }
 
-function  enemy_movement(){
+function  enemy_movement(move_sprite){
     if(follow_player && !is_diying && !attack){
         x += image_xscale * walk_speed;
         image_speed = 1;
-        sprite_index = spr_flower_r;
+        sprite_index = move_sprite;
     }else{
         enemy_state = ENEMYSTATE.WAKEUP;
     }
     if(attack){
         enemy_state = ENEMYSTATE.ATTACK;
     }
+    if(enemy_hp <= 0){
+        enemy_state = ENEMYSTATE.DEATH;
+    }
+    
 }
 
-function enemy_attack(){
-    sprite_index = spr_flower_attack;
-    image_speed =1;
-    
-    mask_index = spr_flower_attack_hitbox
+function enemy_attack(attack_sprite, attack_mask){
+    sprite_index = attack_sprite;
+    image_speed = 1;
+    mask_index = attack_mask;
     
     var list = ds_list_create();
     var num = instance_place_list(x,y,obj_player,list,false)
     if(num > 0) show_debug_message("hit")
     ds_list_destroy(list)
-    mask_index = spr_flower_idle;
+    mask_index = image_index;
     
     if(!attack){
         enemy_state = ENEMYSTATE.WALK;
@@ -84,12 +81,15 @@ function enemy_attack(){
 }
 
 
-function enemy_death(){
+function enemy_death(death_sprite, not_die){
     is_diying = true
     sprite_index = spr_flower_death;
+    
+    if(not_die == false){
     if(animation_end()){
         instance_destroy();
     }
-    
-    
+    }
 }
+    
+    

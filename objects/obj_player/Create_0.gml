@@ -1,7 +1,6 @@
 state = PLAYERSTATE.FREE;
 collision_map = layer_tilemap_get_id(layer_get_id("col"))
 
-
 //keybinds
 key_left = false;
 key_dash = false;
@@ -16,6 +15,7 @@ key_attack_strong = false;
 //sprites
 sprite_run = spr_player_r;
 sprite_idle = spr_player;
+
 
 
 
@@ -58,7 +58,8 @@ dash_cool_x = 12;
 dash_cool_y = 50;
 dash_energy = 0;
 
-
+//stamina
+stamina = 10;
 
 
 //HP variables

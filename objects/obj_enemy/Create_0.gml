@@ -12,4 +12,5 @@ attack = false;
 wakeup_distance =150;
 canwalk_distance = 100;
 attack_distance = 20;
-
+enemy_hp = 2;
+on_ground = false;

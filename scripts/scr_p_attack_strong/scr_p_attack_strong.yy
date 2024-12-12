@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Script16",
+  "%Name":"scr_p_attack_strong",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Script16",
+  "name":"scr_p_attack_strong",
   "parent":{
     "name":"player_states",
     "path":"folders/Scripts/player_states.yy",

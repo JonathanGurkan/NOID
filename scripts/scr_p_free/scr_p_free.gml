@@ -44,15 +44,17 @@ function scr_p_free() {
         -- dash_cooldown;
     }
      
-    if (can_dash && key_dash &&  move_x != 0) {
+    if (can_dash && key_dash &&  move_x != 0 && stamina > 0) {
         dash_cooldown = dash_duration;
         can_dash = false;
         dash_direction =  point_direction(0,0,key_right-key_left,0);
         dash_speed = dash_distance / dash_time;
         dash_energy = dash_distance;
+        --stamina
         state = PLAYERSTATE.DASH;
     }
-    if (key_attack && on_ground && can_attack) {
+    if (key_attack && on_ground && can_attack && stamina > 0) {
+         --stamina;
         state = PLAYERSTATE.ATTACK
         can_attack = false; 
     }
@@ -64,4 +66,5 @@ function scr_p_free() {
     }
     
      scr_p_animation();
+
 }

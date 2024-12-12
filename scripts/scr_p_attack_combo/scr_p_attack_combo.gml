@@ -1,7 +1,8 @@
 function scr_p_attack_combo() {
     process_attack(spr_player_a_2,spr_player_a_2_hitbox)
         
-    if(key_attack) && (image_index > 2) {
+    if(key_attack) && (image_index > 2) && (stamina > 0){
+        --stamina;
         state = PLAYERSTATE.ATTACK;
         return;
     }

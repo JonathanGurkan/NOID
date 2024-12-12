@@ -30,3 +30,5 @@ if (!global.gamepaused) {
         case PLAYERSTATE.ATTACK_STRONG: scr_p_attack_strong(); break;
     }
 }
+
+show_debug_message(stamina)
