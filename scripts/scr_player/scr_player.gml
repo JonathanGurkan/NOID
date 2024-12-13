@@ -1,4 +1,3 @@
-function scr_player(){
 	function do_nothing() {
 	//ye, just do nothing
 	}
@@ -225,4 +224,3 @@ function scr_player(){
 	    scr_p_animation();
 	    collision();
 	}
-}
