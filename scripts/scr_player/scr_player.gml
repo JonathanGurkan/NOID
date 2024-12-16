@@ -74,7 +74,7 @@
 	        sprite_index = spr_player;
 	        state = PLAYERSTATE.FREE
 	        can_attack = true;
-	        obj_player.x += 64;
+	        obj_player.x += 64 * image_xscale;
 	    }
 	}
 	
