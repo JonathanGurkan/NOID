@@ -115,7 +115,10 @@
 	    move_x += dir * walk_acc;
 	    move_x = clamp(move_x,-move_x_max_final,move_x_max_final);
 	    var move_x_friction_final = fric_ground_speed;
-	    if (!on_ground) move_x_friction_final = fric_air_speed;
+	    if (!on_ground) {
+			move_x_friction_final = fric_air_speed;
+		}
+		
 	    if (dir == 0) {
 	        move_x = lerp(move_x, 0, move_x_friction_final); 
 	    }
@@ -130,7 +133,7 @@
 	    }
    
 	    if (move_y < 0) && (!key_jump_held){
-	        move_y = max(move_y, -jump_speed/4);
+	        move_y = max(move_y, -jump_speed/100);
 	    }
 	    move_x += move_x_frac;
 	    move_x_frac = frac(move_x)
