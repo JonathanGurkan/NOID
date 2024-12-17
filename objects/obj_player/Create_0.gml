@@ -62,6 +62,7 @@ dash_energy = 0;
 stamina = 10;
 stamina_timer = 150; //150/30 is 5 sec
 stamina_can_regen = true;
+use_stamina = false;
 
 
 //HP variables

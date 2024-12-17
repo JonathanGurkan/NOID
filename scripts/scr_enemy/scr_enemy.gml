@@ -28,6 +28,10 @@ function enemy_logic(){
         direction = 1;
         image_xscale = 1;
     }
+	
+	if(enemy_hp <= 0){
+    enemy_state = ENEMYSTATE.DEATH;
+    }
  
 }
 
@@ -59,9 +63,7 @@ function  enemy_movement(move_sprite){
     if(attack){
         enemy_state = ENEMYSTATE.ATTACK;
     }
-    if(enemy_hp <= 0){
-        enemy_state = ENEMYSTATE.DEATH;
-    }
+
     
 }
 

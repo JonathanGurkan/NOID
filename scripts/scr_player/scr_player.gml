@@ -37,7 +37,8 @@ function scr_p_attack() {
 	process_attack(spr_player_attack_1,spr_player_attack_1_hitbox)
     
 	if(key_attack) && (image_index > 2) && (stamina > 0){
-	    --stamina;
+	    use_stamia = true;
+		--stamina;
 	    state = PLAYERSTATE.ATTACK_COMBO;
 	    return;
 	}
@@ -157,14 +158,15 @@ function scr_p_free() {
 	if (stamina >= 10) stamina = 10;
 	if (stamina <= 0) stamina = 0;
 	
-	if (!stamina_can_regen) {
+	if (!stamina_can_regen && use_stamina) {
 		stamina = round(stamina);
 		--stamina_timer;
 	}
 	
-	if (key_attack || key_attack_strong || key_dash) {
+	if (use_stamina) {
 		stamina_timer = 150;
 		stamina_can_regen = false;
+		use_stamina = false;
 	}
 	
 	if (stamina_timer == 0) {
