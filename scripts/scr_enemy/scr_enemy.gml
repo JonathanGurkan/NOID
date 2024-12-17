@@ -32,8 +32,7 @@ function enemy_logic(){
 }
 
 function  enemy_idle(idle_sprite){
-    sprite_index = idle_sprite;
-    
+	sprite_index = idle_sprite;
     if(found_player){
         enemy_state = ENEMYSTATE.WAKEUP;
     }
@@ -41,17 +40,19 @@ function  enemy_idle(idle_sprite){
 
 function  enemy_awaken(activate_sprite){
     sprite_index = activate_sprite;
-    
-    if(!found_player){
+	if(follow_player){
+	enemy_state = ENEMYSTATE.WALK;
+	}
+    if(!found_player && !follow_player){
         enemy_state = ENEMYSTATE.IDLE;
     }
 }
 
 function  enemy_movement(move_sprite){
     if(follow_player && !is_diying && !attack){
+		sprite_index = move_sprite;
         x += image_xscale * walk_speed;
         image_speed = 1;
-        sprite_index = move_sprite;
     }else{
         enemy_state = ENEMYSTATE.WAKEUP;
     }
