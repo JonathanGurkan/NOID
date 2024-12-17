@@ -19,7 +19,7 @@ function scr_p_animation() {
 	        sprite_index = spr_player;
 	    } else {
 	        image_speed = 1;
-	        sprite_index =  spr_player_r;
+	        sprite_index =  spr_player_walk;
 	    } 
 	}
         
@@ -34,7 +34,7 @@ function scr_p_animation() {
 }
 	
 function scr_p_attack() {
-	process_attack(spr_player_a_1,spr_player_a_1_hitbox)
+	process_attack(spr_player_attack_1,spr_player_attack_1_hitbox)
     
 	if(key_attack) && (image_index > 2) && (stamina > 0){
 	    --stamina;
@@ -50,7 +50,7 @@ function scr_p_attack() {
 }
 	
 function scr_p_attack_combo() {
-	process_attack(spr_player_a_2,spr_player_a_2_hitbox)
+	process_attack(spr_player_attack_2,spr_player_attack_2_hitbox)
         
 	if(key_attack) && (image_index > 2) && (stamina > 0){
 	    --stamina;
@@ -67,7 +67,7 @@ function scr_p_attack_combo() {
 	
 function scr_p_attack_strong(){
 	if(stamina > 0){
-	process_attack(spr_player_a_strong,spr_player_a_strong_hitbox);
+	process_attack(spr_player_attack_strong,spr_player_attack_strong_hitbox);
 	}
     
 	if (animation_end()) {

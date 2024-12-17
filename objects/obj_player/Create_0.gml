@@ -13,7 +13,7 @@ key_attack = false;
 key_attack_strong = false;
 
 //sprites
-sprite_run = spr_player_r;
+sprite_run = spr_player_walk;
 sprite_idle = spr_player;
 
 
