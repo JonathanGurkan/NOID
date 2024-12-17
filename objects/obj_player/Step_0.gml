@@ -31,4 +31,4 @@ if (!global.gamepaused) {
     }
 }
 
-show_debug_message(stamina)
+show_debug_message("Stamina: " + string(stamina) + "           " + "Stamina Timer: " + string(stamina_timer))

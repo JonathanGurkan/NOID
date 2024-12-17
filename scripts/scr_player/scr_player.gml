@@ -34,27 +34,28 @@ function scr_p_animation() {
 }
 	
 function scr_p_attack() {
-	process_attack(spr_player_attack_1,spr_player_attack_1_hitbox)
+    if (stamina > 0) {
+	   process_attack(spr_player_attack_1,spr_player_attack_1_hitbox)
+    }
     
 	if(key_attack) && (image_index > 2) && (stamina > 0){
-	    use_stamia = true;
-		--stamina;
 	    state = PLAYERSTATE.ATTACK_COMBO;
 	    return;
 	}
 	
 	if (animation_end()) {
 		sprite_index = spr_player;
-		state = PLAYERSTATE.FREE;
-		    can_attack = true;
+		state = PLAYERSTATE.FREE; 
+        can_attack = true;
 	}
 }
 	
 function scr_p_attack_combo() {
-	process_attack(spr_player_attack_2,spr_player_attack_2_hitbox)
+    if (stamina > 0) {
+	   process_attack(spr_player_attack_2,spr_player_attack_2_hitbox)
+    }
         
 	if(key_attack) && (image_index > 2) && (stamina > 0){
-	    --stamina;
 	    state = PLAYERSTATE.ATTACK;
 	    return;
 	}
@@ -67,8 +68,8 @@ function scr_p_attack_combo() {
 }
 	
 function scr_p_attack_strong(){
-	if(stamina > 0){
-	process_attack(spr_player_attack_strong,spr_player_attack_strong_hitbox);
+	if(stamina > 0) { 
+        process_attack(spr_player_attack_strong,spr_player_attack_strong_hitbox);
 	}
     
 	if (animation_end()) {
@@ -79,10 +80,9 @@ function scr_p_attack_strong(){
 	}
 }
 	
-function scr_p_dash() {
-	collision();
-   
- 
+function scr_p_dash() { 
+    collision();
+    
 	move_x = lengthdir_x(dash_speed,dash_direction)
 	move_y = 0;
     
@@ -92,7 +92,6 @@ function scr_p_dash() {
 	    image_alpha = 0.7;
         
 	}
-    
     
 	dash_energy -= dash_speed
 	if(!place_meeting(x,y+1,collision_map)) {
@@ -151,23 +150,32 @@ function scr_p_free() {
 	}
 	
 	//Stamina logic
-	if (stamina_can_regen && stamina < 10) {
-		stamina += 0.03;
+	if (stamina_can_regen && stamina < 10 && stamina >= 0) {
+		stamina += 0.01666666667;
 	}
 	
 	if (stamina >= 10) stamina = 10;
 	if (stamina <= 0) stamina = 0;
 	
-	if (!stamina_can_regen && use_stamina) {
+	if (key_attack || key_attack_strong || key_dash) {
 		stamina = round(stamina);
-		--stamina_timer;
+        stamina_can_regen = false;
+        if(stamina != 0) {
+            stamina_timer = 120
+        } else {
+            stamina_timer = 60
+        }
 	}
-	
-	if (use_stamina) {
-		stamina_timer = 150;
-		stamina_can_regen = false;
-		use_stamina = false;
-	}
+    
+    if (key_dash) {
+       stamina = stamina - 0.5 
+    }
+    
+    
+    
+    if (!stamina_can_regen && stamina_timer <= 150 && stamina_timer > 0) {
+        --stamina_timer;
+    }
 	
 	if (stamina_timer == 0) {
 		stamina_can_regen = true;
@@ -178,7 +186,7 @@ function scr_p_free() {
 	    can_dash = true
 	} else {
 	    can_dash = false;
-	    -- dash_cooldown;
+	    --dash_cooldown;
 	}
      
 	if (can_dash && key_dash &&  move_x != 0 && stamina > 0) {
@@ -191,13 +199,14 @@ function scr_p_free() {
 	    state = PLAYERSTATE.DASH;
 	}
 	if (key_attack && on_ground && can_attack && stamina > 0) {
-	        --stamina;
+        --stamina
 	    state = PLAYERSTATE.ATTACK
 	    can_attack = false; 
 	}
 	
 	if (key_attack_strong) {
 	    state = PLAYERSTATE.ATTACK_STRONG;
+        stamina = stamina - 2;
 	}
 
 	if (key_use) {

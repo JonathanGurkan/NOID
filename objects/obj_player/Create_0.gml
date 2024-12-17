@@ -12,6 +12,7 @@ key_use = false;
 key_attack = false;
 key_attack_strong = false;
 
+
 //sprites
 sprite_run = spr_player_walk;
 sprite_idle = spr_player;
@@ -60,8 +61,8 @@ dash_energy = 0;
 
 //Stamina
 stamina = 10;
-stamina_timer = 150; //150/30 is 5 sec
-stamina_can_regen = true;
+stamina_timer = 120; //150/30 is 5 sec
+stamina_can_regen = false;
 use_stamina = false;
 
 
