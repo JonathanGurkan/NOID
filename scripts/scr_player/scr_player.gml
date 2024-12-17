@@ -109,7 +109,7 @@ function scr_p_dash() {
 }
 	
 function scr_p_free() {
-	//movement_x
+	//Movement x
 	var _move_x_max_final = move_x_max_final;
 	dir = key_right - key_left;
 	move_x += dir * walk_acc;
@@ -123,7 +123,7 @@ function scr_p_free() {
 	    move_x = lerp(move_x, 0, move_x_friction_final); 
 	}
 
-	//movement_y
+	//Movement y
 	if (jump_buffer > 0) {
 	    jump_buffer--;
 	    if (key_jump) {
@@ -149,7 +149,29 @@ function scr_p_free() {
 	    jump_buffer = 8;
 	}
 	
-	//key inputs
+	//Stamina logic
+	if (stamina_can_regen && stamina < 10) {
+		stamina += 0.03;
+	}
+	
+	if (stamina >= 10) stamina = 10;
+	if (stamina <= 0) stamina = 0;
+	
+	if (!stamina_can_regen) {
+		stamina = round(stamina);
+		--stamina_timer;
+	}
+	
+	if (key_attack || key_attack_strong || key_dash) {
+		stamina_timer = 150;
+		stamina_can_regen = false;
+	}
+	
+	if (stamina_timer == 0) {
+		stamina_can_regen = true;
+	}
+	
+	//Key inputs
 	if (dash_cooldown <= 0){
 	    can_dash = true
 	} else {
@@ -175,29 +197,11 @@ function scr_p_free() {
 	if (key_attack_strong) {
 	    state = PLAYERSTATE.ATTACK_STRONG;
 	}
-	
-	if (stamina_can_regen && stamina < 10) {
-		stamina += 0.03;	
-	} else {
-		frac(stamina)
-	}
-	
-	if (!stamina_can_regen) {
-		--stamina_timer;
-	}
-	
-	if (key_attack || key_attack_strong || key_dash) {
-		stamina_timer = 150;
-		stamina_can_regen = false;
-	}
-	
-	if (stamina_timer == 0) {
-		stamina_can_regen = true;
-	}
 
 	if (key_use) {
-	        // Make an NPC face the player
+	    
 	}
+	
 	
 	scr_p_animation();
 }
