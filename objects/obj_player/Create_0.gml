@@ -43,13 +43,13 @@ fric_ground_speed = 0.70;
 fric_air_speed = 0.3;
 
 
-//max speed
+//Max speed
 move_y_max = 6;
 move_x_max_final = 2;
 
 
 //Dash variables
-can_dash = 1;
+can_dash = true;
 dash_distance = 64;
 dash_time = 10;
 dash_duration = 20;
@@ -58,8 +58,10 @@ dash_cool_x = 12;
 dash_cool_y = 50;
 dash_energy = 0;
 
-//stamina
+//Stamina
 stamina = 10;
+stamina_timer = 150; //150/30 is 5 sec
+stamina_can_regen = true;
 
 
 //HP variables
@@ -69,7 +71,7 @@ flash_shader = sh_white;
 
 
 //Damage variables
-invincible = 0; 
+invincible = false; 
 invincibility_timer = 0;  
 inviancibility_duration = 60;
 

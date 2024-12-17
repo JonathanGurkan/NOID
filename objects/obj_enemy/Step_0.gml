@@ -9,7 +9,6 @@ if (!global.gamepaused) {
 }
 
 
-show_debug_message(enemy_state)
 on_ground = place_meeting(x,y+1,collision_map);
 
 enemy_logic();
