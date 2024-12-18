@@ -39,6 +39,7 @@ function scr_p_attack() {
     }
     
 	if(key_attack) && (image_index > 2) && (stamina > 0){
+		change_stamina(1);
 	    state = PLAYERSTATE.ATTACK_COMBO;
 	    return;
 	}
@@ -48,7 +49,6 @@ function scr_p_attack() {
 		sprite_index = spr_player;
 		state = PLAYERSTATE.FREE; 
         can_attack = true;
-		change_stamina(1)
 	}
 }
 	
@@ -58,6 +58,8 @@ function scr_p_attack_combo() {
     }
         
 	if(key_attack) && (image_index > 2) && (stamina > 0){
+		
+		change_stamina(1);
 	    state = PLAYERSTATE.ATTACK;
 	    return;
 	}
@@ -66,7 +68,6 @@ function scr_p_attack_combo() {
 	    sprite_index = spr_player;
 	    state = PLAYERSTATE.FREE;
 	    can_attack = true;
-		change_stamina(1)
 	}
 }
 	
@@ -79,7 +80,6 @@ function scr_p_attack_strong(){
 	    sprite_index = spr_player;
 	    state = PLAYERSTATE.FREE
 	    can_attack = true;
-		change_stamina(2);
 	    obj_player.x += 64 * image_xscale;
 	}
 }
@@ -196,11 +196,14 @@ function scr_p_free() {
 	}
 	
 	if (key_attack && on_ground && can_attack && stamina > 0) {
+		
+		change_stamina(1);
 	    state = PLAYERSTATE.ATTACK
 	    can_attack = false; 
 	}
 	
 	if (key_attack_strong) {
+		change_stamina(2)
 	    state = PLAYERSTATE.ATTACK_STRONG;
 	}
 
@@ -260,5 +263,5 @@ function scr_p_transition() {
 }
 
 function change_stamina(amount) {
-	stamina = stamina - amount;
+	stamina -= amount;
 }

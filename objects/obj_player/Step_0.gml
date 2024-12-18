@@ -31,4 +31,4 @@ if (!global.gamepaused) {
     }
 }
 
-show_debug_message("Stamina: " + string(stamina) + "           " + "Stamina Timer: " + string(stamina_timer))
+show_debug_message("Stamina: " + string(stamina) + "           " + "Stamina Timer: " + string(stamina_timer) + "         " + "click_count" + string(click) )

@@ -17,6 +17,8 @@ key_attack_strong = false;
 sprite_run = spr_player_walk;
 sprite_idle = spr_player;
 
+click = 0;
+
 
 
 
