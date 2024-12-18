@@ -1,4 +1,6 @@
-/// @description
-//Dash cooldown
-draw_sprite(spr_dash_cool, dash_cooldown * 1.5, dash_cool_x, dash_cool_y)
-draw_sprite(spr_bar, 1, 10, 10)
+//Healthbar
+draw_sprite(spr_bar, 1, 30, 20);
+
+//Stamina bar
+draw_sprite(spr_bar, 1, 30, 60);
+draw_sprite_stretched(spr_healthbar_health, abs(10 - (global.player_stamina / 10) - 1), 38, 68, (global.player_stamina / global.player_max_stamina), 10);
