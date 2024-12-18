@@ -43,10 +43,12 @@ function scr_p_attack() {
 	    return;
 	}
 	
+	
 	if (animation_end()) {
 		sprite_index = spr_player;
 		state = PLAYERSTATE.FREE; 
         can_attack = true;
+		change_stamina(1)
 	}
 }
 	
@@ -59,11 +61,12 @@ function scr_p_attack_combo() {
 	    state = PLAYERSTATE.ATTACK;
 	    return;
 	}
-        
+	
 	if (animation_end()) {
 	    sprite_index = spr_player;
 	    state = PLAYERSTATE.FREE;
 	    can_attack = true;
+		change_stamina(1)
 	}
 }
 	
@@ -71,11 +74,12 @@ function scr_p_attack_strong(){
 	if(stamina > 0) { 
         process_attack(spr_player_attack_strong,spr_player_attack_strong_hitbox);
 	}
-    
+	
 	if (animation_end()) {
 	    sprite_index = spr_player;
 	    state = PLAYERSTATE.FREE
 	    can_attack = true;
+		change_stamina(2);
 	    obj_player.x += 64 * image_xscale;
 	}
 }
@@ -90,9 +94,7 @@ function scr_p_dash() {
 	    sprite_index = other.sprite_index;
 	    image_blend = c_white;
 	    image_alpha = 0.7;
-        
 	}
-    
 	dash_energy -= dash_speed
 	if(!place_meeting(x,y+1,collision_map)) {
 	    sprite_index = spr_player_dash_air;
@@ -101,10 +103,11 @@ function scr_p_dash() {
 	    sprite_index = spr_player_dash_ground;
 	}
 	if (dash_energy <= 0) {
-	        move_x = 0;
-	        move_y = 0;
-	        can_dash  = true
-	        state = PLAYERSTATE.FREE;
+	    move_x = 0;
+	    move_y = 0;
+	    can_dash  = true
+	    state = PLAYERSTATE.FREE;
+		change_stamina(0.5)
 	}
 }
 	
@@ -158,7 +161,6 @@ function scr_p_free() {
 	if (stamina <= 0) stamina = 0;
 	
 	if (key_attack || key_attack_strong || key_dash) {
-		stamina = round(stamina);
         stamina_can_regen = false;
         if(stamina != 0) {
             stamina_timer = 120
@@ -166,11 +168,6 @@ function scr_p_free() {
             stamina_timer = 60
         }
 	}
-    
-    if (key_dash) {
-       stamina = stamina - 0.5 
-    }
-    
     
     
     if (!stamina_can_regen && stamina_timer <= 150 && stamina_timer > 0) {
@@ -195,18 +192,16 @@ function scr_p_free() {
 	    dash_direction =  point_direction(0,0,key_right-key_left,0);
 	    dash_speed = dash_distance / dash_time;
 	    dash_energy = dash_distance;
-	    --stamina
 	    state = PLAYERSTATE.DASH;
 	}
+	
 	if (key_attack && on_ground && can_attack && stamina > 0) {
-        --stamina
 	    state = PLAYERSTATE.ATTACK
 	    can_attack = false; 
 	}
 	
 	if (key_attack_strong) {
 	    state = PLAYERSTATE.ATTACK_STRONG;
-        stamina = stamina - 2;
 	}
 
 	if (key_use) {
@@ -262,4 +257,8 @@ function process_attack(sprite, mask) {
 function scr_p_transition() {
 	scr_p_animation();
 	collision();
+}
+
+function change_stamina(amount) {
+	stamina = stamina - amount;
 }
