@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_enemy_flamethrower",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_enemy_flamethrower",
+  "parent":{
+    "name":"enemy_states",
+    "path":"folders/Scripts/enemy_states.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
