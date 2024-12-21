@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"screenshake",
+  "%Name":"scr_enemy_attacks",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"screenshake",
+  "name":"scr_enemy_attacks",
   "parent":{
-    "name":"GUI",
-    "path":"folders/Scripts/enemy_states/GUI.yy",
+    "name":"enemy_states",
+    "path":"folders/Scripts/enemy_states.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

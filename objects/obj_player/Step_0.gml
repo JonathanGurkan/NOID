@@ -31,4 +31,3 @@ if (!global.gamepaused) {
     }
 }
 
-show_debug_message(stamina)
