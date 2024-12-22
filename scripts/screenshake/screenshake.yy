@@ -6,7 +6,7 @@
   "name":"screenshake",
   "parent":{
     "name":"GUI",
-    "path":"folders/Scripts/enemy_states/GUI.yy",
+    "path":"folders/Scripts/GUI.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

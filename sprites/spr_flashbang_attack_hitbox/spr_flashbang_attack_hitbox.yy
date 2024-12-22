@@ -32,7 +32,7 @@
   "origin":9,
   "parent":{
     "name":"hitbox",
-    "path":"folders/Sprites/enemy/flower/hitbox.yy",
+    "path":"folders/Sprites/enemy/flashbang/hitbox.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

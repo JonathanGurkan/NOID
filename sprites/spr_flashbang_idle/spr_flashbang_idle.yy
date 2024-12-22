@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"flower",
-    "path":"folders/Sprites/enemy/flower.yy",
+    "name":"flashbang",
+    "path":"folders/Sprites/enemy/flashbang.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

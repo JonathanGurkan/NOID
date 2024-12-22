@@ -30,21 +30,24 @@ function enemy_flashbang_global(){
             attack_player = false;
         }
     
-        
+    if (direction_p > 90) {
+        direction = -1
+        image_xscale = -1
+        } else {
+        direction = 1;
+        image_xscale = 1;
+        }
+    
     if(enemy_hp <= 0){
         enemy_state = ENEMYSTATE.DEATH;
     }
 
 }
 
-
-
-
 function enemy_flashbang_idle(){
     sprite_index = spr_flashbang_idle;
     
     if(found_player) enemy_state = ENEMYSTATE.ALERT;
-    
 }
 
 function enemy_flashbang_alerted(){
@@ -52,7 +55,6 @@ function enemy_flashbang_alerted(){
     
     if(follow_player) enemy_state = ENEMYSTATE.MOVE;
     if(!found_player && !follow_player) enemy_state = ENEMYSTATE.IDLE;
-    
 }
 
 function enemy_flashbang_movement(){ 
@@ -112,4 +114,3 @@ function enemy_flashbang_death(){
         instance_destroy();
     }
 }
-    

@@ -22,5 +22,6 @@ enum ENEMYSTATE{
     DEATH,
     MOVE,
     ATTACK,
-    EVADE
+    EVADE,
+    FALL
 }
