@@ -13,5 +13,3 @@ on_ground = place_meeting(x,y+1,collision_map);
 
 enemy_flamethrower_global();
 collision();
-
-show_debug_message(string(enemy_state) + "  " + string(follow_player));

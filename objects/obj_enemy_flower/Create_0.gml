@@ -20,8 +20,8 @@ is_diying = false;
 evade_player = false;
 
 //logic reals
-found_distance =100;
-follow_distance = 90;
+found_distance =150;
+follow_distance = 100;
 attack_distance = 10;
 evade_distance = 0;
 

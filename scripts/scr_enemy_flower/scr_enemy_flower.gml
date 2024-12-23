@@ -60,6 +60,7 @@ function enemy_flower_idle(){
 function enemy_flower_alerted(){
     sprite_index = spr_flower_alert;
     image_yscale = 1;
+    image_speed = 1;
     if(animation_end()){
         image_speed = 0;
     }
@@ -90,7 +91,6 @@ function enemy_flower_movement(){
     
     if(evade_player) enemy_state = ENEMYSTATE.EVADE; 
     if(attack_player) enemy_state = ENEMYSTATE.ATTACK;
-    if(!follow_player) enemy_state = ENEMYSTATE.IDLE;
 }
 
 function enemy_flower_evade(){
