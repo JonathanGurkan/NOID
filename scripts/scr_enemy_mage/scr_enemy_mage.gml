@@ -8,29 +8,42 @@ function enemy_mage_global(){
             follow_player = false;
         }
     
-    //player too close
-    if (distance_to_p < evade_distance && !attack_player){
-            evade_player = true;
-        }
-    if (distance_to_p > 50){
-            evade_player = false;
-        }
-    
     //attack range
     if (distance_to_p < attack_distance){
             attack_player = true;
         } else { 
             attack_player = false;
         }
-  
     
-    if(enemy_hp <= 0){
+    if (distance_to_p < shoot_distance){
+            shoot_player = true;
+        } else {
+            shoot_player = false;
+        }
+    
+    if (distance_to_p < evade_distance){
+            evade_player = true;
+        } else {
+            evade_player = false
+        }
+    
+    if (shoot_timer > 0) shoot_timer--;
+    if (shoot_timer <= 0){
+        can_shoot = true;
+    } else {
+        can_shoot = false;
+    }
+    
+    if (dash_timer >0) dash_timer--;
+    
+    if (enemy_hp <= 0){
         enemy_state = ENEMYSTATE.DEATH;
     }
 }
 
 function enemy_mage_idle(){
     sprite_index = spr_mage_idle;
+    last_state = ENEMYSTATE.IDLE;
     if(follow_player) enemy_state = ENEMYSTATE.MOVE;
 }
 
@@ -38,37 +51,29 @@ function enemy_mage_movement(){
     sprite_index = spr_mage_move;
     x += image_xscale * walk_speed;
     image_speed = 1;
-    
-    if(enemy_state != ENEMYSTATE.ATTACK){
-        if (direction_p > 90) {
-            direction = -1
-            image_xscale = -1
-            } else {
-            direction = 1;
-            image_xscale = 1;
-            }
-        }
+       
+    if (direction_p > 90) {
+    direction = -1
+    image_xscale = -1
+    } else {
+    direction = 1;
+    image_xscale = 1;
+    }
     
     if(evade_player) enemy_state = ENEMYSTATE.EVADE;
-    if(attack_player) enemy_state = ENEMYSTATE.ATTACK;
+    if(attack_player && !shoot_player && !can_shoot) enemy_state = ENEMYSTATE.ATTACK;
+    if(shoot_player && can_shoot) enemy_state = ENEMYSTATE.SHOOT; 
     if(!follow_player) enemy_state = ENEMYSTATE.IDLE;
 }
 
 function enemy_mage_shoot(){
-    sprite_index = spr_mage_move;
-    x -= image_xscale * walk_speed;
-    image_speed = 1;
     
-    if(attack_player){
-        enemy_state = ENEMYSTATE.ATTACK;
-    }
-    if(!evade_player) enemy_state = ENEMYSTATE.MOVE;
-}
-
-function enemy_mage_attack(){
-    if (!attack_initialized) {
-        sprite_index = spr_mage_attack;
-        mask_index = spr_mage_attack_hitbox;
+if (!attack_initialized) {
+    image_speed = 1;
+    image_index = 0;
+    last_state = ENEMYSTATE.SHOOT;
+        sprite_index = spr_mage_shoot;
+        mask_index = spr_mage_shoot_hitbox;
         if (direction_p > 90) {
                 direction = -1
                 image_xscale = -1
@@ -84,13 +89,58 @@ function enemy_mage_attack(){
         show_debug_message("hit");
         } 
         ds_list_destroy(list);
-        mask_index = spr_mage_idle;
         
-    if (animation_end()){
+    if (animation_end()){ 
+        mask_index = spr_flamethrower_idle;
         attack_initialized = false;
-        enemy_state = ENEMYSTATE.MOVE;
-        }
+        shoot_timer = shoot_cooldown;
+        enemy_state = ENEMYSTATE.EVADE;
     }
+}
+
+function enemy_mage_attack(){
+        sprite_index = spr_mage_attack;
+        mask_index = spr_mage_attack_hitbox;
+        last_state = ENEMYSTATE.ATTACK;
+    var list = ds_list_create();
+        var num = instance_place_list(x,y,obj_player,list,false)
+        if(num > 0){
+        show_debug_message("hit");
+        } 
+        ds_list_destroy(list);
+        mask_index = spr_mage_idle;
+    if (animation_end()){
+        dash_timer = dash_cooldown;
+        enemy_mage_dash();
+    }
+    
+}
+
+function enemy_mage_evade(){
+        sprite_index = spr_mage_move;
+        x -= image_xscale * walk_speed;
+        image_speed = 1;
+    
+    if(attack_player && !can_shoot && last_state != ENEMYSTATE.ATTACK) enemy_state = ENEMYSTATE.ATTACK;
+    if(shoot_player && can_shoot) enemy_state = ENEMYSTATE.SHOOT;
+    if(!evade_player && distance_to_p >= 130){
+        enemy_state = ENEMYSTATE.IDLE;
+    }
+}
+    
+function enemy_mage_dash() {
+    show_debug_message(string(dash_timer))
+    if (dash_timer > 0) {
+        move_x = -lengthdir_x(3, -image_xscale); // Dash backward based on image_xscale
+        move_y = 0; // No vertical movement during dash
+    } else {
+        // Reset movement and state after the dash
+        move_x = 0;
+        move_y = 0;
+        enemy_state = ENEMYSTATE.EVADE; // Set to EVADE state after dash completes
+    }
+}
+
 
 function enemy_mage_death(){
     is_diying = true

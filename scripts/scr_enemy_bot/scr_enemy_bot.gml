@@ -101,7 +101,7 @@ function enemy_bot_attack() {
     }
     ds_list_destroy(list);
 
-    if (animation_end()) {
+    if (animation_end(1)) {
         enemy_state = ENEMYSTATE.DEATH;
     }
 } 
@@ -110,7 +110,7 @@ function enemy_bot_death(){
     is_diying = true
     sprite_index = spr_flamethrower_death;
     
-    if(animation_end()){
+    if(animation_end(1)){
         instance_destroy();
     }
 }

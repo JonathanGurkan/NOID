@@ -38,8 +38,8 @@
     "path":"sprites/spr_mage_idle/spr_mage_idle.yy",
   },
   "spriteMaskId":{
-    "name":"spr_flamethrower_idle",
-    "path":"sprites/spr_flamethrower_idle/spr_flamethrower_idle.yy",
+    "name":"spr_mage_idle",
+    "path":"sprites/spr_mage_idle/spr_mage_idle.yy",
   },
   "visible":true,
 }

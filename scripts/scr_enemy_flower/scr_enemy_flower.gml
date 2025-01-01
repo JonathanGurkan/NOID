@@ -61,7 +61,7 @@ function enemy_flower_alerted(){
     sprite_index = spr_flower_alert;
     image_yscale = 1;
     image_speed = 1;
-    if(animation_end()){
+    if(animation_end(1)){
         image_speed = 0;
     }
     
@@ -74,13 +74,13 @@ function enemy_flower_fall(){
         image_speed = 1;
         was_activated = true;
         sprite_index = spr_flower_fall;
-        if (animation_end()) image_speed = 0;
+        if (animation_end(1)) image_speed = 0;
         }
         
     if (on_ground && was_activated){
         image_speed = 1;
         sprite_index = spr_flower_land;
-        if (animation_end()) enemy_state = ENEMYSTATE.MOVE;
+        if (animation_end(1)) enemy_state = ENEMYSTATE.MOVE;
     }
 }
 

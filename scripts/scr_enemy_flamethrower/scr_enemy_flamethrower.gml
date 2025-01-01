@@ -86,7 +86,7 @@ function enemy_flamethrower_attack(){
         ds_list_destroy(list);
         mask_index = spr_flamethrower_idle;
         
-    if (animation_end()){
+    if (animation_end(2)){
         attack_initialized = false;
         enemy_state = ENEMYSTATE.MOVE;
         }
@@ -96,7 +96,7 @@ function enemy_flamethrower_death(){
     is_diying = true
     sprite_index = spr_flamethrower_death;
     
-    if(animation_end()){
+    if(animation_end(1)){
         instance_destroy();
     }
 }
