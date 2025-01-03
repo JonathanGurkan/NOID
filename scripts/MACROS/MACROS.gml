@@ -24,5 +24,6 @@ enum ENEMYSTATE{
     ATTACK,
     EVADE,
     FALL,
-    SHOOT
+    SHOOT,
+    DODGE
 }

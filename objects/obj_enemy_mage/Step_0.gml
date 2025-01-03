@@ -6,11 +6,13 @@ if (!global.gamepaused) {
         case ENEMYSTATE.ATTACK: enemy_mage_attack(); break;
         case ENEMYSTATE.SHOOT: enemy_mage_shoot(); break;
         case ENEMYSTATE.EVADE: enemy_mage_evade(); break;
+        case ENEMYSTATE.DODGE: enemy_mage_dodge(); break;
     }
 }
 
 
 on_ground = place_meeting(x,y+1,collision_map);
+
 
 
 enemy_mage_global();

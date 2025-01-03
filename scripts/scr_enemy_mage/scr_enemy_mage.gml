@@ -34,7 +34,7 @@ function enemy_mage_global(){
         can_shoot = false;
     }
     
-    if (dash_timer >0) dash_timer--;
+    if (dash_timer > 0) dash_timer--;
     
     if (enemy_hp <= 0){
         enemy_state = ENEMYSTATE.DEATH;
@@ -99,6 +99,7 @@ if (!attack_initialized) {
 }
 
 function enemy_mage_attack(){
+        image_speed = 1;
         sprite_index = spr_mage_attack;
         mask_index = spr_mage_attack_hitbox;
         last_state = ENEMYSTATE.ATTACK;
@@ -111,7 +112,8 @@ function enemy_mage_attack(){
         mask_index = spr_mage_idle;
     if (animation_end()){
         dash_timer = dash_cooldown;
-        enemy_mage_dash();
+        show_debug_message("miauw")
+        enemy_state = ENEMYSTATE.DODGE;
     }
     
 }
@@ -128,8 +130,9 @@ function enemy_mage_evade(){
     }
 }
     
-function enemy_mage_dash() {
-    show_debug_message(string(dash_timer))
+function enemy_mage_dodge() {
+    sprite_index = spr_mage_idle;
+    image_speed = 0;
     if (dash_timer > 0) {
         move_x = -lengthdir_x(3, -image_xscale); // Dash backward based on image_xscale
         move_y = 0; // No vertical movement during dash
