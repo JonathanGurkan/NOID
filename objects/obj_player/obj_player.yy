@@ -35,12 +35,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player",
-    "path":"sprites/spr_player/spr_player.yy",
+    "name":"spr_swordmaster",
+    "path":"sprites/spr_swordmaster/spr_swordmaster.yy",
   },
   "spriteMaskId":{
-    "name":"spr_player",
-    "path":"sprites/spr_player/spr_player.yy",
+    "name":"spr_swordmaster",
+    "path":"sprites/spr_swordmaster/spr_swordmaster.yy",
   },
   "visible":true,
 }
