@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"Sword_Master_Sprite_Sheet_90x37",
   "bboxMode":0,
-  "bbox_bottom":995,
+  "bbox_bottom":996,
   "bbox_left":0,
-  "bbox_right":875,
+  "bbox_right":889,
   "bbox_top":10,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -14,8 +14,8 @@
   "frames":[
     {"$GMSpriteFrame":"","%Name":"5136ca8c-b3e3-4d91-95b5-9c2e50a451a3","name":"5136ca8c-b3e3-4d91-95b5-9c2e50a451a3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
+  "gridX":90,
+  "gridY":37,
   "height":999,
   "HTile":false,
   "layers":[
