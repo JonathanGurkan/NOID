@@ -133,6 +133,12 @@ function enemy_mage_evade(){
 function enemy_mage_dodge() {
     sprite_index = spr_mage_idle;
     image_speed = 0;
+    with(instance_create_depth(x,y,depth+1,obj_trail)){
+            sprite_index = other.sprite_index;
+            image_blend = c_white;
+            image_alpha = 0.7;
+            
+        }
     if (dash_timer > 0) {
         move_x = -lengthdir_x(3, -image_xscale); // Dash backward based on image_xscale
         move_y = 0; // No vertical movement during dash
