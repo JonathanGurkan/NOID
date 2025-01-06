@@ -32,8 +32,7 @@ if (!global.gamepaused) {
     }
 }
 
-show_debug_message(stamina)
-
 if(keyboard_check_pressed((ord("L")))){
     stamina_timer = 0;
 }
+

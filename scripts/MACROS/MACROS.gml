@@ -18,8 +18,12 @@ enum PLAYERSTATE{
 
 enum ENEMYSTATE{
     IDLE,
-    WAKEUP,
+    ALERT,
     DEATH,
-    WALK,
-    ATTACK
+    MOVE,
+    ATTACK,
+    EVADE,
+    FALL,
+    SHOOT,
+    DODGE
 }
