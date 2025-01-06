@@ -38,6 +38,7 @@
     {"$GMFolder":"","%Name":"cave parralax","folderPath":"folders/Sprites/backgrounds/cave parralax.yy","name":"cave parralax","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"colliders","folderPath":"folders/Sprites/colliders.yy","name":"colliders","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"enemy","folderPath":"folders/Sprites/enemy.yy","name":"enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"hitboxes","folderPath":"folders/Sprites/player/hitboxes.yy","name":"hitboxes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"BOT","folderPath":"folders/Sprites/enemy/BOT.yy","name":"BOT","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"hitbox","folderPath":"folders/Sprites/enemy/BOT/hitbox.yy","name":"hitbox","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"flamethrower","folderPath":"folders/Sprites/enemy/flamethrower.yy","name":"flamethrower","resourceType":"GMFolder","resourceVersion":"2.0",},
