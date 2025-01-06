@@ -24,11 +24,16 @@ if  (keyboard_check_pressed(ord("H"))){
 if (!global.gamepaused) {
     switch (state) {
         case PLAYERSTATE.FREE: scr_p_free(); break;
-        case PLAYERSTATE.ATTACK: scr_p_attack(); break;
-        case PLAYERSTATE.ATTACK_COMBO: scr_p_attack_combo(); break; 
+        case PLAYERSTATE.ATTACK_1: scr_p_attack_1(); break;
+        case PLAYERSTATE.ATTACK_2: scr_p_attack_2(); break; 
+        case PLAYERSTATE.ATTACK_3: scr_p_attack_3(); break;
         case PLAYERSTATE.DASH: scr_p_dash(); break;
         case PLAYERSTATE.ATTACK_STRONG: scr_p_attack_strong(); break;
     }
 }
 
 show_debug_message(stamina)
+
+if(keyboard_check_pressed((ord("L")))){
+    stamina_timer = 0;
+}

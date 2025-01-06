@@ -30,7 +30,7 @@
   "origin":9,
   "parent":{
     "name":"hitboxes",
-    "path":"folders/Sprites/enemy/boss/swordmaster/hitboxes.yy",
+    "path":"folders/Sprites/player/hitboxes.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

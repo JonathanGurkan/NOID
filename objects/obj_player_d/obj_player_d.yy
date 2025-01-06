@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_swordmaster_death",
-    "path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",
+    "name":"spr_player_death",
+    "path":"sprites/spr_player_death/spr_player_death.yy",
   },
   "spriteMaskId":null,
   "visible":true,

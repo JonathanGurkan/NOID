@@ -9,9 +9,9 @@
 
 enum PLAYERSTATE{
     FREE,
-    ATTACK,
-    ATTACK_COMBO,
-    ATTACK_BOW,
+    ATTACK_1,
+    ATTACK_2,
+    ATTACK_3,
     ATTACK_STRONG,
     DASH
 }
