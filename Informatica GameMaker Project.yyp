@@ -208,7 +208,6 @@
     {"id":{"name":"spr_player_teleport_out","path":"sprites/spr_player_teleport_out/spr_player_teleport_out.yy",},},
     {"id":{"name":"spr_player_top","path":"sprites/spr_player_top/spr_player_top.yy",},},
     {"id":{"name":"spr_player_up","path":"sprites/spr_player_up/spr_player_up.yy",},},
-    {"id":{"name":"spr_pot","path":"sprites/spr_pot/spr_pot.yy",},},
     {"id":{"name":"spr_swordmaster_attack_1","path":"sprites/spr_swordmaster_attack_1/spr_swordmaster_attack_1.yy",},},
     {"id":{"name":"spr_swordmaster_attack_2","path":"sprites/spr_swordmaster_attack_2/spr_swordmaster_attack_2.yy",},},
     {"id":{"name":"spr_swordmaster_attack_strong","path":"sprites/spr_swordmaster_attack_strong/spr_swordmaster_attack_strong.yy",},},
