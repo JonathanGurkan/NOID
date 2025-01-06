@@ -1,4 +1,5 @@
 state = PLAYERSTATE.FREE;
+last_state = PLAYERSTATE.FREE;
 collision_map = layer_tilemap_get_id(layer_get_id("col"))
 
 //keybinds
@@ -11,10 +12,6 @@ move = false;
 key_use = false;
 key_attack = false;
 key_attack_strong = false;
-
-//sprites
-sprite_run = spr_player_walk;
-sprite_idle = spr_player;
 
 
 
@@ -44,8 +41,10 @@ fric_air_speed = 0.3;
 
 
 //Max speed
+walk_speed = 2;
+run_speed = 3;
 move_y_max = 6;
-move_x_max_final = 2;
+move_x_max_final = walk_speed;
 
 
 //Dash variables
