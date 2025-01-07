@@ -9,17 +9,21 @@
 
 enum PLAYERSTATE{
     FREE,
-    ATTACK,
-    ATTACK_COMBO,
-    ATTACK_BOW,
-    ATTACK_STRONG,
+    ATTACK_1,
+    ATTACK_2,
+    ATTACK_3,
+    PARRY,
     DASH
 }
 
 enum ENEMYSTATE{
     IDLE,
-    WAKEUP,
+    ALERT,
     DEATH,
-    WALK,
-    ATTACK
+    MOVE,
+    ATTACK,
+    EVADE,
+    FALL,
+    SHOOT,
+    DODGE
 }
