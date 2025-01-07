@@ -9,7 +9,7 @@ var _vb = vb;
 gpu_set_ztestenable(1);
 gpu_set_zwriteenable(1);
 var _z = 0;
-with(obj_light){
+with(obj_light) {
 
     //Draw the shadows (AKA light blockers)
     shader_set(sh_shadow);

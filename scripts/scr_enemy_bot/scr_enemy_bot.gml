@@ -1,30 +1,30 @@
-function enemy_bot_global(){
+function enemy_bot_global() {
     distance_to_p = distance_to_object(obj_player);
     direction_p = point_direction(x,y,obj_player.x, obj_player.y);
     //wakeup
-    if (distance_to_p < found_distance){
+    if (distance_to_p < found_distance) {
         found_player = true;
         } else { 
         found_player = false;
         }
     
     //follow
-    if (distance_to_p < follow_distance){
+    if (distance_to_p < follow_distance) {
             follow_player = true;
         } else { 
             follow_player = false;
         }
     
     //player too close
-    if (distance_to_p < evade_distance && !attack_player){
+    if (distance_to_p < evade_distance && !attack_player) {
             evade_player = true;
         }
-    if (distance_to_p > 50){
+    if (distance_to_p > 50) {
             evade_player = false;
         }
     
     //attack range
-    if (distance_to_p < attack_distance){
+    if (distance_to_p < attack_distance) {
             attack_player = true;
         } else { 
             attack_player = false;
@@ -38,45 +38,45 @@ function enemy_bot_global(){
         image_xscale = 1;
         }
     
-    if(enemy_hp <= 0){
+    if (enemy_hp <= 0) {
         enemy_state = ENEMYSTATE.DEATH;
     }
 
 }
 
-function enemy_bot_idle(){
+function enemy_bot_idle() {
     sprite_index = spr_bot_idle;
     
-    if(found_player) enemy_state = ENEMYSTATE.ALERT;
+    if (found_player) enemy_state = ENEMYSTATE.ALERT;
 }
 
-function enemy_bot_alerted(){
+function enemy_bot_alerted() {
     sprite_index = spr_bot_alert;
     
-    if(follow_player) enemy_state = ENEMYSTATE.MOVE;
-    if(!found_player && !follow_player) enemy_state = ENEMYSTATE.IDLE;
+    if (follow_player) enemy_state = ENEMYSTATE.MOVE;
+    if (!found_player && !follow_player) enemy_state = ENEMYSTATE.IDLE;
 }
 
-function enemy_bot_movement(){ 
+function enemy_bot_movement() { 
     sprite_index = spr_bot_move;
     x += image_xscale * walk_speed;
     image_speed = 1;
     
-    if(evade_player) enemy_state = ENEMYSTATE.EVADE; 
-    if(attack_player) enemy_state = ENEMYSTATE.ATTACK;
-    if(!follow_player) enemy_state = ENEMYSTATE.ALERT;
+    if (evade_player) enemy_state = ENEMYSTATE.EVADE; 
+    if (attack_player) enemy_state = ENEMYSTATE.ATTACK;
+    if (!follow_player) enemy_state = ENEMYSTATE.ALERT;
 }
 
-function enemy_bot_evade(){
+function enemy_bot_evade() {
     sprite_index = spr_bot_move;
     x -= image_xscale * walk_speed;
     image_speed = 1;
     
     
-    if(attack_player){
+    if (attack_player) {
         enemy_state = ENEMYSTATE.ATTACK;
     }
-        if(!evade_player) enemy_state = ENEMYSTATE.MOVE;
+        if (!evade_player) enemy_state = ENEMYSTATE.MOVE;
 }
     
 function enemy_bot_attack() {
@@ -106,11 +106,11 @@ function enemy_bot_attack() {
     }
 } 
 
-function enemy_bot_death(){
+function enemy_bot_death() {
     is_diying = true
     sprite_index = spr_flamethrower_death;
     
-    if(animation_end()){
+    if (animation_end()) {
         instance_destroy();
     }
 }

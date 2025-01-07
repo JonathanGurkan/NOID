@@ -150,7 +150,6 @@
     {"id":{"name":"spr_bot_idle","path":"sprites/spr_bot_idle/spr_bot_idle.yy",},},
     {"id":{"name":"spr_bot_move","path":"sprites/spr_bot_move/spr_bot_move.yy",},},
     {"id":{"name":"spr_bullet_1","path":"sprites/spr_bullet_1/spr_bullet_1.yy",},},
-    {"id":{"name":"spr_dash_cool","path":"sprites/spr_dash_cool/spr_dash_cool.yy",},},
     {"id":{"name":"spr_door_closed","path":"sprites/spr_door_closed/spr_door_closed.yy",},},
     {"id":{"name":"spr_door_open","path":"sprites/spr_door_open/spr_door_open.yy",},},
     {"id":{"name":"spr_door_opening","path":"sprites/spr_door_opening/spr_door_opening.yy",},},

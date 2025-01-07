@@ -1,34 +1,34 @@
-function enemy_mage_global(){
+function enemy_mage_global() {
     distance_to_p = distance_to_object(obj_player);
     direction_p = point_direction(x,y,obj_player.x, obj_player.y);
     //follow
-    if (distance_to_p < follow_distance){
+    if (distance_to_p < follow_distance) {
             follow_player = true;
         } else { 
             follow_player = false;
         }
     
     //attack range
-    if (distance_to_p < attack_distance){
+    if (distance_to_p < attack_distance) {
             attack_player = true;
         } else { 
             attack_player = false;
         }
     
-    if (distance_to_p < shoot_distance){
+    if (distance_to_p < shoot_distance) {
             shoot_player = true;
         } else {
             shoot_player = false;
         }
     
-    if (distance_to_p < evade_distance){
+    if (distance_to_p < evade_distance) {
             evade_player = true;
         } else {
             evade_player = false
         }
     
     if (shoot_timer > 0) shoot_timer--;
-    if (shoot_timer <= 0){
+    if (shoot_timer <= 0) {
         can_shoot = true;
     } else {
         can_shoot = false;
@@ -36,18 +36,18 @@ function enemy_mage_global(){
     
     if (dash_timer > 0) dash_timer--;
     
-    if (enemy_hp <= 0){
+    if (enemy_hp <= 0) {
         enemy_state = ENEMYSTATE.DEATH;
     }
 }
 
-function enemy_mage_idle(){
+function enemy_mage_idle() {
     sprite_index = spr_mage_idle;
     last_state = ENEMYSTATE.IDLE;
-    if(follow_player) enemy_state = ENEMYSTATE.MOVE;
+    if (follow_player) enemy_state = ENEMYSTATE.MOVE;
 }
 
-function enemy_mage_movement(){ 
+function enemy_mage_movement() { 
     sprite_index = spr_mage_move;
     x += image_xscale * walk_speed;
     image_speed = 1;
@@ -60,13 +60,13 @@ function enemy_mage_movement(){
     image_xscale = 1;
     }
     
-    if(evade_player) enemy_state = ENEMYSTATE.EVADE;
-    if(attack_player && !shoot_player && !can_shoot) enemy_state = ENEMYSTATE.ATTACK;
-    if(shoot_player && can_shoot) enemy_state = ENEMYSTATE.SHOOT; 
-    if(!follow_player) enemy_state = ENEMYSTATE.IDLE;
+    if (evade_player) enemy_state = ENEMYSTATE.EVADE;
+    if (attack_player && !shoot_player && !can_shoot) enemy_state = ENEMYSTATE.ATTACK;
+    if (shoot_player && can_shoot) enemy_state = ENEMYSTATE.SHOOT; 
+    if (!follow_player) enemy_state = ENEMYSTATE.IDLE;
 }
 
-function enemy_mage_shoot(){
+function enemy_mage_shoot() {
     
 if (!attack_initialized) {
     image_speed = 1;
@@ -85,12 +85,12 @@ if (!attack_initialized) {
         } 
     var list = ds_list_create();
         var num = instance_place_list(x,y,obj_player,list,false)
-        if(num > 0){
+        if (num > 0) {
         show_debug_message("hit");
         } 
         ds_list_destroy(list);
         
-    if (animation_end()){ 
+    if (animation_end()) { 
         mask_index = spr_flamethrower_idle;
         attack_initialized = false;
         shoot_timer = shoot_cooldown;
@@ -98,32 +98,32 @@ if (!attack_initialized) {
     }
 }
 
-function enemy_mage_attack(){
+function enemy_mage_attack() {
         image_speed = 1;
         sprite_index = spr_mage_attack;
         mask_index = spr_mage_attack_hitbox;
         last_state = ENEMYSTATE.ATTACK;
     var list = ds_list_create();
         var num = instance_place_list(x,y,obj_player,list,false)
-        if(num > 0){
+        if (num > 0) {
         show_debug_message("hit");
         } 
         ds_list_destroy(list);
         mask_index = spr_mage_idle;
-    if (animation_end()){
+    if (animation_end()) {
         dash_timer = dash_cooldown;
         enemy_state = ENEMYSTATE.DODGE;
     }
 }
 
-function enemy_mage_evade(){
+function enemy_mage_evade() {
         sprite_index = spr_mage_move;
         x -= image_xscale * walk_speed;
         image_speed = 1;
     
-    if(attack_player && !can_shoot && last_state != ENEMYSTATE.ATTACK) enemy_state = ENEMYSTATE.ATTACK;
-    if(shoot_player && can_shoot) enemy_state = ENEMYSTATE.SHOOT;
-    if(!evade_player && distance_to_p >= 130){
+    if (attack_player && !can_shoot && last_state != ENEMYSTATE.ATTACK) enemy_state = ENEMYSTATE.ATTACK;
+    if (shoot_player && can_shoot) enemy_state = ENEMYSTATE.SHOOT;
+    if (!evade_player && distance_to_p >= 130) {
         enemy_state = ENEMYSTATE.IDLE;
     }
 }
@@ -131,7 +131,7 @@ function enemy_mage_evade(){
 function enemy_mage_dodge() {
     sprite_index = spr_mage_idle;
     image_speed = 0;
-    with(instance_create_depth(x,y,depth+1,obj_trail)){
+    with(instance_create_depth(x,y,depth+1,obj_trail)) {
             sprite_index = other.sprite_index;
             image_blend = c_white;
             image_alpha = 0.7;
@@ -149,11 +149,11 @@ function enemy_mage_dodge() {
 }
 
 
-function enemy_mage_death(){
+function enemy_mage_death() {
     is_diying = true
     sprite_index = spr_mage_death;
     
-    if(animation_end()){
+    if (animation_end()) {
         instance_destroy();
     }
 }

@@ -12,11 +12,11 @@ on_ground = place_meeting(x,y+1,collision_map);
 
 //reset room om 0 hp / r pressed
 //to reset game press T
-if  (keyboard_check(ord("R"))){
+if (keyboard_check(ord("R"))) {
     room_restart();
 }
 
-if  (keyboard_check_pressed(ord("H"))){
+if (keyboard_check_pressed(ord("H"))) {
     screenshake(3, 60);
 }
 
@@ -32,6 +32,6 @@ if (!global.gamepaused) {
     }
 }
 
-if(keyboard_check_pressed((ord("L")))){
+if (keyboard_check_pressed((ord("L")))) {
     stamina_timer = 0;
 }

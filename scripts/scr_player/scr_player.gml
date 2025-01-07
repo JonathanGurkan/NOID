@@ -3,12 +3,12 @@ function do_nothing() {
 }
 	
 function scr_p_animation() {
-	if(!on_ground){
+	if (!on_ground) {
 	if (move_y < 0) {
 	    sprite_index = spr_player_up;
 	} 
     
-	if (move_y > 0){
+	if (move_y > 0) {
 	    sprite_index = spr_player_down;
         
 	}
@@ -18,7 +18,7 @@ function scr_p_animation() {
 	    if (move_x == 0) {
 	        sprite_index = spr_player_idle;
 	    } else {
-            if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift)){
+            if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift)) {
                 show_debug_message("aaaaaaa")
             image_speed = 1;
             sprite_index = spr_player_move_3;
@@ -44,7 +44,7 @@ function scr_p_attack_1() {
 	   process_attack(spr_player_attack_1,spr_player_attack_1_hitbox)
     }
     
-	if(key_attack) && (image_index > 2) && (global.player_stamina > 0){
+	if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
        change_stamina(5);
 	    state = PLAYERSTATE.ATTACK_2;
 
@@ -64,7 +64,7 @@ function scr_p_attack_2() {
 	   process_attack(spr_player_attack_2,spr_player_attack_2_hitbox)
     }
         
-  if(key_attack) && (image_index > 2) && (global.player_stamina > 0){
+  if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
 	    change_stamina(5);
 	    state = PLAYERSTATE.ATTACK_3;
 	    return;
@@ -80,7 +80,7 @@ function scr_p_attack_2() {
 function scr_p_attack_3() {
     process_attack(spr_player_attack_3,spr_player_attack_3_hitbox)
         
-    if(key_attack) && (image_index > 2) && (stamina > 0){
+    if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
         change_stamina(5)
         state = PLAYERSTATE.ATTACK_1;
         return;
@@ -91,11 +91,10 @@ function scr_p_attack_3() {
         state = PLAYERSTATE.FREE;
         can_attack = true;
     }
-}
-    
+}    
 	
-function scr_p_attack_strong(){
-	if(global.player_stamina > 0) { 
+function scr_p_attack_strong() {
+	if (global.player_stamina > 0) { 
         process_attack(spr_player_attack_strong,spr_player_attack_strong_hitbox);
 	}
 	
@@ -114,7 +113,7 @@ function scr_p_dash() {
 	move_x = lengthdir_x(dash_speed,dash_direction)
 	move_y = 0;
     
-	with(instance_create_depth(x,y,depth+1,obj_trail)){
+	with(instance_create_depth(x,y,depth+1,obj_trail)) {
         var angle = point_direction(x, y, mouse_x, mouse_y);
                 if (angle > 90 && angle < 270) {
                         image_xscale = -1;
@@ -126,7 +125,7 @@ function scr_p_dash() {
 	    image_alpha = 0.7;
 	}
 	dash_energy -= dash_speed
-	if(!place_meeting(x,y+1,collision_map)) {
+	if (!place_meeting(x,y+1,collision_map)) {
 	    sprite_index = spr_player_dash;
 	} else {
 	    image_speed = 1
@@ -166,7 +165,7 @@ function scr_p_free() {
 	    }
 	}
    
-	if (move_y < 0) && (!key_jump_held){
+	if (move_y < 0) && (!key_jump_held) {
 	    move_y = max(move_y, -jump_speed/100);
 	}
 	move_x += move_x_frac;
@@ -193,7 +192,7 @@ function scr_p_free() {
 	
 	if (key_attack || key_attack_strong || key_dash) {
         stamina_can_regen = false;
-        if(global.player_stamina != 0) {
+        if (global.player_stamina != 0) {
             stamina_timer = 60
         } else {
             stamina_timer = 30
@@ -210,7 +209,7 @@ function scr_p_free() {
 	}
 	
 	//Key inputs
-	if (dash_cooldown <= 0){
+	if (dash_cooldown <= 0) {
 	    can_dash = true
 	} else {
 	    can_dash = false;
@@ -228,8 +227,8 @@ function scr_p_free() {
 	}
 
     
-    if(on_ground){
-      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina > 0){
+    if (on_ground) {
+      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina > 0) {
          move_x_max_final = run_speed;
           global.player_stamina -= 0.05;
       } else {
@@ -239,7 +238,7 @@ function scr_p_free() {
     
 	if (key_attack && on_ground && can_attack && global.player_stamina > 0) {
 		change_stamina(5);
-	    state = PLAYERSTATE.ATTACK
+	    state = PLAYERSTATE.ATTACK_1
 	    can_attack = false; 
 	}
 	
@@ -274,7 +273,7 @@ function scr_p_hurt(damage) {
 }
 	
 function process_attack(sprite, mask) {
-	if (sprite_index != sprite){
+	if (sprite_index != sprite) {
 	        sprite_index = sprite;
 	        image_index = 0;
 	        ds_list_clear(hit_by_attack)
@@ -282,12 +281,12 @@ function process_attack(sprite, mask) {
 	    mask_index = mask;
 	    var hit_by_attack_now = ds_list_create();
 	    var hits = instance_place_list(x,y,par_enemy,hit_by_attack_now,false)
-	    if (hits > 0){
-	        for (var i = 0; i < hits; i++){
+	    if (hits > 0) {
+	        for (var i = 0; i < hits; i++) {
 	            var hit_id = hit_by_attack_now[| i];
-	            if(ds_list_find_index(hit_by_attack,hit_id) == -1){
+	            if (ds_list_find_index(hit_by_attack,hit_id) == -1) {
 	                ds_list_add(hit_by_attack,hit_id);
-	                with(hit_id){
+	                with(hit_id) {
 	                    --enemy_hp
 	                }
 	            }
