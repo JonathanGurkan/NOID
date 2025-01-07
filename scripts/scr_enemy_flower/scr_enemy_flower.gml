@@ -121,7 +121,6 @@ function enemy_flower_attack() {
     var list = ds_list_create();
     var num = instance_place_list(x, y, obj_player, list, false);
     if (num > 0) { 
-        show_debug_message("flash");
     }
     ds_list_destroy(list);
 } 
