@@ -39,7 +39,7 @@ function scr_p_attack() {
     }
     
 	if(key_attack) && (image_index > 2) && (global.player_stamina > 0){
-		change_stamina(1);
+		change_stamina(5);
 	    state = PLAYERSTATE.ATTACK_COMBO;
 	    return;
 	}
@@ -59,7 +59,7 @@ function scr_p_attack_combo() {
         
 	if(key_attack) && (image_index > 2) && (global.player_stamina > 0){
 		
-		change_stamina(1);
+		change_stamina(5);
 	    state = PLAYERSTATE.ATTACK;
 	    return;
 	}
@@ -107,7 +107,7 @@ function scr_p_dash() {
 	    move_y = 0;
 	    can_dash  = true
 	    state = PLAYERSTATE.FREE;
-		change_stamina(0.5)
+		change_stamina(2)
 	}
 }
 	
@@ -153,24 +153,24 @@ function scr_p_free() {
 	}
 	
 	//global.player_stamina logic
-	if (stamina_can_regen && global.player_stamina < 10 && global.player_stamina >= 0) {
-		global.player_stamina += 0.01666666667;
+	if (stamina_can_regen && global.player_stamina < 100 && global.player_stamina >= 0) {
+		global.player_stamina += 0.32;
 	}
 	
-	if (global.player_stamina >= 10) global.player_stamina = 10;
+	if (global.player_stamina >= 100) global.player_stamina = 100;
 	if (global.player_stamina <= 0) global.player_stamina = 0;
 	
 	if (key_attack || key_attack_strong || key_dash) {
         stamina_can_regen = false;
         if(global.player_stamina != 0) {
-            stamina_timer = 120
-        } else {
             stamina_timer = 60
+        } else {
+            stamina_timer = 30
         }
 	}
     
     
-    if (!stamina_can_regen && stamina_timer <= 150 && stamina_timer > 0) {
+    if (!stamina_can_regen && stamina_timer <= 120 && stamina_timer > 0) {
         --stamina_timer;
     }
 	
@@ -196,21 +196,19 @@ function scr_p_free() {
 	}
 	
 	if (key_attack && on_ground && can_attack && global.player_stamina > 0) {
-		
-		change_stamina(1);
+		change_stamina(5);
 	    state = PLAYERSTATE.ATTACK
 	    can_attack = false; 
 	}
 	
 	if (key_attack_strong) {
-		change_stamina(2)
+		change_stamina(10)
 	    state = PLAYERSTATE.ATTACK_STRONG;
 	}
 
 	if (key_use) {
 	    
 	}
-	
 	
 	scr_p_animation();
 }

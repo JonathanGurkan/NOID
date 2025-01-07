@@ -10,7 +10,7 @@ global.target_y = -1;
 global.target_direction = -1;
 global.player_max_health = 60;
 global.player_health = global.player_max_health;
-global.player_max_stamina = 10
+global.player_max_stamina = 100
 global.player_stamina = global.player_max_stamina;
 
 global.i_camera = instance_create_layer(0,0,layer,obj_camera);
