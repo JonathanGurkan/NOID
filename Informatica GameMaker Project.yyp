@@ -167,6 +167,7 @@
     {"id":{"name":"spr_flashbang_move","path":"sprites/spr_flashbang_move/spr_flashbang_move.yy",},},
     {"id":{"name":"spr_flower_alert","path":"sprites/spr_flower_alert/spr_flower_alert.yy",},},
     {"id":{"name":"spr_flower_attack","path":"sprites/spr_flower_attack/spr_flower_attack.yy",},},
+    {"id":{"name":"spr_flower_death","path":"sprites/spr_flower_death/spr_flower_death.yy",},},
     {"id":{"name":"spr_flower_fall","path":"sprites/spr_flower_fall/spr_flower_fall.yy",},},
     {"id":{"name":"spr_flower_idle","path":"sprites/spr_flower_idle/spr_flower_idle.yy",},},
     {"id":{"name":"spr_flower_land","path":"sprites/spr_flower_land/spr_flower_land.yy",},},

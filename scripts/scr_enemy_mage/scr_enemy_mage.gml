@@ -75,8 +75,8 @@ if (!attack_initialized) {
         sprite_index = spr_mage_shoot;
         mask_index = spr_mage_shoot_hitbox;
         if (direction_p > 90) {
-                direction = -1
-                image_xscale = -1
+                direction = -1;
+                image_xscale = -1;
                 } else {
                 direction = 1;
                 image_xscale = 1;
@@ -112,10 +112,8 @@ function enemy_mage_attack(){
         mask_index = spr_mage_idle;
     if (animation_end()){
         dash_timer = dash_cooldown;
-        show_debug_message("miauw")
         enemy_state = ENEMYSTATE.DODGE;
     }
-    
 }
 
 function enemy_mage_evade(){
