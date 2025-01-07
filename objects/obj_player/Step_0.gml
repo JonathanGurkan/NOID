@@ -35,4 +35,3 @@ if (!global.gamepaused) {
 if(keyboard_check_pressed((ord("L")))){
     stamina_timer = 0;
 }
-
