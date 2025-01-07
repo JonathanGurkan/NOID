@@ -96,7 +96,7 @@ function enemy_flamethrower_death(){
     is_diying = true
     sprite_index = spr_flamethrower_death;
     
-    if(animation_end(1)){
+    if(animation_end()){
         instance_destroy();
     }
 }

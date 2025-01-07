@@ -108,7 +108,8 @@ function enemy_flashbang_attack() {
 
 function enemy_flashbang_death(){
     is_diying = true
-    sprite_index = spr_flamethrower_death;
+    image_speed = -1;
+    sprite_index = spr_flower_alert;
     
     if(animation_end()){
         instance_destroy();

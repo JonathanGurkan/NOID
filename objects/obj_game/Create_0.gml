@@ -13,7 +13,7 @@ global.player_health = global.player_max_health;
 
 
 global.i_camera = instance_create_layer(0,0,layer,obj_camera);
-global.i_ui = instance_create_layer(0,0,layer,obj_ui)
+global.i_ui = instance_create_layer(0,0,layer,obj_ui);
 
 
 surface_resize(application_surface, RESOLUTION_W, RESOLUTION_H);
