@@ -6,7 +6,7 @@ uniform float u_z; //depth position
 void main() {
     vec2 pos = in_Position.xy;
 
-    if (in_Position.z > 0.){ //check if vertex requires repositioning
+    if (in_Position.z > 0.) { //check if vertex requires repositioning
         vec2 dis = pos - u_pos;
         pos += dis/sqrt(dis.x*dis.x + dis.y*dis.y) * 100000.; //repositioning the vertex with respect to the light position
     }

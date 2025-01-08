@@ -1,4 +1,4 @@
-if (instance_exists(follow)){ 
+if (instance_exists(follow)) { 
     x_to = follow.x; 
     y_to = follow.y;
 }
