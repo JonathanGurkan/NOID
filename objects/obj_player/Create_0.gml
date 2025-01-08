@@ -73,10 +73,9 @@ flash_shader = sh_white;
 //Damage variables
 invincible = false; 
 invincibility_timer = 0;  
-inviancibility_duration = 60;
-
+invincibility_duration = 60;
 can_attack = true;
-
+taking_damage = false;
 
 if (global.target_x != -1) {
     x = global.target_y;

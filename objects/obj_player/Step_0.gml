@@ -24,7 +24,6 @@ if  (keyboard_check_pressed(ord("H"))){
 if (!global.gamepaused) {
     switch (state) {
         case PLAYERSTATE.FREE: scr_p_free(); break;
-		case PLAYERSTATE.HURT: scr_p_hurt(); break;
         case PLAYERSTATE.ATTACK_1: scr_p_attack_1(); break;
         case PLAYERSTATE.ATTACK_2: scr_p_attack_2(); break; 
         case PLAYERSTATE.ATTACK_3: scr_p_attack_3(); break;
@@ -33,7 +32,7 @@ if (!global.gamepaused) {
     }
 }
 
-show_debug_message(global.player_health)
+show_debug_message(taking_damage)
 
 
 if(keyboard_check_pressed((ord("L")))){

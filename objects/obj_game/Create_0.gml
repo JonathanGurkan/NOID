@@ -8,7 +8,7 @@ global.target_room = -1;
 global.target_x = -1;
 global.target_y = -1;
 global.target_direction = -1;
-global.player_max_health = 3;
+global.player_max_health = 30;
 global.player_health = global.player_max_health;
 
 

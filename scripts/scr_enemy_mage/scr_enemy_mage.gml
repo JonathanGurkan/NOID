@@ -86,7 +86,14 @@ if (!attack_initialized) {
     var list = ds_list_create();
         var num = instance_place_list(x,y,obj_player,list,false)
         if(num > 0){
-        show_debug_message("hit");
+            with(obj_player){
+                if (!invincible) { // Only take damage if not invincible
+                        global.player_health -= 5;
+                        invincibility_timer = 60; // Set invincibility period
+                        invincible = true; // Make the player invincible
+                        screenshake(10,20);
+                    }
+                    }
         } 
         ds_list_destroy(list);
         
@@ -106,7 +113,14 @@ function enemy_mage_attack(){
     var list = ds_list_create();
         var num = instance_place_list(x,y,obj_player,list,false)
         if(num > 0){
-			
+            with(obj_player){
+                if (!invincible) { // Only take damage if not invincible
+                        global.player_health -= 2;
+                        invincibility_timer = 60; // Set invincibility period
+                        invincible = true; // Make the player invincible
+                        screenshake(10,20);
+                    }
+                    }
         } 
         ds_list_destroy(list);
         mask_index = spr_mage_idle;
