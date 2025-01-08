@@ -227,6 +227,7 @@ function scr_p_free() {
 	}
 
     
+
     if (on_ground) {
       if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina > 0) {
          move_x_max_final = run_speed;
@@ -251,49 +252,59 @@ function scr_p_free() {
 	    
 	}
 	
-	scr_p_animation();
-}
-	
-function scr_p_hurt(damage) {
-	scr_p_animation();
-	collision();
-	if (invincible <= 0) { // Check if player is invincible
-	    global.player_health = max(0, global.player_health - damage); // Reduce health
 
-	    if (global.player_health > 0) { // If player survives the hit
-	        state = scr_p_stun(); // Set state to stun
-	        screenshake(2, 10); // Apply screen shake
-	        flash = 3; // Set flash effect
-	        invincible = 30; // Set invincibility frames
-	    } else {
-	        // Kill the player logic here
-	        show_debug_message("Player killed");
-	    }
+    if (invincibility_timer > 0) {
+        invincibility_timer -= 1;
+    
+        // Toggle taking_damage flag for flashing effect
+        if (invincibility_timer mod 10 < 5) {
+            taking_damage = true;
+        } else {
+            taking_damage = false;
+        }
+    } else {
+        taking_damage = false; // Stop flashing
+        invincible = false; // End invincibility
+    }
+    
+	if(global.player_health <= 0){
+	sprite_index = spr_player_death;
+	if(animation_end()){
+	room_restart();
 	}
+	}
+	scr_p_animation();
 }
 	
 function process_attack(sprite, mask) {
 	if (sprite_index != sprite) {
 	        sprite_index = sprite;
 	        image_index = 0;
-	        ds_list_clear(hit_by_attack)
+	        ds_list_clear(hit_by_attack);
 	    }
 	    mask_index = mask;
 	    var hit_by_attack_now = ds_list_create();
 	    var hits = instance_place_list(x,y,par_enemy,hit_by_attack_now,false)
 	    if (hits > 0) {
 	        for (var i = 0; i < hits; i++) {
+
 	            var hit_id = hit_by_attack_now[| i];
 	            if (ds_list_find_index(hit_by_attack,hit_id) == -1) {
 	                ds_list_add(hit_by_attack,hit_id);
-	                with(hit_id) {
-	                    --enemy_hp
+
+	                with(hit_id){
+	                    --enemy_hp;
 	                }
 	            }
 	        }
 	    }
-	    ds_list_destroy(hit_by_attack_now)
+	    ds_list_destroy(hit_by_attack_now);
 	    mask_index = spr_player_idle;
+}
+
+function scr_p_hurt(enemy_damage) {
+   
+    state = PLAYERSTATE.FREE;
 }
 	
 function scr_p_transition() {
