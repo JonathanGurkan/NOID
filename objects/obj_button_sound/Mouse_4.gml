@@ -4,4 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-room_goto(r_settings);
+// Some code that will mute the game.
