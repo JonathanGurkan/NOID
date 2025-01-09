@@ -9,8 +9,8 @@
   "name":"obj_button_exit",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"buttons",
+    "path":"folders/Objects/UI/buttons.yy",
   },
   "parentObjectId":{
     "name":"par_button",
