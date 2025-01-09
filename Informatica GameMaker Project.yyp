@@ -18,7 +18,7 @@
     {"$GMFolder":"","%Name":"colliders","folderPath":"folders/Objects/colliders.yy","name":"colliders","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"dynamic_light","folderPath":"folders/Objects/dynamic_light.yy","name":"dynamic_light","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"enemy","folderPath":"folders/Objects/enemy.yy","name":"enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"GUI","folderPath":"folders/Objects/GUI.yy","name":"GUI","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"UI","folderPath":"folders/Objects/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"interactables","folderPath":"folders/Objects/interactables.yy","name":"interactables","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"manager","folderPath":"folders/Objects/manager.yy","name":"manager","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"parents","folderPath":"folders/Objects/parents.yy","name":"parents","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -74,6 +74,9 @@
   "name":"Informatica GameMaker Project",
   "resources":[
     {"id":{"name":"f_button_text","path":"fonts/f_button_text/f_button_text.yy",},},
+    {"id":{"name":"obj_button_exit","path":"objects/obj_button_exit/obj_button_exit.yy",},},
+    {"id":{"name":"obj_button_play","path":"objects/obj_button_play/obj_button_play.yy",},},
+    {"id":{"name":"obj_button_settings","path":"objects/obj_button_settings/obj_button_settings.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},},
     {"id":{"name":"obj_enemy_bot","path":"objects/obj_enemy_bot/obj_enemy_bot.yy",},},
