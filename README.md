@@ -53,8 +53,8 @@
 
 <h2>Development Team</h2>
     <ul>
-        <li><strong>Karl:</strong> Co-Developer and Designer</li>
-        <li><strong>[Your Name]:</strong> Co-Developer and Programmer</li>
+        <li><strong>Karl:</strong> Developer</li>
+        <li><strong>Jonathan:</strong> Developer</li>
     </ul>
 
 <h2>Status</h2>
@@ -64,8 +64,8 @@
     <p>
         We’d love to hear your feedback! Please share your thoughts and suggestions by contacting us at:
         <ul>
-            <li><strong>Karl’s Email:</strong> [Add here]</li>
-            <li><strong>[Your Name]’s Email:</strong> [Add here]</li>
+            <li><strong>Karl’s Email:</strong> s932051@cartesius.espritscholen.nl</li>
+            <li><strong>Jonathan’s Email:</strong> j.gurkan@cartesius.espritscholen.nl</li>
         </ul>
     </p>
 
