@@ -11,7 +11,7 @@
         <li><strong>Challenging Gameplay:</strong> Plan your upgrades carefully—each Power Card can only be used for up to three or four upgrades.</li>
     </ul>
 
-    <h2>Gameplay Mechanics</h2>
+<h2>Gameplay Mechanics</h2>
     <ol>
         <li>
             <strong>Power Cards:</strong>
