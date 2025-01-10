@@ -119,7 +119,7 @@ function enemy_mage_attack() {
                         global.player_health -= 2;
                         invincibility_timer = 60; // Set invincibility period
                         invincible = true; // Make the player invincible
-                        screenshake(10,20);
+                        screenshake(5,20);
                     }
                     }
         } 
@@ -165,9 +165,13 @@ function enemy_mage_dodge() {
 
 
 function enemy_mage_death() {
-    is_diying = true
-    sprite_index = spr_mage_death;
-    
+	 is_diying = true
+	 sprite_index = spr_mage_death;
+	if (!attack_initialized) {
+    image_speed = 1;
+    image_index = 0;
+    attack_initialized = true;
+        } 
     if (animation_end()) {
         instance_destroy();
     }
