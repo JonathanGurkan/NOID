@@ -1,2 +1,2 @@
-button_text = "CREDITS"
+button_text = "Credits"
 

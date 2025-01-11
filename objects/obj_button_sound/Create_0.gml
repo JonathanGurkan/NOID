@@ -1,2 +1,2 @@
-button_text = "TOGGLE SOUND"
+button_text = "Toggle sound"
 

@@ -78,6 +78,7 @@
   "name":"Informatica GameMaker Project",
   "resources":[
     {"id":{"name":"f_button_text","path":"fonts/f_button_text/f_button_text.yy",},},
+    {"id":{"name":"f_large_button_text","path":"fonts/f_large_button_text/f_large_button_text.yy",},},
     {"id":{"name":"obj_back_button_main","path":"objects/obj_back_button_main/obj_back_button_main.yy",},},
     {"id":{"name":"obj_back_button_set","path":"objects/obj_back_button_set/obj_back_button_set.yy",},},
     {"id":{"name":"obj_button_credits","path":"objects/obj_button_credits/obj_button_credits.yy",},},

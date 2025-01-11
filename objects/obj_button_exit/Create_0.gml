@@ -1,2 +1,2 @@
-button_text = "EXIT"
+button_text = "Exit"
 

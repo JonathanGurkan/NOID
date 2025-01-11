@@ -1,2 +1,2 @@
-button_text = "SETTINGS"
+button_text = "Settings"
 
