@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_button_hud",
+  "%Name":"obj_back_button_main",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_button_hud",
+  "name":"obj_back_button_main",
   "overriddenProperties":[],
   "parent":{
-    "name":"forward",
-    "path":"folders/Objects/UI/buttons/forward.yy",
+    "name":"back",
+    "path":"folders/Objects/UI/buttons/back.yy",
   },
   "parentObjectId":{
     "name":"par_button",
@@ -34,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_button",
-    "path":"sprites/spr_button/spr_button.yy",
+    "name":"spr_button_back",
+    "path":"sprites/spr_button_back/spr_button_back.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -9,8 +9,8 @@
   "name":"obj_button_sound",
   "overriddenProperties":[],
   "parent":{
-    "name":"buttons",
-    "path":"folders/Objects/UI/buttons.yy",
+    "name":"forward",
+    "path":"folders/Objects/UI/buttons/forward.yy",
   },
   "parentObjectId":{
     "name":"par_button",
