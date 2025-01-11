@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":99,
   "bbox_left":0,
-  "bbox_right":313,
+  "bbox_right":627,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -14,8 +14,8 @@
   "frames":[
     {"$GMSpriteFrame":"","%Name":"c4a5f9c0-22c9-4e33-be41-9e0b2ed34532","name":"c4a5f9c0-22c9-4e33-be41-9e0b2ed34532","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
+  "gridX":1,
+  "gridY":1,
   "height":100,
   "HTile":true,
   "layers":[
@@ -23,7 +23,7 @@
   ],
   "name":"_6_close_light",
   "nineSlice":null,
-  "origin":4,
+  "origin":0,
   "parent":{
     "name":"cave parralax",
     "path":"folders/Sprites/backgrounds/cave parralax.yy",
@@ -75,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":157,
-    "yorigin":50,
+    "xorigin":0,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":314,
+  "width":628,
 }
