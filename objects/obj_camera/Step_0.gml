@@ -1,3 +1,7 @@
+if(room = r_main_menu){
+    camera_set_view_pos(cam,x,y);
+    x = lerp(x,x+50,0.08);
+} else{
 if (instance_exists(follow)) { 
     x_to = follow.x; 
     y_to = follow.y;
@@ -15,3 +19,4 @@ y += random_range(-shake_remain,shake_remain)
 shake_remain = max(0, shake_remain - ((1/shake_lenght) * shake_magnitude));
 
 camera_set_view_pos(cam,x - view_width_half,y - view_height_half);
+}

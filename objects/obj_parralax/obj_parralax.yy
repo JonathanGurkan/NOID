@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_parallax_7",
+  "%Name":"obj_parralax",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_parallax_7",
+  "name":"obj_parralax",
   "overriddenProperties":[],
   "parent":{
-    "name":"parallax",
-    "path":"folders/Objects/parallax.yy",
+    "name":"manager",
+    "path":"folders/Objects/manager.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"_7_tileset",
-    "path":"sprites/_7_tileset/_7_tileset.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
