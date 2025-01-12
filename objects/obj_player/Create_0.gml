@@ -42,7 +42,7 @@ fric_air_speed = 0.3;
 //Max speed
 walk_speed = 2;
 run_speed = 3;
-move_y_max = 6;
+move_y_max = 4;
 move_x_max_final = walk_speed;
 
 

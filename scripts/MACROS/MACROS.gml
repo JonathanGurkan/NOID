@@ -1,5 +1,5 @@
 #macro FRAME_RATE 60 
-#macro ROOM_START r_main_menu
+#macro ROOM_START r_tutorial_3
 
 #macro RESOLUTION_W 1280
 #macro RESOLUTION_H 720
