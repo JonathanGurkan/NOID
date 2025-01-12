@@ -165,6 +165,7 @@
     {"id":{"name":"spr_bot_activate","path":"sprites/spr_bot_activate/spr_bot_activate.yy",},},
     {"id":{"name":"spr_bot_idle","path":"sprites/spr_bot_idle/spr_bot_idle.yy",},},
     {"id":{"name":"spr_bot_move","path":"sprites/spr_bot_move/spr_bot_move.yy",},},
+    {"id":{"name":"spr_bot_shoot","path":"sprites/spr_bot_shoot/spr_bot_shoot.yy",},},
     {"id":{"name":"spr_bullet_1","path":"sprites/spr_bullet_1/spr_bullet_1.yy",},},
     {"id":{"name":"spr_button_back","path":"sprites/spr_button_back/spr_button_back.yy",},},
     {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},},
