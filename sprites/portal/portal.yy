@@ -31,7 +31,7 @@
   ],
   "name":"portal",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"interactables",
     "path":"folders/Sprites/interactables.yy",
@@ -108,7 +108,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":14,
-    "yorigin":20,
+    "yorigin":38,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

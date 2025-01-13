@@ -312,6 +312,13 @@ function scr_p_transition() {
 	collision();
 }
 
+function scr_p_teleport(){
+    
+    obj_player.x = obj_portal.x
+    obj_player.y = obj_portal.y
+}
+
+
 function change_stamina(amount) {
 	global.player_stamina -= amount;
 }
