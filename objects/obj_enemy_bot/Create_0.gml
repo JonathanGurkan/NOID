@@ -20,12 +20,12 @@ attack_player = false;
 is_diying = false;
 
 //logic reals
-found_distance = 0;
-follow_distance = 0;
-evade_distance = 0;
-attack_distance = 0;
+found_distance = 200;
+follow_distance = 150;
+evade_distance = 50;
+attack_distance = 60;
 enemy_attack_timer = 0;
-attack_cooldown = 0;
+attack_cooldown = 100;
 
 //hp + damage
 enemy_hp = 1;
