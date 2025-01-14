@@ -105,7 +105,7 @@ function enemy_flamethrower_attack() {
 }
 
 function enemy_flamethrower_death() {
-    is_diying = true
+    is_dying = true
     sprite_index = spr_flamethrower_death;
     
     if (animation_end()) {

@@ -119,7 +119,7 @@ function enemy_bot_dash() {
 
 
 function enemy_bot_death() {
-    is_diying = true
+    is_dying = true
     sprite_index = spr_bot_death;
     
     if (animation_end()) {

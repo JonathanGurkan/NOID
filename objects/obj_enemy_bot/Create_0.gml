@@ -18,7 +18,7 @@ found_player = false;
 follow_player = false;
 dash_player = false;
 attack_player = false;
-is_diying = false;
+is_dying = false;
 
 //logic reals
 found_distance = 100;

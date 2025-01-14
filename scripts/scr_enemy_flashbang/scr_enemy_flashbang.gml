@@ -114,7 +114,7 @@ function enemy_flashbang_attack() {
 } 
 
 function enemy_flashbang_death() {
-    is_diying = true
+    is_dying = true
     image_speed = 1;
     sprite_index = spr_flashbang_death;
     
