@@ -16,8 +16,8 @@ on_ground = false;
 //logic bools
 found_player = false;
 follow_player = false;
-dash_away_from_player = false;
-shoot_player = false;
+dash_player = false;
+attack_player = false;
 is_diying = false;
 
 //logic reals
@@ -26,7 +26,7 @@ follow_distance = 70;
 attack_distance = 20;
 enemy_attack_timer = 20;
 attack_cooldown = 100;
-attack_count = 0
+shoot_count = 0
 
 //hp + damage
 enemy_hp = 10;

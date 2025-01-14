@@ -25,10 +25,10 @@ function enemy_bot_global() {
     if (direction_p > 90) {
         direction = -1
         image_xscale = -1
-        } else {
+    } else {
         direction = 1;
         image_xscale = 1;
-        }
+    }
     
     if (enemy_hp <= 0) {
         enemy_state = ENEMYSTATE.DEATH;
@@ -63,17 +63,6 @@ function enemy_bot_movement() {
     if (!follow_player) enemy_state = ENEMYSTATE.ALERT;
 }
 
-function enemy_bot_dash() {
-	sprite_index = spr_bot_fire_dash
-	image_index = 0
-	image_speed = 1
-	mask_index = spr_bot_fire_dash_hitbox
-    
-    if(animation_end()) {
-        attack_count = 0
-        enemy_state = ENEMYSTATE.MOVE
-    }
-}
     
 function enemy_bot_shoot() {
     if (!attack_initialized) {
@@ -88,6 +77,7 @@ function enemy_bot_shoot() {
         }
         
         attack_initialized = true;
+        shoot_count += 1 
     } 
         
     var list = ds_list_create();
@@ -112,7 +102,18 @@ function enemy_bot_shoot() {
     if (animation_end()) {
         attack_initialized = false;
         enemy_state = ENEMYSTATE.MOVE;
+    }
+}
+
+function enemy_bot_dash() {
+    sprite_index = spr_bot_fire_dash
+    image_index = 0
+    image_speed = 1
+    mask_index = spr_bot_fire_dash_hitbox
+    
+    if(animation_end()) {
         attack_count = 0
+        enemy_state = ENEMYSTATE.MOVE
     }
 }
 
