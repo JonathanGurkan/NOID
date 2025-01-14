@@ -17,16 +17,16 @@ on_ground = false;
 found_player = false;
 follow_player = false;
 dash_player = false;
-attack_player = false;
+shoot_player = false;
 is_dying = false;
+can_shoot = false;
 
 //logic reals
 found_distance = 100;
 follow_distance = 70;
-attack_distance = 20;
-enemy_attack_timer = 20;
-attack_cooldown = 100;
-shoot_count = 0
+shoot_distance = 20;
+shoot_cooldown = 100;
+shoot_timer = 0;
 
 //hp + damage
 enemy_hp = 10;

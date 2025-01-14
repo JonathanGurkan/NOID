@@ -16,10 +16,10 @@ function enemy_bot_global() {
         }
     
     //attack range
-    if (distance_to_p < attack_distance) {
-            attack_player = true;
+    if (distance_to_p < shoot_distance) {
+            shoot_player = true;
         } else { 
-            attack_player = false;
+            shoot_player = false;
         }
     
     if (direction_p > 90) {
@@ -33,12 +33,18 @@ function enemy_bot_global() {
     if (enemy_hp <= 0) {
         enemy_state = ENEMYSTATE.DEATH;
     }
-
+    
+    if (shoot_timer > 0) shoot_timer--;
+        
+    if (shoot_timer <= 0) {
+        can_shoot = true;
+    } else {
+        can_shoot = false;
+    }
 }
 
 function enemy_bot_idle() {
     sprite_index = spr_bot_idle;
-    
     
     if (found_player) enemy_state = ENEMYSTATE.ALERT;
 }
@@ -59,8 +65,18 @@ function enemy_bot_movement() {
     x += image_xscale * walk_speed;
     image_speed = 1;
     
-    if (attack_player) enemy_state = ENEMYSTATE.ATTACK;
+    if (shoot_player && can_shoot) enemy_state = ENEMYSTATE.ATTACK;
     if (!follow_player) enemy_state = ENEMYSTATE.ALERT;
+}
+
+function enemy_bot_evade() {
+        sprite_index = spr_bot_move;
+        x -= image_xscale * walk_speed;
+        image_speed = 1;
+    
+    if (distance_to_p > follow_distance - 1) {
+        enemy_state = ENEMYSTATE.MOVE
+    }
 }
 
     
@@ -77,7 +93,6 @@ function enemy_bot_shoot() {
         }
         
         attack_initialized = true;
-        shoot_count += 1 
     } 
         
     var list = ds_list_create();
@@ -96,12 +111,14 @@ function enemy_bot_shoot() {
     } 
     
     ds_list_destroy(list);
-    mask_index = spr_bot_idle;
     
 
     if (animation_end()) {
+        image_index = 0
+        mask_index = spr_bot_idle;
         attack_initialized = false;
-        enemy_state = ENEMYSTATE.MOVE;
+        shoot_timer = shoot_cooldown;
+        enemy_state = ENEMYSTATE.EVADE;
     }
 }
 
