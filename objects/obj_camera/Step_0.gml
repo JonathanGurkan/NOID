@@ -1,7 +1,14 @@
 if(room = r_main_menu){
+    instance_destroy(obj_player)
+    room_init = true;
+    if(room_init){
+         camera_set_view_pos(cam,0,0);
+        room_init = false;
+    }
+    
     camera_set_view_pos(cam,x,y);
     x = lerp(x,x+50,0.08);
-} else{
+} else {
 if (instance_exists(follow)) { 
     x_to = follow.x; 
     y_to = follow.y;

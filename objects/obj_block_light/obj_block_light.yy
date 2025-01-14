@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_light",
+  "%Name":"obj_block_light",
   "eventList":[],
   "managed":true,
-  "name":"obj_light",
+  "name":"obj_block_light",
   "overriddenProperties":[],
   "parent":{
     "name":"dynamic_light",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite122",
-    "path":"sprites/Sprite122/Sprite122.yy",
+    "name":"Sprite120",
+    "path":"sprites/Sprite120/Sprite120.yy",
   },
   "spriteMaskId":null,
   "visible":false,

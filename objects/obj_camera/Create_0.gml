@@ -12,3 +12,4 @@ y_min = 0
 shake_lenght = 0;
 shake_magnitude = 0;
 shake_remain = 0;
+room_init = false;
