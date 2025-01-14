@@ -73,7 +73,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.0.169",
+    "IDEVersion":"2024.1100.0.713",
   },
   "name":"Informatica GameMaker Project",
   "resources":[
@@ -99,6 +99,7 @@
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"obj_gameover","path":"objects/obj_gameover/obj_gameover.yy",},},
     {"id":{"name":"obj_jump_orb","path":"objects/obj_jump_orb/obj_jump_orb.yy",},},
+    {"id":{"name":"obj_light_e","path":"objects/obj_light_e/obj_light_e.yy",},},
     {"id":{"name":"obj_light_m","path":"objects/obj_light_m/obj_light_m.yy",},},
     {"id":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},},
     {"id":{"name":"obj_parralax","path":"objects/obj_parralax/obj_parralax.yy",},},

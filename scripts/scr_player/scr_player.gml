@@ -19,7 +19,7 @@ function scr_p_animation() {
 	        sprite_index = spr_player_idle;
 	    } else {
             if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift)) {
-                show_debug_message("aaaaaaa")
+      
             image_speed = 1;
             sprite_index = spr_player_move_3;
             } else{

@@ -1,10 +1,9 @@
-if(place_meeting(x,y,obj_player)){
+if(place_meeting(x+10,y+10,obj_player)){
     layer_destroy("falling_block");
     falling = true;
 }
 
 if(falling){
-
     screenshake(2,60)
     var grv_final = grv;
     var move_y_max_final = move_y_max;
