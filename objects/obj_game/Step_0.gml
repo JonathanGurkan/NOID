@@ -23,4 +23,7 @@ if(room_toggle = true){
     if keyboard_check(ord("1")) room = r_tutorial_1;
     if keyboard_check(ord("2")) room = r_tutorial_2;
     if keyboard_check(ord("3")) room = r_tutorial_3;
+	draw_text(0,15,fps);
+	draw_text(0,30,instance_number(obj_light));
 }
+
