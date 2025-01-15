@@ -133,7 +133,7 @@ function enemy_bot_shoot() {
 function enemy_bot_dash() {
     show_debug_message("Fire dash attack initialized")
     
-    if (distance_to_p = 50 && !dash_player) {
+    if (distance_to_p = dash_distance && !dash_player) {
         if (direction_p > 90) {
             direction = 1
             image_xscale = 1
