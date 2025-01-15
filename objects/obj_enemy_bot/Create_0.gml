@@ -17,9 +17,11 @@ on_ground = false;
 found_player = false;
 follow_player = false;
 dash_player = false;
+can_dash = false;
 shoot_player = false;
-is_dying = false;
 can_shoot = false;
+is_dying = false;
+
 
 //logic reals
 found_distance = 100;
@@ -27,6 +29,7 @@ follow_distance = 70;
 shoot_distance = 20;
 shoot_cooldown = 100;
 shoot_timer = 0;
+dash_distance = 50;
 
 //hp + damage
 enemy_hp = 10;

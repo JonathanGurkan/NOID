@@ -4,23 +4,29 @@ function enemy_bot_global() {
     //wakeup
     if (distance_to_p < found_distance) {
         found_player = true;
-        } else { 
+    } else { 
         found_player = false;
-        }
+    }
     
     //follow
     if (distance_to_p < follow_distance) {
-            follow_player = true;
-        } else { 
-            follow_player = false;
-        }
+        follow_player = true;
+    } else { 
+        follow_player = false;
+    }
     
     //attack range
     if (distance_to_p < shoot_distance) {
-            shoot_player = true;
-        } else { 
-            shoot_player = false;
-        }
+        shoot_player = true;
+    } else { 
+        shoot_player = false;
+    }
+    
+    if (distance_to_p < dash_distance) {
+        dash_player = true;
+    } else {
+        dash_player = false;
+    }
     
     if (direction_p > 90) {
         direction = -1
@@ -65,14 +71,15 @@ function enemy_bot_movement() {
     x += image_xscale * walk_speed;
     image_speed = 1;
     
-    if (shoot_player && can_shoot) enemy_state = ENEMYSTATE.ATTACK;
+    if (shoot_player && can_shoot) enemy_state = ENEMYSTATE.DASH;
+    if (dash_player) enemy_state = ENEMYSTATE.DASH
     if (!follow_player) enemy_state = ENEMYSTATE.ALERT;
 }
 
 function enemy_bot_evade() {
-        sprite_index = spr_bot_move;
-        x -= image_xscale * walk_speed;
-        image_speed = 1;
+    sprite_index = spr_bot_move;
+    x -= image_xscale * walk_speed;
+    image_speed = 1;
     
     if (distance_to_p > follow_distance - 1) {
         enemy_state = ENEMYSTATE.MOVE
@@ -82,6 +89,7 @@ function enemy_bot_evade() {
     
 function enemy_bot_shoot() {
     if (!attack_initialized) {
+        show_debug_message("Normal attack initialized")
         sprite_index = spr_bot_shoot;
         mask_index = spr_bot_shoot_hitbox;
         if (direction_p > 90) {
@@ -123,14 +131,27 @@ function enemy_bot_shoot() {
 }
 
 function enemy_bot_dash() {
-    sprite_index = spr_bot_fire_dash
-    image_index = 0
-    image_speed = 1
-    mask_index = spr_bot_fire_dash_hitbox
+    show_debug_message("Fire dash attack initialized")
+    
+    if (distance_to_p = 50 && !dash_player) {
+        if (direction_p > 90) {
+            direction = 1
+            image_xscale = 1
+        } else {
+            direction = -1;
+            image_xscale = -1;
+        }
+        
+        sprite_index = spr_bot_fire_dash;
+        image_index = 0;
+        image_speed = 1;
+        mask_index = spr_bot_fire_dash_hitbox;
+        dash_player = true;
+    }
+    
     
     if(animation_end()) {
-        attack_count = 0
-        enemy_state = ENEMYSTATE.MOVE
+        enemy_state = ENEMYSTATE.EVADE
     }
 }
 
