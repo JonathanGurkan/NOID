@@ -92,7 +92,6 @@ function enemy_flamethrower_attack() {
             }
         }
         
-        show_debug_message(global.player_health);
     } 
         ds_list_destroy(list);
         mask_index = spr_flamethrower_idle;

@@ -27,6 +27,12 @@ function enemy_bot_global() {
     } else {
         dash_player = false;
     }
+
+    if (distance_to_p < evade_distance) {
+        evade_player = true;
+    } else {
+        evade_player = false
+    }
     
     if (direction_p > 90) {
         direction = -1
@@ -47,6 +53,18 @@ function enemy_bot_global() {
     } else {
         can_shoot = false;
     }
+    
+    if (dash_timer > 0) dash_timer--;
+            
+        if (dash_timer <= 0) {
+            can_dash = true;
+        } else {
+            can_dash = false;
+        }
+    
+    if(evade_timer >= 0) evade_timer--
+        show_debug_message(evade_timer)
+    
 }
 
 function enemy_bot_idle() {
@@ -63,7 +81,7 @@ function enemy_bot_alerted() {
     }
     
     if (follow_player) enemy_state = ENEMYSTATE.MOVE;
-    if (dash_player && !shoot_player) enemy_state = ENEMYSTATE.DASH
+    if (dash_player && !shoot_player && can_dash) enemy_state = ENEMYSTATE.DASH
     if (!found_player && !follow_player) enemy_state = ENEMYSTATE.IDLE;
 }
 
@@ -72,7 +90,8 @@ function enemy_bot_movement() {
     x += image_xscale * walk_speed;
     image_speed = 1;
     
-    if (shoot_player && can_shoot) enemy_state = ENEMYSTATE.ATTACK;
+    if (evade_player) enemy_state = ENEMYSTATE.EVADE; 
+        if (shoot_player && can_shoot) enemy_state = ENEMYSTATE.ATTACK;
     if (!follow_player) enemy_state = ENEMYSTATE.ALERT;
 }
 
@@ -81,18 +100,25 @@ function enemy_bot_evade() {
     x -= image_xscale * walk_speed;
     image_speed = 1;
     
-    if (distance_to_p > follow_distance) {
-        enemy_state = ENEMYSTATE.MOVE;
-    }
     
-    if(distance_to_p > dash_distance) {
-        enemy_state = ENEMYSTATE.DASH;
+    
+    if (!evade_player){
+        if (!attack_initialized) {
+        evade_timer = evade_cooldown;
+        attack_initialized =true;
+        }
+        
+        
+        if (evade_timer <= 0 ){
+             if(can_dash && dash_player) {enemy_state = ENEMYSTATE.DASH;} else { enemy_state = ENEMYSTATE.MOVE}
+        }
+        
     }
 }
 
+
 function enemy_bot_shoot() {
     if (!attack_initialized) {
-        show_debug_message("Normal attack initialized")
         sprite_index = spr_bot_shoot;
         mask_index = spr_bot_shoot_hitbox;
         if (direction_p > 90) {
@@ -102,7 +128,6 @@ function enemy_bot_shoot() {
             direction = 1;
             image_xscale = 1;
         }
-        
         attack_initialized = true;
     } 
         
@@ -118,7 +143,6 @@ function enemy_bot_shoot() {
                 screenshake(10,20);
             }
         }
-        show_debug_message(global.player_health);
     } 
     
     ds_list_destroy(list);
@@ -129,30 +153,27 @@ function enemy_bot_shoot() {
         mask_index = spr_bot_idle;
         attack_initialized = false;
         shoot_timer = shoot_cooldown;
-        enemy_state = ENEMYSTATE.EVADE;
+        enemy_state = ENEMYSTATE.MOVE;
     }
 }
 
 function enemy_bot_dash() {
+    sprite_index = spr_bot_fire_dash;
+    mask_index = spr_bot_fire_dash_hitbox;      
+    image_speed = 1;
+    dash_player = true;
+    
     if (!dash_initialized) {
+        image_index = 0;
         show_debug_message("Fire dash attack initialized")
-        if (distance_to_p > dash_distance && !dash_player) {
-            if (direction_p > 90) {
-                direction = -1
-                image_xscale = -1
-            } else {
-                direction = 1;
-                image_xscale = 1;
-            }
-            
-            sprite_index = spr_bot_fire_dash;
-            image_index = 0;
-            image_speed = 1;
-            mask_index = spr_bot_fire_dash_hitbox;
-            dash_player = true;
+        if (direction_p > 90) {
+            direction = -1
+            image_xscale = -1
+        } else {
+            direction = 1;
+            image_xscale = 1;
         }
-        
-        dash_initialized = false;
+        dash_initialized = true;
     }
     
     var list = ds_list_create();
@@ -167,14 +188,16 @@ function enemy_bot_dash() {
                     screenshake(10,20);
                 }
             }
-            show_debug_message(global.player_health);
         } 
         
         ds_list_destroy(list);
     
     
     if(animation_end()) {
-        enemy_state = ENEMYSTATE.ALERT
+        x += image_xscale * 70;
+        dash_timer = dash_cooldown;
+        mask_index = spr_bot_idle;
+        enemy_state = ENEMYSTATE.MOVE;
         dash_player = false;
     }
 }

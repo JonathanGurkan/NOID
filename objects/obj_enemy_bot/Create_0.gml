@@ -3,7 +3,7 @@ enemy_state = ENEMYSTATE.IDLE;
 collision_map = layer_tilemap_get_id(layer_get_id("col"))
 distance_to_p = distance_to_object(obj_player);
 direction_p = point_direction(x,y,obj_player.x, obj_player.y);
-attack_initialized = false;
+attack_initialized = false; ;
     
 //movement
 walk_speed = 1.3;
@@ -21,6 +21,7 @@ shoot_player = false;
 can_shoot = false;
 is_dying = false;
 dash_initialized = false;
+can_dash = false;
 
 
 //logic reals
@@ -30,7 +31,11 @@ shoot_distance = 20;
 dash_distance = 40;
 evade_distance = 20;
 shoot_cooldown = 100;
+dash_cooldown = 100;
+dash_timer = 0;
 shoot_timer = 0;
+evade_timer = 0;
+evade_cooldown = 6;
 
 //hp + damage
 enemy_hp = 10;
