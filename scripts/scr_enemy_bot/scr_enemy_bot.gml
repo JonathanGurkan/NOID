@@ -82,7 +82,11 @@ function enemy_bot_evade() {
     image_speed = 1;
     
     if (distance_to_p > follow_distance) {
-        enemy_state = ENEMYSTATE.MOVE
+        enemy_state = ENEMYSTATE.MOVE;
+    }
+    
+    if(distance_to_p > dash_distance) {
+        enemy_state = ENEMYSTATE.DASH;
     }
 }
 
