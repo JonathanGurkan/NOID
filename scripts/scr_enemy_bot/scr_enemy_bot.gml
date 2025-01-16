@@ -84,10 +84,6 @@ function enemy_bot_evade() {
     if (distance_to_p > follow_distance) {
         enemy_state = ENEMYSTATE.MOVE
     }
-    
-    //if (dash_player) {
-        //enemy_state = ENEMYSTATE.DASH
-    //}
 }
 
 function enemy_bot_shoot() {
@@ -174,7 +170,7 @@ function enemy_bot_dash() {
     
     
     if(animation_end()) {
-        enemy_state = ENEMYSTATE.IDLE
+        enemy_state = ENEMYSTATE.ALERT
         dash_player = false;
     }
 }
