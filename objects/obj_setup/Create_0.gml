@@ -1,5 +1,5 @@
 // Resize the application surface for pixel games and performance boost
-surface_resize(application_surface, 320, 180);
+surface_resize(application_surface,1280,720);
 display_set_gui_maximize();
 
 // Turn off automatic drawing of the application surface
@@ -25,7 +25,7 @@ vf = vertex_format_end();
 vb = vertex_create_buffer();
 
 // Shadow surface setup
-shad_surf = surface_create(320, 180);
+shad_surf = surface_create(1280,720);
 
 // Background layer functions
 function BGbegin() {
@@ -42,14 +42,14 @@ layer_script_begin(_bg_layer, BGbegin);
 layer_script_end(_bg_layer2, BGend);
 
 // Normal layer functions
-global.n_surf = surface_create(320, 180); // Ensure the surface exists
+global.n_surf = surface_create(1280,720); // Ensure the surface exists
 
 function Nbegin() {
     if (!surface_exists(global.n_surf)) {
-        global.n_surf = surface_create(320, 180);
+        global.n_surf = surface_create(1280,720);
     }
     surface_set_target(global.n_surf);
-    matrix_set(matrix_world, matrix_build(-global.vx, -global.vy, 0, 0, 0, 0, 1, 1, 1));
+    matrix_set(matrix_world, matrix_build(-obj_camera.x,-obj_camera.y, 0, 0, 0, 0, 1, 1, 1));
     draw_clear_alpha(c_white, 0);
 }
 
