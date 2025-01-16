@@ -13,5 +13,26 @@ if (!global.gamepaused) {
 
 on_ground = place_meeting(x,y+1,collision_map);
 
+show_debug_message("Distance BOT ---> Player = " + string(distance_to_p))
+
+show_debug_message("BOT State = " + string(enemy_state))
+
+show_debug_message("can_dash = " + string(dash_player))
+
+if(found_player) {
+    show_debug_message("BOT: Found player")
+}
+
+if(follow_player) {
+    show_debug_message("BOT: Follow player")
+}
+
+if(shoot_player) {
+    show_debug_message("BOT: Shooting player")
+}
+
+if(dash_player) {
+    show_debug_message("BOT: Dashing player")
+}
 enemy_bot_global();
 collision();

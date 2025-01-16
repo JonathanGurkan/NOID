@@ -21,15 +21,17 @@ can_dash = false;
 shoot_player = false;
 can_shoot = false;
 is_dying = false;
+dash_initialized = false;
 
 
 //logic reals
 found_distance = 100;
 follow_distance = 70;
 shoot_distance = 20;
+dash_distance = 80;
+evade_distance = 20;
 shoot_cooldown = 100;
 shoot_timer = 0;
-dash_distance = 50;
 
 //hp + damage
 enemy_hp = 10;
