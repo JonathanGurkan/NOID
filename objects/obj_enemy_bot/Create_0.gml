@@ -15,17 +15,27 @@ on_ground = false;
 //logic bools
 found_player = false;
 follow_player = false;
-evade_player = false;
-attack_player = false;
-is_diying = false;
+dash_player = false;
+shoot_player = false;
+can_shoot = false;
+is_dying = false;
+dash_initialized = false;
+can_dash = false;
+uncondidtional_follow =false;
+
 
 //logic reals
-found_distance = 0;
-follow_distance = 0;
-evade_distance = 0;
-attack_distance = 0;
-enemy_attack_timer = 0;
-attack_cooldown = 0;
+found_distance = 100;
+follow_distance = 70;
+shoot_distance = 20;
+dash_distance = 40;
+evade_distance = 20;
+shoot_cooldown = 100;
+dash_cooldown = 100;
+dash_timer = 0;
+shoot_timer = 0;
+evade_timer = 0;
+evade_cooldown = 60;
 
 //hp + damage
 enemy_hp = 1;
