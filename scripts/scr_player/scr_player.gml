@@ -293,7 +293,9 @@ function process_attack(sprite, mask) {
 	                ds_list_add(hit_by_attack,hit_id);
 
 	                with(hit_id){
+                       
 	                    --enemy_hp;
+                     
 	                }
 	            }
 	        }

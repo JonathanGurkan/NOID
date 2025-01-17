@@ -7,6 +7,7 @@ if (!global.gamepaused) {
         case ENEMYSTATE.MOVE: enemy_bot_movement(); break;
         case ENEMYSTATE.ATTACK: enemy_bot_shoot(); break;
 		case ENEMYSTATE.DASH: enemy_bot_dash(); break
+        case ENEMYSTATE.SEARCH: enemy_bot_search(); break;
     }
 }
 

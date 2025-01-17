@@ -27,5 +27,6 @@ enum ENEMYSTATE{
     FALL,
     SHOOT,
     DODGE,
-	DASH
+	DASH,
+    SEARCH
 }

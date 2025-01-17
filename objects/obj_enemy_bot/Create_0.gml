@@ -22,6 +22,7 @@ can_shoot = false;
 is_dying = false;
 dash_initialized = false;
 can_dash = false;
+uncondidtional_follow =false;
 
 
 //logic reals
@@ -35,7 +36,7 @@ dash_cooldown = 100;
 dash_timer = 0;
 shoot_timer = 0;
 evade_timer = 0;
-evade_cooldown = 6;
+evade_cooldown = 60;
 
 //hp + damage
 enemy_hp = 10;
