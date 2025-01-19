@@ -12,11 +12,11 @@ var _u_nmap = u_nmap;
 
 //Shadow surface setup
 if (!surface_exists(shad_surf)){
-	shad_surf = surface_create(1280,720);
+	shad_surf = surface_create(320,180);
 }
 
 
-matrix_set(matrix_world,matrix_build(-obj_camera.x+640,-obj_camera.y+360,0,0,0,0,1,1,1));
+matrix_set(matrix_world,matrix_build(-vx,-vy,0,0,0,0,1,1,1));
 
 //Draw Normal (EDIT: this should be below the matrix set)
 surface_set_target(global.n_surf);
@@ -30,7 +30,7 @@ surface_reset_target();
 //Draw lights and shadows
 surface_set_target(shad_surf);
 draw_clear_alpha(c_black,0);
-draw_surface_ext(application_surface,obj_camera.x -640,obj_camera.y -360,1,1,0,c_white,0.2);
+draw_surface_ext(application_surface,_vx,_vy,1,1,0,c_white,0.2);
 with(obj_light){
 	
 	//Draw the shadows (AKA light blockers)
@@ -49,7 +49,7 @@ with(obj_light){
 	shader_set_uniform_f(_u_dir,dir);
 	texture_set_stage(_u_nmap,surface_get_texture(global.n_surf));
 	//draw_rectangle_color(_vx,_vy,_vx+320,_vy+180,color,color,color,color,0); //canvas for drawing the light
-	draw_surface_ext(application_surface,obj_camera.x -640,obj_camera.y -360,1,1,0,color,1);
+	draw_surface_ext(application_surface,_vx,_vy,1,1,0,color,1);
 }
 shader_reset();
 surface_reset_target();
@@ -58,7 +58,7 @@ matrix_set(matrix_world,matrix_build(0,0,0,0,0,0,1,1,1));
 
 //Draw and blend the shadow surface to the application surface
 gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
-draw_surface(shad_surf,obj_camera.x -640,obj_camera.y -360);
+draw_surface(shad_surf,vx,vy);
 
 
 //reset shader and blendmode 
