@@ -26,16 +26,17 @@ NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonat
             * **Flamethrower:** Flamethrower has only one main attack: using his flamethrower to damage the player. 
             * **Flower:** Flower is one of the smallest enemies in the game. It can hide in the ceiling or just stay on the ground but either way, he will approach the player and damage him with the steam that comes out of him. 
             * **Flashbang:** Flashbang is the smallest enemy in the game. This little guy is a suicide bomber. It appears from out of the ground and goes to the player. When he is near enough, his antenna will shine so bright that the poor dude with explode.
-            * Mage: Mage is the most complex enemy in the game. This fella has not one, not two but three moves he can throw at the player. First is the blast: he shoots a blast from his gun towards the player which deals significant damage. Second is the close range attack: when the player comes too close, Mage will shoot a small blast from his gun to knock the player back, while directly after he will do his third move: Mage dashes backwards to avoid any attacks the player throws at him. 
-4.  **Power Cards:**
+            * Mage: Mage is the most complex enemy in the game. This fella has not one, not two but three moves he can throw at the player. First is the blast: he shoots a blast from his gun towards the player which deals significant damage. Second is the close range attack: when the player comes too close, Mage will shoot a small blast from his gun to knock the player back, while directly after he will do his third move: Mage dashes backwards to avoid any attacks the player throws at him.
+3.  **Room design:** Instead of a traditional level design, we went for a progressive room design. The player wakes up in his first dungeon and learns how to do basic movement, combat and parcour. Our plan is to make ## rooms in total. This we think is a reasonal size to make before our deadline. With this amount of rooms the player will have plenty of room to play in. Every # rooms the player will encounter a boss that will give him a Power card which will give the opportunity to upgrade one of his abilties. Each boss will be progressively harder
+5.  **Power Cards:**
     *   Earned by defeating enemies and bosses.
     *   Spend them to unlock upgrades.
-5.  **Upgrade Categories:**
+6.  **Upgrade Categories:**
     *   **Health:** Increases your survivability.
     *   **Stamina:** Improves endurance for actions like dodging or running.
     *   **Strength:** Boosts your attack power.
     *   **Defense:** Enhances your ability to take hits.
-6.  **Enemies & Bosses:**
+7.  **Enemies & Bosses:**
     *   Encounter a variety of enemies, each with unique attack patterns.
     *   Defeat bosses to unlock rare Power Cards and progress the story.
     
