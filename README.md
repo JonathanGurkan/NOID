@@ -1,83 +1,72 @@
-<h1>Welcome to the NOID GitHub page!</h1>
-    <p>
-        NOID is a dungeon-crawling adventure game developed by <strong>Karl Olma</strong> and <strong>Jonathan Gurkan</strong> using GameMaker Language. 
-        Dive into an action-packed world where you explore mysterious dungeons, defeat enemies, and capture Power Cards to upgrade your character's abilities.
-    </p>
-<h2>Features</h2>
-    <ul>
-        <li><strong>Dungeon Exploration:</strong> Discover and conquer dungeons filled with challenges.</li>
-        <li><strong>Combat System:</strong> Engage in battles against enemies and powerful bosses.</li>
-        <li><strong>Upgrade System:</strong> Collect Power Cards to enhance your character’s Health, Stamina, Strength, and Defense. Each category features up to six upgrades, allowing for strategic customization.</li>
-        <li><strong>Challenging Gameplay:</strong> Plan your upgrades carefully—each Power Card can only be used for up to three or four upgrades.</li>
-    </ul>
+# Welcome to the NOID GitHub page!
 
-<h2>Gameplay Mechanics</h2>
-    <ol>
-        <li> 
-            <strong>Game controls: </strong>
-            <ul>
-                <li>You control the player with WASD and mouse buttons which leads to easy to master controls. </li>
-                <li>You attack with left mouse button, while Shift helps you to escape dodgy situations with a great dash.</li>
-                <li>The player (who's name is not known hence the name NOID) has two swords. He can attack with them and parry enemy attacks.</li>
-                <li>Player health is 100 hitpoints but can be upgraded with Power Cards</li>
-        </li>
-        <li>
-            <strong>Power Cards:</strong>
-            <ul>
-                <li>Earned by defeating enemies and bosses.</li>
-                <li>Spend them to unlock upgrades.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Upgrade Categories:</strong>
-            <ul>
-                <li><strong>Health:</strong> Increases your survivability.</li>
-                <li><strong>Stamina:</strong> Improves endurance for actions like dodging or running.</li>
-                <li><strong>Strength:</strong> Boosts your attack power.</li>
-                <li><strong>Defense:</strong> Enhances your ability to take hits.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Enemies & Bosses:</strong>
-            <ul>
-                <li>Encounter a variety of enemies, each with unique attack patterns.</li>
-                <li>Defeat bosses to unlock rare Power Cards and progress the story.</li>
-            </ul>
-        </li>
-    </ol>
+NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonathan Gurkan** using GameMaker Language. Dive into an action-packed world where you explore mysterious dungeons, defeat enemies, and capture Power Cards to upgrade your character's abilities.
 
-<h2>How to Play</h2>
-    <ul>
-        <li><strong>Explore</strong> the dungeon and uncover its secrets.</li>
-        <li><strong>Defeat</strong> enemies and bosses to gather Power Cards.</li>
-        <li><strong>Upgrade</strong> your abilities strategically to prepare for tougher challenges.</li>
-    </ul>
+## Features
 
-<h2>Requirements</h2>
-    <ul>
-        <li>GameMaker Studio 2 or higher (for developers).</li>
-        <li>PC or Mac for playing the game.</li>
-    </ul>
+*   **Dungeon Exploration:** Discover and conquer dungeons filled with challenges.
+*   **Combat System:** Engage in battles against enemies and powerful bosses.
+*   **Upgrade System:** Collect Power Cards to enhance your character’s Health, Stamina, Strength, and Defense. Each category features up to six upgrades, allowing for strategic customization.
+*   **Challenging Gameplay:** Plan your upgrades carefully—each Power Card can only be used for up to three or four upgrades.
 
-<h2>Development Team</h2>
-    <ul>
-        <li><strong>Karl:</strong> Developer</li>
-        <li><strong>Jonathan:</strong> Developer</li>
-    </ul>
+## Gameplay Mechanics
 
-<h2>Status</h2>
-    <p>NOID is currently in development. Stay tuned for updates, including new features, improvements, and bug fixes!</p>
+1.  **Game controls:**
+    *   You control the player with WASD and mouse buttons which leads to easy to master controls.
+    *   You attack with left mouse button, while Shift helps you to escape dodgy situations with a great dash.
+    *   The player (who's name is not known hence the name NOID) has two swords. He can attack with them and parry enemy attacks.
+    *   Player health is 100 hitpoints but can be upgraded with Power Cards.
+    *   Enemy hitpoints vary between 2 and 15 hitpoints depending on the type of enemy. 
+2.  **Characters:**
+    *   *Player:*
+        *   The player is a girl dressed in yellow, she has two swords and has the ability to attack and parry with the swords.
+    *   *Enemies:*
+        *   There will be a total of 5 enemies in the game:
+            * **B.O.T:** B.O.T is a robot with two attacks: Fire dash and shoot. With the fire dash, B.O.T dashes towards the player dealing damage to the player and also knocking him back. The shoot attack is like the name suggests; B.O.T tries to shoot a projectile to the player, but only gunpowder comes out. It deals damage but not that much in comparison to a normal gunshot.
+            * **Flamethrower:** Flamethrower has only one main attack: using his flamethrower to damage the player. 
+            * **Flower:** Flower is one of the smallest enemies in the game. It can hide in the ceiling or just stay on the ground but either way, he will approach the player and damage him with the steam that comes out of him. 
+            * **Flashbang:** Flashbang is the smallest enemy in the game. This little guy is a suicide bomber. It appears from out of the ground and goes to the player. When he is near enough, his antenna will shine so bright that the poor dude with explode.
+            * Mage: Mage is the most complex enemy in the game. This fella has not one, not two but three moves he can throw at the player. First is the blast: he shoots a blast from his gun towards the player which deals significant damage. Second is the close range attack: when the player comes too close, Mage will shoot a small blast from his gun to knock the player back, while directly after he will do his third move: Mage dashes backwards to avoid any attacks the player throws at him. 
+4.  **Power Cards:**
+    *   Earned by defeating enemies and bosses.
+    *   Spend them to unlock upgrades.
+5.  **Upgrade Categories:**
+    *   **Health:** Increases your survivability.
+    *   **Stamina:** Improves endurance for actions like dodging or running.
+    *   **Strength:** Boosts your attack power.
+    *   **Defense:** Enhances your ability to take hits.
+6.  **Enemies & Bosses:**
+    *   Encounter a variety of enemies, each with unique attack patterns.
+    *   Defeat bosses to unlock rare Power Cards and progress the story.
+    
 
-<h2>Feedback</h2>
-    <p>
-        We’d love to hear your feedback! Please share your thoughts and suggestions by contacting us at:
-        <ul>
-            <li><strong>Karl’s Email:</strong> s932051@cartesius.espritscholen.nl</li>
-            <li><strong>Jonathan’s Email:</strong> j.gurkan@cartesius.espritscholen.nl</li>
-        </ul>
-    </p>
+## How to Play
 
-<h2>License</h2>
-    <p>
-        This project is for educational and personal purposes. Redistribution or commercial use is not permitted without permission from the developers.
-    </p>
+*   **Explore** the dungeon and uncover its secrets.
+*   **Defeat** enemies and bosses to gather Power Cards.
+*   **Upgrade** your abilities strategically to prepare for tougher challenges.
+
+## Requirements
+
+*   GameMaker Studio 2 or higher (for developers).
+*   PC or Mac for playing the game.
+
+## Development Team
+
+*   **Karl:** Developer
+*   **Jonathan:** Developer
+
+## Status
+
+NOID is currently in development. Stay tuned for updates, including new features, improvements, and bug fixes!
+
+## Feedback
+
+We’d love to hear your feedback! Please share your thoughts and suggestions by contacting us at:
+
+*   **Karl’s Email:** s932051@cartesius.espritscholen.nl
+*   **Jonathan’s Email:** j.gurkan@cartesius.espritscholen.nl
+
+## License
+
+This project is for educational and personal purposes. Redistribution or commercial use is not permitted without permission from the developers.
