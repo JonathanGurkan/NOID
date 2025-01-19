@@ -1,11 +1,11 @@
-<h1>NOID</h1>
+<h1>Welcome to the NOID GitHub page!</h1>
     <p>
         NOID is a dungeon-crawling adventure game developed by <strong>Karl Olma</strong> and <strong>Jonathan Gurkan</strong> using GameMaker Language. 
         Dive into an action-packed world where you explore mysterious dungeons, defeat enemies, and capture Power Cards to upgrade your character's abilities.
     </p>
 <h2>Features</h2>
     <ul>
-        <li><strong>Dungeon Exploration:</strong> Discover and conquer procedurally generated dungeons filled with challenges.</li>
+        <li><strong>Dungeon Exploration:</strong> Discover and conquer dungeons filled with challenges.</li>
         <li><strong>Combat System:</strong> Engage in battles against enemies and powerful bosses.</li>
         <li><strong>Upgrade System:</strong> Collect Power Cards to enhance your character’s Health, Stamina, Strength, and Defense. Each category features up to six upgrades, allowing for strategic customization.</li>
         <li><strong>Challenging Gameplay:</strong> Plan your upgrades carefully—each Power Card can only be used for up to three or four upgrades.</li>
@@ -13,6 +13,14 @@
 
 <h2>Gameplay Mechanics</h2>
     <ol>
+        <li> 
+            <strong>Game controls: </strong>
+            <ul>
+                <li>You control the player with WASD and mouse buttons which leads to easy to master controls. </li>
+                <li>You attack with left mouse button, while Shift helps you to escape dodgy situations with a great dash.</li>
+                <li>The player (who's name is not known hence the name NOID) has two swords. He can attack with them and parry enemy attacks.</li>
+                <li>Player health is 100 hitpoints but can be upgraded with Power Cards</li>
+        </li>
         <li>
             <strong>Power Cards:</strong>
             <ul>
