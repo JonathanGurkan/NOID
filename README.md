@@ -4,7 +4,7 @@ NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonat
 
 ## Features
 
-*   **Dungeon Exploration:** Discover and conquer dungeons filled with challenges.
+*   **Dungeon:** Conquer dungeons filled with challenges.
 *   **Combat System:** Engage in battles against enemies and powerful bosses.
 *   **Upgrade System:** Collect Power Cards to enhance your character’s Health, Stamina, Strength, and Defense. Each category features up to six upgrades, allowing for strategic customization.
 *   **Challenging Gameplay:** Plan your upgrades carefully—each Power Card can only be used for up to three or four upgrades.
@@ -56,7 +56,7 @@ NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonat
 
 ## Status
 
-NOID is currently in development. Stay tuned for updates, including new features, improvements, and bug fixes!
+NOID is currently in development. Stay tuned for updates, including new features, improvements, and bug fixes! We are planning to finish a playable version of the game on the 7th of February and the final version on 6 March.
 
 ## Feedback
 
