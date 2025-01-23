@@ -18,8 +18,9 @@ NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonat
     *   Player health is 100 hitpoints but can be upgraded with Power Cards.
     *   Enemy hitpoints vary between 2 and 15 hitpoints depending on the type of enemy. 
 2.  **Characters:**
-    *   *Player:*
+    *   *Player:* 
         *   The player is a girl dressed in yellow, she has two swords and has the ability to attack and parry with the swords.
+        <img src="sprites/spr_player_idle/f7115fc5-c861-45fd-82f5-a79013419ddc.png" alt="Player" width="364" height="148">
     *   *Enemies:*
         *   There will be a total of 5 enemies in the game:
             * **B.O.T:** B.O.T is a robot with two attacks: Fire dash and shoot. With the fire dash, B.O.T dashes towards the player dealing damage to the player and also knocking him back. The shoot attack is like the name suggests; B.O.T tries to shoot a projectile to the player, but only gunpowder comes out. It deals damage but not that much in comparison to a normal gunshot.
@@ -68,3 +69,6 @@ We’d love to hear your feedback! Please share your thoughts and suggestions by
 ## License
 
 This project is for educational and personal purposes. Redistribution or commercial use is not permitted without permission from the developers.
+
+## Flowcharts
+Along the way of programming the enemies, we've come up with flowcharts to better understand the logic. You can see them here
