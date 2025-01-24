@@ -34,9 +34,9 @@ NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonat
             *   **Mage**: Mage is the most complex enemy in the game. This fella has not one, not two but three moves he can throw at the player. First is the blast: he shoots a blast from his gun towards the player which deals significant damage. Second is the close range attack: when the player comes too close, Mage will shoot a small blast from his gun to knock the player back, while directly after he will do his third move: Mage dashes backwards to avoid any attacks the player throws at him.<br>
         ![Mage](https://github.com/user-attachments/assets/6ceaec8e-1fdd-45e4-8d94-e7785ad2a18a)
    * *Bosses:*
-      * <!-- Put your text here -->
+      * Every 3 or 4 rooms there will be a bossfight that the player needs to defeat to then get a power card for an upgrade one of his abilities. Inspiration of this is taken from the Legend of Zelda where every dungeon boss gives you a Heart Container. We don't have an idea what the bosses will look like but for the first one we are thinking about a dude with swords. We are not sure how we are going to implement this into the game. 
 3.  **Room design:** Instead of a traditional level design, we went for a progressive room design. The player wakes up in his first dungeon and learns how to do basic movement, combat and parcour. Our plan is to make ## rooms in total. This we think is a reasonal size to make before our deadline. With this amount of rooms the player will have plenty of room to play in. Every # rooms the player will encounter a boss that will give him a Power card which will give the opportunity to upgrade one of his abilties. Each boss will be progressively harder.
-4.  **Environment:** You start in a dark cave where you explore the controls and get to play around with the enemies a bit. After defeating the first boss you will then go to the more open city environment where you explore even more of our game
+4.  **Environment:** You start in a dark cave where you explore the controls and get to play around with the enemies a bit. After defeating the first boss you will then go to the more open city environment where you explore even more of our game. 
 5.  **Gameplay and balance:** To maintain equal balance throughout the game, enemies will give rewards based on how hard it was for the player to kill them. Rewards could be Slices of Power, coins, health or stamina. Slices of Power are the building blocks of Power Cards. With a total of 3 Slices of Power the player gets one Power Card.
    * **Upgrade Categories with Power Cards:**
        *   **Health:** Increases your survivability.
@@ -65,7 +65,7 @@ NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonat
 
 ## Status
 
-NOID is currently in development. Stay tuned for updates, including new features, improvements, and bug fixes! We are planning to finish a playable version of the game on the 7th of February and the final version on 6 March.
+NOID is currently in development. Stay tuned for updates, including new features, improvements, and bug fixes! We are planning to finish a playable version of the game on the 7th of February and the final version on March 6th. We're not sure if we will be working on this project after the school project is finished but if you want to contribute to the project, please reach out to us on our GitHub pages
 
 ## Feedback
 
