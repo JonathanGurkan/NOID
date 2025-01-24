@@ -36,13 +36,14 @@ NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonat
    * *Bosses:*
       * <!-- Put your text here -->
 3.  **Room design:** Instead of a traditional level design, we went for a progressive room design. The player wakes up in his first dungeon and learns how to do basic movement, combat and parcour. Our plan is to make ## rooms in total. This we think is a reasonal size to make before our deadline. With this amount of rooms the player will have plenty of room to play in. Every # rooms the player will encounter a boss that will give him a Power card which will give the opportunity to upgrade one of his abilties. Each boss will be progressively harder.
-4.  **Gameplay and balance:** To maintain equal balance throughout the game, enemies will give rewards based on how hard it was for the player to kill them. Rewards could be Slices of Power, coins, health or stamina. Slices of Power are the building blocks of Power Cards. With a total of 3 Slices of Power the player gets one Power Card.
+4.  **Environment:** You start in a dark cave where you explore the controls and get to play around with the enemies a bit. After defeating the first boss you will then go to the more open city environment where you explore even more of our game
+5.  **Gameplay and balance:** To maintain equal balance throughout the game, enemies will give rewards based on how hard it was for the player to kill them. Rewards could be Slices of Power, coins, health or stamina. Slices of Power are the building blocks of Power Cards. With a total of 3 Slices of Power the player gets one Power Card.
    * **Upgrade Categories with Power Cards:**
        *   **Health:** Increases your survivability.
        *   **Stamina:** Improves endurance for actions like dodging or running.
        *   **Strength:** Boosts your attack power.
        *   **Defense:** Enhances your ability to take hits.
-5. **Sound:** In NOID we want to use sounds that we'll be recording ourself, which could turn out to be great but also has a pretty big chance of failing hard, so we'll see how that will turn out  
+6. **Sound:** In NOID we want to use sounds that we'll be recording ourself, which could turn out to be great but also has a pretty big chance of failing hard, so we'll see how that will turn out
 
 ## Cheats and extras
 * When `F12` is pressed once you can switch between the different rooms with `1, 2, 3 etc...`
