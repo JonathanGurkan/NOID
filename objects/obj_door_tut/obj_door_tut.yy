@@ -1,20 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_light_e",
+  "%Name":"obj_door_tut",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_light_e",
+  "name":"obj_door_tut",
   "overriddenProperties":[],
   "parent":{
-    "name":"dynamic_light",
-    "path":"folders/Objects/dynamic_light.yy",
+    "name":"interactables",
+    "path":"folders/Objects/interactables.yy",
   },
-  "parentObjectId":{
-    "name":"obj_light",
-    "path":"objects/obj_light/obj_light.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_door_closed",
+    "path":"sprites/spr_door_closed/spr_door_closed.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

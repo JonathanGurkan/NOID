@@ -11,10 +11,7 @@
     "name":"dynamic_light",
     "path":"folders/Objects/dynamic_light.yy",
   },
-  "parentObjectId":{
-    "name":"obj_light",
-    "path":"objects/obj_light/obj_light.yy",
-  },
+  "parentObjectId":null,
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

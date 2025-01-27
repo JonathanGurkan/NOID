@@ -233,8 +233,8 @@
   ],
   "name":"r_tutorial_1",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"tutorial",
+    "path":"folders/Rooms/tutorial.yy",
   },
   "parentRoom":{
     "name":"r_parent",
