@@ -72,7 +72,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1100.0.713",
+    "IDEVersion":"2024.8.0.169",
   },
   "name":"Informatica GameMaker Project",
   "resources":[
@@ -102,6 +102,7 @@
     {"id":{"name":"obj_player_d","path":"objects/obj_player_d/obj_player_d.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_room_exit","path":"objects/obj_room_exit/obj_room_exit.yy",},},
+    {"id":{"name":"obj_screenflash","path":"objects/obj_screenflash/obj_screenflash.yy",},},
     {"id":{"name":"obj_setup","path":"objects/obj_setup/obj_setup.yy",},},
     {"id":{"name":"obj_spikes_flat","path":"objects/obj_spikes_flat/obj_spikes_flat.yy",},},
     {"id":{"name":"obj_trail","path":"objects/obj_trail/obj_trail.yy",},},
@@ -205,6 +206,7 @@
     {"id":{"name":"spr_obj_platform","path":"sprites/spr_obj_platform/spr_obj_platform.yy",},},
     {"id":{"name":"spr_obj_spikes_flat","path":"sprites/spr_obj_spikes_flat/spr_obj_spikes_flat.yy",},},
     {"id":{"name":"spr_obj_wallclimb","path":"sprites/spr_obj_wallclimb/spr_obj_wallclimb.yy",},},
+    {"id":{"name":"spr_pixel","path":"sprites/spr_pixel/spr_pixel.yy",},},
     {"id":{"name":"spr_player_attack_1_hitbox","path":"sprites/spr_player_attack_1_hitbox/spr_player_attack_1_hitbox.yy",},},
     {"id":{"name":"spr_player_attack_1","path":"sprites/spr_player_attack_1/spr_player_attack_1.yy",},},
     {"id":{"name":"spr_player_attack_2_hitbox","path":"sprites/spr_player_attack_2_hitbox/spr_player_attack_2_hitbox.yy",},},
