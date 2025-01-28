@@ -123,5 +123,8 @@ function enemy_flashbang_death() {
     
     if (animation_end()) {
         instance_destroy();
+        with (obj_screenflash) {
+            flash_toggle = false;
+        }
     }
 }

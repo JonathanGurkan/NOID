@@ -9,8 +9,8 @@
   "name":"obj_screenflash",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"manager",
+    "path":"folders/Objects/manager.yy",
   },
   "parentObjectId":null,
   "persistent":false,
