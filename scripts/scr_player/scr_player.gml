@@ -312,22 +312,17 @@ function scr_p_transition() {
 	collision();
 }
 
-function scr_p_teleport(){
-    x = obj_portal.x
-    y = obj_portal.y
-    sprite_index = spr_player_teleport_in;
-    image_speed = 1;
-    if(animation_end()){
-            global.target_room = target_room; 
-            global.target_x = target_x;
-            global.target_y = target_y;
-            global.target_direction = obj_player.direction;
-            with (obj_player) state = scr_p_transition;
-            room_transition(TRANS_TYPE.FADE, target_room)
-            instance_destroy();
+function scr_p_teleport(){ 
+    global.target_room = target_room; 
+    global.target_x = target_x;
+    global.target_y = target_y;
+    global.target_direction = obj_player.direction;
+    with (obj_player) state = scr_p_transition;
+    room_transition(TRANS_TYPE.FADE, target_room)
+    instance_destroy();
         }
         
-    }
+    
     
 
 
