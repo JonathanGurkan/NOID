@@ -1,4 +1,7 @@
 with (obj_player) state = scr_p_transition;
+with (obj_camera){
+
+}
 
 if (leading == OUT) {
     percent = min(1, percent + TRANSITION_SPEED);
