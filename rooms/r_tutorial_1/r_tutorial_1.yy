@@ -10,6 +10,7 @@
     {"name":"inst_4B71BE6C","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
     {"name":"inst_22C75EC5","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
     {"name":"inst_33BF3FCE","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
+    {"name":"inst_54CC670D","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -58,6 +59,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_room_exit","path":"objects/obj_room_exit/obj_room_exit.yy",},"propertyId":{"name":"target_y","path":"objects/obj_room_exit/obj_room_exit.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"915",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":2.0,"x":0.0,"y":481.0,},
         {"$GMRInstance":"v1","%Name":"inst_33BF3FCE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_33BF3FCE","objectId":{"name":"obj_spikes_flat","path":"objects/obj_spikes_flat/obj_spikes_flat.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":41.0,"scaleY":13.0,"x":128.0,"y":608.0,},
+        {"$GMRInstance":"v1","%Name":"inst_54CC670D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_54CC670D","objectId":{"name":"obj_screenflash","path":"objects/obj_screenflash/obj_screenflash.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":320.0,},
       ],"layers":[],"name":"colliders","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"behind_player_tiles","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
         {"$GMRTileLayer":"","%Name":"behind_player_tiles_sub","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"behind_player_tiles_sub","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":48,"SerialiseWidth":86,"TileCompressedData":[
