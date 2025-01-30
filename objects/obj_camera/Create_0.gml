@@ -6,9 +6,9 @@ x_to = xstart;
 y_to = ystart;
 x_min = 0
 y_min = 0
-
-
-
+follow_obj_x = 0;
+follow_obj_y = 0;
+cutscene = false;
 shake_lenght = 0;
 shake_magnitude = 0;
 shake_remain = 0;

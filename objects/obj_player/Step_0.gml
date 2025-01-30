@@ -29,8 +29,10 @@ if (!global.gamepaused) {
         case PLAYERSTATE.ATTACK_3: scr_p_attack_3(); break;
         case PLAYERSTATE.DASH: scr_p_dash(); break;
         case PLAYERSTATE.PARRY: scr_p_attack_strong(); break;
+        case PLAYERSTATE.ENDTUT: scr_p_endtut(); break;
     }
 }
+
 
 
 
