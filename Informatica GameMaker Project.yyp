@@ -72,7 +72,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.0.169",
+    "IDEVersion":"2024.1100.0.713",
   },
   "name":"Informatica GameMaker Project",
   "resources":[
@@ -106,6 +106,7 @@
     {"id":{"name":"obj_spikes_flat","path":"objects/obj_spikes_flat/obj_spikes_flat.yy",},},
     {"id":{"name":"obj_trail","path":"objects/obj_trail/obj_trail.yy",},},
     {"id":{"name":"obj_transition","path":"objects/obj_transition/obj_transition.yy",},},
+    {"id":{"name":"obj_ui","path":"objects/obj_ui/obj_ui.yy",},},
     {"id":{"name":"obj_wallclimb","path":"objects/obj_wallclimb/obj_wallclimb.yy",},},
     {"id":{"name":"par_button","path":"objects/par_button/par_button.yy",},},
     {"id":{"name":"par_enemy","path":"objects/par_enemy/par_enemy.yy",},},
