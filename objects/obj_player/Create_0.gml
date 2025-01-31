@@ -1,6 +1,8 @@
 state = PLAYERSTATE.FREE;
 last_state = PLAYERSTATE.FREE;
 collision_map = layer_tilemap_get_id(layer_get_id("col"))
+pause_option = ["Continue", "Main Menu", "Quit"];
+pause_option_selected = 0;
 
 //keybinds
 key_left = false;
