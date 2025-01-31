@@ -4,5 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-room_goto(r_start)
+room_goto(r_main_menu)
 
