@@ -1,5 +1,5 @@
 //pause the game
-if (keyboard_check_pressed(vk_escape)) {
+if (keyboard_check_pressed(vk_escape) && room != r_main_menu) {
     global.gamepaused = !global.gamepaused;
     if (global.gamepaused) {
         show_debug_message("game_paused_image_speed exists in " + string(id));
