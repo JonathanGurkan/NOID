@@ -3,8 +3,8 @@
   "%Name":"sh_light",
   "name":"sh_light",
   "parent":{
-    "name":"Shaders",
-    "path":"folders/Shaders.yy",
+    "name":"lighting system",
+    "path":"folders/Shaders/lighting system.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

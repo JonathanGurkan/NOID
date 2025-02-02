@@ -56,7 +56,6 @@ function enemy_bot_global() {
     
     if(evade_timer >= 0) evade_timer--
         
-    
 }
 
 function enemy_bot_idle() {
@@ -100,7 +99,6 @@ function enemy_bot_evade() {
     x -= image_xscale * walk_speed;
     image_speed = 1;
     uncondidtional_follow = false;
-    
     
     
     if (!evade_player){
@@ -172,6 +170,54 @@ function enemy_bot_shoot() {
         enemy_state = ENEMYSTATE.MOVE;
     }
 }
+
+function enemy_bot_dash() {
+    sprite_index = spr_bot_fire_dash;
+    mask_index = spr_bot_fire_dash_hitbox;      
+    image_speed = 1;
+    dash_player = true;
+    
+    if (!dash_initialized) {
+        image_index = 0;
+        show_debug_message("Fire dash attack initialized")
+        if (direction_p > 90) {
+            direction = -1
+            image_xscale = -1
+        } else {
+            direction = 1;
+            image_xscale = 1;
+        }
+        dash_initialized = true;
+    }
+    
+    var list = ds_list_create();
+        var num = instance_place_list(x,y,obj_player,list,false)
+        
+        if (num > 0) {
+            with (obj_player) {
+                if (!invincible) { // Only take damage if not invincible
+                    global.player_health -= 2;
+                    invincibility_timer = 60; // Set invincibility period
+                    invincible = true; // Make the player invincible
+                    screenshake(10,20);
+                }
+            }
+        } 
+        
+        ds_list_destroy(list);
+    
+    
+    if(animation_end()) {
+        dash_timer = dash_cooldown;
+        mask_index = spr_bot_idle;
+        enemy_state = ENEMYSTATE.MOVE;
+        dash_player = false;
+        x += image_xscale * 70;
+    }
+
+
+} 
+
 
 function enemy_bot_dash() {
     sprite_index = spr_bot_fire_dash;

@@ -1,2 +1,1 @@
-/// @description Insert description here
-// You can write your code in this editor
+  x = lerp(x,x+50,0.08);

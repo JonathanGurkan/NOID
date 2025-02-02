@@ -6,6 +6,28 @@ draw_sprite_stretched(spr_health, 1, 38, 28, 228 * (global.player_health / 100) 
 draw_sprite(spr_bar, 1, 30, 60);
 draw_sprite_stretched(spr_stamina, 1, 38, 68, 228 * (global.player_stamina / 100) , 16)
 
+
+if(draw_text_cut){
+show_debug_message(alpha)
+    alpha = min(alpha+0.01, 1);
+    draw_set_alpha(alpha);
+    draw_set_font(f_button_text);
+    draw_set_color(c_white);
+    draw_sprite_stretched(spr_gametitle,false,90,220,175,135);
+    draw_text(1000, 250, "Chapter 1");
+    draw_text(1000, 300, "The Circle");
+        
+    draw_set_alpha(1);
+    
+    if(instance_exists(obj_room_exit)){
+        show_debug_message(obj_room_exit.y)
+        if(alpha = 1) obj_room_exit.y -= 0.5;
+    }
+    
+    
+}
+
+
 //Pause sceen
 if (global.gamepaused) {
     draw_set_color(c_black);
@@ -31,3 +53,4 @@ if (global.gamepaused) {
         draw_set_alpha(1)
     }
 }
+
