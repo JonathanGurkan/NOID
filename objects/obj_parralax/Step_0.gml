@@ -1,6 +1,7 @@
 var cam_x = camera_get_view_x(view_camera[0]);
 layer_x("title",cam_x * 1);
 layer_x("P_b_1", cam_x * -1);
+layer_x("buttons", cam_x * 1);
 layer_x("player", cam_x * 1);
 layer_x("P_b_2", cam_x * 0.6);
 layer_x("P_b_3", cam_x * 0.7);

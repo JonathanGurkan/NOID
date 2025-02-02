@@ -2,14 +2,13 @@ var enemy_count = instance_number(par_enemy);
 var distance_to_p = distance_to_object(obj_player);
 
 if (timer >= 0) timer -- 
-    
-show_debug_message(image_index)
 
 if (timer = 1){
    teleport = true
     image_speed = 0;
     image_index = 0;
 }
+
 
 if (enemy_count <= 1 && distance_to_p < 20 && obj_player.key_use) trigger = true;
     

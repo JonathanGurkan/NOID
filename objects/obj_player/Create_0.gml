@@ -82,3 +82,8 @@ if (global.target_x != -1) {
 }
 
 hit_by_attack = ds_list_create();
+
+
+//cutscene variables
+alpha = 0;
+draw_text_cut = false;
