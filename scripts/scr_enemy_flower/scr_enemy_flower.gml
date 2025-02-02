@@ -134,7 +134,7 @@ function enemy_flower_attack() {
 } 
 
 function enemy_flower_death() {
-    is_diying = true
+    is_dying = true
         sprite_index = spr_flower_death;
         
         if (animation_end()) {

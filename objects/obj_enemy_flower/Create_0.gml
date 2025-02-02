@@ -16,7 +16,7 @@ on_ground = false;
 found_player = false;
 follow_player = false;
 attack_player = false;
-is_diying = false;
+is_dying = false;
 evade_player = false;
 
 //logic reals
