@@ -4,8 +4,7 @@ if (keyboard_check(ord("T"))){
 
 //fullscreen
 if(keyboard_check(vk_f11)){
-    if window_get_fullscreen()
-    {
+    if window_get_fullscreen() {
         window_set_fullscreen(false);
     } else {
         window_set_fullscreen(true);
