@@ -16,3 +16,5 @@ on_ground = place_meeting(x,y+1,collision_map);
 
 enemy_bot_global();
 collision();
+
+show_debug_message(string(distance_to_p))
