@@ -7,7 +7,7 @@ if (global.gamepaused) {
     if (pause_option_selected < 0) pause_option_selected = array_length(pause_option) -1;
         
     var key_activate = keyboard_check_pressed(vk_enter);
-    if (key_activate) {
+    if(key_activate) {
         switch (pause_option_selected) {
             case 0: {
                 global.gamepaused = false;
@@ -21,6 +21,5 @@ if (global.gamepaused) {
                 game_end();
             }
         }
-        global.gamepaused = false;
     }
 }

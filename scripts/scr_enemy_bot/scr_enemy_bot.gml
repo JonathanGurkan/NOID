@@ -212,7 +212,7 @@ function enemy_bot_dash() {
         mask_index = spr_bot_idle;
         enemy_state = ENEMYSTATE.MOVE;
         dash_player = false;
-        x += image_xscale * 70
+        x += image_xscale * 70;
     }
 
 
