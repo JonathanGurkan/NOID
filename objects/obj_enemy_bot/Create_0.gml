@@ -3,9 +3,10 @@ enemy_state = ENEMYSTATE.IDLE;
 collision_map = layer_tilemap_get_id(layer_get_id("col"))
 distance_to_p = distance_to_object(obj_player);
 direction_p = point_direction(x,y,obj_player.x, obj_player.y);
+attack_initialized = false; ;
     
 //movement
-walk_speed = 0;
+walk_speed = 1.3;
 move_y = 0;
 move_y_max = 3;
 move_x = 0;
@@ -38,4 +39,4 @@ evade_timer = 0;
 evade_cooldown = 60;
 
 //hp + damage
-enemy_hp = 1;
+enemy_hp = 10;

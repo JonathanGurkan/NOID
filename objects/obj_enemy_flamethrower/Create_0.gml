@@ -15,7 +15,7 @@ on_ground = false;
 follow_player = false;
 evade_player = false;
 attack_player = false;
-is_diying = false;
+is_dying = false;
 
 //logic reals
 follow_distance = 150;
