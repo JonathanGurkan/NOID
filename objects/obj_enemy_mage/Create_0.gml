@@ -16,7 +16,7 @@ follow_player = false;
 evade_player = false;
 attack_player = false;
 shoot_player = false;
-is_dying = false;
+is_diying = false;
 can_shoot = false;
 attack_initialized = false;
 

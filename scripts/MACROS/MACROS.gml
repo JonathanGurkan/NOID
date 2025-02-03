@@ -31,4 +31,3 @@ enum ENEMYSTATE{
 	DASH,
     SEARCH
 }
-

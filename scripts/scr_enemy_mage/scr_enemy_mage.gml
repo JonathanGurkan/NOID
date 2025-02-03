@@ -165,7 +165,7 @@ function enemy_mage_dodge() {
 
 
 function enemy_mage_death() {
-    is_dying = true
+    is_diying = true
     sprite_index = spr_mage_death;
     
     if (animation_end()) {
