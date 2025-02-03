@@ -110,21 +110,15 @@ function enemy_flashbang_attack() {
 
     if (animation_end()) {
         enemy_state = ENEMYSTATE.DEATH;
-		with (obj_screenflash) {
-			flash_toggle = true;
-		}
     }
 } 
 
 function enemy_flashbang_death() {
-    is_dying = true
+    is_diying = true
     image_speed = 1;
     sprite_index = spr_flashbang_death;
     
     if (animation_end()) {
         instance_destroy();
-        with (obj_screenflash) {
-            flash_toggle = false;
-        }
     }
 }

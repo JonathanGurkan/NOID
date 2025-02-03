@@ -1,9 +1,9 @@
-function screenshake(strength, length) {
+function screenshake(strngth, lgth) {
     with (global.i_camera) {
-        if (strength > shake_remain) {
-            shake_magnitude = strength;
+        if (strngth > shake_remain) {
+            shake_magnitude = strngth;
             shake_remain = shake_magnitude;
-            shake_length = length;
+            shake_length = lgth;
         }
     }
 }

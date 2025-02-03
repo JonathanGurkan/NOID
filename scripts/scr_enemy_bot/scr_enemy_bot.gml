@@ -4,9 +4,9 @@ function enemy_bot_global() {
     //wakeup
     if (distance_to_p < found_distance) {
         found_player = true;
-    } else { 
+        } else { 
         found_player = false;
-    }
+        }
     
     //follow
     if (distance_to_p < follow_distance || uncondidtional_follow) {
@@ -16,23 +16,11 @@ function enemy_bot_global() {
     }
     
     //attack range
-    if (distance_to_p < shoot_distance) {
-        shoot_player = true;
-    } else { 
-        shoot_player = false;
-    }
-    
-    if (distance_to_p < dash_distance) {
-        dash_player = true;
-    } else {
-        dash_player = false;
-    }
-
-    if (distance_to_p < evade_distance) {
-        evade_player = true;
-    } else {
-        evade_player = false
-    }
+    if (distance_to_p < attack_distance) {
+            attack_player = true;
+        } else { 
+            attack_player = false;
+        }
     
     if (enemy_hp <= 0) {
         enemy_state = ENEMYSTATE.DEATH;
@@ -65,14 +53,9 @@ function enemy_bot_idle() {
 }
 
 function enemy_bot_alerted() {
-    sprite_index = spr_bot_activate;
-    image_speed = 1;
-    if (animation_end()) {
-        image_speed = 0;
-    }
+    sprite_index = spr_bot_alert;
     
     if (follow_player) enemy_state = ENEMYSTATE.MOVE;
-    if (dash_player && !shoot_player && can_dash) enemy_state = ENEMYSTATE.DASH
     if (!found_player && !follow_player) enemy_state = ENEMYSTATE.IDLE;
 }
 
@@ -90,7 +73,7 @@ function enemy_bot_movement() {
         }
     
     if (evade_player) enemy_state = ENEMYSTATE.EVADE; 
-        if (shoot_player && can_shoot) enemy_state = ENEMYSTATE.ATTACK;
+    if (attack_player) enemy_state = ENEMYSTATE.ATTACK;
     if (!follow_player) enemy_state = ENEMYSTATE.ALERT;
 }
 
@@ -99,7 +82,6 @@ function enemy_bot_evade() {
     x -= image_xscale * walk_speed;
     image_speed = 1;
     uncondidtional_follow = false;
-    
     
     if (!evade_player){
         if (!attack_initialized) {
@@ -133,91 +115,31 @@ function enemy_bot_search(){
 
 function enemy_bot_shoot() {
     if (!attack_initialized) {
-        sprite_index = spr_bot_shoot;
-        mask_index = spr_bot_shoot_hitbox;
-        if (direction_p > 90) {
-            direction = -1
-            image_xscale = -1
-        } else {
-            direction = 1;
-            image_xscale = 1;
-        }
-        attack_initialized = true;
-    } 
-        
+        sprite_index = spr_bot_attack;
+        image_index = 0; 
+        image_speed = 1; 
+        mask_index = spr_bot_attack_hitbox;
+        attack_initialized = true; 
+    }
+
+    if (image_index < 5 && !attack_player) {
+        enemy_state = ENEMYSTATE.MOVE;
+        attack_initialized = false; 
+        mask_index = spr_bot_idle;
+    }
+
     var list = ds_list_create();
-    var num = instance_place_list(x,y,obj_player,list,false)
-    
+    var num = instance_place_list(x, y, obj_player, list, false);
     if (num > 0) {
-        with (obj_player) {
-            if (!invincible) { // Only take damage if not invincible
-                global.player_health -= 2;
-                invincibility_timer = 60; // Set invincibility period
-                invincible = true; // Make the player invincible
-                screenshake(10,20);
-            }
-        }
-    } 
-    
+        show_debug_message("flash");
+    }
     ds_list_destroy(list);
-    
 
     if (animation_end()) {
-        image_index = 0
-        mask_index = spr_bot_idle;
-        attack_initialized = false;
-        shoot_timer = shoot_cooldown;
-        enemy_state = ENEMYSTATE.MOVE;
+        enemy_state = ENEMYSTATE.DEATH;
     }
-}
-
-function enemy_bot_dash() {
-    sprite_index = spr_bot_fire_dash;
-    mask_index = spr_bot_fire_dash_hitbox;      
-    image_speed = 1;
-    dash_player = true;
-    
-    if (!dash_initialized) {
-        image_index = 0;
-        show_debug_message("Fire dash attack initialized")
-        if (direction_p > 90) {
-            direction = -1
-            image_xscale = -1
-        } else {
-            direction = 1;
-            image_xscale = 1;
-        }
-        dash_initialized = true;
-    }
-    
-    var list = ds_list_create();
-        var num = instance_place_list(x,y,obj_player,list,false)
-        
-        if (num > 0) {
-            with (obj_player) {
-                if (!invincible) { // Only take damage if not invincible
-                    global.player_health -= 2;
-                    invincibility_timer = 60; // Set invincibility period
-                    invincible = true; // Make the player invincible
-                    screenshake(10,20);
-                }
-            }
-        } 
-        
-        ds_list_destroy(list);
-    
-    
-    if(animation_end()) {
-        dash_timer = dash_cooldown;
-        mask_index = spr_bot_idle;
-        enemy_state = ENEMYSTATE.MOVE;
-        dash_player = false;
-        x += image_xscale * 70;
-    }
-
 
 } 
-
 
 function enemy_bot_dash() {
     sprite_index = spr_bot_fire_dash;
@@ -266,8 +188,8 @@ function enemy_bot_dash() {
 
 
 function enemy_bot_death() {
-    is_dying = true
-    sprite_index = spr_bot_death;
+    is_diying = true
+    sprite_index = spr_flamethrower_death;
     
     if (animation_end()) {
         instance_destroy();
