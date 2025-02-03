@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"colliders",
-    "path":"folders/Sprites/colliders.yy",
+    "name":"gamebuilding",
+    "path":"folders/Sprites/colliders/gamebuilding.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

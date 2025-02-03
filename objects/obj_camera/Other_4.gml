@@ -1,4 +1,5 @@
+
 if (instance_exists(follow)) {
-    x = obj_player.x;
-    y = obj_player.y;
+    x = follow_obj_x;
+    y = follow_obj_y;
 }

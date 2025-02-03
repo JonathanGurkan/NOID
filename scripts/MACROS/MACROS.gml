@@ -14,7 +14,8 @@ enum PLAYERSTATE{
     ATTACK_3,
     PARRY,
     DASH,
-	HURT
+	HURT,
+    ENDTUT
 }
 
 enum ENEMYSTATE{
@@ -30,3 +31,4 @@ enum ENEMYSTATE{
 	DASH,
     SEARCH
 }
+

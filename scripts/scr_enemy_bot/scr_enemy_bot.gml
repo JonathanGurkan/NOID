@@ -56,7 +56,6 @@ function enemy_bot_global() {
     
     if(evade_timer >= 0) evade_timer--
         
-    
 }
 
 function enemy_bot_idle() {
@@ -100,7 +99,6 @@ function enemy_bot_evade() {
     x -= image_xscale * walk_speed;
     image_speed = 1;
     uncondidtional_follow = false;
-    
     
     
     if (!evade_player){
@@ -216,7 +214,11 @@ function enemy_bot_dash() {
         dash_player = false;
         x += image_xscale * 70
     }
-}
+
+
+} 
+
+
 
 
 function enemy_bot_death() {

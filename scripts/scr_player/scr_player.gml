@@ -19,7 +19,7 @@ function scr_p_animation() {
 	        sprite_index = spr_player_idle;
 	    } else {
             if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift)) {
-                show_debug_message("Player has dashed")
+
             image_speed = 1;
             sprite_index = spr_player_move_3;
             } else{
@@ -313,6 +313,21 @@ function scr_p_transition() {
 	scr_p_animation();
 	collision();
 }
+
+function scr_p_teleport(){ 
+    global.target_room = target_room; 
+    global.target_x = target_x;
+    global.target_y = target_y;
+    global.target_direction = obj_player.direction;
+    with (obj_player) state = scr_p_transition;
+    room_transition(TRANS_TYPE.FADE, target_room)
+    instance_destroy();
+        }
+        
+    
+    
+
+
 
 function change_stamina(amount) {
 	global.player_stamina -= amount;

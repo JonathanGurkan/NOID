@@ -31,8 +31,8 @@
   ],
   "name":"r_parent",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"tutorial",
+    "path":"folders/Rooms/tutorial.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
