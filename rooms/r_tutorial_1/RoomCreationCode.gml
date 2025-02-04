@@ -1,0 +1,1 @@
+obj_camera.follow = obj_player;
