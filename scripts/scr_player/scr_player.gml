@@ -45,7 +45,7 @@ function scr_p_attack_1() {
     }
     
 	if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
-       change_stamina(5);
+       change_stamina(10);
 	    state = PLAYERSTATE.ATTACK_2;
 
 	    return;
@@ -65,7 +65,7 @@ function scr_p_attack_2() {
     }
         
   if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
-	    change_stamina(5);
+	    change_stamina(10);
 	    state = PLAYERSTATE.ATTACK_3;
 	    return;
 	}
@@ -81,7 +81,7 @@ function scr_p_attack_3() {
     process_attack(spr_player_attack_3,spr_player_attack_3_hitbox)
         
     if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
-        change_stamina(5)
+        change_stamina(10)
         state = PLAYERSTATE.ATTACK_1;
         return;
     }
@@ -137,7 +137,7 @@ function scr_p_dash() {
 	        can_dash  = true
 	        state = PLAYERSTATE.FREE;
           last_state = PLAYERSTATE.DASH
-          change_stamina(2)
+          change_stamina(5)
 	}
  
 }
@@ -240,7 +240,7 @@ function scr_p_free() {
     }
     
 	if (key_attack && on_ground && can_attack && global.player_stamina > 0) {
-		change_stamina(5);
+		change_stamina(10);
 	    state = PLAYERSTATE.ATTACK_1
 	    can_attack = false; 
 	}
