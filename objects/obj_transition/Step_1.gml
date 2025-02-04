@@ -1,6 +1,5 @@
 with (obj_player) state = scr_p_transition;
 
-
 if (leading == OUT) {
     percent = min(1, percent + TRANSITION_SPEED);
     with (obj_player) state = scr_p_transition();
@@ -21,4 +20,3 @@ if (leading == OUT) {
         instance_destroy();
     }
 }
-

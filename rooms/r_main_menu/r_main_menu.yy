@@ -10,6 +10,7 @@
     {"name":"inst_746F0B45","path":"rooms/r_main_menu/r_main_menu.yy",},
     {"name":"inst_367F3662","path":"rooms/r_main_menu/r_main_menu.yy",},
     {"name":"inst_5AC94673","path":"rooms/r_main_menu/r_main_menu.yy",},
+    {"name":"inst_7CEF54BA","path":"rooms/r_main_menu/r_main_menu.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -21,6 +22,7 @@
         {"$GMRInstance":"v1","%Name":"inst_746F0B45","colour":4294967295,"frozen":true,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_746F0B45","objectId":{"name":"obj_button_exit","path":"objects/obj_button_exit/obj_button_exit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":208.0,"y":680.0,},
         {"$GMRInstance":"v1","%Name":"inst_367F3662","colour":4294967295,"frozen":true,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_367F3662","objectId":{"name":"obj_button_settings","path":"objects/obj_button_settings/obj_button_settings.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1152.0,"y":680.0,},
         {"$GMRInstance":"v1","%Name":"inst_5AC94673","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5AC94673","objectId":{"name":"obj_parralax","path":"objects/obj_parralax/obj_parralax.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-8.0,"y":-72.0,},
+        {"$GMRInstance":"v1","%Name":"inst_7CEF54BA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7CEF54BA","objectId":{"name":"obj_transition","path":"objects/obj_transition/obj_transition.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":695.0,"y":432.0,},
       ],"layers":[],"name":"buttons","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"P_b_1","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"P_b_1","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"_7_tileset","path":"sprites/_7_tileset/_7_tileset.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
     {"$GMRAssetLayer":"","%Name":"player","assets":[
