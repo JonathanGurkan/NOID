@@ -45,7 +45,10 @@ if (!global.player_is_alive) {
     if(key_activate) {
         switch (death_option_selected) {
             case 0: {
-                //Restart the room
+                state = PLAYERSTATE.FREE;
+                global.player_is_alive = true;
+                global.player_health = global.player_max_health;
+                room_restart()
             } break;
             
             case 1: {
