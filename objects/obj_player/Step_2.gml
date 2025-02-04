@@ -15,11 +15,20 @@ if (global.gamepaused) {
             
             case 1: {
                 room_goto(r_main_menu);
+				global.gamepaused = false;
             } break;
             
             case  2: {
                 game_end();
-            }
+            } break;
+			
+			case 3: {
+				if window_get_fullscreen() {
+					window_set_fullscreen(false);
+				} else {
+				    window_set_fullscreen(true);
+				}
+			}
         }
     }
 }
