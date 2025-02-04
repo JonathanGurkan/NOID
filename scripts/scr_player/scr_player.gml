@@ -22,7 +22,7 @@ function scr_p_animation() {
 
             image_speed = 1;
             sprite_index = spr_player_move_3;
-            } else{
+            } else {
 	        image_speed = 1;
 	        sprite_index =  spr_player_move;
             }
@@ -234,7 +234,7 @@ function scr_p_free() {
         stamina_can_regen = false;
         global.player_stamina -= 0.05;
       } else {
-        move_x_max_final = walk_speed
+        move_x_max_final = walk_speed;
         stamina_can_regen = true;
       }       
     }
