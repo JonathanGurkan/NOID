@@ -22,7 +22,7 @@ function scr_p_animation() {
 
             image_speed = 1;
             sprite_index = spr_player_move_3;
-            } else{
+            } else {
 	        image_speed = 1;
 	        sprite_index =  spr_player_move;
             }
@@ -45,7 +45,7 @@ function scr_p_attack_1() {
     }
     
 	if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
-       change_stamina(5);
+       change_stamina(10);
 	    state = PLAYERSTATE.ATTACK_2;
 
 	    return;
@@ -65,7 +65,7 @@ function scr_p_attack_2() {
     }
         
   if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
-	    change_stamina(5);
+	    change_stamina(10);
 	    state = PLAYERSTATE.ATTACK_3;
 	    return;
 	}
@@ -81,7 +81,7 @@ function scr_p_attack_3() {
     process_attack(spr_player_attack_3,spr_player_attack_3_hitbox)
         
     if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
-        change_stamina(5)
+        change_stamina(10)
         state = PLAYERSTATE.ATTACK_1;
         return;
     }
@@ -137,7 +137,7 @@ function scr_p_dash() {
 	        can_dash  = true
 	        state = PLAYERSTATE.FREE;
           last_state = PLAYERSTATE.DASH
-          change_stamina(2)
+          change_stamina(5)
 	}
  
 }
@@ -184,7 +184,7 @@ function scr_p_free() {
 	
 	//global.player_stamina logic
 	if (stamina_can_regen && global.player_stamina < 100 && global.player_stamina >= 0) {
-		global.player_stamina += 0.32;
+		global.player_stamina += 0.16;
 	}
 	
 	if (global.player_stamina >= 100) global.player_stamina = 100;
@@ -229,24 +229,21 @@ function scr_p_free() {
     
 
     if (on_ground) {
-      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina > 0) {
-         move_x_max_final = run_speed;
-          global.player_stamina -= 0.05;
+      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina > 0) { 
+        move_x_max_final = run_speed;
+        stamina_can_regen = false;
+        global.player_stamina -= 0.05;
       } else {
-          move_x_max_final = walk_speed
+        move_x_max_final = walk_speed;
       }       
     }
     
 	if (key_attack && on_ground && can_attack && global.player_stamina > 0) {
-		change_stamina(5);
+		change_stamina(10);
 	    state = PLAYERSTATE.ATTACK_1
 	    can_attack = false; 
 	}
 	
-// 	if (key_attack_strong) {
-// 		change_stamina(10)
-// 	    state = PLAYERSTATE.ATTACK_STRONG;
-// 	}
 
 	if (key_use) {
 	    
@@ -314,21 +311,17 @@ function scr_p_transition() {
 	collision();
 }
 
-function scr_p_teleport(){ 
+function scr_p_teleport() { 
     global.target_room = target_room; 
     global.target_x = target_x;
     global.target_y = target_y;
     global.target_direction = obj_player.direction;
     with (obj_player) state = scr_p_transition;
     room_transition(TRANS_TYPE.FADE, target_room)
-    instance_destroy();
-        }
-        
+    instance_destroy(); 
+}
+
     
-    
-
-
-
 function change_stamina(amount) {
 	global.player_stamina -= amount;
 }
