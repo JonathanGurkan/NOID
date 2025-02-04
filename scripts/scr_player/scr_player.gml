@@ -184,7 +184,7 @@ function scr_p_free() {
 	
 	//global.player_stamina logic
 	if (stamina_can_regen && global.player_stamina < 100 && global.player_stamina >= 0) {
-		global.player_stamina += 0.32;
+		global.player_stamina += 0.16;
 	}
 	
 	if (global.player_stamina >= 100) global.player_stamina = 100;
@@ -235,7 +235,6 @@ function scr_p_free() {
         global.player_stamina -= 0.05;
       } else {
         move_x_max_final = walk_speed;
-        stamina_can_regen = true;
       }       
     }
     
