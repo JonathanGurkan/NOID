@@ -4,7 +4,7 @@ function do_nothing() {
 
 function scr_p_global() {
     if (global.player_health <= 0) {
-        state = PLAYERSTATE.DEATH
+        state = PLAYERSTATE.DEATH;
     }
 }
 
@@ -13,8 +13,10 @@ function scr_p_death() {
     image_speed = 1;
     
     if(animation_end()) {
-        show_debug_message("Player has died")
-        global.gamepaused = true;
+        global.player_is_alive = false;
+        image_speed = 0;
+        image_index = 5;
+        
     }
 }
 	
