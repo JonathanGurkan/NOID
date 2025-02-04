@@ -29,10 +29,12 @@ if (!global.gamepaused) {
         case PLAYERSTATE.ATTACK_3: scr_p_attack_3(); break;
         case PLAYERSTATE.DASH: scr_p_dash(); break;
         case PLAYERSTATE.PARRY: scr_p_attack_strong(); break;
-        case PLAYERSTATE.ENDTUT: scr_p_endtut(); break;
+        case PLAYERSTATE.ENDTUT: scr_p_endtut(); break; 
+        case PLAYERSTATE.DEATH: scr_p_death(); break
     }
 }
 
+scr_p_global()
 
 if (keyboard_check_pressed((ord("L")))) {
     stamina_timer = 0;

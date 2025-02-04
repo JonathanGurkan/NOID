@@ -15,7 +15,8 @@ enum PLAYERSTATE{
     PARRY,
     DASH,
 	HURT,
-    ENDTUT
+    ENDTUT,
+    DEATH
 }
 
 enum ENEMYSTATE{

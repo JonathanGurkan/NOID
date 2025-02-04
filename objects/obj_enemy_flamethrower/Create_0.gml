@@ -26,7 +26,7 @@ attack_cooldown = 100;
 
 //hp + damage
 enemy_hp = 2;
-enemy_damage = 2;
+enemy_damage = 50;
 
 attack_initialized = 0;
 
