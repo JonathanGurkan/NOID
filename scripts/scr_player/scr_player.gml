@@ -229,11 +229,13 @@ function scr_p_free() {
     
 
     if (on_ground) {
-      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina > 0) {
-         move_x_max_final = run_speed;
-          global.player_stamina -= 0.05;
+      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina > 0) { 
+        move_x_max_final = run_speed;
+        stamina_can_regen = false;
+        global.player_stamina -= 0.05;
       } else {
-          move_x_max_final = walk_speed
+        move_x_max_final = walk_speed
+        stamina_can_regen = true;
       }       
     }
     
@@ -243,10 +245,6 @@ function scr_p_free() {
 	    can_attack = false; 
 	}
 	
-// 	if (key_attack_strong) {
-// 		change_stamina(10)
-// 	    state = PLAYERSTATE.ATTACK_STRONG;
-// 	}
 
 	if (key_use) {
 	    
@@ -314,21 +312,17 @@ function scr_p_transition() {
 	collision();
 }
 
-function scr_p_teleport(){ 
+function scr_p_teleport() { 
     global.target_room = target_room; 
     global.target_x = target_x;
     global.target_y = target_y;
     global.target_direction = obj_player.direction;
     with (obj_player) state = scr_p_transition;
     room_transition(TRANS_TYPE.FADE, target_room)
-    instance_destroy();
-        }
-        
+    instance_destroy(); 
+}
+
     
-    
-
-
-
 function change_stamina(amount) {
 	global.player_stamina -= amount;
 }

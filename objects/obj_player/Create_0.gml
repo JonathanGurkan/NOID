@@ -59,7 +59,7 @@ dash_cool_y = 50;
 dash_energy = 0;
 
 //Stamina
-stamina_timer = 120; //150/30 is 5 sec
+stamina_timer = 120; //120/60 is 2 sec
 stamina_can_regen = false;
 use_stamina = false;
 
