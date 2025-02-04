@@ -15,6 +15,7 @@ if (global.gamepaused) {
             
             case 1: {
                 room_goto(r_main_menu);
+				global.gamepaused = false;
             } break;
             
             case  2: {
