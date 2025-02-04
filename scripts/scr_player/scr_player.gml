@@ -10,7 +10,6 @@ function scr_p_global() {
 
 function scr_p_death() {
     sprite_index = spr_player_death;
-    image_index = 0;
     image_speed = 1;
     
     if(animation_end()) {
