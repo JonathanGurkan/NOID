@@ -3,7 +3,7 @@ enum TRANS_TYPE{
     FADE
 }
 
-width = room_width;
+width = RESOLUTION_W;
 height = RESOLUTION_H;
 height_half = height * 0.5;
 percent = 0;
