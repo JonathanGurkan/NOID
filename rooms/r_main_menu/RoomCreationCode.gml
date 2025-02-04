@@ -1,3 +1,2 @@
-if (instance_exists(obj_player)){
-    instance_destroy(obj_player)
-}
+obj_camera.x = 0;
+obj_camera.y = 0;
