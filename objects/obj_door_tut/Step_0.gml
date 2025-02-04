@@ -7,8 +7,3 @@ if(open && !is_open){
         is_open = true;
     }
 }
-
-
-
-
-
