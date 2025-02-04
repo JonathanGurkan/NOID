@@ -1,5 +1,4 @@
 with (obj_player) state = scr_p_transition;
-
 if (leading == OUT) {
     percent = min(1, percent + TRANSITION_SPEED);
     with (obj_player) state = scr_p_transition();
@@ -13,7 +12,8 @@ if (leading == OUT) {
            x = obj_player.x;
            y = obj_player.y;
        }    
-    }
+    } 
+    
     percent = max(0, percent - TRANSITION_SPEED);
     if (percent <= 0) { // If screen fully revealed
         with (obj_player) state = PLAYERSTATE.FREE;
