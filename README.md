@@ -46,6 +46,7 @@ NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonat
 
 - When `F12` is pressed once you can switch between the different rooms with `1, 2, 3 etc...`
 - Around the game there are secret entrances that lead to different parts of the game
+- Hold `X` to temporary disable collision
 
 - **Explore** the dungeon and uncover its secrets.
 - **Defeat** enemies and bosses to gather Power Cards.
