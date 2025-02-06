@@ -22,9 +22,13 @@
     {"name":"inst_60D578D6","path":"rooms/r_tutorial_2/r_tutorial_2.yy",},
     {"name":"inst_4E0ED4EE","path":"rooms/r_tutorial_2/r_tutorial_2.yy",},
     {"name":"inst_54ED743","path":"rooms/r_tutorial_2/r_tutorial_2.yy",},
+    {"name":"inst_76ECA366","path":"rooms/r_tutorial_2/r_tutorial_2.yy",},
   ],
   "isDnd":false,
   "layers":[
+    {"$GMRInstanceLayer":"","%Name":"managers","depth":-300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v1","%Name":"inst_76ECA366","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_76ECA366","objectId":{"name":"obj_screenflash","path":"objects/obj_screenflash/obj_screenflash.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":128.0,},
+      ],"layers":[],"name":"managers","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"col","depth":-200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":false,"layers":[],"name":"col","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":17,"SerialiseWidth":62,"TileCompressedData":[
           -329,0,-21,1,-36,0,-6,1,-19,0,-2,1,-31,0,-5,1,-24,0,-2,1,-17,0,-16,1,-27,0,-2,1,-15,0,-2,1,-43,0,-18,
           1,-72,0,-10,-2147483648,1,0,-15,-2147483648,1,0,-6,-2147483648,1,0,-23,-2147483648,-5,0,-11,-2147483648,
