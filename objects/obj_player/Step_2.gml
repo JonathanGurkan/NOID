@@ -53,7 +53,6 @@ if (!global.player_is_alive) {
             
             case 1: {
                 room_goto(r_main_menu);
-                global.gamepaused = false;
                 state = PLAYERSTATE.FREE;
                 global.player_is_alive = true;
                 global.player_health = global.player_max_health;
