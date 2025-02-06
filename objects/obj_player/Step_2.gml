@@ -1,5 +1,5 @@
 if (global.gamepaused) {
-    var key_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("w"))
+    var key_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))
     var key_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))
     
     pause_option_selected += (key_down - key_up)
@@ -34,7 +34,7 @@ if (global.gamepaused) {
 }
 
 if (!global.player_is_alive) {
-    var key_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("w"))
+    var key_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))
     var key_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))
     
     death_option_selected += (key_down - key_up)
@@ -48,6 +48,7 @@ if (!global.player_is_alive) {
                 state = PLAYERSTATE.FREE;
                 global.player_is_alive = true;
                 global.player_health = global.player_max_health;
+                global.player_stamina = global.player_max_stamina;
                 room_restart()
             } break;
             
@@ -56,6 +57,7 @@ if (!global.player_is_alive) {
                 state = PLAYERSTATE.FREE;
                 global.player_is_alive = true;
                 global.player_health = global.player_max_health;
+                global.player_stamina = global.player_max_stamina;
             } break;
             
             case 2: {

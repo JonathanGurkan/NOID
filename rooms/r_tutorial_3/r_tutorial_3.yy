@@ -68,7 +68,7 @@
           1,0,-10,-2147483648,-2,0,1,-2147483648,-6,0,2,-2147483648,0,-6,-2147483648,-9,0,-9,-2147483648,1,0,-39,
           -2147483648,1,0,-11,-2147483648,-23,0,-11,-2147483648,1,0,-69,-2147483648,-2,0,-65,-2147483648,1,0,-85,
           -2147483648,1,0,-85,-2147483648,1,0,-312,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"TileSet2","path":"tilesets/TileSet2/TileSet2.yy",},"userdefinedDepth":true,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"TileSet2","path":"tilesets/TileSet2/TileSet2.yy",},"userdefinedDepth":true,"visible":false,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"on_player_tiles","depth":-100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"on_player_tiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":48,"SerialiseWidth":86,"TileCompressedData":[
           -438,-2147483648,1,115,-10,-2147483648,1,115,-13,-2147483648,1,115,-10,-2147483648,1,115,-6,-2147483648,
           1,115,-3,-2147483648,5,0,-2147483648,0,-2147483648,115,-3,-2147483648,1,115,-6,-2147483648,1,116,-5,
