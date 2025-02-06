@@ -1,7 +1,5 @@
 
 function scr_p_endtut(){
-    show_debug_message(x)
-    
     if(y < 208) collision();
     else {
         x += 1;
@@ -10,7 +8,7 @@ function scr_p_endtut(){
     var frac_x = round(x);
     if (frac_x == 283) {
         x -= 1;
-        obj_cutscene_cam.y -= 0.2; 
+        obj_cutscene_cam.y -= 0.4; 
         obj_camera.follow = obj_cutscene_cam;
         sprite_index = spr_player_kneel;
         if(animation_end()){
@@ -21,5 +19,9 @@ function scr_p_endtut(){
     with(obj_cutscene_cam){
      if (cam_y = 90) obj_player.draw_text_cut = true;
     }
+    
+    if(instance_exists(obj_room_exit)){
+            if(alpha = 1) obj_room_exit.y -= 0.5;
+        }
 
 }

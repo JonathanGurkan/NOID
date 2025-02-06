@@ -1,7 +1,8 @@
+
 with (obj_player) state = scr_p_transition;
 
 if (leading == OUT) {
-    percent = min(1, percent + TRANSITION_SPEED);
+    percent = min(1, percent + transition_speed);
     with (obj_player) state = scr_p_transition();
     if (percent >= 1) { // If screen fully obscured
         room_goto(target);
@@ -15,7 +16,7 @@ if (leading == OUT) {
        }
     } 
     
-    percent = max(0, percent - TRANSITION_SPEED);
+    percent = max(0, percent - transition_speed);
     if (percent <= 0) { // If screen fully revealed
         with (obj_player) state = PLAYERSTATE.FREE;
         instance_destroy();

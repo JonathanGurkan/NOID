@@ -1,24 +1,6 @@
 function do_nothing() {
 //ye, just do nothing
 }
-
-function scr_p_global() {
-    if (global.player_health <= 0 && on_ground) {
-        state = PLAYERSTATE.DEATH;
-    }
-}
-
-function scr_p_death() {
-    sprite_index = spr_player_death;
-    image_speed = 1;
-    
-    if(animation_end()) {
-        global.player_is_alive = false;
-        image_speed = 0;
-        image_index = 5;
-        
-    }
-}
 	
 function scr_p_animation() {
 	if (!on_ground) {
@@ -281,6 +263,13 @@ function scr_p_free() {
         taking_damage = false; // Stop flashing
         invincible = false; // End invincibility
     }
+    
+	if(global.player_health <= 0){
+	sprite_index = spr_player_death;
+	if(animation_end()){
+	room_restart();
+	}
+	}
 	scr_p_animation();
 }
 	
@@ -318,6 +307,7 @@ function scr_p_hurt(enemy_damage) {
 }
 	
 function scr_p_transition() {
+    transit = true;
 	scr_p_animation();
 	collision();
 }
