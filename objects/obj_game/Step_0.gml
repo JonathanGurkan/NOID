@@ -13,6 +13,9 @@ if(keyboard_check(vk_f12)){
     room_toggle = true;
 }
 if(room_toggle = true){
+	if(keyboard_check(ord("L"))){
+	global.player_health = 1;
+	}
 	if (keyboard_check(ord("R"))) {
     room_restart();
 	}

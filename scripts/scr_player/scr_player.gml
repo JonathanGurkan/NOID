@@ -2,6 +2,23 @@ function do_nothing() {
 //ye, just do nothing
 }
 	
+	function scr_p_global() {
+    if (global.player_health <= 0 && on_ground) {
+        state = PLAYERSTATE.DEATH;
+    }
+}
+
+function scr_p_death() {
+    sprite_index = spr_player_death;
+    image_speed = 1;
+
+    if(animation_end()) {
+        global.player_is_alive = false;
+        image_speed = 0;
+
+    }
+}
+	
 function scr_p_animation() {
 	if (!on_ground) {
 	if (move_y < 0) {
