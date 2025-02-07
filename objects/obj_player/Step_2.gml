@@ -1,6 +1,6 @@
 if (global.gamepaused) {
-    var key_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("w"))
-    var key_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))
+    var key_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
+    var key_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
     
     pause_option_selected += (key_down - key_up)
     if (pause_option_selected >= array_length(pause_option)) pause_option_selected = 0;
