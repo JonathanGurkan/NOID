@@ -85,3 +85,6 @@ if (global.target_x != -1) {
 alpha = 0;
 draw_text_cut = false;
 transit = false;
+wait = 0;
+wait_time = 40;
+init = false;
