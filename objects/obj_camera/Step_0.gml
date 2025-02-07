@@ -1,8 +1,9 @@
 if(room = r_main_menu){
     instance_destroy(obj_player)
     room_init = true;
-    if(room_init){
-         camera_set_view_pos(cam,0,0);
+    
+    if (room_init){
+        camera_set_view_pos(cam,0,0);
         room_init = false;
     }
     
@@ -23,19 +24,17 @@ if(room = r_main_menu){
     camera_set_view_pos(cam,x - view_width_half,y - view_height_half); 
     
     if (shake) { 
-      shake_time -= 1; 
-      var xval = choose(-shake_magnitude, shake_magnitude); 
-      var yval = choose(-shake_magnitude, shake_magnitude); 
-      camera_set_view_pos(view_camera[0], x - view_width_half + xval, obj_player.y - view_height_half + yval); 
+        shake_time -= 1; 
+        var xval = choose(-shake_magnitude, shake_magnitude); 
+        var yval = choose(-shake_magnitude, shake_magnitude); 
+        camera_set_view_pos(view_camera[0], x - view_width_half + xval, obj_player.y - view_height_half + yval); 
       
-      if (shake_time <= 0) { 
+        if (shake_time <= 0) { 
           shake_magnitude -= shake_fade; 
       
           if (shake_magnitude <= 0) {
               shake = false; 
           } 
-      } 
+        } 
     }
 }
-
-
