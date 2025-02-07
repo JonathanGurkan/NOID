@@ -31,8 +31,7 @@ if(room = r_main_menu){
       if (shake_time <= 0) { 
           shake_magnitude -= shake_fade; 
       
-          if (shake_magnitude <= 0) { 
-              camera_set_view_pos(view_camera[0], obj_player.x, obj_player.y); 
+          if (shake_magnitude <= 0) {
               shake = false; 
           } 
       } 
