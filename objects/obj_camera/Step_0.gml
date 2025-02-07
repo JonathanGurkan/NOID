@@ -20,10 +20,22 @@ y += (y_to - y) /15;
 x = clamp(x, view_width_half, room_width-view_width_half);
 y = clamp(y, view_height_half, room_height-view_height_half);
 
-x += random_range(-shake_remain,shake_remain);
-y += random_range(-shake_remain,shake_remain);
+if (shake) { 
+   shake_time -= 1; 
+   var _xval = choose(-shake_magnitude, shake_magnitude); 
+   var _yval = choose(-shake_magnitude, shake_magnitude); 
+   camera_set_view_pos(view_camera[0], _xval, _yval); 
 
-shake_remain = max(0, shake_remain - ((1/shake_lenght) * shake_magnitude));
+   if (shake_time <= 0) { 
+      shake_magnitude -= shake_fade; 
+
+      if (shake_magnitude <= 0) { 
+         camera_set_view_pos(view_camera[0], 0, 0); 
+         shake = false; 
+      } 
+   } 
+}
 
 camera_set_view_pos(cam,x - view_width_half,y - view_height_half);
 }
+

@@ -17,7 +17,7 @@ if (keyboard_check(ord("R"))) {
 }
 
 if (keyboard_check_pressed(ord("H"))) {
-    screenshake(3, 60);
+    screenshake(10, 20, 5)
 }
 
 

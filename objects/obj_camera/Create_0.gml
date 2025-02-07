@@ -9,7 +9,10 @@ y_min = 0
 follow_obj_x = 0;
 follow_obj_y = 0;
 cutscene = false;
-shake_lenght = 0;
-shake_magnitude = 0;
-shake_remain = 0;
 room_init = false;
+
+//Screen shake
+shake = false;
+shake_time = 0;
+shake_magnitude = 0;
+shake_fade = 0.25;

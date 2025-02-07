@@ -154,7 +154,7 @@ function enemy_bot_shoot() {
                 global.player_health -= 2;
                 invincibility_timer = 60; // Set invincibility period
                 invincible = true; // Make the player invincible
-                screenshake(10,20);
+                screenshake(10,20000,3);
             }
         }
     } 
@@ -199,7 +199,7 @@ function enemy_bot_dash() {
                     global.player_health -= 2;
                     invincibility_timer = 60; // Set invincibility period
                     invincible = true; // Make the player invincible
-                    screenshake(10,20);
+                    screenshake(10,20000,3);
                 }
             }
         } 
