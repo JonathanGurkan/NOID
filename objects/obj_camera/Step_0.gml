@@ -19,7 +19,7 @@ if(room = r_main_menu){
     y += (y_to - y) /15;
     
     x = clamp(x, view_width_half, room_width-view_width_half);  
-    y = clamp(y, view_height_half, room_height-view_height_half);
+    y = clamp(y, view_height_half, room_height+view_height_half);
    
     camera_set_view_pos(cam,x - view_width_half,y - view_height_half); 
     
@@ -27,14 +27,13 @@ if(room = r_main_menu){
         shake_time -= 1; 
         var xval = choose(-shake_magnitude, shake_magnitude); 
         var yval = choose(-shake_magnitude, shake_magnitude); 
-        camera_set_view_pos(view_camera[0], x - view_width_half + xval, obj_player.y - view_height_half + yval); 
+        camera_set_view_pos(cam, x - view_width_half + xval, y - view_height_half + yval); 
       
         if (shake_time <= 0) { 
-          shake_magnitude -= shake_fade; 
-      
-          if (shake_magnitude <= 0) {
-              shake = false; 
-          } 
+            shake_magnitude -= shake_fade; 
+            if (shake_magnitude <= 0) {
+                shake = false; 
+            } 
         } 
     }
 }

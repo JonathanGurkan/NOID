@@ -88,7 +88,7 @@ function enemy_flamethrower_attack() {
                 global.player_health -= 2;
                 invincibility_timer = 60; // Set invincibility period
                 invincible = true; // Make the player invincible
-                screenshake(60, 1.5, 0.3);
+                screenshake(60, 0.4, 0.3);
             }
         }
         

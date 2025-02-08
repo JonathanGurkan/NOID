@@ -92,7 +92,7 @@ if (!attack_initialized) {
                         global.player_health -= 5;
                         invincibility_timer = 60; // Set invincibility period
                         invincible = true; // Make the player invincible
-                        screenshake(10, 1, 0.3);
+                        screenshake(5, 2.5, 0.3);
                     }
                     }
         } 
