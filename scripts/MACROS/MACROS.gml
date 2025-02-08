@@ -1,6 +1,5 @@
 #macro FRAME_RATE 60 
 #macro ROOM_START r_main_menu
-
 #macro RESOLUTION_W 1280
 #macro RESOLUTION_H 720
 #macro TRANSITION_SPEED 0.04

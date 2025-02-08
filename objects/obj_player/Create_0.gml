@@ -1,6 +1,6 @@
 state = PLAYERSTATE.FREE;
 last_state = PLAYERSTATE.FREE;
-collision_map = layer_tilemap_get_id(layer_get_id("col"))
+collision_map = layer_tilemap_get_id(layer_get_id("col"));
 pause_option = ["Continue", "Main Menu", "Quit", "Toggle Fullscreen"];
 pause_option_selected = 0;
 death_option = ["Restart", "Main Menu", "Quit"];
@@ -16,8 +16,6 @@ move = false;
 key_use = false;
 key_attack = false;
 key_attack_strong = false;
-
-
 
 //Movement variables
 last_x = 0;
@@ -78,6 +76,7 @@ invincibility_timer = 0;
 invincibility_duration = 60;
 can_attack = true;
 taking_damage = false;
+hit_by_attack = ds_list_create();
 
 if (global.target_x != -1) {
     x = global.target_y;
@@ -85,9 +84,10 @@ if (global.target_x != -1) {
     direction = global.target_direction;
 }
 
-hit_by_attack = ds_list_create();
-
-
 //cutscene variables
 alpha = 0;
 draw_text_cut = false;
+transit = false;
+wait = 0;
+wait_time = 40;
+init = false;
