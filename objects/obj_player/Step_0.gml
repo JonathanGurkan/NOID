@@ -9,11 +9,6 @@ key_attack_strong = mouse_check_button(mb_right);
 move = key_right - key_left;
 on_ground = place_meeting(x,y+1,collision_map);
 
-//reset room om 0 hp / r pressed
-//to reset game press T
-
-
-
 if (!global.gamepaused) {
     switch (state) {
         case PLAYERSTATE.FREE: scr_p_free(); break;

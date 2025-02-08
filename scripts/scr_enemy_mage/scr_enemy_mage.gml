@@ -92,7 +92,7 @@ if (!attack_initialized) {
                         global.player_health -= 5;
                         invincibility_timer = 60; // Set invincibility period
                         invincible = true; // Make the player invincible
-                        screenshake(10,20);
+                        screenshake(5, 2.5, 0.3);
                     }
                     }
         } 
@@ -119,7 +119,7 @@ function enemy_mage_attack() {
                         global.player_health -= 2;
                         invincibility_timer = 60; // Set invincibility period
                         invincible = true; // Make the player invincible
-                        screenshake(10,20);
+                        screenshake(10, 1, 0.3);
                     }
                     }
         } 
