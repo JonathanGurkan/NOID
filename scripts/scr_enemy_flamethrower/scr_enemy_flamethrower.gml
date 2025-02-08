@@ -85,7 +85,7 @@ function enemy_flamethrower_attack() {
     if(num > 0){
         with(obj_player) {
             if (!invincible) { // Only take damage if not invincible
-                global.player_health -= 2;
+                global.player_health -= 10;
                 invincibility_timer = 60; // Set invincibility period
                 invincible = true; // Make the player invincible
                 screenshake(60, 0.4, 0.3);
