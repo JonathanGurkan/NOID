@@ -333,13 +333,8 @@ function process_attack(sprite, mask) {
 	    mask_index = spr_player_idle;
 }
 
-function scr_p_hurt(enemy_damage) {
-   
-    state = PLAYERSTATE.FREE;
-}
 	
 function scr_p_transition() {
-    transit = true;
 	scr_p_animation();
 	collision();
 }

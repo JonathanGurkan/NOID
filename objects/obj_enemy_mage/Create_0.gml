@@ -1,6 +1,6 @@
 //misc
 enemy_state = ENEMYSTATE.IDLE;
-collision_map = layer_tilemap_get_id(layer_get_id("col"))
+collision_map = obj_collision;
 image_speed =1;
     
 //movement

@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_wallclimb",
+  "%Name":"obj_wall",
   "eventList":[],
   "managed":true,
-  "name":"obj_wallclimb",
+  "name":"obj_wall",
   "overriddenProperties":[],
   "parent":{
     "name":"colliders",
