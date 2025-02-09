@@ -41,7 +41,6 @@
     {"name":"inst_3EE10057","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
     {"name":"inst_18BBF37C","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
     {"name":"inst_6833FBF4","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
-    {"name":"inst_79327C07","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
     {"name":"inst_2DEFA7B8","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
   ],
   "isDnd":false,
