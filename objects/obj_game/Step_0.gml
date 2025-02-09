@@ -20,7 +20,7 @@ if(room_toggle = true){
     room_restart();
 	}
 	if (keyboard_check_pressed(ord("H"))) {
-	    screenshake(3, 60);
+	    screenshake(3, 60,0.5);
 	}
     if keyboard_check(ord("1")) {
         room = r_tutorial_1;
@@ -34,11 +34,14 @@ if(room_toggle = true){
     if keyboard_check(ord("0")) {
         room = r_main_menu;
     }
+    if keyboard_check(ord("Y")) {
+        room = r_test;
+    }
     if(instance_exists(obj_player)){
         if keyboard_check(ord("X")){
-            obj_player.collision_map = layer_tilemap_get_id(layer_get_id("")) 
+            obj_player.collision_map = 1
         } else {
-            obj_player.collision_map = layer_tilemap_get_id(layer_get_id("col"))
+            obj_player.collision_map = obj_collision;
         }
     }
     if keyboard_check(ord("4")) room = r_end;
