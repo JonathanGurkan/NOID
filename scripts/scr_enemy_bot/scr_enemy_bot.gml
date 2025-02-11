@@ -101,7 +101,7 @@ function enemy_bot_movement() {
 
 function enemy_bot_evade() {
     sprite_index = spr_bot_move;
-    if(enemy_state = ENEMYSTATE.EVADE) move_x = image_xscale * -walk_speed; else move_x = 0;
+    if(follow_distance) move_x = image_xscale * -walk_speed; else move_x = 0;
     image_speed = 1;
     uncondidtional_follow = false;
     
