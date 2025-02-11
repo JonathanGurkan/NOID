@@ -1,5 +1,5 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"Informatica GameMaker Project",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -71,11 +71,12 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1100.0.713",
+    "IDEVersion":"2024.1300.0.739",
   },
   "name":"Informatica GameMaker Project",
   "resources":[
@@ -143,6 +144,17 @@
     {"id":{"name":"sh_light","path":"shaders/sh_light/sh_light.yy",},},
     {"id":{"name":"sh_shadow","path":"shaders/sh_shadow/sh_shadow.yy",},},
     {"id":{"name":"sh_white","path":"shaders/sh_white/sh_white.yy",},},
+    {"id":{"name":"EhE_okE","path":"sounds/EhE_okE/EhE_okE.yy",},},
+    {"id":{"name":"s_door_open","path":"sounds/s_door_open/s_door_open.yy",},},
+    {"id":{"name":"s_e_damage_1","path":"sounds/s_e_damage_1/s_e_damage_1.yy",},},
+    {"id":{"name":"s_menu_start","path":"sounds/s_menu_start/s_menu_start.yy",},},
+    {"id":{"name":"s_p_attack_1","path":"sounds/s_p_attack_1/s_p_attack_1.yy",},},
+    {"id":{"name":"s_p_attack_2","path":"sounds/s_p_attack_2/s_p_attack_2.yy",},},
+    {"id":{"name":"s_p_attack_3","path":"sounds/s_p_attack_3/s_p_attack_3.yy",},},
+    {"id":{"name":"s_p_attack_4","path":"sounds/s_p_attack_4/s_p_attack_4.yy",},},
+    {"id":{"name":"s_p_attack_5","path":"sounds/s_p_attack_5/s_p_attack_5.yy",},},
+    {"id":{"name":"s_p_attack_6","path":"sounds/s_p_attack_6/s_p_attack_6.yy",},},
+    {"id":{"name":"s_p_walk_1","path":"sounds/s_p_walk_1/s_p_walk_1.yy",},},
     {"id":{"name":"_1_Background","path":"sprites/_1_Background/_1_Background.yy",},},
     {"id":{"name":"_2_super_far","path":"sprites/_2_super_far/_2_super_far.yy",},},
     {"id":{"name":"_3_far","path":"sprites/_3_far/_3_far.yy",},},

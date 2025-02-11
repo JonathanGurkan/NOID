@@ -1,6 +1,6 @@
 gpu_set_zwriteenable(true);
 gpu_set_ztestenable(true);
-gpu_set_depth(-1000)
+gpu_set_depth(-1000);
 
 if (type == TRANS_TYPE.FADE) {
     transition_speed = 0.04;

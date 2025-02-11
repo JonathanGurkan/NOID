@@ -20,6 +20,7 @@ function scr_p_death() {
 }
 	
 function scr_p_animation() {
+    show_debug_message(audio_exists(s_p_walk_1))
 	if (!on_ground) {
 	if (move_y < 0) {
 	    sprite_index = spr_player_up;
@@ -35,6 +36,8 @@ function scr_p_animation() {
 	    if (move_x == 0) {
 	        sprite_index = spr_player_idle;
 	    } else {
+            if (!audio_play_sound(s_p_walk_1,0,1)) audio_play_sound(s_p_walk_1,0,1); 
+                
             if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift)) {
 
             image_speed = 1;
@@ -57,6 +60,7 @@ function scr_p_animation() {
 }
 	
 function scr_p_attack_1() {
+    audio_play_sound(s_p_attack_1,0,0)
 	  if (global.player_stamina > 0) {
 	   process_attack(spr_player_attack_1,spr_player_attack_1_hitbox)
     }

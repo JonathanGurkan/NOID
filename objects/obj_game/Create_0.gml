@@ -17,7 +17,6 @@ global.cutscene = -1;
 global.player_is_alive = true;
 
 
-
 //surface_resize(application_surface, RESOLUTION_W, RESOLUTION_H);
 room_goto(ROOM_START);
 //debug or testing 
