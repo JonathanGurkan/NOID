@@ -1,6 +1,8 @@
 function enemy_bot_global() {
     distance_to_p = distance_to_object(obj_player);
-    direction_p = point_direction(x,y,obj_player.x, obj_player.y);
+    direction_p = round(point_direction(x,y,obj_player.x, obj_player.y));
+    if(direction_p == 360) direction_p = 0;
+    if(direction_p == 0) direction_p = 360;
     dist_to_wall = distance_to_object(obj_wall);
     //wakeup
     if (distance_to_p < found_distance) {
@@ -28,12 +30,6 @@ function enemy_bot_global() {
     } else {
         dash_player = false;
     }
-
-    if (distance_to_p < evade_distance) {
-        evade_player = true;
-    } else {
-        evade_player = false
-    }
     
     if (enemy_hp <= 0) {
         enemy_state = ENEMYSTATE.DEATH;
@@ -55,10 +51,20 @@ function enemy_bot_global() {
             can_dash = false;
         }
     
-    if(evade_timer >= 0) evade_timer--
         
+   y = round(y)
         
-    show_debug_message(enemy_state);
+    show_debug_message(
+    "distance_to_p: " + string(distance_to_p) + 
+    " | direction_p: " + string(direction_p) + 
+    " | dist_to_wall: " + string(dist_to_wall) + 
+    " | found_player: " + string(found_player) + 
+    " | follow_player: " + string(follow_player) + 
+    " | shoot_player: " + string(shoot_player) + 
+    " | dash_player: " + string(dash_player) + 
+    " | can_shoot: " + string(can_shoot) + 
+    " | can_dash: " + string(can_dash)
+);
         
 }
 
@@ -80,75 +86,33 @@ function enemy_bot_alerted() {
 
 function enemy_bot_movement() { 
     sprite_index = spr_bot_move;
-    if(enemy_state = ENEMYSTATE.MOVE) move_x = 1 * image_xscale * walk_speed; else move_x = 0;
+    move_x = 1 * walk_speed * image_xscale; 
     image_speed = 1;
-    
+ // Only update when not locked
     if (direction_p > 90) {
-            direction = -1
-            image_xscale = -1
-        } else {
-            direction = 1;
-            image_xscale = 1;
-        }
+        image_xscale = -1;
+    } else {
+        image_xscale = 1;
+    }
+
+
+
     
-    if (evade_player) enemy_state = ENEMYSTATE.EVADE; 
     if (shoot_player && can_shoot) enemy_state = ENEMYSTATE.ATTACK;
     if (!follow_player) enemy_state = ENEMYSTATE.ALERT;
-    if (can_dash && dash_player && dist_to_wall > 80) enemy_state = ENEMYSTATE.DASH; 
-        
-    
+    if (can_dash && dash_player) enemy_state = ENEMYSTATE.DASH; 
 }
 
-function enemy_bot_evade() {
-    sprite_index = spr_bot_move;
-    if(follow_distance) move_x = image_xscale * -walk_speed; else move_x = 0;
-    image_speed = 1;
-    uncondidtional_follow = false;
-    
-    if(dist_to_wall < 80)||(can_dash && dash_player && dist_to_wall > 80) {
-        enemy_state = ENEMYSTATE.DASH; 
-        attack_initialized = false;
-    }
-    
-    if (!evade_player){
-        if (!attack_initialized) {
-        evade_timer = evade_cooldown;
-        attack_initialized =true;
-        }
-        if (evade_timer <= 0 ){ 
-               enemy_state = ENEMYSTATE.SEARCH;
-                attack_initialized = false;
-        }    
-        if(shoot_player && can_shoot){
-            enemy_state = ENEMYSTATE.SHOOT;
-            attack_initialized = false;
-        }
-}
-    }
 
-function enemy_bot_search(){
-    move_x = 0;
-    var value  = random_range(0,1.5);
-    show_debug_message(value)
-    if(round(value) = 1){
-        enemy_state = ENEMYSTATE.MOVE;
-        uncondidtional_follow = true;
-    } else {
-        enemy_state = ENEMYSTATE.ALERT;
-    }
-    
-    if (shoot_player && can_shoot) enemy_state = ENEMYSTATE.ATTACK;
-}
 
 function enemy_bot_shoot() {
+    move_x = 0;
     if (!attack_initialized) {
         sprite_index = spr_bot_shoot;
         mask_index = spr_bot_shoot_hitbox;
         if (direction_p > 90) {
-            direction = -1
             image_xscale = -1
         } else {
-            direction = 1;
             image_xscale = 1;
         }
         attack_initialized = true;
@@ -180,24 +144,43 @@ function enemy_bot_shoot() {
     }
 }
 
+
+
+
+
+//dist_to_wall < 80
+//image_xscale  = x_scale
+//obj_player.dist_to_wall < dist_to_wall 
+
+
 function enemy_bot_dash() {
     sprite_index = spr_bot_fire_dash;
     mask_index = spr_bot_fire_dash_hitbox;      
     image_speed = 1;
     dash_player = true;
+    move_x = 0;
     
     if (!dash_initialized) {
         image_index = 0;
-        if (direction_p > 90) {
-            direction = -1
-            image_xscale = -1
-        } else {
-            direction = 1;
-            image_xscale = 1;
-        }
-        if(dist_to_wall < 80 && obj_player.dist_to_wall < dist_to_wall) image_xscale = -image_xscale;
         dash_initialized = true;
-    }       
+        
+    
+        
+        if(dist_to_wall < 80) || (obj_player.dist_to_wall < dist_to_wall && dist_to_wall < 80){
+           if (direction_p > 90) {
+               image_xscale = 1
+           } else {
+               image_xscale = -1;
+           } 
+        } else {
+            if (direction_p > 90 ) {
+               image_xscale = -1
+           } else {
+               image_xscale = 1;
+           } 
+        }
+    }   
+         
     var list = ds_list_create();
     var num = instance_place_list(x,y,obj_player,list,false);
     if (num > 0) {
@@ -211,12 +194,12 @@ function enemy_bot_dash() {
         }
     } 
     ds_list_destroy(list);
+    
 
     if(animation_end()) {
-        if(dist_to_wall < 80 && obj_player.dist_to_wall < dist_to_wall)  x -= image_xscale * 70; else  x += image_xscale * 70;  
+        x += image_xscale * 70;  
         dash_timer = dash_cooldown;
         mask_index = spr_bot_idle;
-        sprite_index = spr_bot_move;
         dash_player = false;
         dash_initialized = false;
         enemy_state = ENEMYSTATE.MOVE;
@@ -224,11 +207,8 @@ function enemy_bot_dash() {
        
 }
 
-
-
-
-
 function enemy_bot_death() {
+    move_x = 0;
     is_dying = true
     sprite_index = spr_bot_death;
     

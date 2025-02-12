@@ -24,6 +24,7 @@ is_dying = false;
 dash_initialized = false;
 can_dash = false;
 uncondidtional_follow =false;
+direction_locked = false;
 
 
 //logic reals
