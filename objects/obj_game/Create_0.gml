@@ -1,4 +1,4 @@
-//Init + Globals
+ //Init + Globals
 game_paused_image_speed = image_speed;
 randomize();
 
@@ -15,7 +15,6 @@ global.player_stamina = global.player_max_stamina;
 global.i_camera = instance_create_layer(0,0,layer,obj_camera);
 global.cutscene = -1;
 global.player_is_alive = true;
-
 
 
 //surface_resize(application_surface, RESOLUTION_W, RESOLUTION_H);

@@ -28,8 +28,5 @@ function scr_p_endtut(){
      if (cam_y = 90) obj_player.draw_text_cut = true;
     }
     
-    if(instance_exists(obj_room_exit)){
-            if(alpha = 1) obj_room_exit.y -= 0.5;
-        }
-
+    if(instance_exists(obj_room_exit) && alpha = 1) obj_room_exit.y -= 0.5;
 }

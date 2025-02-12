@@ -65,6 +65,9 @@ function enemy_bot_global() {
     " | can_dash: " + string(can_dash)
 );
         
+        
+    show_debug_message(enemy_state);
+        
 }
 
 function enemy_bot_idle() {
@@ -196,6 +199,10 @@ function enemy_bot_dash() {
     }
        
 }
+
+
+
+
 
 function enemy_bot_death() {
     move_x = 0;
