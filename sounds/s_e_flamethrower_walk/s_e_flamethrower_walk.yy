@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"s_e_flamethrower_walk",
   "audioGroupId":{
-    "name":"ag_enemies",
-    "path":"audiogroups/ag_enemies",
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
   "bitRate":128,

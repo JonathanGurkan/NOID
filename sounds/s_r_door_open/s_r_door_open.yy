@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"s_r_door_open",
   "audioGroupId":{
-    "name":"ag_rooms",
-    "path":"audiogroups/ag_rooms",
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
   "bitRate":128,

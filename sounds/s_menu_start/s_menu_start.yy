@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"s_menu_start",
   "audioGroupId":{
-    "name":"menu",
-    "path":"audiogroups/menu",
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
   "bitRate":128,

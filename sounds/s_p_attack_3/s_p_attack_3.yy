@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"s_p_attack_3",
   "audioGroupId":{
-    "name":"ag_player1",
-    "path":"audiogroups/ag_player1",
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
   "bitRate":128,

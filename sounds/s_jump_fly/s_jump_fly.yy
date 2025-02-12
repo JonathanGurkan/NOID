@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"s_jump_fly",
   "audioGroupId":{
-    "name":"ag_player",
-    "path":"audiogroups/ag_player",
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
   "bitRate":128,
