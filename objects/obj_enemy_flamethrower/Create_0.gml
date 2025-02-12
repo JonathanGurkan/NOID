@@ -2,7 +2,6 @@
 enemy_state = ENEMYSTATE.IDLE;
 collision_map = obj_collision;
 
-    
 //movement
 walk_speed = 1;
 move_y = 0;
@@ -25,7 +24,6 @@ enemy_attack_timer = 0;
 attack_cooldown = 100;
 
 //hp + damage
-enemy_hp = 2;
-enemy_damage = 2;
+enemy_hp = 5;
 attack_initialized = 0;
 
