@@ -58,7 +58,8 @@ function enemy_flashbang_alerted() {
     if (!found_player && !follow_player) enemy_state = ENEMYSTATE.IDLE;
 }
 
-function enemy_flashbang_movement() { 
+function enemy_flashbang_movement() {
+    if(!audio_is_playing(s_e_flashbang_walk)) audio_play_sound(s_e_flashbang_walk,0,0,0.7,0,random_range(0.5,1)); 
     sprite_index = spr_flashbang_move;
     x += image_xscale * walk_speed;
     image_speed = 1;
