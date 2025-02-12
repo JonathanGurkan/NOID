@@ -1,5 +1,5 @@
 function enemy_flamethrower_global() {
-    if(enemy_state != ENEMYSTATE.MOVE) audio_stop_sound(s_e_flamethrower_walk);
+    if(enemy_state != ENEMYSTATE.MOVE) audio_stop_sound(snd_e_flamethrower_walk);
     distance_to_p = distance_to_object(obj_player);
     direction_p = point_direction(x,y,obj_player.x, obj_player.y);
     //follow
@@ -36,7 +36,7 @@ function enemy_flamethrower_idle() {
 }
 
 function enemy_flamethrower_movement() { 
-    if(!audio_is_playing(s_e_flamethrower_walk)) audio_play_sound(s_e_flamethrower_walk,0,0,0.7,0,random_range(0.5,1));
+    if(!audio_is_playing(snd_e_flamethrower_walk)) audio_play_sound(snd_e_flamethrower_walk,0,0,0.7,0,random_range(0.5,1));
     sprite_index = spr_flamethrower_move;
     x += image_xscale * walk_speed;
     image_speed = 1;
@@ -68,7 +68,7 @@ function enemy_flamethrower_evade() {
 }
 
 function enemy_flamethrower_attack() {
-    if(!audio_is_playing(s_e_flamethrower_attack)) audio_play_sound(s_e_flamethrower_attack,0,0,1,0,random_range(0.8,1));
+    if(!audio_is_playing(snd_e_flamethrower_attack)) audio_play_sound(snd_e_flamethrower_attack,0,0,1,0,random_range(0.8,1));
     sprite_index = spr_flamethrower_attack;
     mask_index = spr_flamethrower_attack_hitbox;
     if (!attack_initialized) {

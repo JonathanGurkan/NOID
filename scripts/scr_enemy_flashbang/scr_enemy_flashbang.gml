@@ -1,5 +1,5 @@
 function enemy_flashbang_global() {
-    if (enemy_state != ENEMYSTATE.MOVE) audio_stop_sound(s_e_flashbang_walk)
+    if (enemy_state != ENEMYSTATE.MOVE) audio_stop_sound(snd_e_flashbang_walk)
     distance_to_p = distance_to_object(obj_player);
     direction_p = point_direction(x,y,obj_player.x, obj_player.y);
     //wakeup
@@ -59,7 +59,7 @@ function enemy_flashbang_alerted() {
 }
 
 function enemy_flashbang_movement() {
-    if(!audio_is_playing(s_e_flashbang_walk)) audio_play_sound(s_e_flashbang_walk,0,0,0.7,0,random_range(0.5,1)); 
+    if(!audio_is_playing(snd_e_flashbang_walk)) audio_play_sound(snd_e_flashbang_walk,0,0,0.7,0,random_range(0.5,1)); 
     sprite_index = spr_flashbang_move;
     x += image_xscale * walk_speed;
     image_speed = 1;
@@ -114,7 +114,7 @@ function enemy_flashbang_attack() {
         enemy_state = ENEMYSTATE.DEATH;
 		with (obj_screenflash) {
 			flash_toggle = true;
-            if(!audio_is_playing(s_e_flashbang)) audio_play_sound(s_e_flashbang,0,0,0.7,0,1);
+            if(!audio_is_playing(snd_e_flashbang)) audio_play_sound(snd_e_flashbang,0,0,0.7,0,1);
 		}
     }
 } 
