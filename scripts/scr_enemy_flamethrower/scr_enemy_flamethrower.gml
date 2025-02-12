@@ -66,9 +66,9 @@ function enemy_flamethrower_evade() {
 }
 
 function enemy_flamethrower_attack() {
+    sprite_index = spr_flamethrower_attack;
+    mask_index = spr_flamethrower_attack_hitbox;
     if (!attack_initialized) {
-        sprite_index = spr_flamethrower_attack;
-        mask_index = spr_flamethrower_attack_hitbox;
         if (direction_p > 90) {
             direction = -1
             image_xscale = -1
@@ -80,15 +80,14 @@ function enemy_flamethrower_attack() {
         attack_initialized = true;
     } 
 		
-		var list = ds_list_create();
-        var num = instance_place_list(x,y,obj_player,list,false);
-    with(obj_player) {
-        if (!invincible) { // Only take damage if not invincible
-            global.player_health -= 0.2;
-            screenshake(60, 0.4, 0.3);
-        }
+    if (place_meeting(x, y, obj_player)) {
+       with(obj_player) {
+           if (!invincible) { // Only take damage if not invincible and is still touching the attack
+               global.player_health -= 0.2;
+               screenshake(60, 0.4, 0.3);
+           }
+       }
     }
-        ds_list_destroy(list);
         mask_index = spr_flamethrower_idle;
         
 
