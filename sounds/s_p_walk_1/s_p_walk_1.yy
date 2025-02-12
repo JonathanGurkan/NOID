@@ -12,8 +12,8 @@
   "duration":2.2051246,
   "name":"s_p_walk_1",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"player",
+    "path":"folders/Sounds/player.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -12,8 +12,8 @@
   "duration":0.328322,
   "name":"s_p_attack_2",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"player",
+    "path":"folders/Sounds/player.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

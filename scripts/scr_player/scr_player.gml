@@ -21,28 +21,19 @@ function scr_p_death() {
 	
 function scr_p_animation() {
     
-    
-    if (on_ground) audio_stop_sound(s_jump_fly);
-    show_debug_message(move_y);
+    if (!audio_is_playing(s_jump_fly) && move_y > 2) audio_play_sound(s_jump_fly,0,1,0.5); 
+    var jumping = false
+    if (on_ground) {
+        audio_stop_sound(s_jump_fly);
+    }
 	if (!on_ground) {
 	if (move_y < 0) {
-        sprite_index = spr_player_up;
-        //if (!audio_is_playing(s_jump_fly)) audio_play_sound(s_jump_fly,0,1);
-    }
-   
-	if (move_y > 0) {
-        if (!audio_is_playing(s_jump_fly)) audio_play_sound(s_jump_fly,0,1);
         audio_stop_sound(s_p_walk_1)
+        sprite_index = spr_player_up;
+    }
+	if (move_y > 0) {
 	    sprite_index = spr_player_down;
     }
-        
-    var has_jumped = false;
-    if(move_y != 0) has_jumped = true;
-    if(has_jumped && on_ground) if (!audio_is_playing(s_jump_up)) audio_play_sound(s_jump_up,0,0);
-    show_debug_message(has_jumped)
-    
-    
-        
 	} else {
         
 	    if (move_x == 0) {
