@@ -2,7 +2,7 @@ function do_nothing() {
 //ye, just do nothing
 }
 	
-	function scr_p_global() {
+function scr_p_global() {
     if (global.player_health <= 0 && on_ground) {
         state = PLAYERSTATE.DEATH;
     }
@@ -318,13 +318,8 @@ function process_attack(sprite, mask) {
 	    mask_index = spr_player_idle;
 }
 
-function scr_p_hurt(enemy_damage) {
-   
-    state = PLAYERSTATE.FREE;
-}
 	
 function scr_p_transition() {
-    transit = true;
 	scr_p_animation();
 	collision();
 }

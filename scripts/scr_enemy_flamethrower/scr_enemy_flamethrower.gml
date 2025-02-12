@@ -8,14 +8,6 @@ function enemy_flamethrower_global() {
             follow_player = false;
         }
     
-    //player too close
-    if (distance_to_p < evade_distance && !attack_player) {
-            evade_player = true;
-        }
-    if (distance_to_p > 50) {
-            evade_player = false;
-        }
-    
     //attack range
     if (distance_to_p < attack_distance) {
             attack_player = true;
@@ -54,21 +46,10 @@ function enemy_flamethrower_movement() {
     if (!follow_player) enemy_state = ENEMYSTATE.IDLE;
 }
 
-function enemy_flamethrower_evade() {
-    sprite_index = spr_flamethrower_move;
-    x -= image_xscale * walk_speed;
-    image_speed = 1;
-    
-    if (attack_player) {
-        enemy_state = ENEMYSTATE.ATTACK;
-    }
-    if (!evade_player) enemy_state = ENEMYSTATE.MOVE;
-}
-
 function enemy_flamethrower_attack() {
+    sprite_index = spr_flamethrower_attack;
+    mask_index = spr_flamethrower_attack_hitbox;
     if (!attack_initialized) {
-        sprite_index = spr_flamethrower_attack;
-        mask_index = spr_flamethrower_attack_hitbox;
         if (direction_p > 90) {
             direction = -1
             image_xscale = -1
@@ -80,26 +61,22 @@ function enemy_flamethrower_attack() {
         attack_initialized = true;
     } 
 		
-		var list = ds_list_create();
-        var num = instance_place_list(x,y,obj_player,list,false)
-    if(num > 0){
-        with(obj_player) {
-            if (!invincible) { // Only take damage if not invincible
-                global.player_health -= 10;
-                invincibility_timer = 60; // Set invincibility period
-                invincible = true; // Make the player invincible
-                screenshake(60, 0.4, 0.3);
-            }
-        }
-        
-    } 
-        ds_list_destroy(list);
+    if (place_meeting(x, y, obj_player)) {
+       with(obj_player) {
+           if (!invincible) { // Only take damage if not invincible and is still touching the attack
+               global.player_health -= 0.2;
+               screenshake(60, 0.4, 0.3);
+           }
+       }
+    }
         mask_index = spr_flamethrower_idle;
         
 
     if (animation_end()){
         attack_initialized = false;
         enemy_state = ENEMYSTATE.MOVE;
+        invincibility_timer = 60; // Set invincibility period
+        invincible = true; // Make the player invincible
     }
 }
 

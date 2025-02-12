@@ -4,7 +4,6 @@ if (!global.gamepaused) {
         case ENEMYSTATE.DEATH: enemy_flamethrower_death(); break;
         case ENEMYSTATE.MOVE: enemy_flamethrower_movement(); break;
         case ENEMYSTATE.ATTACK: enemy_flamethrower_attack(); break;
-        case ENEMYSTATE.EVADE: enemy_flamethrower_evade(); break
     }
 }
 

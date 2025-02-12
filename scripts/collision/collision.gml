@@ -1,8 +1,7 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
 function collision() {
     //x-collision
-    if (place_meeting(x+move_x,y,collision_map)) {
+    if (place_meeting(x+move_x,y-1,collision_map)) {
         while (!place_meeting(x+sign(move_x),y,collision_map)) {
             x += sign(move_x)
 		}

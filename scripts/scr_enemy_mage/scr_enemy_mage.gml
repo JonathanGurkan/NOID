@@ -1,8 +1,11 @@
 function enemy_mage_global() {
     distance_to_p = distance_to_object(obj_player);
     direction_p = point_direction(x,y,obj_player.x, obj_player.y);
+    direction_p = round(point_direction(x,y,obj_player.x, obj_player.y));
+    if(direction_p <= 360 && direction_p >= 270) direction_p = 0
+    dist_to_wall = distance_to_object(obj_wall);
     //follow
-    if (distance_to_p < follow_distance) {
+    if (distance_to_p < follow_distance  || unconditional_follow) {
             follow_player = true;
         } else { 
             follow_player = false;
@@ -21,7 +24,7 @@ function enemy_mage_global() {
             shoot_player = false;
         }
     
-    if (distance_to_p < evade_distance) {
+    if (distance_to_p < evade_distance && !unconditional_follow) {
             evade_player = true;
         } else {
             evade_player = false
@@ -39,9 +42,28 @@ function enemy_mage_global() {
     if (enemy_hp <= 0) {
         enemy_state = ENEMYSTATE.DEATH;
     }
+    
+    if(distance_to_object(obj_wall) <= 5) {
+        unconditional_follow = true; enemy_state = ENEMYSTATE.MOVE;
+    }
+    
+    show_debug_message(
+    "distance_to_p: " + string(distance_to_p) + 
+    " | direction_p: " + string(direction_p) + 
+    " | follow_player: " + string(follow_player) + 
+    " | attack_player: " + string(attack_player) + 
+    " | shoot_player: " + string(shoot_player) + 
+    " | evade_player: " + string(evade_player) + 
+    " | can_shoot: " + string(can_shoot) + 
+    " | enemy_hp: " + string(enemy_hp) + 
+    " | enemy_state: " + string(unconditional_follow)
+);
+    
+
 }
 
 function enemy_mage_idle() {
+    move_x = 0;
     sprite_index = spr_mage_idle;
     last_state = ENEMYSTATE.IDLE;
     if (follow_player) enemy_state = ENEMYSTATE.MOVE;
@@ -49,25 +71,22 @@ function enemy_mage_idle() {
 
 function enemy_mage_movement() { 
     sprite_index = spr_mage_move;
-    x += image_xscale * walk_speed;
+    move_x = 1 * image_xscale * walk_speed;
     image_speed = 1;
        
     if (direction_p > 90) {
-    direction = -1
     image_xscale = -1
     } else {
-    direction = 1;
     image_xscale = 1;
     }
-    
     if (evade_player) enemy_state = ENEMYSTATE.EVADE;
-    if (attack_player && !shoot_player && !can_shoot) enemy_state = ENEMYSTATE.ATTACK;
+    if (attack_player && !shoot_player && !can_shoot) || (unconditional_follow && attack_player) enemy_state = ENEMYSTATE.ATTACK;
     if (shoot_player && can_shoot) enemy_state = ENEMYSTATE.SHOOT; 
     if (!follow_player) enemy_state = ENEMYSTATE.IDLE;
 }
 
 function enemy_mage_shoot() {
-    
+    move_x = 0;
 if (!attack_initialized) {
     image_speed = 1;
     image_index = 0;
@@ -107,6 +126,7 @@ if (!attack_initialized) {
 }
 
 function enemy_mage_attack() {
+        move_x = 0; 
         image_speed = 1;
         sprite_index = spr_mage_attack;
         mask_index = spr_mage_attack_hitbox;
@@ -128,18 +148,27 @@ function enemy_mage_attack() {
     if (animation_end()) {
         dash_timer = dash_cooldown;
         enemy_state = ENEMYSTATE.DODGE;
+        unconditional_follow = false;
     }
 }
 
 function enemy_mage_evade() {
+        move_x = 0;
         sprite_index = spr_mage_move;
-        x -= image_xscale * walk_speed;
+        move_x = 1 * image_xscale * walk_speed;
         image_speed = 1;
+    
+        if (direction_p > 90) {
+                image_xscale = 1;
+                } else {
+                image_xscale = -1;
+                }
     
     if (attack_player && !can_shoot && last_state != ENEMYSTATE.ATTACK) enemy_state = ENEMYSTATE.ATTACK;
     if (shoot_player && can_shoot) enemy_state = ENEMYSTATE.SHOOT;
-    if (!evade_player && distance_to_p >= 130) {
-        enemy_state = ENEMYSTATE.IDLE;
+    if (!evade_player && distance_to_p >= 100) {
+        unconditional_follow = true;
+        enemy_state = ENEMYSTATE.MOVE;
     }
 }
     
@@ -153,7 +182,7 @@ function enemy_mage_dodge() {
             
         }
     if (dash_timer > 0) {
-        move_x = -lengthdir_x(3, -image_xscale); // Dash backward based on image_xscale
+        move_x = lengthdir_x(3, -image_xscale); // Dash backward based on image_xscale
         move_y = 0; // No vertical movement during dash
     } else {
         // Reset movement and state after the dash
@@ -165,6 +194,7 @@ function enemy_mage_dodge() {
 
 
 function enemy_mage_death() {
+    move_x = 0;
     is_dying = true
     sprite_index = spr_mage_death;
     

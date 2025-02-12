@@ -1,6 +1,6 @@
 //misc
 enemy_state = ENEMYSTATE.IDLE;
-collision_map = layer_tilemap_get_id(layer_get_id("col"))
+collision_map = obj_collision;
 distance_to_p = distance_to_object(obj_player);
 direction_p = point_direction(x,y,obj_player.x, obj_player.y);
 
@@ -20,9 +20,9 @@ is_dying = false;
 evade_player = false;
 
 //logic reals
-found_distance =150;
+found_distance = 150;
 follow_distance = 100;
-attack_distance = 10;
+attack_distance = 2;
 evade_distance = 0;
 
 //hp + damage

@@ -8,6 +8,7 @@ key_attack = mouse_check_button_pressed(mb_left);
 key_attack_strong = mouse_check_button(mb_right);
 move = key_right - key_left;
 on_ground = place_meeting(x,y+1,collision_map);
+dist_to_wall = distance_to_object(obj_wall);
 
 if (!global.gamepaused) {
     switch (state) {

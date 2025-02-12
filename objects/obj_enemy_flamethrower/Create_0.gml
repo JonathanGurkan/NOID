@@ -1,8 +1,7 @@
 //misc
 enemy_state = ENEMYSTATE.IDLE;
-collision_map = layer_tilemap_get_id(layer_get_id("col"))
+collision_map = obj_collision;
 
-    
 //movement
 walk_speed = 1;
 move_y = 0;
@@ -19,13 +18,11 @@ is_dying = false;
 
 //logic reals
 follow_distance = 150;
-evade_distance = 50;
-attack_distance = 60;
+attack_distance = 45;
 enemy_attack_timer = 0;
 attack_cooldown = 100;
 
 //hp + damage
-enemy_hp = 2;
-enemy_damage = 2;
+enemy_hp = 5;
 attack_initialized = 0;
 

@@ -94,24 +94,10 @@ function enemy_flashbang_attack() {
         mask_index = spr_flashbang_idle;
     }
 
-    var list = ds_list_create();
-    var num = instance_place_list(x, y, obj_player, list, false);
-    if (num > 0) {
-        with(obj_player){
-        if (!invincible) { // Only take damage if not invincible
-                global.player_health -= 2;
-                invincibility_timer = 60; // Set invincibility period
-                invincible = true; // Make the player invincible
-                screenshake(10,1,0.3);
-            }
-        }
-    }
-    ds_list_destroy(list);
-
     if (animation_end()) {
         enemy_state = ENEMYSTATE.DEATH;
 		with (obj_screenflash) {
-			flash_toggle = true;
+			flash_trigger = true;
 		}
     }
 } 
@@ -123,8 +109,5 @@ function enemy_flashbang_death() {
     
     if (animation_end()) {
         instance_destroy();
-        with (obj_screenflash) {
-            flash_toggle = false;
-        }
     }
 }

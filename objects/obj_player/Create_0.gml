@@ -1,10 +1,11 @@
 state = PLAYERSTATE.FREE;
 last_state = PLAYERSTATE.FREE;
-collision_map = layer_tilemap_get_id(layer_get_id("col"));
+collision_map = obj_collision;
 pause_option = ["Continue", "Main Menu", "Quit", "Toggle Fullscreen"];
 pause_option_selected = 0;
 death_option = ["Restart", "Main Menu", "Quit"];
 death_option_selected = 0;
+dist_to_wall = 0;
 
 //keybinds
 key_left = false;
