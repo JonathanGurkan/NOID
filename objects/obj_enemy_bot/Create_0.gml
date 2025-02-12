@@ -40,4 +40,4 @@ evade_timer = 0;
 evade_cooldown = 60;
 
 //hp + damage
-enemy_hp = 5;
+enemy_hp = 4;
