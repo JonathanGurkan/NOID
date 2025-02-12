@@ -1,16 +1,16 @@
 {
   "$GMSound":"",
-  "%Name":"s_flashbang",
+  "%Name":"s_r_door_open",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"ag_rooms",
+    "path":"audiogroups/ag_rooms",
   },
   "bitDepth":1,
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":4.5308166,
-  "name":"s_flashbang",
+  "duration":0.98839,
+  "name":"s_r_door_open",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"s_flashbang.mp3",
+  "soundFile":"s_r_door_open.mp3",
   "type":0,
   "volume":1.0,
 }

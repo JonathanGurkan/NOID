@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"s_e_flame_attack",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"ag_enemies",
+    "path":"audiogroups/ag_enemies",
   },
   "bitDepth":1,
   "bitRate":128,
@@ -12,8 +12,8 @@
   "duration":2.8964627,
   "name":"s_e_flame_attack",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"enemies",
+    "path":"folders/Sounds/enemies.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

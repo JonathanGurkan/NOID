@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"s_p_walk_1",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"ag_player",
+    "path":"audiogroups/ag_player",
   },
   "bitDepth":1,
   "bitRate":128,
