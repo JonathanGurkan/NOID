@@ -1,4 +1,5 @@
 function enemy_flower_global() {
+    if (enemy_state != ENEMYSTATE.MOVE) audio_stop_sound(s_e_flower_move);
 distance_to_p = distance_to_object(obj_player);
 direction_p = point_direction(x,y,obj_player.x, obj_player.y);
 //wakeup
@@ -84,7 +85,8 @@ function enemy_flower_fall() {
     }
 }
 
-function enemy_flower_movement() { 
+function enemy_flower_movement() {
+    if(!audio_is_playing(s_e_flower_move)) audio_play_sound(s_e_flower_move,0,0,0.7,0,random_range(0.5,1));
     sprite_index = spr_flower_move;
     x += image_xscale * walk_speed;
     image_speed = 1;
@@ -111,24 +113,26 @@ function enemy_flower_attack() {
         image_index = 0; 
         image_speed = 1; 
         attack_initialized = true; 
+        if (!audio_is_playing(s_e_flower_attack_1)) audio_play_sound(s_e_flower_attack_1,0,1,1,0,random_range(0.8,1));
     }
 
     if (!attack_player) {
         enemy_state = ENEMYSTATE.MOVE;
+        if (audio_is_playing(s_e_flower_attack_1)) audio_stop_sound(s_e_flower_attack_1)
         attack_initialized = false; 
     }
 
     var list = ds_list_create();
     var num = instance_place_list(x, y, obj_player, list, false);
     if (num > 0) { 
-        with(obj_player){
-    if (!invincible) { // Only take damage if not invincible
-            global.player_health -= 2;
-            invincibility_timer = 60; // Set invincibility period
-            invincible = true; // Make the player invincible
-            screenshake(10, 1, 0.3);
-        }
-                }
+      with(obj_player){
+            if (!invincible) { // Only take damage if not invincible
+                global.player_health -= 2;
+                invincibility_timer = 60; // Set invincibility period
+                invincible = true; // Make the player invincible
+                screenshake(10, 1, 0.3);
+            }
+      }
     }
     ds_list_destroy(list);
 } 
