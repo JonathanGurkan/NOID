@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"s_e_walk",
+  "%Name":"s_e_flamethrower_attack",
   "audioGroupId":{
     "name":"ag_enemies",
     "path":"audiogroups/ag_enemies",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":2.2051246,
-  "name":"s_e_walk",
+  "duration":2.8964627,
+  "name":"s_e_flamethrower_attack",
   "parent":{
-    "name":"enemies",
-    "path":"folders/Sounds/enemies.yy",
+    "name":"flamethrower",
+    "path":"folders/Sounds/enemies/flamethrower.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"s_e_walk.mp3",
+  "soundFile":"s_e_flamethrower_attack.mp3",
   "type":0,
   "volume":1.0,
 }

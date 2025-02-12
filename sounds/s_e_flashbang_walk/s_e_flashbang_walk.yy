@@ -1,16 +1,16 @@
 {
   "$GMSound":"",
-  "%Name":"s_e_flashbang",
+  "%Name":"s_e_flashbang_walk",
   "audioGroupId":{
-    "name":"ag_enemies",
-    "path":"audiogroups/ag_enemies",
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":4.5308166,
-  "name":"s_e_flashbang",
+  "duration":4.632381,
+  "name":"s_e_flashbang_walk",
   "parent":{
     "name":"flashbang",
     "path":"folders/Sounds/enemies/flashbang.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"s_e_flashbang.mp3",
+  "soundFile":"s_e_flashbang_walk.mp3",
   "type":0,
   "volume":1.0,
 }
