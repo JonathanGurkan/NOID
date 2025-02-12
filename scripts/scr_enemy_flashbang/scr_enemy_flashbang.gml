@@ -111,7 +111,7 @@ function enemy_flashbang_attack() {
     if (animation_end()) {
         enemy_state = ENEMYSTATE.DEATH;
 		with (obj_screenflash) {
-			flash_toggle = true;
+			flash_trigger = true;
 		}
     }
 } 
@@ -124,7 +124,7 @@ function enemy_flashbang_death() {
     if (animation_end()) {
         instance_destroy();
         with (obj_screenflash) {
-            flash_toggle = false;
+            flash_trigger = false;
         }
     }
 }
