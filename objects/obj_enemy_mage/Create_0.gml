@@ -33,6 +33,6 @@ dash_timer = 0;
 dash_cooldown = 20;
 
 //hp + damage
-enemy_hp = 4;
+enemy_hp = 7;
 
 
