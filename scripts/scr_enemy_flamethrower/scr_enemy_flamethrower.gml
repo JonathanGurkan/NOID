@@ -81,18 +81,13 @@ function enemy_flamethrower_attack() {
     } 
 		
 		var list = ds_list_create();
-        var num = instance_place_list(x,y,obj_player,list,false)
-    if(num > 0){
-        with(obj_player) {
-            if (!invincible) { // Only take damage if not invincible
-                global.player_health -= 10;
-                invincibility_timer = 60; // Set invincibility period
-                invincible = true; // Make the player invincible
-                screenshake(60, 0.4, 0.3);
-            }
+        var num = instance_place_list(x,y,obj_player,list,false);
+    with(obj_player) {
+        if (!invincible) { // Only take damage if not invincible
+            global.player_health -= 0.2;
+            screenshake(60, 0.4, 0.3);
         }
-        
-    } 
+    }
         ds_list_destroy(list);
         mask_index = spr_flamethrower_idle;
         
@@ -100,6 +95,8 @@ function enemy_flamethrower_attack() {
     if (animation_end()){
         attack_initialized = false;
         enemy_state = ENEMYSTATE.MOVE;
+        invincibility_timer = 60; // Set invincibility period
+        invincible = true; // Make the player invincible
     }
 }
 
