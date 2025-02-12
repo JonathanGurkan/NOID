@@ -47,17 +47,8 @@ function enemy_mage_global() {
         unconditional_follow = true; enemy_state = ENEMYSTATE.MOVE;
     }
     
-    show_debug_message(
-    "distance_to_p: " + string(distance_to_p) + 
-    " | direction_p: " + string(direction_p) + 
-    " | follow_player: " + string(follow_player) + 
-    " | attack_player: " + string(attack_player) + 
-    " | shoot_player: " + string(shoot_player) + 
-    " | evade_player: " + string(evade_player) + 
-    " | can_shoot: " + string(can_shoot) + 
-    " | enemy_hp: " + string(enemy_hp) + 
-    " | enemy_state: " + string(unconditional_follow)
-);
+
+
     
 
 }
@@ -199,6 +190,7 @@ function enemy_mage_death() {
     sprite_index = spr_mage_death;
     
     if (animation_end()) {
+        global.player_score += 10;
         instance_destroy();
     }
 }

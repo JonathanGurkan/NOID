@@ -52,22 +52,6 @@ function enemy_bot_global() {
     
         
    y = round(y)
-        
-    show_debug_message(
-    "distance_to_p: " + string(distance_to_p) + 
-    " | direction_p: " + string(direction_p) + 
-    " | dist_to_wall: " + string(dist_to_wall) + 
-    " | found_player: " + string(found_player) + 
-    " | follow_player: " + string(follow_player) + 
-    " | shoot_player: " + string(shoot_player) + 
-    " | dash_player: " + string(dash_player) + 
-    " | can_shoot: " + string(can_shoot) + 
-    " | can_dash: " + string(can_dash)
-);
-        
-        
-    show_debug_message(enemy_state);
-        
 }
 
 function enemy_bot_idle() {
@@ -205,11 +189,13 @@ function enemy_bot_dash() {
 
 
 function enemy_bot_death() {
+    
     move_x = 0;
     is_dying = true
     sprite_index = spr_bot_death;
     
     if (animation_end()) {
         instance_destroy();
+        global.player_score += 10;
     }
 }

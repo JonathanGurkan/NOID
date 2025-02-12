@@ -58,3 +58,5 @@ if(room_toggle = true){
     }
 
 }
+
+show_debug_message(global.player_score)
