@@ -20,26 +20,37 @@ function scr_p_death() {
 }
 	
 function scr_p_animation() {
-    show_debug_message(audio_exists(s_p_walk_1))
+    
+    
+    if (on_ground) audio_stop_sound(s_jump_fly);
+    show_debug_message(move_y);
 	if (!on_ground) {
 	if (move_y < 0) {
-	    sprite_index = spr_player_up;
-	} 
-    
+        sprite_index = spr_player_up;
+        //if (!audio_is_playing(s_jump_fly)) audio_play_sound(s_jump_fly,0,1);
+    }
+   
 	if (move_y > 0) {
+        if (!audio_is_playing(s_jump_fly)) audio_play_sound(s_jump_fly,0,1);
+        audio_stop_sound(s_p_walk_1)
 	    sprite_index = spr_player_down;
+    }
         
-	}
+    var has_jumped = false;
+    if(move_y != 0) has_jumped = true;
+    if(has_jumped && on_ground) if (!audio_is_playing(s_jump_up)) audio_play_sound(s_jump_up,0,0);
+    show_debug_message(has_jumped)
+    
+    
         
 	} else {
         
 	    if (move_x == 0) {
 	        sprite_index = spr_player_idle;
+            audio_stop_sound(s_p_walk_1)
 	    } else {
-            if (!audio_play_sound(s_p_walk_1,0,1)) audio_play_sound(s_p_walk_1,0,1); 
-                
+            if (!audio_is_playing(s_p_walk_1)) audio_play_sound(s_p_walk_1,0,1,0.4); 
             if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift)) {
-
             image_speed = 1;
             sprite_index = spr_player_move_3;
             } else {
@@ -60,7 +71,7 @@ function scr_p_animation() {
 }
 	
 function scr_p_attack_1() {
-    audio_play_sound(s_p_attack_1,0,0)
+    if (!audio_is_playing(s_p_attack_1) && global.player_stamina > 10) audio_play_sound(s_p_attack_1,0,0,0.2,0,random_range(0.5,1));
 	  if (global.player_stamina > 0) {
 	   process_attack(spr_player_attack_1,spr_player_attack_1_hitbox)
     }
@@ -81,6 +92,7 @@ function scr_p_attack_1() {
 }
 
 function scr_p_attack_2() {
+    if (!audio_is_playing(s_p_attack_2)) audio_play_sound(s_p_attack_2,0,0,0.7,0,random_range(0.5,1));
 	if (global.player_stamina > 0) {
 	   process_attack(spr_player_attack_2,spr_player_attack_2_hitbox)
     }
@@ -99,6 +111,7 @@ function scr_p_attack_2() {
 }
 
 function scr_p_attack_3() {
+    if (!audio_is_playing(s_p_attack_3)) audio_play_sound(s_p_attack_3,0,0,0.7,0,random_range(0.5,1));
     process_attack(spr_player_attack_3,spr_player_attack_3_hitbox)
         
     if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
@@ -129,11 +142,9 @@ function scr_p_attack_strong() {
 	
 function scr_p_dash() { 
     collision();
-    
-
+    if (!audio_is_playing(s_p_dash)) audio_play_sound(s_p_dash,0,0,1,0,random_range(0.8,1));
 	move_x = lengthdir_x(dash_speed,dash_direction)
 	move_y = 0;
-    
 	with(instance_create_depth(x,y,depth+1,obj_trail)) {
         var angle = point_direction(x, y, mouse_x, mouse_y);
                 if (angle > 90 && angle < 270) {
@@ -311,7 +322,7 @@ function process_attack(sprite, mask) {
 	                ds_list_add(hit_by_attack,hit_id);
 
 	                with(hit_id){
-                       
+                       audio_play_sound(s_e_damage_1,0,0,1,0,random_range(0.5,1.5));
 	                    --enemy_hp;
                      
 	                }

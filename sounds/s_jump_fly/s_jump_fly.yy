@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"s_jump_fly",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.90385485,
+  "name":"s_jump_fly",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"s_jump_fly.mp3",
+  "type":0,
+  "volume":1.0,
+}

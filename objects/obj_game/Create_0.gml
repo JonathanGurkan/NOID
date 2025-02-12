@@ -1,4 +1,4 @@
-//Init + Globals
+ //Init + Globals
 game_paused_image_speed = image_speed;
 randomize();
 

@@ -13,6 +13,9 @@ if(keyboard_check(vk_f12)){
     room_toggle = true;
 }
 if(room_toggle = true){
+    if(keyboard_check(ord("J"))){
+	audio_play_sound(EhE_okE,0,0);
+	}
 	if(keyboard_check(ord("L"))){
 	global.player_health = 1;
 	}
