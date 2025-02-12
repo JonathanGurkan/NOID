@@ -106,5 +106,7 @@ function enemy_flamethrower_death() {
     sprite_index = spr_flamethrower_death;
     if (animation_end()) {
         instance_destroy();
+        audio_stop_sound(snd_e_flamethrower_attack)
+        audio_stop_sound(snd_e_flamethrower_walk)
     }
 }

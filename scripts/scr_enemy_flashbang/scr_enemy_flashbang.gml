@@ -123,6 +123,7 @@ function enemy_flashbang_death() {
     is_dying = true
     image_speed = 1;
     sprite_index = spr_flashbang_death;
+    audio_stop_sound(snd_e_flashbang_walk)
     
     if (animation_end()) {
         instance_destroy();
