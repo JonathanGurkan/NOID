@@ -118,7 +118,7 @@ function enemy_flower_attack() {
 
     if (!attack_player) {
         enemy_state = ENEMYSTATE.MOVE;
-        if (audio_is_playing(s_e_flower_attack_1)) audio_stop_sound(s_e_flower_attack_1)
+        if (audio_is_playing(snd_e_flower_attack_1)) audio_stop_sound(snd_e_flower_attack_1)
         attack_initialized = false; 
     }
 
