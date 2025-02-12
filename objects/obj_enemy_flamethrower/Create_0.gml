@@ -18,8 +18,7 @@ is_dying = false;
 
 //logic reals
 follow_distance = 150;
-evade_distance = 50;
-attack_distance = 60;
+attack_distance = 45;
 enemy_attack_timer = 0;
 attack_cooldown = 100;
 
