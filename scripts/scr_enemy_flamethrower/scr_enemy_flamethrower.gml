@@ -76,7 +76,7 @@ function enemy_flamethrower_attack() {
         
 
     if (animation_end()){
-        audio_stop_sound(s_e_flamethrower_attack)
+        audio_stop_sound(snd_e_flamethrower_attack)
         attack_initialized = false;
         enemy_state = ENEMYSTATE.MOVE;
         invincibility_timer = 60; // Set invincibility period
