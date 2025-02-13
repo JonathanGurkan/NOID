@@ -1,6 +1,8 @@
 if (flash_trigger && !flash_active) {
     flash_active = true;  // Start the flash
-    flash_time = 0;       // Reset time for a fresh flash
+    flash_time = 0;       // Reset time
+    flash_max = pi;       // Keep half a cycle for a single smooth flash
+    flash_rate = flash_max / flash_length; // Adjust speed based on user-defined length
 }
 
 if (flash_active) {
