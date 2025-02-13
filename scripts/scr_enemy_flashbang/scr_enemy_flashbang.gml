@@ -99,7 +99,7 @@ function enemy_flashbang_attack() {
     if (animation_end()) {
         enemy_state = ENEMYSTATE.DEATH;
 		with (obj_screenflash) {
-			flash_toggle = true;
+			flash_trigger = true;
             if(!audio_is_playing(snd_e_flashbang)) audio_play_sound(snd_e_flashbang,0,0,0.7,0,1);
 		}
     }
