@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scr_enemy_flower",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scr_enemy_mage",
   "isCompatibility":false,
   "isDnD":false,
