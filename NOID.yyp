@@ -1,6 +1,6 @@
 {
-  "$GMProject":"v1",
-  "%Name":"Informatica GameMaker Project",
+  "$GMProject":"",
+  "%Name":"NOID",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMAudioGroup":"","%Name":"menu","name":"menu","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -82,14 +82,13 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
     "IDEVersion":"2024.1300.0.743",
   },
-  "name":"Informatica GameMaker Project",
+  "name":"NOID",
   "resources":[
     {"id":{"name":"f_button_text","path":"fonts/f_button_text/f_button_text.yy",},},
     {"id":{"name":"f_large_button_text","path":"fonts/f_large_button_text/f_large_button_text.yy",},},
