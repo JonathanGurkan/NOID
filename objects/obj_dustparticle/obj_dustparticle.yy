@@ -8,8 +8,8 @@
   "name":"obj_dustparticle",
   "overriddenProperties":[],
   "parent":{
-    "name":"player",
-    "path":"folders/Objects/player.yy",
+    "name":"colliders",
+    "path":"folders/Objects/colliders.yy",
   },
   "parentObjectId":null,
   "persistent":false,

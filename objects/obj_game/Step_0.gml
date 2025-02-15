@@ -55,6 +55,8 @@ if(room_toggle = true){
         with(par_enemy){
             instance_destroy();
         }
-    }
-
+	}
+	if(keyboard_check(ord("C"))){
+		global.wallclimb = true;
+	}
 }

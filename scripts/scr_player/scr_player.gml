@@ -52,13 +52,16 @@ function scr_p_animation() {
 		if (on_wall != 0){
 			sprite_index = spr_player_onwall;
 			image_xscale = on_wall;
-			dust++
+			audio_stop_sound(snd_p_jump_fly);
+			if (global.wallclimb = true){
+				dust++
 				var side = bbox_left;
 				if(on_wall == 1) side = bbox_right;
 				if(dust>4 && move_y > 0) with (instance_create_layer(side,bbox_top+3,"enemy",obj_dustparticle)){
 				other.dust = 0;
 				hspeed = -other.on_wall * obj_player.move_y;
 				}
+			}
 		}
 	}
 	
@@ -195,7 +198,7 @@ function scr_p_free() {
 	    move_x = lerp(move_x, 0, move_x_friction_final); 
 	}
 	
-	wallclimb();
+	if (global.wallclimb = true) wallclimb();
 	//Movement y
 	if (jump_buffer > 0) {
 	    jump_buffer--;

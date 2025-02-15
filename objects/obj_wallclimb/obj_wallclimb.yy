@@ -1,15 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_cutscene",
+  "%Name":"obj_wallclimb",
   "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_cutscene",
+  "name":"obj_wallclimb",
   "overriddenProperties":[],
   "parent":{
-    "name":"roombuilding",
-    "path":"folders/Objects/colliders/roombuilding.yy",
+    "name":"colliders",
+    "path":"folders/Objects/colliders.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -25,16 +27,14 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"scene_name","filters":[],"listItems":[],"multiselect":false,"name":"scene_name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":0,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite126",
-    "path":"sprites/Sprite126/Sprite126.yy",
+    "name":"Sprite123",
+    "path":"sprites/Sprite123/Sprite123.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
