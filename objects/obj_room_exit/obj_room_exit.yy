@@ -8,8 +8,8 @@
   "name":"obj_room_exit",
   "overriddenProperties":[],
   "parent":{
-    "name":"colliders",
-    "path":"folders/Objects/colliders.yy",
+    "name":"roombuilding",
+    "path":"folders/Objects/colliders/roombuilding.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,5 +1,4 @@
 if(place_meeting(x,y-1,obj_player)){
-    show_debug_message("miau")
     screenshake(20,0.5,0.5);
     with(obj_player) move_x_max_final = walk_speed;
  } 

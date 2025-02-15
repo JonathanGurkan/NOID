@@ -8,7 +8,7 @@ if (!global.gamepaused) {
             }
 }
 
-on_ground = place_meeting(x,y+1,collision_map);
+on_ground = place_meeting(x,y,collision_map);
 
 enemy_flashbang_global();
 collision();
