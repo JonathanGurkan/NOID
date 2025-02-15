@@ -3,6 +3,7 @@ game_paused_image_speed = image_speed;
 randomize();
 
 global.gamepaused = false;
+global.sound_on = true;
 global.text_speed = .75;
 global.target_room = -1;
 global.target_x = -1;
