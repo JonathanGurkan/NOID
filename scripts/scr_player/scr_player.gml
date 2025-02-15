@@ -20,46 +20,65 @@ function scr_p_death() {
 }
 	
 function scr_p_animation() {
-    
-    if (!audio_is_playing(snd_p_jump_fly) && move_y > 2) audio_play_sound(snd_p_jump_fly,0,1,0.5); 
-    var jumping = false
-    if (on_ground) {
-        audio_stop_sound(snd_p_jump_fly);
-    }
-	if (!on_ground) {
-	if (move_y < 0) {
+	show_debug_message(on_wall)
+	
+    if (!audio_is_playing(snd_p_jump_fly) && move_y > 2) audio_play_sound(snd_p_jump_fly,0,1,0.5);   
+	if (move_x == 0) {
+	    sprite_index = spr_player_idle;
         audio_stop_sound(snd_p_walk_1)
-        sprite_index = spr_player_up;
-    }
-	if (move_y > 0) {
-	    sprite_index = spr_player_down;
-    }
 	} else {
-        
-	    if (move_x == 0) {
-	        sprite_index = spr_player_idle;
-            audio_stop_sound(snd_p_walk_1)
-	    } else {
-            if (!audio_is_playing(snd_p_walk_1)) audio_play_sound(snd_p_walk_1,0,1,0.4); 
-            if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift)) {
-            image_speed = 1;
-            sprite_index = spr_player_move_3;
-            } else {
-	        image_speed = 1;
-	        sprite_index =  spr_player_move;
-            }
-	    } 
+        if (!audio_is_playing(snd_p_walk_1)) audio_play_sound(snd_p_walk_1,0,1,0.4); 
+        if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift)) {
+        image_speed = 1;
+        sprite_index = spr_player_move_3;
+        } else {
+	    image_speed = 1;
+	    sprite_index =  spr_player_move;
+        }
+	} 
+	
+	if (on_ground) {
+        audio_stop_sound(snd_p_jump_fly);
+    } else {
+		
+		if (move_y < 0) {
+			audio_stop_sound(snd_p_walk_1)
+			sprite_index = spr_player_up;
+			}
+		if (move_y > 0) {
+			audio_stop_sound(snd_p_walk_1)
+			sprite_index = spr_player_down;
+			}
+		if (on_wall != 0){
+			sprite_index = spr_player_onwall;
+			image_xscale = on_wall;
+			audio_stop_sound(snd_p_jump_fly);
+			if (global.wallclimb = true){
+				dust++
+				var side = bbox_left;
+				if(on_wall == 1) side = bbox_right;
+				if(dust>4 && move_y > 0) with (instance_create_layer(side,bbox_top+3,"enemy",obj_dustparticle)){
+				other.dust = 0;
+				hspeed = -other.on_wall * obj_player.move_y;
+				}
+			}
+		}
 	}
+	
+	
+	if(on_wall == 0){
+		dust = 0;
+		var angle = point_direction(x, y, mouse_x, mouse_y);
         
-	var angle = point_direction(x, y, mouse_x, mouse_y);
-        
-	// Constrain the angle between -90 and 90 degrees
-	if (angle > 90 && angle < 270) {
-	    image_xscale = -1;
-	} else {
-	    image_xscale = 1;
+		// Constrain the angle between -90 and 90 degrees
+		if (angle > 90 && angle < 270) {
+		    image_xscale = -1;
+		} else {
+			    image_xscale = 1;
+		}
 	}
 }
+
 	
 function scr_p_attack_1() {
     if (!audio_is_playing(snd_p_attack_1) && global.player_stamina > 10) audio_play_sound(snd_p_attack_1,0,0,0.2,0,random_range(0.5,1));
@@ -70,7 +89,6 @@ function scr_p_attack_1() {
 	if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
        change_stamina(10);
 	    state = PLAYERSTATE.ATTACK_2;
-
 	    return;
 	}
 	
@@ -166,6 +184,7 @@ function scr_p_dash() {
 }
 	
 function scr_p_free() {
+	on_ground = place_meeting(x,y+1,collision_map);
 	//Movement x
 	dir = key_right - key_left;
 	move_x += dir * walk_acc;
@@ -178,7 +197,8 @@ function scr_p_free() {
 	if (dir == 0) {
 	    move_x = lerp(move_x, 0, move_x_friction_final); 
 	}
-
+	
+	if (global.wallclimb = true) wallclimb();
 	//Movement y
 	if (jump_buffer > 0) {
 	    jump_buffer--;
@@ -198,7 +218,7 @@ function scr_p_free() {
 	move_y+= move_y_frac;
 	move_y_frac = frac(move_y)
 	move_y -= move_y_frac;
-    
+
 	collision();
     
 	if (on_ground) {
@@ -252,7 +272,7 @@ function scr_p_free() {
     
 
     if (on_ground) {
-      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina > 0) { 
+      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina > 0) {
         move_x_max_final = run_speed;
         stamina_can_regen = false;
         global.player_stamina -= 0.05;
@@ -267,12 +287,6 @@ function scr_p_free() {
 	    can_attack = false; 
 	}
 	
-
-	if (key_use) {
-	    
-	}
-	
-
     if (invincibility_timer > 0) {
         invincibility_timer -= 1;
     
@@ -343,4 +357,15 @@ function scr_p_teleport() {
     
 function change_stamina(amount) {
 	global.player_stamina -= amount;
+}
+
+function wallclimb() {
+if (on_wall != 0) && (!on_ground) && (key_jump){
+    walljump_delay = walljump_delay_max;
+    move_x = -on_wall * wall_speed_x;
+    move_y = wall_speed_y;
+}
+if (on_wall != 0) && (move_y > 0){
+    move_y = grv_onwall;
+}
 }

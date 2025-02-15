@@ -33,6 +33,7 @@ knockback_speed = 0;
 
 //gravity
 grv = 0.25;
+grv_onwall = 0.1;
 
 //movement speeds
 walk_speed = 2; // walking speed
@@ -64,6 +65,15 @@ stamina_timer = 120; //120/60 is 2 sec
 stamina_can_regen = false;
 use_stamina = false;
 
+//wallclimb
+wall_move_y_max = 2;
+wall_speed_x = 10;
+wall_speed_y = -10;
+on_wall = 0;
+walljump_delay = 0;
+walljump_delay_max = -1;
+on_jump_wall = 0;
+dust = 0;
 
 //HP variables
 death_triggered = false;
