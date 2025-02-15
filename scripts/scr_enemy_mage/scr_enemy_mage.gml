@@ -5,7 +5,7 @@ function enemy_mage_global() {
     if(direction_p <= 360 && direction_p >= 270) direction_p = 0
     dist_to_wall = distance_to_object(obj_wall);
     //follow
-    if (distance_to_p < follow_distance  || unconditional_follow) {
+    if (distance_to_p < follow_distance && y >= obj_player.y - 31 || unconditional_follow) {
             follow_player = true;
         } else { 
             follow_player = false;

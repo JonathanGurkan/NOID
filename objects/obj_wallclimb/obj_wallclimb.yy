@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite123",
-    "path":"sprites/Sprite123/Sprite123.yy",
+    "name":"wallclimb",
+    "path":"sprites/wallclimb/wallclimb.yy",
   },
   "spriteMaskId":null,
   "visible":true,

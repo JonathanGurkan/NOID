@@ -1,7 +1,6 @@
 //misc
 enemy_state = ENEMYSTATE.IDLE;
-collision_map = obj_collision;
-image_speed =1;
+collision_map = [obj_collision,obj_wall];
     
 //movement
 walk_speed = 1;

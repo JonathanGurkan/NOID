@@ -1,14 +1,14 @@
 {
   "$GMTileSet":"",
-  "%Name":"TileSet2",
+  "%Name":"room_setup",
   "autoTileSets":[],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"TileSet2",
-  "out_columns":0,
+  "name":"room_setup",
+  "out_columns":4,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -17,14 +17,17 @@
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_roomsetup",
+    "path":"sprites/spr_roomsetup/spr_roomsetup.yy",
+  },
   "spriteNoExport":false,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",
   },
   "tileAnimation":{
-    "FrameData":[],
+    "FrameData":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,],
     "SerialiseFrameCount":1,
   },
   "tileAnimationFrames":[],
@@ -35,5 +38,5 @@
   "tileWidth":16,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":0,
+  "tile_count":16,
 }
