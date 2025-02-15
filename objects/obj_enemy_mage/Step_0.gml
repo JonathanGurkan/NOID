@@ -9,7 +9,7 @@ if (!global.gamepaused) {
         case ENEMYSTATE.DODGE: enemy_mage_dodge(); break;
     }
 }
-on_ground = place_meeting(x,y+1,collision_map);
+on_ground = place_meeting(x,y,collision_map);
 
 
 

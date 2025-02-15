@@ -1,4 +1,5 @@
 function enemy_bot_global() {
+	collision();
     distance_to_p = distance_to_object(obj_player);
     direction_p = round(point_direction(x,y,obj_player.x, obj_player.y));
     if(direction_p <= 360 && direction_p >= 270) direction_p = 0
@@ -49,9 +50,6 @@ function enemy_bot_global() {
         } else {
             can_dash = false;
         }
-    
-        
-   y = round(y)
 }
 
 function enemy_bot_idle() {

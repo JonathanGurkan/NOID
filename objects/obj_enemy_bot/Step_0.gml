@@ -13,4 +13,4 @@ if (!global.gamepaused) {
 on_ground = place_meeting(x,y+1,collision_map);
 
 enemy_bot_global();
-collision();
+

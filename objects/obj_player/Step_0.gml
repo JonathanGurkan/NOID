@@ -8,6 +8,7 @@ key_attack = mouse_check_button_pressed(mb_left);
 key_attack_strong = mouse_check_button(mb_right);
 move = key_right - key_left;
 on_ground = place_meeting(x,y+1,collision_map);
+on_wall = place_meeting(x+1,y,obj_collision) - place_meeting(x-1,y,obj_collision); 
 dist_to_wall = distance_to_object(obj_wall);
 
 if (!global.gamepaused) {
@@ -22,5 +23,4 @@ if (!global.gamepaused) {
 		case PLAYERSTATE.DEATH: scr_p_death(); break
     }
 }
-
-scr_p_global()
+scr_p_global();
