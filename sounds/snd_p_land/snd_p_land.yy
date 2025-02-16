@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"s_p_land",
+  "%Name":"snd_p_land",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.040408164,
-  "name":"s_p_land",
+  "duration":0.078367,
+  "name":"snd_p_land",
   "parent":{
-    "name":"back",
-    "path":"folders/Objects/UI/buttons/back.yy",
+    "name":"player",
+    "path":"folders/Sounds/player.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"s_p_land.mp3",
+  "soundFile":"snd_p_land.mp3",
   "type":0,
   "volume":1.0,
 }
