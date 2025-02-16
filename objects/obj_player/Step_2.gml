@@ -9,26 +9,32 @@ if (global.gamepaused) {
     var key_activate = keyboard_check_pressed(vk_enter);
     if(key_activate) {
         switch (pause_option_selected) {
-            case 0: {
+            case 0: { //Continue
                 global.gamepaused = false;
             } break;
-            
-            case 1: {
-                room_goto(r_main_menu);
-				global.gamepaused = false;
-            } break;
-            
-            case  2: {
-                game_end();
-            } break;
 			
-			case 3: {
+			case 1: { //Controls
+				room_goto(r_controls)
+				global.gamepaused = false;
+			} break;
+			
+			case 2: { //Toggle Fullscreen
 				if window_get_fullscreen() {
 					window_set_fullscreen(false);
 				} else {
 				    window_set_fullscreen(true);
 				}
-			}
+			} break;
+            
+            case 3: { //Main Menu
+                room_goto(r_main_menu);
+				global.gamepaused = false;
+            } break;
+            
+            case 4: { //Quit
+                game_end();
+            } break;
+			
         }
     }
 }

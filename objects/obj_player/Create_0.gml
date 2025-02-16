@@ -1,7 +1,7 @@
 state = PLAYERSTATE.FREE;
 last_state = PLAYERSTATE.FREE;
 collision_map = obj_collision;
-pause_option = ["Continue", "Main Menu", "Quit", "Toggle Fullscreen"];
+pause_option = ["Continue","Controls","Toggle Fullscreen", "Main Menu", "Quit"];
 pause_option_selected = 0;
 death_option = ["Restart", "Main Menu", "Quit"];
 death_option_selected = 0;
