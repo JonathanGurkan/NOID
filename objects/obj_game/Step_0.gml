@@ -38,7 +38,7 @@ if(room_toggle = true){
     room = r_main_menu;
     }
     if keyboard_check(ord("Y")) {
-        room = r_wallclimb;
+        room = r_2;
     }
     if(instance_exists(obj_player)){
         if keyboard_check(ord("X")){

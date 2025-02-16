@@ -20,7 +20,6 @@ function scr_p_death() {
 }
 	
 function scr_p_animation() {
-	show_debug_message(on_wall)
 	
     if (!audio_is_playing(snd_p_jump_fly) && move_y > 2) audio_play_sound(snd_p_jump_fly,0,1,0.5);   
 	if (move_x == 0) {
