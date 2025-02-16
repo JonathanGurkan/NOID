@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.98839,
+  "duration":1.018776,
   "name":"snd_r_door_open",
   "parent":{
     "name":"Sounds",
