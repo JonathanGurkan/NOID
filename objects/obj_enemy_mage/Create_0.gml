@@ -36,5 +36,4 @@ dash_cooldown = 20;
 //hp + damage
 enemy_hp = 7;
 hitflash = false;
-hitflash_timer = 10;
-hitflash_countdown = 0;
+hitflash_countdown = 5;

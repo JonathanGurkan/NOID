@@ -46,11 +46,6 @@ function enemy_mage_global() {
     if(distance_to_object(obj_wall) <= 5) {
         unconditional_follow = true; enemy_state = ENEMYSTATE.MOVE;
     }
-    
-
-
-    
-
 }
 
 function enemy_mage_idle() {

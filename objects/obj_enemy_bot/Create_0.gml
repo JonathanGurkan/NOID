@@ -43,5 +43,5 @@ evade_cooldown = 60;
 //hp + damage
 enemy_hp = 4;
 hitflash = false;
-hitflash_timer = 10;
-hitflash_countdown = 0;
+
+hitflash_countdown = 5;

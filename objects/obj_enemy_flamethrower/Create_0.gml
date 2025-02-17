@@ -26,5 +26,5 @@ attack_cooldown = 100;
 enemy_hp = 5;
 attack_initialized = 0;
 hitflash = false;
-hitflash_timer = 10;
-hitflash_countdown = 0;
+
+hitflash_countdown = 5;
