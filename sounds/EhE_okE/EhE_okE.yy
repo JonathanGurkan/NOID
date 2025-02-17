@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.82292515,
+  "duration":0.862041,
   "name":"EhE_okE",
   "parent":{
     "name":"Sounds",

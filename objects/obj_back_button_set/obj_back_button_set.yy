@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_button_back",
-    "path":"sprites/spr_button_back/spr_button_back.yy",
+    "name":"spr_nav_arrow",
+    "path":"sprites/spr_nav_arrow/spr_nav_arrow.yy",
   },
   "spriteMaskId":null,
   "visible":true,
