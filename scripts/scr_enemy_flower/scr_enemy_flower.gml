@@ -1,48 +1,48 @@
 function enemy_flower_global() {
-    if (enemy_state != ENEMYSTATE.MOVE) audio_stop_sound(snd_e_flower_move);
-distance_to_p = distance_to_object(obj_player);
-direction_p = point_direction(x,y,obj_player.x, obj_player.y);
-//wakeup
-if (distance_to_p < found_distance) {
-    found_player = true;
+	if (enemy_state != ENEMYSTATE.MOVE) audio_stop_sound(snd_e_flower_move);
+	distance_to_p = distance_to_object(obj_player);
+	direction_p = point_direction(x,y,obj_player.x, obj_player.y);
+	//wakeup
+	if (distance_to_p < found_distance) {
+		found_player = true;
     } else { 
-    found_player = false;
+		found_player = false;
     }
 
-//follow
-if (distance_to_p < follow_distance) {
+	//follow
+	if (distance_to_p < follow_distance) {
         follow_player = true;
     } else { 
         follow_player = false;
     }
 
-//player too close
-if (distance_to_p < evade_distance && !attack_player) {
+	//player too close
+	if (distance_to_p < evade_distance && !attack_player) {
         evade_player = true;
-}
-if (distance_to_p > 50) {
+	}
+	if (distance_to_p > 50) {
         evade_player = false;
-}
+	}
 
-//attack range
-if (distance_to_p < attack_distance) {
+	//attack range
+	if (distance_to_p < attack_distance) {
         attack_player = true;
     } else { 
         attack_player = false;
     }
 
-    
-if (enemy_hp <= 0) {
-    enemy_state = ENEMYSTATE.DEATH;
-}
+	
+	if (enemy_hp <= 0) {
+		enemy_state = ENEMYSTATE.DEATH;
+	}
 
 
-if (direction_p > 90) {
-    direction = -1
-    image_xscale = -1
+	if (direction_p > 90) {
+		direction = -1
+		image_xscale = -1
     } else {
-    direction = 1;
-    image_xscale = 1;
+		direction = 1;
+		image_xscale = 1;
     }
 }
 

@@ -78,7 +78,7 @@ dust = 0;
 //HP variables
 death_triggered = false;
 flash = 0;
-flash_shader = sh_white;
+flash_shader = sh_damage_e;
 
 
 //Damage variables
