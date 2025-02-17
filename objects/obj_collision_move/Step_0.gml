@@ -1,6 +1,3 @@
-show_debug_message(" | axis: " + string(axis))
-
-
 if(axis == "x"){
 if (x > first_x + move_amount) move_dir = -1;
 if (x < first_x) move_dir = 1;
@@ -21,8 +18,8 @@ if (y < obj_player.y){
 	below = 1;
 }
 with (obj_player) {
-    if place_meeting(x,y+(2 * below),obj_collision_move) {
-          x+=obj_collision_move.x-obj_collision_move.xprevious
-          y+=obj_collision_move.y-obj_collision_move.yprevious
+    if place_meeting(x +sign(move_x),y+(2 * below),obj_collision_move) {
+         x+=obj_collision_move.x-obj_collision_move.xprevious;
+          y+=obj_collision_move.y-obj_collision_move.yprevious;
     }
 }
