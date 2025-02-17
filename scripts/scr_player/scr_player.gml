@@ -329,6 +329,7 @@ function process_attack(sprite, mask) {
 	                with(hit_id){
                        audio_play_sound(snd_e_damage_1,0,0,1,0,random_range(0.5,1.5));
 	                    --enemy_hp;
+						hitflash = true
                      
 	                }
 	            }
@@ -360,12 +361,12 @@ function change_stamina(amount) {
 }
 
 function wallclimb() {
-if (on_wall != 0) && (!on_ground) && (key_jump){
-    walljump_delay = walljump_delay_max;
-    move_x = -on_wall * wall_speed_x;
-    move_y = wall_speed_y;
-}
-if (on_wall != 0) && (move_y > 0){
-    move_y = grv_onwall;
-}
+	if (on_wall != 0) && (!on_ground) && (key_jump){
+	    walljump_delay = walljump_delay_max;
+	    move_x = -on_wall * wall_speed_x;
+	    move_y = wall_speed_y;
+	}
+	if (on_wall != 0) && (move_y > 0){
+	    move_y = grv_onwall;
+	}
 }

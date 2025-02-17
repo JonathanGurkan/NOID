@@ -10,5 +10,14 @@ if (!global.gamepaused) {
 
 on_ground = place_meeting(x,y,collision_map);
 
+if (hitflash) {
+	hitflash_countdown = hitflash_timer
+	hitflash_countdown--
+	
+	if (hitflash_countdown = 0) {
+		hitflash = false;
+	}
+}
+
 enemy_flashbang_global();
 collision();
