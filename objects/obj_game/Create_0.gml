@@ -18,6 +18,7 @@ global.cutscene = -1;
 global.player_is_alive = true;
 global.player_score = 0;
 global.wallclimb = false;
+global.last_interacted_id = -1;
 
 //surface_resize(application_surface, RESOLUTION_W, RESOLUTION_H);
 room_goto(ROOM_START);

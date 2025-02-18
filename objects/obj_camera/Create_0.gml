@@ -1,7 +1,7 @@
 cam = view_camera[0]; 
 follow = obj_player;
-view_width_half = camera_get_view_width(cam) * 0.5;
-view_height_half = camera_get_view_height(cam) * 0.7;
+view_height_half = 0;
+view_width_half = 0;
 x_to = xstart;
 y_to = ystart;
 x_min = 0
