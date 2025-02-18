@@ -239,6 +239,7 @@
     {"id":{"name":"spr_door_opening","path":"sprites/spr_door_opening/spr_door_opening.yy",},},
     {"id":{"name":"spr_flamethrower_attack_hitbox","path":"sprites/spr_flamethrower_attack_hitbox/spr_flamethrower_attack_hitbox.yy",},},
     {"id":{"name":"spr_flamethrower_attack","path":"sprites/spr_flamethrower_attack/spr_flamethrower_attack.yy",},},
+    {"id":{"name":"spr_flamethrower_death_hitbox","path":"sprites/spr_flamethrower_death_hitbox/spr_flamethrower_death_hitbox.yy",},},
     {"id":{"name":"spr_flamethrower_death","path":"sprites/spr_flamethrower_death/spr_flamethrower_death.yy",},},
     {"id":{"name":"spr_flamethrower_idle","path":"sprites/spr_flamethrower_idle/spr_flamethrower_idle.yy",},},
     {"id":{"name":"spr_flamethrower_move","path":"sprites/spr_flamethrower_move/spr_flamethrower_move.yy",},},
