@@ -356,6 +356,7 @@
     {"id":{"name":"spr_transition","path":"sprites/spr_transition/spr_transition.yy",},},
     {"id":{"name":"spr_useportal","path":"sprites/spr_useportal/spr_useportal.yy",},},
     {"id":{"name":"Sprite123","path":"sprites/Sprite123/Sprite123.yy",},},
+    {"id":{"name":"Sprite165","path":"sprites/Sprite165/Sprite165.yy",},},
     {"id":{"name":"The_Circle_35x37","path":"sprites/The_Circle_35x37/The_Circle_35x37.yy",},},
     {"id":{"name":"tiles_modern","path":"sprites/tiles_modern/tiles_modern.yy",},},
     {"id":{"name":"Tree_Tileset1","path":"sprites/Tree_Tileset1/Tree_Tileset1.yy",},},

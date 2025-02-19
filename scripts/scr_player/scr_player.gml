@@ -184,6 +184,7 @@ function scr_p_dash() {
 }
 	
 function scr_p_free() {
+	moving_platform_collision();
 	on_ground = place_meeting(x,y+1,collision_map);
 	//Movement x
 	dir = key_right - key_left;
@@ -370,4 +371,32 @@ function wallclimb() {
 	if (on_wall != 0) && (move_y > 0){
 	    move_y = grv_onwall;
 	}
+}
+
+function moving_platform_collision() {
+var rightWall = noone;
+var list = ds_list_create();
+var listSize = instance_place_list(x, y, obj_collision_move, list, false);
+
+// Loop through all colliding move platforms
+for (var i = 0; i < listSize; i++) {
+    var listInst = ds_list_find_value(list, i); // Fix: Use ds_list_find_value instead of list[i]
+
+    // If there are walls to the right of me, get the closest one
+    if (listInst.bbox_left - listInst.move_x >= bbox_right - 1) {
+        if (!instance_exists(rightWall) || listInst.bbox_left < rightWall.bbox_left) {
+            rightWall = listInst;
+        }
+    }
+}
+
+// Destroy the ds list to free memory
+ds_list_destroy(list);
+
+// Get out of the walls
+if (instance_exists(rightWall)) {
+    var rightDist = bbox_right - x;
+    x = rightWall.bbox_left - rightDist;
+}
+
 }
