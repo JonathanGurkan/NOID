@@ -274,10 +274,10 @@ function scr_p_free() {
     
 
     if (on_ground) {
-      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina > 0) {
+      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina >= 0 && move_x != 0) {
         move_x_max_final = run_speed;
         stamina_can_regen = false;
-        global.player_stamina -= 0.05;
+		change_stamina(0.05);
       } else {
         move_x_max_final = walk_speed;
       }       
