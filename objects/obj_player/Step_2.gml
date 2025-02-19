@@ -11,13 +11,11 @@ if (global.gamepaused) {
         switch (pause_option_selected) {
             case 0: { //Continue
                 global.gamepaused = false;
-            } break;
-			
+            } break;		
 			case 1: { //Controls
 				room_goto(r_controls)
 				global.gamepaused = false;
 			} break;
-			
 			case 2: { //Toggle Fullscreen
 				if window_get_fullscreen() {
 					window_set_fullscreen(false);
@@ -25,13 +23,20 @@ if (global.gamepaused) {
 				    window_set_fullscreen(true);
 				}
 			} break;
-            
-            case 3: { //Main Menu
+            case 3: { //Toggle Sound
+				audio_play_sound(snd_menu_fw,0,0);
+				global.sound_on = !global.sound_on
+				if (global.sound_on) {
+					audio_master_gain(1);
+				} else {
+					audio_master_gain(0);
+				}
+			} break;
+            case 4: { //Main Menu
                 room_goto(r_main_menu);
 				global.gamepaused = false;
             } break;
-            
-            case 4: { //Quit
+            case 5: { //Quit
                 game_end();
             } break;
 			
@@ -56,7 +61,6 @@ if (!global.player_is_alive) {
                 global.player_stamina = global.player_max_stamina;
                 room_transition(TRANS_TYPE.FADE, room)
             } break;
-            
             case 1: {
                 room_goto(r_main_menu);
                 state = PLAYERSTATE.FREE;
@@ -64,7 +68,6 @@ if (!global.player_is_alive) {
                 global.player_health = global.player_max_health;
                 global.player_stamina = global.player_max_stamina;
             } break;
-            
             case 2: {
                 game_end();
             } break;
