@@ -90,8 +90,8 @@ taking_damage = false;
 hit_by_attack = ds_list_create();
 
 if (global.target_x != -1) {
-    x = global.target_y;
-    y = global.target_x;
+    x = global.target_x;
+    y = global.target_y;
     direction = global.target_direction;
 }
 
