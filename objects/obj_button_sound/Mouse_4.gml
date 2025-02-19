@@ -8,13 +8,8 @@ audio_play_sound(snd_menu_fw,0,0);
 
 if (global.sound_on) {
     audio_master_gain(1);
+	button_text = "ON";
 } else {
-    audio_master_gain(0); 
-}
-
-
-if (global.sound_on) {
-    button_text = "ON";
-} else {
-    button_text = "OFF";
+    audio_master_gain(0);
+	button_text = "OFF";
 }

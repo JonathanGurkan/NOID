@@ -1,7 +1,7 @@
 state = PLAYERSTATE.FREE;
 last_state = PLAYERSTATE.FREE;
 collision_map = obj_collision;
-pause_option = ["Continue","Controls","Toggle Fullscreen", "Main Menu", "Quit"];
+pause_option = ["Continue","Controls","Toggle Fullscreen","Toggle Sound", "Main Menu", "Quit"];
 pause_option_selected = 0;
 death_option = ["Restart", "Main Menu", "Quit"];
 death_option_selected = 0;
@@ -78,7 +78,7 @@ dust = 0;
 //HP variables
 death_triggered = false;
 flash = 0;
-flash_shader = sh_white;
+flash_shader = sh_damage_e;
 
 
 //Damage variables

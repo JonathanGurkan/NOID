@@ -27,6 +27,7 @@ evade_distance = 0;
 
 //hp + damage
 enemy_hp = 2;
-
+hitflash = false;
+hitflash_countdown = 5;
 attack_initialized = false;
 was_activated = false;

@@ -80,13 +80,13 @@ function scr_p_animation() {
 
 	
 function scr_p_attack_1() {
-    if (!audio_is_playing(snd_p_attack_1) && global.player_stamina > 10) audio_play_sound(snd_p_attack_1,0,0,0.2,0,random_range(0.5,1));
+    if (!audio_is_playing(snd_p_attack_1) && global.player_stamina > 0) audio_play_sound(snd_p_attack_1,0,0,0.2,0,random_range(0.5,1));
 	  if (global.player_stamina > 0) {
 	   process_attack(spr_player_attack_1,spr_player_attack_1_hitbox)
     }
     
-	if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
-       change_stamina(10);
+	if (key_attack) && (image_index > 2) && (global.player_stamina > 5) {
+		change_stamina(5);
 	    state = PLAYERSTATE.ATTACK_2;
 	    return;
 	}
@@ -105,8 +105,8 @@ function scr_p_attack_2() {
 	   process_attack(spr_player_attack_2,spr_player_attack_2_hitbox)
     }
         
-  if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
-	    change_stamina(10);
+  if (key_attack) && (image_index > 2) && (global.player_stamina > 3) {
+	    change_stamina(3);
 	    state = PLAYERSTATE.ATTACK_3;
 	    return;
 	}
@@ -122,8 +122,8 @@ function scr_p_attack_3() {
     if (!audio_is_playing(snd_p_attack_3)) audio_play_sound(snd_p_attack_3,0,0,0.7,0,random_range(0.5,1));
     process_attack(spr_player_attack_3,spr_player_attack_3_hitbox)
         
-    if (key_attack) && (image_index > 2) && (global.player_stamina > 0) {
-        change_stamina(10)
+    if (key_attack) && (image_index > 2) && (global.player_stamina > 3) {
+        change_stamina(3)
         state = PLAYERSTATE.ATTACK_1;
         return;
     }
@@ -171,13 +171,14 @@ function scr_p_dash() {
 	    image_speed = 1
 	    sprite_index = spr_player_dash;
 	}
+	
 	if (dash_energy <= 0) {
-	        move_x = 0;
-	        move_y = 0;
-	        can_dash  = true
-	        state = PLAYERSTATE.FREE;
-          last_state = PLAYERSTATE.DASH
-          change_stamina(5)
+		move_x = 0;
+		move_y = 0;
+		can_dash  = true
+		state = PLAYERSTATE.FREE;
+		last_state = PLAYERSTATE.DASH
+		change_stamina(3)
 	}
  
 }
@@ -198,6 +199,7 @@ function scr_p_free() {
 	}
 	
 	if (global.wallclimb = true) wallclimb();
+	
 	//Movement y
 	if (jump_buffer > 0) {
 	    jump_buffer--;
@@ -226,13 +228,13 @@ function scr_p_free() {
 	
 	//global.player_stamina logic
 	if (stamina_can_regen && global.player_stamina < 100 && global.player_stamina >= 0) {
-		global.player_stamina += 0.16;
+		global.player_stamina += 0.32;
 	}
 	
 	if (global.player_stamina >= 100) global.player_stamina = 100;
 	if (global.player_stamina <= 0) global.player_stamina = 0;
 	
-	if (key_attack || key_attack_strong || key_dash) {
+	if (global.player_stamina > 10 && key_attack || key_attack_strong || key_dash) {
         stamina_can_regen = false;
         if (global.player_stamina != 0) {
             stamina_timer = 60
@@ -271,16 +273,16 @@ function scr_p_free() {
     
 
     if (on_ground) {
-      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina > 0) {
+      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina >= 0 && move_x != 0) {
         move_x_max_final = run_speed;
         stamina_can_regen = false;
-        global.player_stamina -= 0.05;
+		change_stamina(0.05);
       } else {
         move_x_max_final = walk_speed;
       }       
     }
     
-	if (key_attack && on_ground && can_attack && global.player_stamina > 0) {
+	if (key_attack && on_ground && can_attack && global.player_stamina > 10) {
 		change_stamina(10);
 	    state = PLAYERSTATE.ATTACK_1
 	    can_attack = false; 
@@ -328,6 +330,7 @@ function process_attack(sprite, mask) {
 	                with(hit_id){
                        audio_play_sound(snd_e_damage_1,0,0,1,0,random_range(0.5,1.5));
 	                    --enemy_hp;
+						hitflash = true
                      
 	                }
 	            }
@@ -359,12 +362,12 @@ function change_stamina(amount) {
 }
 
 function wallclimb() {
-if (on_wall != 0) && (!on_ground) && (key_jump){
-    walljump_delay = walljump_delay_max;
-    move_x = -on_wall * wall_speed_x;
-    move_y = wall_speed_y;
-}
-if (on_wall != 0) && (move_y > 0){
-    move_y = grv_onwall;
-}
+	if (on_wall != 0) && (!on_ground) && (key_jump){
+	    walljump_delay = walljump_delay_max;
+	    move_x = -on_wall * wall_speed_x;
+	    move_y = wall_speed_y;
+	}
+	if (on_wall != 0) && (move_y > 0){
+	    move_y = grv_onwall;
+	}
 }

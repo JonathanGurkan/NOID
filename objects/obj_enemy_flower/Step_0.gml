@@ -12,6 +12,16 @@ if (!global.gamepaused) {
 
 on_ground = place_meeting(x,y,collision_map);
 
+if (hitflash) {
+    if (hitflash_countdown <= 0) {
+        hitflash = false;
+    } else {
+        hitflash_countdown--;
+    }
+} else {
+	hitflash_countdown = 5
+}
+
 enemy_flower_global();
 
 if (was_activated) collision();

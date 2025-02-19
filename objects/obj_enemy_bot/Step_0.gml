@@ -12,5 +12,14 @@ if (!global.gamepaused) {
 
 on_ground = place_meeting(x,y+1,collision_map);
 
-enemy_bot_global();
+if (hitflash) {
+    if (hitflash_countdown <= 0) {
+        hitflash = false;
+    } else {
+        hitflash_countdown--;
+    }
+} else {
+	hitflash_countdown = 5
+}
 
+enemy_bot_global();
