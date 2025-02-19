@@ -7,4 +7,4 @@ move_cam = false;
 view_w = 320;
 view_h = 180;
 times_changed = 0;
-global.last_interacted_id = -1;
+

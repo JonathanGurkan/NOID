@@ -1,5 +1,4 @@
 enum TRANS_TYPE{
-    CUTSCENE_FADE,
     FADE
 }
 

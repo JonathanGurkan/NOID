@@ -30,8 +30,10 @@ function scr_p_endtut(){
 	}
     
 	if(alpha = 1){
+		
+		if(global.cutscene_count < 1 ) global.cutscene_count++;
+		
 		if(key_use){ 
-		global.cutscene_count = 1;
 		state = PLAYERSTATE.FREE;
 		obj_camera.follow = obj_player;
 		layer_destroy("cutscene")
