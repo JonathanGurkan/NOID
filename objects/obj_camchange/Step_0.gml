@@ -26,6 +26,3 @@ if(floor(spd) >= 1){
 	spd = 0
 	move_cam = false;
 }
-
-
-show_debug_message(string(global.last_interacted_id) + "   " + string(times_changed))

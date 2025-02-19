@@ -18,9 +18,8 @@ draw_sprite_stretched(spr_stamina, 1, 38, 68, 228 * (global.player_stamina / 100
     
 
 if(draw_text_cut){
-    if (alpha >= 1){
-		draw_set_alpha(0);	
-	} else {
+	
+    if (alpha <= 1 && state = PLAYERSTATE.ENDTUT){
 	    alpha = min(alpha+0.01, 1);
 	    draw_set_alpha(alpha);
 	    draw_set_font(f_button_text);
@@ -36,8 +35,7 @@ if (state = PLAYERSTATE.ENDTUT && alpha >= 1){
 	draw_set_alpha(1)
 	draw_set_font(f_button_text);
 	draw_set_color(c_white);
-	draw_text_transformed(obj_player.x+10,obj_player.y-30, "Press E to continue",0.2,0.2,0);
-	if(key_use) state = PLAYERSTATE.FREE;
+	draw_text_transformed(560,700, "Press E to continue",0.5,0.5,0);
 }
 
 

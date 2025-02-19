@@ -24,5 +24,3 @@ if (!global.gamepaused) {
     }
 }
 scr_p_global();
-
-show_debug_message(state)

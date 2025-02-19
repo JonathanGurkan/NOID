@@ -9,9 +9,13 @@ if(keyboard_check(vk_f11)){
 }
 
 //room toggle
-if(keyboard_check(vk_f12)){
-    room_toggle = true;
-}
+if(keyboard_check_pressed(vk_f12)){
+    if(room_toggle = true){
+	room_toggle = false;
+	} else {
+	room_toggle = true;
+	}
+} 
 if(room_toggle = true){
     if(keyboard_check(ord("J"))){
 	audio_play_sound(EhE_okE,0,0);
@@ -38,7 +42,7 @@ if(room_toggle = true){
     room = r_main_menu;
     }
     if keyboard_check(ord("Y")) {
-        room = r_1;
+        room = r_wallclimb;
     }
     if(instance_exists(obj_player)){
         if keyboard_check(ord("X")){
