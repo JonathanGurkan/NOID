@@ -131,7 +131,7 @@
           4,306,466,308,601,-25,-2147483648,5,143,144,145,146,147,-81,-2147483648,5,170,171,172,173,174,-63,-2147483648,
           3,1879048519,1879048546,1879048573,-11,-2147483648,1,474,-71,-2147483648,3,1879048518,1879048545,1879048572,
           -11,-2147483648,1,501,-53,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"TileSet4","path":"tilesets/TileSet4/TileSet4.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":null,"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"player","depth":0,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"","%Name":"inst_79A040C_3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_79A040C_3","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":208.0,"y":736.0,},
         {"$GMRInstance":"","%Name":"inst_7B390CC0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7B390CC0","objectId":{"name":"obj_wallclimb","path":"objects/obj_wallclimb/obj_wallclimb.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":90.160416,"scaleX":0.5625,"scaleY":1.0,"x":601.0,"y":736.0,},
@@ -305,7 +305,7 @@
               -14,-2147483648,10,-2147483485,-2147483414,-2147483413,-2147483412,-2147483484,-2147483414,-2147483413,
               -2147483412,-2147483484,-2147483484,-26,-2147483466,1,-2147483391,-13,-2147483648,-3,0,-18,-2147483466,
               1,-2147483465,-14,-2147483648,1,-2147483467,-35,-2147483466,1,-2147483373,-14,-2147483648,-2,0,
-            ],"TileDataFormat":1,},"tilesetId":{"name":"TileSet3","path":"tilesets/TileSet3/TileSet3.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+            ],"TileDataFormat":1,},"tilesetId":{"name":"tileset","path":"tilesets/tileset/tileset.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
       ],"name":"behind_player_tiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":48,"SerialiseWidth":86,"TileCompressedData":[
           -86,182,86,38,39,40,41,42,43,44,45,46,47,48,49,2,3,4,5,6,7,8,9,10,11,12,13,38,39,40,41,42,43,44,45,46,
           47,48,2,3,4,5,6,7,8,9,38,39,40,41,42,43,44,45,46,47,48,49,2,3,4,5,6,7,8,9,10,11,12,13,38,39,40,41,42,
@@ -366,7 +366,7 @@
           1879048280,-11,182,9,234,235,236,182,234,235,236,164,165,-14,-2147483648,10,163,234,235,236,164,234,
           235,236,164,164,-26,182,1,257,-14,-2147483648,1,1879048279,-19,182,1,183,-14,-2147483648,1,181,-35,182,
           1,275,-14,-2147483648,2,1879048278,182,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"TileSet3","path":"tilesets/TileSet3/TileSet3.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"tileset","path":"tilesets/tileset/tileset.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4280492835,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"r_wallclimb",
