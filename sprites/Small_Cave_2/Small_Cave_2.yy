@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"cave holes",
-    "path":"folders/Sprites/backgrounds/cave holes.yy",
+    "name":"white",
+    "path":"folders/Sprites/backgrounds/cave holes/white.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
