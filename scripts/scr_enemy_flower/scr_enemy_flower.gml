@@ -16,14 +16,6 @@ function enemy_flower_global() {
         follow_player = false;
     }
 
-	//player too close
-	if (distance_to_p < evade_distance && !attack_player) {
-        evade_player = true;
-	}
-	if (distance_to_p > 50) {
-        evade_player = false;
-	}
-
 	//attack range
 	if (distance_to_p < attack_distance) {
         attack_player = true;
@@ -90,21 +82,8 @@ function enemy_flower_movement() {
     sprite_index = spr_flower_move;
     x += image_xscale * walk_speed;
     image_speed = 1;
-    
-    if (evade_player) enemy_state = ENEMYSTATE.EVADE; 
+   
     if (attack_player) enemy_state = ENEMYSTATE.ATTACK;
-}
-
-function enemy_flower_evade() {
-    sprite_index = spr_flower_move;
-    x -= image_xscale * walk_speed;
-    image_speed = 1;
-    
-    
-    if (attack_player) {
-        enemy_state = ENEMYSTATE.ATTACK;
-    }
-        if (!evade_player) enemy_state = ENEMYSTATE.MOVE;
 }
     
 function enemy_flower_attack() {
