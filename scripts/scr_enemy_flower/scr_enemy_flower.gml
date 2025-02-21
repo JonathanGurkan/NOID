@@ -1,5 +1,5 @@
 function enemy_flower_global() {
-	if (enemy_state != ENEMYSTATE.MOVE) audio_stop_sound(snd_e_flower_move);
+	if (enemy_state != ENEMYSTATE.MOVE || !follow_player) audio_stop_sound(snd_e_flower_move);
 	distance_to_p = distance_to_object(obj_player);
 	direction_p = point_direction(x,y,obj_player.x, obj_player.y);
 	//wakeup
