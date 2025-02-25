@@ -88,20 +88,25 @@ function enemy_flamethrower_attack() {
 
 function enemy_flamethrower_death() {
     is_dying = true
+	var dealt_damage = false
     sprite_index = spr_flamethrower_death;
 	mask_index = spr_flamethrower_death_hitbox
 	
 	if (place_meeting(x, y, obj_player)) {
        with(obj_player) {
-            global.player_health -= 15;
-			invincibility_timer = 60;
-			invincible = true
+		    dealt_damage = true
             screenshake(60, 0.4, 0.3);
        }
     }
 	
     if (animation_end()) {
         global.player_score += 10;
+		if (dealt_damage) {
+			global.player_health -= 15;
+
+			invincibility_timer = 60;
+			invincible = true
+		}
         instance_destroy();
         audio_stop_sound(snd_e_flamethrower_attack)
         audio_stop_sound(snd_e_flamethrower_walk)
