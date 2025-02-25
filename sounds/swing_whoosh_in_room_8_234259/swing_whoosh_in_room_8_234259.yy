@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.432,
   "name":"swing_whoosh_in_room_8_234259",
   "parent":{
     "name":"imports",
