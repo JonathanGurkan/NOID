@@ -113,6 +113,7 @@ if (!attack_initialized) {
 }
 
 function enemy_mage_attack() {
+	if (!audio_is_playing(snd_e_slap_attack)) audio_play_sound(snd_e_slap_attack, 0, 0, 1, 0, random_range(0.6,0.7))
         move_x = 0; 
         image_speed = 1;
         sprite_index = spr_mage_attack;
