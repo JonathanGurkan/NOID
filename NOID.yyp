@@ -153,6 +153,7 @@
     {"id":{"name":"initial","path":"rooms/initial/initial.yy",},},
     {"id":{"name":"r_1","path":"rooms/r_1/r_1.yy",},},
     {"id":{"name":"r_2","path":"rooms/r_2/r_2.yy",},},
+    {"id":{"name":"r_bossfight","path":"rooms/r_bossfight/r_bossfight.yy",},},
     {"id":{"name":"r_controls","path":"rooms/r_controls/r_controls.yy",},},
     {"id":{"name":"r_credits","path":"rooms/r_credits/r_credits.yy",},},
     {"id":{"name":"r_developer_controls","path":"rooms/r_developer_controls/r_developer_controls.yy",},},
@@ -216,6 +217,7 @@
     {"id":{"name":"_6_close_light","path":"sprites/_6_close_light/_6_close_light.yy",},},
     {"id":{"name":"_7_tileset","path":"sprites/_7_tileset/_7_tileset.yy",},},
     {"id":{"name":"interaction","path":"sprites/interaction/interaction.yy",},},
+    {"id":{"name":"Large_Backgrounds","path":"sprites/Large_Backgrounds/Large_Backgrounds.yy",},},
     {"id":{"name":"layer_1","path":"sprites/layer_1/layer_1.yy",},},
     {"id":{"name":"layer_1142","path":"sprites/layer_1142/layer_1142.yy",},},
     {"id":{"name":"layer_2","path":"sprites/layer_2/layer_2.yy",},},
@@ -406,6 +408,7 @@
     {"roomId":{"name":"r_2","path":"rooms/r_2/r_2.yy",},},
     {"roomId":{"name":"r_key","path":"rooms/r_key/r_key.yy",},},
     {"roomId":{"name":"r_developer_controls","path":"rooms/r_developer_controls/r_developer_controls.yy",},},
+    {"roomId":{"name":"r_bossfight","path":"rooms/r_bossfight/r_bossfight.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

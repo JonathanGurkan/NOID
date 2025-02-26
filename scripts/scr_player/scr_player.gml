@@ -15,7 +15,6 @@ function scr_p_death() {
     if(animation_end()) {
         global.player_is_alive = false;
         image_speed = 0;
-
     }
 }
 	
@@ -93,16 +92,16 @@ function scr_p_attack_1() {
 	
 	
 	if (animation_end()) {
-    sprite_index = spr_player_idle;
+		sprite_index = spr_player_idle;
 		state = PLAYERSTATE.FREE;
-		    can_attack = true;
+		can_attack = true;
 	}
 }
 
 function scr_p_attack_2() {
     if (!audio_is_playing(snd_p_attack_2)) audio_play_sound(snd_p_attack_2,0,0,0.7,0,random_range(0.5,1));
 	if (global.player_stamina > 0) {
-	   process_attack(spr_player_attack_2,spr_player_attack_2_hitbox)
+	   process_attack(spr_player_attack_2,spr_player_attack_2_hitbox);
     }
         
   if (key_attack) && (image_index > 2) && (global.player_stamina > 3) {
@@ -175,10 +174,10 @@ function scr_p_dash() {
 	if (dash_energy <= 0) {
 		move_x = 0;
 		move_y = 0;
-		can_dash  = true
+		can_dash  = true;
 		state = PLAYERSTATE.FREE;
-		last_state = PLAYERSTATE.DASH
-		change_stamina(3)
+		last_state = PLAYERSTATE.DASH;
+		change_stamina(3);
 	}
  
 }
@@ -343,6 +342,7 @@ function process_attack(sprite, mask) {
 
 	
 function scr_p_transition() {
+	y += 2 * sign(move_y);
 	scr_p_animation();
 	collision();
 }
@@ -352,12 +352,12 @@ function scr_p_teleport() {
     global.target_x = target_x;
     global.target_y = target_y;
     global.target_direction = obj_player.direction;
-    with (obj_player) state = scr_p_transition;
-    room_transition(TRANS_TYPE.FADE, target_room)
+    with (obj_player) state = scr_p_transition();
+    room_transition(TRANS_TYPE.FADE, target_room);
     instance_destroy(); 
 }
 
-    
+    ;
 function change_stamina(amount) {
 	global.player_stamina -= amount;
 }
@@ -376,7 +376,7 @@ function wallclimb() {
 function moving_platform_collision() {
 var rightWall = noone;
 var list = ds_list_create();
-var listSize = instance_place_list(x, y, obj_collision_move, list, false);
+var listSize = instance_place_list(x,y,obj_collision_move,list,false);
 
 // Loop through all colliding move platforms
 for (var i = 0; i < listSize; i++) {
@@ -398,5 +398,4 @@ if (instance_exists(rightWall)) {
     var rightDist = bbox_right - x;
     x = rightWall.bbox_left - rightDist;
 }
-
 }
