@@ -72,6 +72,7 @@ function enemy_mage_movement() {
 }
 
 function enemy_mage_shoot() {
+	if(!audio_is_playing(snd_e_laser)) audio_play_sound(snd_e_laser, 0, 0, 1, 0, random_range(0.8,1))
     move_x = 0;
 if (!attack_initialized) {
     image_speed = 1;
