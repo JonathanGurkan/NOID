@@ -163,6 +163,7 @@ function enemy_mage_evade() {
 }
     
 function enemy_mage_dodge() {
+	if (!audio_is_playing(snd_e_mage_dash)) audio_play_sound(snd_e_mage_dash, 0, 0, 1, 0, 1)
     sprite_index = spr_mage_idle;
     image_speed = 0;
     with(instance_create_depth(x,y,depth+1,obj_trail)) {
