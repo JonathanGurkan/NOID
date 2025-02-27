@@ -243,6 +243,7 @@
     {"id":{"name":"spr_arrow_dodge","path":"sprites/spr_arrow_dodge/spr_arrow_dodge.yy",},},
     {"id":{"name":"spr_arrow_in_game","path":"sprites/spr_arrow_in_game/spr_arrow_in_game.yy",},},
     {"id":{"name":"spr_attack","path":"sprites/spr_attack/spr_attack.yy",},},
+    {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"spr_bar","path":"sprites/spr_bar/spr_bar.yy",},},
     {"id":{"name":"spr_basicplayermovement","path":"sprites/spr_basicplayermovement/spr_basicplayermovement.yy",},},
     {"id":{"name":"spr_blocklight","path":"sprites/spr_blocklight/spr_blocklight.yy",},},

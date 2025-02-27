@@ -342,7 +342,6 @@ function process_attack(sprite, mask) {
 
 	
 function scr_p_transition() {
-	y += 2 * sign(move_y);
 	scr_p_animation();
 	collision();
 }
