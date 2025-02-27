@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite165",
-    "path":"sprites/Sprite165/Sprite165.yy",
+    "name":"spr_spikes_red",
+    "path":"sprites/spr_spikes_red/spr_spikes_red.yy",
   },
   "spriteMaskId":null,
   "visible":true,

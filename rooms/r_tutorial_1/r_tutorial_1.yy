@@ -25,7 +25,6 @@
     {"name":"inst_2778E1CB","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
     {"name":"inst_3C86F858","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
     {"name":"inst_43F97DB9","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
-    {"name":"inst_6DBE9ABC","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -91,7 +90,6 @@
         {"$GMRInstance":"","%Name":"inst_2778E1CB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2778E1CB","objectId":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.0,"x":576.0,"y":480.0,},
         {"$GMRInstance":"","%Name":"inst_3C86F858","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3C86F858","objectId":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.0,"x":656.0,"y":448.0,},
         {"$GMRInstance":"","%Name":"inst_43F97DB9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_43F97DB9","objectId":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.6274496,"scaleX":2.0,"scaleY":1.0,"x":703.99994,"y":480.0,},
-        {"$GMRInstance":"","%Name":"inst_6DBE9ABC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":0.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6DBE9ABC","objectId":{"name":"obj_spike","path":"objects/obj_spike/obj_spike.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":144.0,},
       ],"layers":[],"name":"colliders","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"behind_player_tiles","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":false,"layers":[
         {"$GMRAssetLayer":"","%Name":"behind_player_assets","assets":[
