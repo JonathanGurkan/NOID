@@ -143,6 +143,7 @@
     {"id":{"name":"obj_room_exit","path":"objects/obj_room_exit/obj_room_exit.yy",},},
     {"id":{"name":"obj_screenflash","path":"objects/obj_screenflash/obj_screenflash.yy",},},
     {"id":{"name":"obj_setup","path":"objects/obj_setup/obj_setup.yy",},},
+    {"id":{"name":"obj_spike","path":"objects/obj_spike/obj_spike.yy",},},
     {"id":{"name":"obj_trail","path":"objects/obj_trail/obj_trail.yy",},},
     {"id":{"name":"obj_transition","path":"objects/obj_transition/obj_transition.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
