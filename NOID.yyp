@@ -99,7 +99,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.4.1.152",
+    "IDEVersion":"2024.8.0.169",
   },
   "name":"NOID",
   "resources":[
@@ -355,6 +355,7 @@
     {"id":{"name":"spr_portal","path":"sprites/spr_portal/spr_portal.yy",},},
     {"id":{"name":"spr_roomsetup","path":"sprites/spr_roomsetup/spr_roomsetup.yy",},},
     {"id":{"name":"spr_secret","path":"sprites/spr_secret/spr_secret.yy",},},
+    {"id":{"name":"spr_spikes_black","path":"sprites/spr_spikes_black/spr_spikes_black.yy",},},
     {"id":{"name":"spr_spikes_blue","path":"sprites/spr_spikes_blue/spr_spikes_blue.yy",},},
     {"id":{"name":"spr_spikes_hitbox","path":"sprites/spr_spikes_hitbox/spr_spikes_hitbox.yy",},},
     {"id":{"name":"spr_spikes_red","path":"sprites/spr_spikes_red/spr_spikes_red.yy",},},
