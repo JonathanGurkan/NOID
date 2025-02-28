@@ -1,4 +1,6 @@
 hit_timer--;
+sprite_index = asset_get_index("spr_spikes_" + color);
+mask_index = spr_spikes_hitbox
 
 if (place_meeting(x, y, obj_player) && can_hit) {
 	global.player_health -= damage;
