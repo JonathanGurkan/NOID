@@ -1,4 +1,3 @@
-damage = 3;
 can_hit = true;
 
 hit_timer = 0;
