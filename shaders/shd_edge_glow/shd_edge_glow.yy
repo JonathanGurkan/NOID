@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_edge_glow",
+  "name":"shd_edge_glow",
+  "parent":{
+    "name":"edge_glow",
+    "path":"folders/Shaders/edge_glow.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

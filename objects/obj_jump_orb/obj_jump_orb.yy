@@ -9,8 +9,8 @@
   "name":"obj_jump_orb",
   "overriddenProperties":[],
   "parent":{
-    "name":"interactables",
-    "path":"folders/Objects/interactables.yy",
+    "name":"roombuilding",
+    "path":"folders/Objects/colliders/roombuilding.yy",
   },
   "parentObjectId":null,
   "persistent":false,

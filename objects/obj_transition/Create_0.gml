@@ -1,10 +1,10 @@
 enum TRANS_TYPE{
-    CUTSCENE_FADE,
     FADE
 }
 
 width = RESOLUTION_W + 500;
-height = RESOLUTION_H;
+height = RESOLUTION_H + 500;
+
 height_half = height * 0.5;
 percent = 0;
 alpha = 0;

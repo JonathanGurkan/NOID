@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite122",
-    "path":"sprites/Sprite122/Sprite122.yy",
+    "name":"spr_cutcam",
+    "path":"sprites/spr_cutcam/spr_cutcam.yy",
   },
   "spriteMaskId":null,
   "visible":true,

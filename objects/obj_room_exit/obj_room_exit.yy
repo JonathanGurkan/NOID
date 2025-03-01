@@ -34,9 +34,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite59",
-    "path":"sprites/Sprite59/Sprite59.yy",
+    "name":"spr_transition",
+    "path":"sprites/spr_transition/spr_transition.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

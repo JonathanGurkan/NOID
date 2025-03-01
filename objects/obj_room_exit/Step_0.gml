@@ -4,10 +4,5 @@ if (instance_exists(obj_player) && (position_meeting(obj_player.x,obj_player.y,i
 	global.target_y = target_y;
     global.target_direction = obj_player.direction;
     with (obj_player) state = scr_p_transition;
-        if(room != r_end){
-         room_transition(TRANS_TYPE.FADE, target_room)
-     } else {
-        room_transition(TRANS_TYPE.CUTSCENE_FADE, target_room)
-    }
-    instance_destroy();
+    room_transition(TRANS_TYPE.FADE, target_room)
 }

@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite126",
-    "path":"sprites/Sprite126/Sprite126.yy",
+    "name":"spr_cutscene",
+    "path":"sprites/spr_cutscene/spr_cutscene.yy",
   },
   "spriteMaskId":null,
   "visible":false,

@@ -1,3 +1,6 @@
+view_width_half = camera_get_view_width(cam) * 0.5;
+view_height_half = camera_get_view_height(cam) * 0.7;
+
 if(room = r_main_menu){
     instance_destroy(obj_player)
     room_init = true;

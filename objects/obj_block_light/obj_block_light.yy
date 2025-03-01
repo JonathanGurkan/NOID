@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite120",
-    "path":"sprites/Sprite120/Sprite120.yy",
+    "name":"spr_blocklight",
+    "path":"sprites/spr_blocklight/spr_blocklight.yy",
   },
   "spriteMaskId":null,
   "visible":false,

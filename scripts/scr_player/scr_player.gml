@@ -15,12 +15,10 @@ function scr_p_death() {
     if(animation_end()) {
         global.player_is_alive = false;
         image_speed = 0;
-
     }
 }
 	
 function scr_p_animation() {
-	show_debug_message(on_wall)
 	
     if (!audio_is_playing(snd_p_jump_fly) && move_y > 2) audio_play_sound(snd_p_jump_fly,0,1,0.5);   
 	if (move_x == 0) {
@@ -94,16 +92,16 @@ function scr_p_attack_1() {
 	
 	
 	if (animation_end()) {
-    sprite_index = spr_player_idle;
+		sprite_index = spr_player_idle;
 		state = PLAYERSTATE.FREE;
-		    can_attack = true;
+		can_attack = true;
 	}
 }
 
 function scr_p_attack_2() {
     if (!audio_is_playing(snd_p_attack_2)) audio_play_sound(snd_p_attack_2,0,0,0.7,0,random_range(0.5,1));
 	if (global.player_stamina > 0) {
-	   process_attack(spr_player_attack_2,spr_player_attack_2_hitbox)
+	   process_attack(spr_player_attack_2,spr_player_attack_2_hitbox);
     }
         
   if (key_attack) && (image_index > 2) && (global.player_stamina > 3) {
@@ -176,15 +174,16 @@ function scr_p_dash() {
 	if (dash_energy <= 0) {
 		move_x = 0;
 		move_y = 0;
-		can_dash  = true
+		can_dash  = true;
 		state = PLAYERSTATE.FREE;
-		last_state = PLAYERSTATE.DASH
-		change_stamina(3)
+		last_state = PLAYERSTATE.DASH;
+		change_stamina(3);
 	}
  
 }
 	
 function scr_p_free() {
+	moving_platform_collision();
 	on_ground = place_meeting(x,y+1,collision_map);
 	//Movement x
 	dir = key_right - key_left;
@@ -352,12 +351,12 @@ function scr_p_teleport() {
     global.target_x = target_x;
     global.target_y = target_y;
     global.target_direction = obj_player.direction;
-    with (obj_player) state = scr_p_transition;
-    room_transition(TRANS_TYPE.FADE, target_room)
+    with (obj_player) state = scr_p_transition();
+    room_transition(TRANS_TYPE.FADE, target_room);
     instance_destroy(); 
 }
 
-    
+    ;
 function change_stamina(amount) {
 	global.player_stamina -= amount;
 }
@@ -371,4 +370,31 @@ function wallclimb() {
 	if (on_wall != 0) && (move_y > 0){
 	    move_y = grv_onwall;
 	}
+}
+
+function moving_platform_collision() {
+var rightWall = noone;
+var list = ds_list_create();
+var listSize = instance_place_list(x,y,obj_collision_move,list,false);
+
+// Loop through all colliding move platforms
+for (var i = 0; i < listSize; i++) {
+    var listInst = ds_list_find_value(list, i); // Fix: Use ds_list_find_value instead of list[i]
+
+    // If there are walls to the right of me, get the closest one
+    if (listInst.bbox_left - listInst.move_x >= bbox_right - 1) {
+        if (!instance_exists(rightWall) || listInst.bbox_left < rightWall.bbox_left) {
+            rightWall = listInst;
+        }
+    }
+}
+
+// Destroy the ds list to free memory
+ds_list_destroy(list);
+
+// Get out of the walls
+if (instance_exists(rightWall)) {
+    var rightDist = bbox_right - x;
+    x = rightWall.bbox_left - rightDist;
+}
 }

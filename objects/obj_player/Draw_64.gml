@@ -18,19 +18,24 @@ draw_sprite_stretched(spr_stamina, 1, 38, 68, 228 * (global.player_stamina / 100
     
 
 if(draw_text_cut){
-    if (instance_exists(obj_transition)){
-         draw_set_alpha(0); 
-    } else {
-    alpha = min(alpha+0.01, 1);
-    draw_set_alpha(alpha);
-    draw_set_font(f_button_text);
-    draw_set_color(c_white);
-    draw_sprite_stretched(spr_gametitle,false,90,220,175,135);
-    draw_text(1000, 250, "Chapter 1");
-    draw_text(1000, 300, "The Circle");
-    draw_text(90,180, "Score: " + string(global.player_score))
-    draw_set_alpha(1);
+	
+    if (alpha <= 1 && state = PLAYERSTATE.ENDTUT){
+	    alpha = min(alpha+0.01, 1);
+	    draw_set_alpha(alpha);
+	    draw_set_font(f_button_text);
+	    draw_set_color(c_white);
+	    draw_sprite_stretched(spr_gametitle,false,90,220,175,135);
+	    draw_text(1000, 250, "Chapter 1");
+	    draw_text(1000, 300, "The Circle");
+	    draw_text(90,180, "Score: " + string(global.player_score))
+	    draw_set_alpha(1);
     }
+}
+if (state = PLAYERSTATE.ENDTUT && alpha >= 1){
+	draw_set_alpha(1)
+	draw_set_font(f_button_text);
+	draw_set_color(c_white);
+	draw_text_transformed(560,700, "Press E to continue",0.5,0.5,0);
 }
 
 

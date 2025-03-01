@@ -14,11 +14,12 @@ global.player_max_stamina = 100;
 global.player_health = global.player_max_health;
 global.player_stamina = global.player_max_stamina;
 global.i_camera = instance_create_layer(0,0,layer,obj_camera);
-global.cutscene = -1;
 global.player_is_alive = true;
 global.player_score = 0;
 global.wallclimb = false;
-
+global.cutscene_count = 0;
+global.cutscene = -1;
+global.last_interacted_id = -1;
 //surface_resize(application_surface, RESOLUTION_W, RESOLUTION_H);
 room_goto(ROOM_START);
 //debug or testing 

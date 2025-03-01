@@ -9,9 +9,13 @@ if(keyboard_check(vk_f11)){
 }
 
 //room toggle
-if(keyboard_check(vk_f12)){
-    room_toggle = true;
-}
+if(keyboard_check_pressed(vk_f12)){
+    if(room_toggle = true){
+	room_toggle = false;
+	} else {
+	room_toggle = true;
+	}
+} 
 if(room_toggle = true){
     if(keyboard_check(ord("J"))){
 	audio_play_sound(EhE_okE,0,0);

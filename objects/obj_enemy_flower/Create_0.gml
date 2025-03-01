@@ -1,6 +1,6 @@
 //misc
 enemy_state = ENEMYSTATE.IDLE;
-collision_map = obj_collision;
+collision_map = [obj_collision,obj_wall];
 distance_to_p = distance_to_object(obj_player);
 direction_p = point_direction(x,y,obj_player.x, obj_player.y);
 
