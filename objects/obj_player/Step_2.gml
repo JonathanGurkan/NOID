@@ -8,39 +8,58 @@ if (global.gamepaused) {
         
     var key_activate = keyboard_check_pressed(vk_enter);
     if(key_activate) {
-        switch (pause_option_selected) {
-            case 0: { //Continue
-                global.gamepaused = false;
-            } break;		
-			case 1: { //Controls
-				room_goto(r_controls)
-				global.gamepaused = false;
-			} break;
-			case 2: { //Toggle Fullscreen
-				if window_get_fullscreen() {
-					window_set_fullscreen(false);
-				} else {
-				    window_set_fullscreen(true);
-				}
-			} break;
-            case 3: { //Toggle Sound
-				audio_play_sound(snd_menu_fw,0,0);
-				global.sound_on = !global.sound_on
-				if (global.sound_on) {
-					audio_master_gain(1);
-				} else {
-					audio_master_gain(0);
-				}
-			} break;
-            case 4: { //Main Menu
-                room_goto(r_main_menu);
-				global.gamepaused = false;
-            } break;
-            case 5: { //Quit
-                game_end();
-            } break;
+		if (pause_option == pause_menu_main) {
+	        switch (pause_option_selected) {
+	            case 0: { //Continue
+	                global.gamepaused = false;
+	            } break;		
+				case 1: { //Options
+					pause_option = pause_menu_options;
+					pause_option_selected = 0;
+				} break;
+				case 2: { //Restart Level
+					global.gamepaused = false;
+					room_restart()
+				} break;
+	            case 3: { //Main Menu
+					room_goto(r_main_menu);
+					global.gamepaused = false;
+				} break;
+	            case 4: { //Quit
+	                game_end();
+	            } break;
 			
-        }
+	        }
+		}
+		
+		if (pause_option == pause_menu_options) {
+			switch (pause_option_selected) {
+	            case 0: { //Toggle Fullscreen
+	                if window_get_fullscreen() {
+						window_set_fullscreen(false);
+					} else {
+					    window_set_fullscreen(true);
+					}
+	            } break;		
+				case 1: { //Toggle Sound
+					audio_play_sound(snd_menu_fw,0,0);
+					global.sound_on = !global.sound_on
+					if (global.sound_on) {
+						audio_master_gain(1);
+					} else {
+						audio_master_gain(0);
+					}
+				} break;
+				case 2: { //Show Controls
+					//Write new code that draws the controls in the GUI HUD
+				} break;
+	            case 3: { //Back
+					pause_option = pause_menu_main;
+					pause_option_selected = 0;
+				} break;
+			
+	        }
+		}
     }
 }
 if (!global.player_is_alive) {
