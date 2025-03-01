@@ -35,7 +35,7 @@ if (global.gamepaused) {
 		if (pause_option == pause_menu_options) {
 			switch (pause_option_selected) {
 	            case 0: { //Toggle Fullscreen
-	                if window_get_fullscreen() {
+	                if (window_get_fullscreen()) {
 						window_set_fullscreen(false);
 					} else {
 					    window_set_fullscreen(true);
