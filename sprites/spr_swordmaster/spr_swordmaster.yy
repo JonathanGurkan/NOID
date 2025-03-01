@@ -52,8 +52,8 @@
   },
   "origin":7,
   "parent":{
-    "name":"swordmaster",
-    "path":"folders/Sprites/enemy/boss/swordmaster.yy",
+    "name":"Swordmaster",
+    "path":"folders/Sprites/enemy/boss/Swordmaster.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
