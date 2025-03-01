@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_p_attack_2",
+  "%Name":"arcade_ui_1_229498",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.365714,
-  "name":"snd_p_attack_2",
+  "duration":1.032,
+  "name":"arcade_ui_1_229498",
   "parent":{
-    "name":"player",
-    "path":"folders/Sounds/player.yy",
+    "name":"imports",
+    "path":"folders/Sounds/imports.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_p_attack_2.mp3",
+  "soundFile":"arcade_ui_1_229498.mp3",
   "type":0,
   "volume":1.0,
 }

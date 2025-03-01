@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.2620635,
+  "duration":0.313469,
   "name":"snd_e_damage_1",
   "parent":{
     "name":"enemies",
