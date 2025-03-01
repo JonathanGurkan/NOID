@@ -60,3 +60,7 @@ if(room_toggle = true){
 		global.wallclimb = true;
 	}
 }
+
+if (global.gamepaused && global.player_is_alive) {
+	global.gamepaused = false;	
+}
