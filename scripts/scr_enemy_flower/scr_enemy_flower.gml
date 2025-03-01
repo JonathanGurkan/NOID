@@ -1,7 +1,8 @@
 function enemy_flower_global() {
 	if (enemy_state != ENEMYSTATE.MOVE || !follow_player) audio_stop_sound(snd_e_flower_move);
 	distance_to_p = distance_to_object(obj_player);
-	direction_p = point_direction(x,y,obj_player.x, obj_player.y);
+	 direction_p = round(point_direction(x,y,obj_player.x, obj_player.y));
+	 if(direction_p <= 360 && direction_p >= 330) direction_p = 0
 	//wakeup
 	if (distance_to_p < found_distance) {
 		found_player = true;
@@ -27,15 +28,10 @@ function enemy_flower_global() {
 	if (enemy_hp <= 0) {
 		enemy_state = ENEMYSTATE.DEATH;
 	}
-
-
-	if (direction_p > 90) {
-		direction = -1
-		image_xscale = -1
-    } else {
-		direction = 1;
-		image_xscale = 1;
-    }
+	
+	    show_debug_message(
+		"dir: " + string(direction_p)
+    );
 }
 
 function enemy_flower_idle() {
@@ -51,6 +47,13 @@ function enemy_flower_idle() {
 }
 
 function enemy_flower_alerted() {
+	if (direction_p > 90) {
+		image_xscale = -1;
+    } else {
+		image_xscale = 1;
+    }
+	
+	
     sprite_index = spr_flower_alert;
     image_yscale = 1;
     image_speed = 1;
@@ -78,11 +81,16 @@ function enemy_flower_fall() {
 }
 
 function enemy_flower_movement() {
+	if (direction_p > 90) {
+		image_xscale = -1
+    } else {
+		image_xscale = 1;
+    }
+	
     if(!audio_is_playing(snd_e_flower_move)) audio_play_sound(snd_e_flower_move,0,0,0.7,0,random_range(0.5,1));
     sprite_index = spr_flower_move;
     x += image_xscale * walk_speed;
     image_speed = 1;
-   
     if (attack_player) enemy_state = ENEMYSTATE.ATTACK;
 }
     
