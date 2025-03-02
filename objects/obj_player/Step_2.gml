@@ -34,22 +34,22 @@ if (global.gamepaused) {
 		
 		if (pause_option == pause_menu_options) {
 			switch (pause_option_selected) {
-	            case 0: { //Toggle Fullscreen
-	                if (window_get_fullscreen()) {
-						window_set_fullscreen(false);
-					} else {
-					    window_set_fullscreen(true);
-					}
-	            } break;		
-				case 1: { //Toggle Sound
-					audio_play_sound(snd_menu_fw,0,0);
+	            case 0: { //Toggle Sound
+	               audio_play_sound(snd_menu_fw,0,0);
 					global.sound_on = !global.sound_on
 					if (global.sound_on) {
 						audio_master_gain(1);
 					} else {
 						audio_master_gain(0);
 					}
-				} break;
+	            } break;		
+				case 1: { //Toggle Fullscreen
+					if (window_get_fullscreen()) {
+						window_set_fullscreen(false)
+					} else {
+						window_set_fullscreen(true)
+					}
+				} break; 
 				case 2: { //Show Controls
 					//Write new code that draws the controls in the GUI HUD
 				} break;
