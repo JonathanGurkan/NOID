@@ -2,6 +2,7 @@ function enemy_flamethrower_global() {
     if(enemy_state != ENEMYSTATE.MOVE) audio_stop_sound(snd_e_flamethrower_walk);
     distance_to_p = distance_to_object(obj_player);
     direction_p = point_direction(x,y,obj_player.x, obj_player.y);
+	if(direction_p <= 360 && direction_p >= 270) direction_p = 0
     //follow
     if (distance_to_p < follow_distance) {
             follow_player = true;
