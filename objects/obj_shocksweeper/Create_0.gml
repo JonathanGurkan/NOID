@@ -11,3 +11,7 @@ t = 120;
 init = false;
 timer_before_attack = 0;
 time_before_attack = 40;
+
+hitflash = false;
+hitflash_countdown = 5;
+enemy_hp = 10;

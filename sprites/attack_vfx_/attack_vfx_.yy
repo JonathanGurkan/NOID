@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Orb mage",
-    "path":"folders/Sprites/enemy/boss/Orb mage.yy",
+    "name":"misc",
+    "path":"folders/Sprites/enemy/boss/Orb mage/misc.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Shock Sweeper",
-    "path":"folders/Sprites/enemy/boss/Shock Sweeper.yy",
+    "name":"misc",
+    "path":"folders/Sprites/enemy/boss/Shock Sweeper/misc.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

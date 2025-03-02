@@ -3,19 +3,31 @@ if(bossfight_started && can_attack) {
 if(!init){
 	global.bossinit = false;
 	init = true;
-	var time_before_attackswitch = round(random_range(10,30));
+	var time_before_attackswitch = round(random_range(20,40));
 	if (timer_before_attackswitch <= 0) timer_before_attackswitch = time_before_attackswitch;
-	what_attack = round(random_range(0,2));
+	repeat(10) {
+    var index = irandom(array_length(attack_array) - 1);
+    if (attack_array[index] != -1) {
+        random_pick = attack_array[index];
+        break;
+    }
+}
+
+
 }
 
 
 if (timer_before_attackswitch >= 0) timer_before_attackswitch--;
-show_debug_message(string(timer_before_attackswitch) + "  " + string(what_attack) + "  " + string(global.bossinit));
 
+show_debug_message(string(attack_array) + "  " + string(random_pick));
 if(timer_before_attackswitch <= 0){
-if (what_attack = 0) boss_state = BOSSSTATE.SLAM_ATTACK;
-if (what_attack = 1)  boss_state = BOSSSTATE.SWORD_ATTACK;
-if (what_attack = 2)  boss_state = BOSSSTATE.SWEEP_ATTACK;
+if (random_pick = -1) {
+	can_attack = true;
+	init = false;
+}
+if (random_pick = 1)	boss_state = BOSSSTATE.SLAM_ATTACK;
+if (random_pick = 2)	boss_state = BOSSSTATE.SWORD_ATTACK;
+if (random_pick = 3)	boss_state = BOSSSTATE.SWEEP_ATTACK;
 }
 
 
@@ -32,4 +44,5 @@ if (!global.gamepaused) {
     }
 }
 
-if (keyboard_check(ord("P"))) boss_state = BOSSSTATE.SWORD_ATTACK;
+
+if(keyboard_check(ord("E"))) bossfight_started = true;

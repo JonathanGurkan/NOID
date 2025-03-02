@@ -13,8 +13,8 @@
     "path":"folders/Objects/enemy/BOSS.yy",
   },
   "parentObjectId":{
-    "name":"par_boss",
-    "path":"objects/par_boss/par_boss.yy",
+    "name":"par_enemy",
+    "path":"objects/par_enemy/par_enemy.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -37,6 +37,9 @@
     "name":"spr_orbmage_idle",
     "path":"sprites/spr_orbmage_idle/spr_orbmage_idle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_orbmage_idle",
+    "path":"sprites/spr_orbmage_idle/spr_orbmage_idle.yy",
+  },
   "visible":true,
 }

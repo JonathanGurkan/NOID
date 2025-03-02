@@ -4,6 +4,7 @@
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_swordfighter",
@@ -13,8 +14,8 @@
     "path":"folders/Objects/enemy/BOSS.yy",
   },
   "parentObjectId":{
-    "name":"par_boss",
-    "path":"objects/par_boss/par_boss.yy",
+    "name":"par_enemy",
+    "path":"objects/par_enemy/par_enemy.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,9 +35,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_swordmaster",
-    "path":"sprites/spr_swordmaster/spr_swordmaster.yy",
+    "name":"spr_swordmaster_idle",
+    "path":"sprites/spr_swordmaster_idle/spr_swordmaster_idle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_swordmaster_idle",
+    "path":"sprites/spr_swordmaster_idle/spr_swordmaster_idle.yy",
+  },
   "visible":true,
 }

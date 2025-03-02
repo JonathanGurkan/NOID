@@ -12,7 +12,10 @@
     "name":"BOSS",
     "path":"folders/Objects/enemy/BOSS.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_enemy",
+    "path":"objects/par_enemy/par_enemy.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,6 +37,9 @@
     "name":"spr_shocksweeper_idle",
     "path":"sprites/spr_shocksweeper_idle/spr_shocksweeper_idle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_shocksweeper_idle",
+    "path":"sprites/spr_shocksweeper_idle/spr_shocksweeper_idle.yy",
+  },
   "visible":true,
 }

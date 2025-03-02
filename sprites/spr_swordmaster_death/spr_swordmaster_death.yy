@@ -32,8 +32,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Swordmaster",
-    "path":"folders/Sprites/enemy/boss/Swordmaster.yy",
+    "name":"misc",
+    "path":"folders/Sprites/enemy/boss/Swordmaster/misc.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
