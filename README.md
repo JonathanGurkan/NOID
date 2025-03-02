@@ -8,15 +8,16 @@ NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonat
 - **Combat System:** Engage in battles against enemies and powerful bosses.
 - **Upgrade System:** Collect Power Cards to enhance your character’s Health, Stamina, Strength, and Defense. Each category features up to six upgrades, allowing for strategic customization.
 - **Challenging Gameplay:** Plan your upgrades carefully—each Power Card can only be used for up to three or four upgrades.
+- **Explore** the dungeon and uncover its secrets.
+- **Defeat** enemies and bosses to gather Power Cards.
 
 ## Gameplay Mechanics
-
 1.  **Game controls:**
     - You control the player with WASD and mouse buttons which leads to easy to master controls.
     - You attack with left mouse button, while Shift helps you to escape dodgy situations with a great dash.
     - The player (who's name is not known hence the name NOID) has two swords. He can attack with them and parry enemy attacks.
     - Player health is 100 hitpoints but can be upgraded with Power Cards.
-    - Enemy hitpoints vary between 2 and 15 hitpoints depending on the type of enemy.
+    - Enemy hitpoints vary between 2 and 7 hitpoints depending on the type of enemy.
 2.  **Characters:**
 - _Player:_ <img src="https://github.com/user-attachments/assets/c50d1de5-3277-466e-b370-c9c044a1755b" alt="Player" align="right">
   - The player is a girl dressed in yellow, she has two swords and has the ability to attack and parry with the swords. She has a ton of attacks she can do. And she looks really good.
@@ -42,15 +43,26 @@ NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonat
 
 6. **Sound:** In NOID we want to use sounds that we'll be recording ourself, which could turn out to be great but also has a pretty big chance of failing hard, so we'll see how that will turn out
 
-## Cheats and extras
+## Controls, Cheats and Extra's
 
-- When `F12` is pressed once you can switch between the different rooms with `1, 2, 3 etc...`
-- Around the game there are secret entrances that lead to different parts of the game
-- Hold `X` to temporary disable collision
-
-- **Explore** the dungeon and uncover its secrets.
-- **Defeat** enemies and bosses to gather Power Cards.
-- **Upgrade** your abilities strategically to prepare for tougher challenges.
+- **Controls**
+  - Move with WASD
+  - Attack with Left Mouse Button
+  - Dash with Shift
+  - Jump with Space
+- **Cheats**
+    - Use `F12` to toggle between user and developer mode.
+    - While in developer mode:
+        -  You can jump between rooms with `1...2...3...`
+        -  You can hold `X` to temporary disable collision
+        -  You can press `C` to enable wall climb
+        -  You can restart the room with `R`
+        -  You can restart the game with `T`
+        -  You can test the sound with `J` (please don't)
+        -  You can go to a secret test room with `Y`
+        -  You can instantly make your HP go to 1 with `L`
+        -  You can kill all enemies instantly with `K`
+    - Around the game there are secret entrances that lead to different parts of the gam
 
 ## Scheme of the game development
 
