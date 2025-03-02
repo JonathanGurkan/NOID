@@ -18,7 +18,7 @@ if(!init){
 	image_index = 0;
 	init = true;
 	timer_before_attack = time_before_attack;	
-	warp(obj_player.x+1000*image_index,obj_player.y);
+	warp(obj_player.x+1000*image_xscale,obj_player.y);
 	with (obj_swordfighter_1) warp(256,48);
 	with (obj_swordfighter_2) warp(256,48);
 }
