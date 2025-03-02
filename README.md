@@ -2,6 +2,9 @@
 
 NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonathan Gurkan** using GameMaker Studio 2. Dive into an action-packed world where you explore mysterious dungeons, defeat enemies, and capture Power Cards to upgrade your character's abilities.
 
+## Lore
+This will be replaced when the lore is done
+
 ## Features
 
 - **Dungeon:** Conquer dungeons filled with challenges.
@@ -62,7 +65,7 @@ NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonat
         -  You can go to a secret test room with `Y`
         -  You can instantly make your HP go to 1 with `L`
         -  You can kill all enemies instantly with `K`
-    - Around the game there are secret entrances that lead to different parts of the gam
+    - Around the game there are secret entrances that lead to different parts of the game
 
 ## Scheme of the game development
 
