@@ -1,0 +1,1 @@
+boss_state = BOSSSTATE.IDLE;

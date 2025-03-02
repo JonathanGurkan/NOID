@@ -32,3 +32,13 @@ enum ENEMYSTATE{
     SEARCH
 }
 
+enum BOSSSTATE{
+	IDLE,
+	
+	
+	
+	
+	SWORD_ATTACK
+	
+}
+

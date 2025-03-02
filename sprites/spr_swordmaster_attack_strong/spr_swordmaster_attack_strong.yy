@@ -2,16 +2,17 @@
   "$GMSprite":"",
   "%Name":"spr_swordmaster_attack_strong",
   "bboxMode":0,
-  "bbox_bottom":19,
+  "bbox_bottom":39,
   "bbox_left":0,
-  "bbox_right":80,
-  "bbox_top":1,
+  "bbox_right":161,
+  "bbox_top":2,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
+    {"$GMSpriteFrame":"","%Name":"1f15e9e1-3629-4ba1-9bee-9da049a17d31","name":"1f15e9e1-3629-4ba1-9bee-9da049a17d31","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"05c9dbc4-3746-44ec-9f45-536b9a034406","name":"05c9dbc4-3746-44ec-9f45-536b9a034406","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"17c4a377-a174-4833-91e7-1090161b1a8e","name":"17c4a377-a174-4833-91e7-1090161b1a8e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"ca48e51a-7c96-4f66-b2a1-7326c3647d32","name":"ca48e51a-7c96-4f66-b2a1-7326c3647d32","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
@@ -25,7 +26,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":20,
+  "height":40,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"29b9c7ae-3dda-4eb2-b139-7ee5b18af48e","blendMode":0,"displayName":"default","isLocked":false,"name":"29b9c7ae-3dda-4eb2-b139-7ee5b18af48e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -58,7 +59,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":10.0,
+    "length":11.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -78,41 +79,44 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1f15e9e1-3629-4ba1-9bee-9da049a17d31","path":"sprites/spr_swordmaster_attack_strong/spr_swordmaster_attack_strong.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"ec33984a-17ba-4634-b832-126209aba2b3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"05c9dbc4-3746-44ec-9f45-536b9a034406","path":"sprites/spr_swordmaster_attack_strong/spr_swordmaster_attack_strong.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"04183739-43a3-45d9-9433-466603762d0d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"04183739-43a3-45d9-9433-466603762d0d","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"17c4a377-a174-4833-91e7-1090161b1a8e","path":"sprites/spr_swordmaster_attack_strong/spr_swordmaster_attack_strong.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c41d6103-9d6d-49b0-8ef5-2d20025f2454","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"c41d6103-9d6d-49b0-8ef5-2d20025f2454","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ca48e51a-7c96-4f66-b2a1-7326c3647d32","path":"sprites/spr_swordmaster_attack_strong/spr_swordmaster_attack_strong.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cd5ba657-b049-4a23-84a2-7b9459844624","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"cd5ba657-b049-4a23-84a2-7b9459844624","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9f0b2788-68b6-4538-a90e-c8ba7bb46118","path":"sprites/spr_swordmaster_attack_strong/spr_swordmaster_attack_strong.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9c9732d7-eda9-4892-a1b2-e9bef6020834","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"9c9732d7-eda9-4892-a1b2-e9bef6020834","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"36431661-1d25-4867-b9fd-337b8a769548","path":"sprites/spr_swordmaster_attack_strong/spr_swordmaster_attack_strong.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e4deda4f-8cf3-4c1f-92e5-a48e4de02e75","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"e4deda4f-8cf3-4c1f-92e5-a48e4de02e75","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f3525141-8ae0-4fa3-be52-71a7b00f0804","path":"sprites/spr_swordmaster_attack_strong/spr_swordmaster_attack_strong.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9516bf9c-e13b-443c-a313-368d704216a8","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"9516bf9c-e13b-443c-a313-368d704216a8","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5ae90641-cb72-45cc-a310-d899fc3ceefb","path":"sprites/spr_swordmaster_attack_strong/spr_swordmaster_attack_strong.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"899656c5-54e8-4964-872f-5188c288da96","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"899656c5-54e8-4964-872f-5188c288da96","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0d3e3a34-5e2c-4083-bca3-b9d8b91035ad","path":"sprites/spr_swordmaster_attack_strong/spr_swordmaster_attack_strong.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b14babed-3825-435a-9422-a7b84a99b586","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"b14babed-3825-435a-9422-a7b84a99b586","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"919830e9-7d12-4db5-9901-ed8915fb1fe2","path":"sprites/spr_swordmaster_attack_strong/spr_swordmaster_attack_strong.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9729fd30-d1b3-45e8-b3fb-a1d4343bc2f6","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"9729fd30-d1b3-45e8-b3fb-a1d4343bc2f6","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fbeb9251-fe58-41b1-90bc-8c592adaa51e","path":"sprites/spr_swordmaster_attack_strong/spr_swordmaster_attack_strong.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e847678b-e74e-49c7-8749-92b388d29f8b","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"e847678b-e74e-49c7-8749-92b388d29f8b","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":12,
-    "yorigin":20,
+    "xorigin":24,
+    "yorigin":40,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -122,5 +126,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":91,
+  "width":182,
 }
