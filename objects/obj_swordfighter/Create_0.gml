@@ -1,4 +1,5 @@
 //global
+
 direction_p = 0;
 
 // idle state
