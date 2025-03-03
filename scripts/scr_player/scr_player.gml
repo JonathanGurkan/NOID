@@ -55,10 +55,14 @@ function scr_p_animation() {
 				dust++
 				var side = bbox_left;
 				if(on_wall == 1) side = bbox_right;
-				if(dust>4 && move_y > 0) with (instance_create_layer(side,bbox_top+3,"enemy",obj_dustparticle)){
+				if(dust>4 && move_y > 0){
+				if(!layer_exists("walldust")) layer_create(0,"walldust");
+				with (instance_create_layer(side,bbox_top+3,"walldust",obj_dustparticle)){
 				other.dust = 0;
 				hspeed = -other.on_wall * obj_player.move_y;
 				}
+				
+				} 
 			}
 		}
 	}
