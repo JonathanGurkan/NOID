@@ -139,11 +139,11 @@ function enemy_flower_attack() {
 
 function enemy_flower_death() {
     is_dying = true
-        sprite_index = spr_flower_death;
-        audio_stop_sound(snd_e_flower_attack_1)
-        audio_stop_sound(snd_e_flower_move)
-        if (animation_end()) {
-            global.player_score += 10;
-            instance_destroy();
-        }
+    sprite_index = spr_flower_death;
+    audio_stop_sound(snd_e_flower_attack_1)
+    audio_stop_sound(snd_e_flower_move)
+        
+	if (animation_end()) {
+        instance_destroy();
+    }
 }

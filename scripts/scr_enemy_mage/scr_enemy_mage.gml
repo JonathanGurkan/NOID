@@ -185,7 +185,7 @@ function enemy_mage_death() {
     sprite_index = spr_mage_death;
     
     if (animation_end()) {
-        global.player_score += 10;
+        
         instance_destroy();
     }
 }

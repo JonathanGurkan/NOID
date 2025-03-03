@@ -59,6 +59,7 @@ if (!global.player_is_alive) {
                 global.player_is_alive = true;
                 global.player_health = global.player_max_health;
                 global.player_stamina = global.player_max_stamina;
+				
                 room_transition(TRANS_TYPE.FADE, room)
             } break;
             case 1: {
@@ -67,6 +68,7 @@ if (!global.player_is_alive) {
                 global.player_is_alive = true;
                 global.player_health = global.player_max_health;
                 global.player_stamina = global.player_max_stamina;
+				global.player_score = 0;
             } break;
             case 2: {
                 game_end();

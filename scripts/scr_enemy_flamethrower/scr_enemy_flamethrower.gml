@@ -101,7 +101,13 @@ function enemy_flamethrower_death() {
     }
 	
     if (animation_end()) {
-        global.player_score += 10;
+        
+		if (dealt_damage) {
+			global.player_health -= 15;
+
+			invincibility_timer = 60;
+			invincible = true
+		}
         instance_destroy();
         audio_stop_sound(snd_e_flamethrower_attack)
         audio_stop_sound(snd_e_flamethrower_walk)
