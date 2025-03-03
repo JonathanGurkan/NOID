@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_laser",
+  "%Name":"snd_e_mage_move",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":2.064,
-  "name":"snd_laser",
+  "duration":3.082449,
+  "name":"snd_e_mage_move",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"mage",
+    "path":"folders/Sounds/enemies/mage.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_laser.mp3",
+  "soundFile":"snd_e_mage_move.mp3",
   "type":0,
   "volume":1.0,
 }

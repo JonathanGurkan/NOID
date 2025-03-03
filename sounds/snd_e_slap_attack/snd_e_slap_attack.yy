@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_e_damage_1",
+  "%Name":"snd_e_slap_attack",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.313469,
-  "name":"snd_e_damage_1",
+  "duration":0.264,
+  "name":"snd_e_slap_attack",
   "parent":{
-    "name":"enemies",
-    "path":"folders/Sounds/enemies.yy",
+    "name":"mage",
+    "path":"folders/Sounds/enemies/mage.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_e_damage_1.mp3",
+  "soundFile":"snd_e_slap_attack.mp3",
   "type":0,
   "volume":1.0,
 }
