@@ -1,13 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_wallclimb",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_heart",
+  "eventList":[],
   "managed":true,
-  "name":"obj_wallclimb",
+  "name":"obj_heart",
   "overriddenProperties":[],
   "parent":{
     "name":"pickups",
@@ -32,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_wallclimb",
-    "path":"sprites/spr_wallclimb/spr_wallclimb.yy",
+    "name":"spr_heart",
+    "path":"sprites/spr_heart/spr_heart.yy",
   },
   "spriteMaskId":null,
   "visible":true,
