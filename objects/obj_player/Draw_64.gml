@@ -27,7 +27,6 @@ if(draw_text_cut){
 	    draw_sprite_stretched(spr_gametitle,false,90,220,175,135);
 	    draw_text(1000, 250, "Chapter 1");
 	    draw_text(1000, 300, "The Circle");
-	    draw_text(90,180, "Score: " + string(global.player_score))
 	    draw_set_alpha(1);
     }
 }
