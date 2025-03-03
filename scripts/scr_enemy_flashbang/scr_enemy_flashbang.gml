@@ -114,7 +114,7 @@ function enemy_flashbang_death() {
     audio_stop_sound(snd_e_flashbang_walk)
     
     if (animation_end()) {
-        
+        global.player_score += 10;
         instance_destroy();
     }
 }

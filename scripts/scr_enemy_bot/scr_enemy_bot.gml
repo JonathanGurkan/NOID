@@ -188,6 +188,6 @@ function enemy_bot_death() {
     
     if (animation_end()) {
         instance_destroy();
-        
+        global.player_score += 10;
     }
 }

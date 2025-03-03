@@ -101,7 +101,7 @@ function enemy_flamethrower_death() {
     }
 	
     if (animation_end()) {
-        
+        global.player_score += 10;
 		if (dealt_damage) {
 			global.player_health -= 15;
 

@@ -131,7 +131,7 @@ function enemy_flower_death() {
     audio_stop_sound(snd_e_flower_move)
         
 	if (animation_end()) {
-        
+        global.player_score += 10;
         instance_destroy();
     }
 }

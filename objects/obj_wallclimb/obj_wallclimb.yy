@@ -10,8 +10,8 @@
   "name":"obj_wallclimb",
   "overriddenProperties":[],
   "parent":{
-    "name":"pickups",
-    "path":"folders/Objects/pickups.yy",
+    "name":"roombuilding",
+    "path":"folders/Objects/colliders/roombuilding.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_wallclimb",
-    "path":"sprites/spr_wallclimb/spr_wallclimb.yy",
+    "name":"wallclimb",
+    "path":"sprites/wallclimb/wallclimb.yy",
   },
   "spriteMaskId":null,
   "visible":true,
