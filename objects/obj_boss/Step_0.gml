@@ -46,11 +46,16 @@ with(obj_player) state = scr_p_transition();
 if(keyboard_check(vk_f2)) boss_over = true;
 
 if(boss_over){
-	spd += change_spd;
-	view_h --
-	view_w --
+	with(obj_player){
+	state = scr_p_transition();
+	move_x = 0;
+	} 
+	global.player_score += 2;
+	view_h -= 1.5 * 0.5625;
+	view_w -= 1.5;
+	obj_camera.y = obj_player.y -12;
 	camera_set_view_size(cam,view_w,view_h);
 } 
 
 
-if(view_w <= 0) room_goto(r_main_menu);
+if(view_w <= 0) room_goto(r_end_end);
