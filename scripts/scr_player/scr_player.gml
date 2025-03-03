@@ -104,7 +104,7 @@ function scr_p_attack_2() {
 	   process_attack(spr_player_attack_2,spr_player_attack_2_hitbox);
     }
         
-  if (key_attack) && (image_index > 2) && (global.player_stamina > 3) {
+  if (key_attack) && (image_index > 2) && (global.player_stamina > 3) && (on_ground) {
 	    change_stamina(3);
 	    state = PLAYERSTATE.ATTACK_3;
 	    return;
@@ -121,7 +121,7 @@ function scr_p_attack_3() {
     if (!audio_is_playing(snd_p_attack_3)) audio_play_sound(snd_p_attack_3,0,0,0.7,0,random_range(0.5,1));
     process_attack(spr_player_attack_3,spr_player_attack_3_hitbox)
         
-    if (key_attack) && (image_index > 2) && (global.player_stamina > 3) {
+    if (key_attack) && (image_index > 2) && (global.player_stamina > 3) && (on_ground) {
         change_stamina(3)
         state = PLAYERSTATE.ATTACK_1;
         return;
@@ -282,9 +282,9 @@ function scr_p_free() {
       }       
     }
     
-	if (key_attack && on_ground && can_attack && global.player_stamina > 10) {
+	if (key_attack && can_attack && global.player_stamina > 10 && on_ground) {
 		change_stamina(10);
-	    state = PLAYERSTATE.ATTACK_1
+	    state = PLAYERSTATE.ATTACK_1;
 	    can_attack = false; 
 	}
 	

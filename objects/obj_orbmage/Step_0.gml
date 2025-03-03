@@ -5,6 +5,19 @@ if(direction_p <= 360 && direction_p >= 270) direction_p = 0
 if(timer_before_attack >= 0) timer_before_attack--;
 if (obj_boss.boss_state != BOSSSTATE.SWEEP_ATTACK) be_gone();
 
+if (obj_boss.boss_state = BOSSSTATE.CUTSCENE){
+if(radius > 30){
+	radius -=2;
+} else { 
+	with(obj_boss) {
+		boss_state = BOSSSTATE.IDLE;
+		bossfight_started = true;
+	}
+	obj_player.state = PLAYERSTATE.FREE;
+}
+}
+
+
 
 if(enemy_hp <= 0){
 instance_destroy();
@@ -19,6 +32,4 @@ with(obj_boss){
 		boss_state = BOSSSTATE.IDLE;
 		can_attack = true;
 	}
-} 
-
-draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,1)
+}

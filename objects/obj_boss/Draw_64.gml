@@ -7,3 +7,5 @@ if(instance_exists(obj_orbmage)) orb_hp = obj_orbmage.enemy_hp;
 if(instance_exists(obj_shocksweeper)) shock_hp = obj_shocksweeper.enemy_hp;
 draw_sprite_stretched(spr_health, 0, 396, 656, 490 * (sword_hp + orb_hp + shock_hp) / 30 , 16);
 draw_sprite(spr_bar_boss, 0, 390, 650);
+
+if  ((sword_hp + orb_hp + shock_hp) <= 0) boss_over = true;

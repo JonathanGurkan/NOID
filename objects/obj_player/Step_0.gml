@@ -20,6 +20,7 @@ if (!global.gamepaused) {
         case PLAYERSTATE.PARRY: scr_p_attack_strong(); break;
         case PLAYERSTATE.ENDTUT: scr_p_endtut(); break;
 		case PLAYERSTATE.DEATH: scr_p_death(); break
+		case PLAYERSTATE.LOCK: do_nothing(); break
     }
 }
 scr_p_global();

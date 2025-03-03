@@ -3,6 +3,10 @@ if(direction_p <= 360 && direction_p >= 270) direction_p = 0
 
 if(timer_before_attack >= 0) timer_before_attack--;
 if (obj_boss.boss_state != BOSSSTATE.SWORD_ATTACK) be_gone();
+if (obj_boss.boss_state = BOSSSTATE.CUTSCENE){
+if(radius > 30){
+	radius -= 2;
+}}
 
 
 if(enemy_hp <= 0){

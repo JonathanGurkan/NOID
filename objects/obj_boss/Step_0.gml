@@ -10,10 +10,8 @@ if(!init){
     if (attack_array[index] != -1) {
         random_pick = attack_array[index];
         break;
-    }
-}
-
-
+		 }
+	}
 }
 
 
@@ -29,11 +27,7 @@ if (random_pick = 1)	boss_state = BOSSSTATE.SLAM_ATTACK;
 if (random_pick = 2)	boss_state = BOSSSTATE.SWORD_ATTACK;
 if (random_pick = 3)	boss_state = BOSSSTATE.SWEEP_ATTACK;
 }
-
-
 }
-
-
 
 if (!global.gamepaused) {
     switch (boss_state) {
@@ -44,5 +38,19 @@ if (!global.gamepaused) {
     }
 }
 
+if(place_meeting(x,y,obj_player) && !bossfight_started){
+boss_state = BOSSSTATE.CUTSCENE;
+with(obj_player) state = scr_p_transition();
+}
 
-if(keyboard_check(ord("E"))) bossfight_started = true;
+if(keyboard_check(vk_f2)) boss_over = true;
+
+if(boss_over){
+	spd += change_spd;
+	view_h --
+	view_w --
+	camera_set_view_size(cam,view_w,view_h);
+} 
+
+
+if(view_w <= 0) room_goto(r_main_menu);
