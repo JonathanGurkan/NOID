@@ -1,9 +1,5 @@
 //pause the game
-if (keyboard_check_pressed(vk_escape) && room != r_main_menu && global.player_is_alive) {
-	with (obj_player) {
-		pause_option = pause_menu_main;
-		pause_option_selected = 0;
-	}
+if (keyboard_check_pressed(vk_escape) && room != r_main_menu) {
     global.gamepaused = !global.gamepaused;
     audio_stop_all();
     if (global.gamepaused) {

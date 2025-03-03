@@ -2,7 +2,6 @@ function enemy_flamethrower_global() {
     if(enemy_state != ENEMYSTATE.MOVE) audio_stop_sound(snd_e_flamethrower_walk);
     distance_to_p = distance_to_object(obj_player);
     direction_p = point_direction(x,y,obj_player.x, obj_player.y);
-	if(direction_p <= 360 && direction_p >= 270) direction_p = 0
     //follow
     if (distance_to_p < follow_distance) {
             follow_player = true;
@@ -89,25 +88,20 @@ function enemy_flamethrower_attack() {
 
 function enemy_flamethrower_death() {
     is_dying = true
-	var dealt_damage = false
     sprite_index = spr_flamethrower_death;
 	mask_index = spr_flamethrower_death_hitbox
 	
 	if (place_meeting(x, y, obj_player)) {
        with(obj_player) {
-		    dealt_damage = true
+            global.player_health -= 15;
+			invincibility_timer = 60;
+			invincible = true
             screenshake(60, 0.4, 0.3);
        }
     }
 	
     if (animation_end()) {
         global.player_score += 10;
-		if (dealt_damage) {
-			global.player_health -= 15;
-
-			invincibility_timer = 60;
-			invincible = true
-		}
         instance_destroy();
         audio_stop_sound(snd_e_flamethrower_attack)
         audio_stop_sound(snd_e_flamethrower_walk)

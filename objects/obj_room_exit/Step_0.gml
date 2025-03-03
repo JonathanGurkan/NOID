@@ -5,4 +5,5 @@ if (instance_exists(obj_player) && (position_meeting(obj_player.x,obj_player.y,i
     global.target_direction = obj_player.direction;
     with (obj_player) state = scr_p_transition;
     room_transition(TRANS_TYPE.FADE, target_room)
+    instance_destroy();
 }

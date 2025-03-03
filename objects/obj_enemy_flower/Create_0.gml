@@ -20,8 +20,8 @@ is_dying = false;
 evade_player = false;
 
 //logic reals
-found_distance = 100;
-follow_distance = 200;
+found_distance = 150;
+follow_distance = 100;
 attack_distance = 2;
 evade_distance = 0;
 

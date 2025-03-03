@@ -4,8 +4,7 @@ enum TRANS_TYPE{
 }
 
 width = RESOLUTION_W + 500;
-height = RESOLUTION_H + 500;
-
+height = RESOLUTION_H;
 height_half = height * 0.5;
 percent = 0;
 alpha = 0;
