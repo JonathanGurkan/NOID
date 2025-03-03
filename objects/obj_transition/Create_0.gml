@@ -1,6 +1,5 @@
 enum TRANS_TYPE{
-    FADE,
-	FAST_FADE
+    FADE
 }
 
 width = RESOLUTION_W + 500;
