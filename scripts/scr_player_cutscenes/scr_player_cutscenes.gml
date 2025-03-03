@@ -15,6 +15,7 @@ function scr_p_endtut(){
 	}
 	    x -= 1;
 		sprite_index = spr_player_kneel;
+		if (audio_is_playing(snd_p_walk_1)) audio_stop_sound(snd_p_walk_1)
 	    if(animation_end()) image_speed = 0;
 		if (wait <= 0){
 		    if(instance_exists(obj_cutscene_cam)){

@@ -2,7 +2,8 @@ function enemy_flashbang_global() {
     if (enemy_state != ENEMYSTATE.MOVE) audio_stop_sound(snd_e_flashbang_walk)
     distance_to_p = distance_to_object(obj_player);
     direction_p = point_direction(x,y,obj_player.x, obj_player.y);
-    //wakeup
+	if(direction_p <= 360 && direction_p >= 270) direction_p = 0
+	
     if (distance_to_p < found_distance) {
         found_player = true;
         } else { 

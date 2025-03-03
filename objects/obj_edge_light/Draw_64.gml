@@ -5,9 +5,9 @@ if (surface_exists(light_surf)) {
 
     with (obj_lightsource) {
         gpu_set_blendmode(bm_subtract);
-        draw_sprite_ext(spr_light_gradient, 0, obj_player.x, obj_player.y, x_radious, y_radious, 0, c_black, 1);
+        draw_sprite_ext(spr_light_gradient, 0, obj_player.x, obj_player.y, x_radius, y_radius, 0, c_black, 1);
         gpu_set_blendmode(bm_zero);
-        draw_sprite_ext(spr_light_gradient, 0, obj_player.x, obj_player.y, x_radious, y_radious, 0, c_orange, 0.7);
+        draw_sprite_ext(spr_light_gradient, 0, obj_player.x, obj_player.y, x_radius, y_radius, 0, c_orange, 0.7);
         gpu_set_blendmode(bm_normal);
     }
 
