@@ -7,7 +7,6 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_53839600","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
-    {"name":"inst_22C75EC5","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
     {"name":"inst_3FDDE0CC","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
     {"name":"inst_2D9A855E","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
     {"name":"inst_12B3ECCB","path":"rooms/r_tutorial_1/r_tutorial_1.yy",},
