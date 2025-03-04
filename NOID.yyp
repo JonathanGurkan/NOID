@@ -101,7 +101,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.0.169",
+    "IDEVersion":"2024.4.1.152",
   },
   "name":"NOID",
   "resources":[
@@ -128,7 +128,6 @@
     {"id":{"name":"obj_cutscene","path":"objects/obj_cutscene/obj_cutscene.yy",},},
     {"id":{"name":"obj_door_tut","path":"objects/obj_door_tut/obj_door_tut.yy",},},
     {"id":{"name":"obj_dustparticle","path":"objects/obj_dustparticle/obj_dustparticle.yy",},},
-    {"id":{"name":"obj_edge_light","path":"objects/obj_edge_light/obj_edge_light.yy",},},
     {"id":{"name":"obj_enemy_bot","path":"objects/obj_enemy_bot/obj_enemy_bot.yy",},},
     {"id":{"name":"obj_enemy_flamethrower","path":"objects/obj_enemy_flamethrower/obj_enemy_flamethrower.yy",},},
     {"id":{"name":"obj_enemy_flashbang","path":"objects/obj_enemy_flashbang/obj_enemy_flashbang.yy",},},
@@ -140,7 +139,6 @@
     {"id":{"name":"obj_jump_orb","path":"objects/obj_jump_orb/obj_jump_orb.yy",},},
     {"id":{"name":"obj_light_m","path":"objects/obj_light_m/obj_light_m.yy",},},
     {"id":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},},
-    {"id":{"name":"obj_lightsource","path":"objects/obj_lightsource/obj_lightsource.yy",},},
     {"id":{"name":"obj_parralax","path":"objects/obj_parralax/obj_parralax.yy",},},
     {"id":{"name":"obj_player_d","path":"objects/obj_player_d/obj_player_d.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
