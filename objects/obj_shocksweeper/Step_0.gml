@@ -1,5 +1,4 @@
 if(timer_before_attack >= 0) timer_before_attack--;
-
 if (obj_boss.boss_state != BOSSSTATE.SLAM_ATTACK) be_gone();
 if (obj_boss.boss_state = BOSSSTATE.CUTSCENE){
 	if (!audio_is_playing(snd_boss_music)) audio_play_sound(snd_boss_music,0,1,0.5); 

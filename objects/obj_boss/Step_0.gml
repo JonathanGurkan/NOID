@@ -1,3 +1,15 @@
+
+
+if(obj_swordfighter.radius >= 400){
+with(obj_orbmage) visible = false;
+with(obj_shocksweeper) visible = false;
+with(obj_swordfighter) visible = false;
+} else {
+with(obj_orbmage) visible = true;
+with(obj_shocksweeper) visible = true;
+with(obj_swordfighter) visible = true;
+}
+
 if(bossfight_started && can_attack) {
 	
 if(!init){

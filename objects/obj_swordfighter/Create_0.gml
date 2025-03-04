@@ -5,7 +5,7 @@ direction_p = 0;
 // idle state
 origin_x = x;
 origin_y = y;
-radius = 1000;
+radius = 400;
 t = 240;
 
 //attack_sword
