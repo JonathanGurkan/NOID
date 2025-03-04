@@ -1,5 +1,4 @@
-var heart_spawn = round(random_range(0,1))
-var heart_spawn = round(random_range(0,1))
+var heart_spawn = floor(random_range(0,1))
 
 if (!layer_exists("pickup")) {
 	layer_create(0, "pickup");

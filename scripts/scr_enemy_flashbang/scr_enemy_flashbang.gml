@@ -3,7 +3,7 @@ function enemy_flashbang_global() {
     distance_to_p = distance_to_object(obj_player);
     direction_p = point_direction(x,y,obj_player.x, obj_player.y);
 	if(direction_p <= 360 && direction_p >= 270) direction_p = 0
-    //wakeup
+	
     if (distance_to_p < found_distance) {
         found_player = true;
         } else { 

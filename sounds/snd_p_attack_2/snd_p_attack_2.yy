@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.365714,
+  "duration":0.328322,
   "name":"snd_p_attack_2",
   "parent":{
     "name":"player",
