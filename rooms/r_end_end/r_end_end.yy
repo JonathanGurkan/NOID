@@ -8,7 +8,6 @@
   "instanceCreationOrder":[
     {"name":"inst_4CB79109","path":"rooms/r_end_end/r_end_end.yy",},
     {"name":"inst_754C63A1","path":"rooms/r_end_end/r_end_end.yy",},
-    {"name":"inst_1E448456","path":"rooms/r_end_end/r_end_end.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -24,7 +23,6 @@
     {"$GMRInstanceLayer":"","%Name":"player","depth":0,"effectEnabled":true,"effectType":null,"gridX":160,"gridY":90,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"","%Name":"inst_4CB79109","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4CB79109","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":560.0,"y":144.0,},
         {"$GMRInstance":"","%Name":"inst_754C63A1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_754C63A1","objectId":{"name":"obj_cutscene_cam","path":"objects/obj_cutscene_cam/obj_cutscene_cam.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":159.0,"y":90.0,},
-        {"$GMRInstance":"","%Name":"inst_1E448456","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1E448456","objectId":{"name":"obj_button_exit","path":"objects/obj_button_exit/obj_button_exit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.29693058,"scaleY":0.2969306,"x":159.0,"y":149.12277,},
       ],"layers":[],"name":"player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
         {"$GMRSpriteGraphic":"","%Name":"graphic_349E4D6E","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_349E4D6E","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.23346233,"scaleY":0.23346236,"spriteId":{"name":"spr_gametitle","path":"sprites/spr_gametitle/spr_gametitle.yy",},"x":157.62631,"y":95.0,},

@@ -64,7 +64,7 @@ if(boss_over){
 	state = scr_p_transition();
 	move_x = 0;
 	} 
-	global.player_score += 2;
+	global.player_score += 1;
 	view_h -= 1.5 * 0.5625;
 	view_w -= 1.5;
 	obj_camera.y = obj_player.y -14;
