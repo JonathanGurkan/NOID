@@ -26,6 +26,7 @@ if (random_pick = -1) {
 if (random_pick = 1)	boss_state = BOSSSTATE.SLAM_ATTACK;
 if (random_pick = 2)	boss_state = BOSSSTATE.SWORD_ATTACK;
 if (random_pick = 3)	boss_state = BOSSSTATE.SWEEP_ATTACK;
+if (random_pick = 4)	boss_state = BOSSSTATE.LAZER_ATTACK;
 }
 }
 
@@ -35,6 +36,7 @@ if (!global.gamepaused) {
 		case BOSSSTATE.SWORD_ATTACK: with(obj_swordfighter) scr_boss_sword_attack(); break;
 		case BOSSSTATE.SLAM_ATTACK: with(obj_shocksweeper) scr_boss_slam_attack(); break;
 		case BOSSSTATE.SWEEP_ATTACK: with(obj_orbmage) scr_boss_sweep_attack(); break;
+		case BOSSSTATE.LAZER_ATTACK: with(obj_orbmage) scr_boss_lazer_attack(); break;
     }
 }
 

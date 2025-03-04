@@ -65,6 +65,29 @@ image_speed = 1;
 	}
 }
 
+function scr_boss_lazer_attack() {
+if(!global.bossinit){
+	obj_boss.can_attack = false;
+	image_index = 0;
+	warp(409, 582);
+	sprite_index = spr_orbmage_attack_lazer;
+	mask_index = spr_orbmage_attack_lazer_hitbox;
+	global.bossinit = true;
+}
+	 boss_attack();
+	
+
+
+	if(animation_end()){
+		with(obj_boss){
+		init = false;
+		boss_state = BOSSSTATE.IDLE;
+		can_attack = true;
+		}
+		sprite_index = spr_orbmage_idle;
+	}
+}
+
 function scr_boss_slam_attack() {
 if(!global.bossinit){
 	obj_boss.can_attack = false;
