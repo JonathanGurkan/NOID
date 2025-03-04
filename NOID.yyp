@@ -313,6 +313,7 @@
     {"id":{"name":"spr_heart","path":"sprites/spr_heart/spr_heart.yy",},},
     {"id":{"name":"spr_jump","path":"sprites/spr_jump/spr_jump.yy",},},
     {"id":{"name":"spr_jumphigher","path":"sprites/spr_jumphigher/spr_jumphigher.yy",},},
+    {"id":{"name":"spr_jumporb","path":"sprites/spr_jumporb/spr_jumporb.yy",},},
     {"id":{"name":"spr_jumpoverattacks","path":"sprites/spr_jumpoverattacks/spr_jumpoverattacks.yy",},},
     {"id":{"name":"spr_key_1","path":"sprites/spr_key_1/spr_key_1.yy",},},
     {"id":{"name":"spr_key_2","path":"sprites/spr_key_2/spr_key_2.yy",},},
