@@ -26,6 +26,7 @@
     {"name":"inst_4BD00D74","path":"rooms/r_tutorial_3/r_tutorial_3.yy",},
     {"name":"inst_D0A9362","path":"rooms/r_tutorial_3/r_tutorial_3.yy",},
     {"name":"inst_51E03695","path":"rooms/r_tutorial_3/r_tutorial_3.yy",},
+    {"name":"inst_4461A886","path":"rooms/r_tutorial_3/r_tutorial_3.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -742,6 +743,7 @@
             {"$GMRSpriteGraphic":"","%Name":"graphic_5055ECE1","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_5055ECE1","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_dashandholdtorun","path":"sprites/spr_dashandholdtorun/spr_dashandholdtorun.yy",},"x":1184.0,"y":128.0,},
             {"$GMRSpriteGraphic":"","%Name":"graphic_6921582E","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_6921582E","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_arrow_in_game","path":"sprites/spr_arrow_in_game/spr_arrow_in_game.yy",},"x":918.0,"y":123.0,},
             {"$GMRSpriteGraphic":"","%Name":"graphic_50FBC9A3","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_50FBC9A3","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_arrow_in_game","path":"sprites/spr_arrow_in_game/spr_arrow_in_game.yy",},"x":436.0,"y":120.0,},
+            {"$GMRSpriteGraphic":"","%Name":"graphic_8C6523A","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_8C6523A","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_jumporb","path":"sprites/spr_jumporb/spr_jumporb.yy",},"x":536.0,"y":537.0,},
           ],"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets_1","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
         {"$GMRTileLayer":"","%Name":"behind_player_sub","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"behind_player_sub","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":48,"SerialiseWidth":86,"TileCompressedData":[
               -282,
