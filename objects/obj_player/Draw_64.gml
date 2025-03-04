@@ -2,7 +2,7 @@
 if (state != PLAYERSTATE.ENDTUT){
     
 //Health bar
-
+if(room != r_end_end) {
 if (instance_exists(obj_transition)) {
     draw_set_alpha(0);
     } else {
@@ -16,8 +16,14 @@ draw_sprite(spr_bar, 1, 30, 60);
 draw_sprite_stretched(spr_stamina, 1, 38, 68, 228 * (global.player_stamina / 100) , 16)
 
 // Score counter
-draw_set_color(c_white)
-draw_text(1100,20, "Score: " + string(global.player_score))
+draw_set_color(c_white);
+
+
+draw_text(1100,20, "Score: " + string(global.player_score));
+} else {
+draw_text(540,400, "Score: " + string(global.player_score));
+draw_text(465,550, "Press Enter to exit");
+}
 }
     
 

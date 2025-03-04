@@ -38,5 +38,5 @@
     "path":"sprites/spr_camcahnge/spr_camcahnge.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

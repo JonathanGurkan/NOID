@@ -1,4 +1,4 @@
-if (!global.gamepaused) {
+	if (!global.gamepaused) {
     switch (enemy_state) {
         case ENEMYSTATE.IDLE: enemy_flamethrower_idle(); break;
         case ENEMYSTATE.DEATH: enemy_flamethrower_death(); break;
