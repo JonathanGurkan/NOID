@@ -125,12 +125,6 @@ function enemy_bot_shoot() {
 
 
 
-
-//dist_to_wall < 80
-//image_xscale  = x_scale
-//obj_player.dist_to_wall < dist_to_wall 
-
-
 function enemy_bot_dash() {
     sprite_index = spr_bot_fire_dash;
     mask_index = spr_bot_fire_dash_hitbox;      
@@ -194,6 +188,6 @@ function enemy_bot_death() {
     
     if (animation_end()) {
         instance_destroy();
-        global.player_score += 10;
+        
     }
 }
