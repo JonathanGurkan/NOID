@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":3.213061,
+  "duration":3.082449,
   "name":"snd_e_mage_move",
   "parent":{
     "name":"mage",

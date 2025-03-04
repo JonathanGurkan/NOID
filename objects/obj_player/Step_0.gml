@@ -24,3 +24,4 @@ if (!global.gamepaused) {
     }
 }
 scr_p_global();
+

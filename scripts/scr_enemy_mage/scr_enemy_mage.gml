@@ -1,9 +1,8 @@
 function enemy_mage_global() {
-	if (enemy_state != ENEMYSTATE.MOVE) audio_stop_sound(snd_e_mage_move)
     distance_to_p = distance_to_object(obj_player);
     direction_p = point_direction(x,y,obj_player.x, obj_player.y);
     direction_p = round(point_direction(x,y,obj_player.x, obj_player.y));
-    if(direction_p <= 360 && direction_p >= 270) direction_p = 0;
+    if(direction_p <= 360 && direction_p >= 270) direction_p = 0
     dist_to_wall = distance_to_object(obj_wall);
     //follow
     if (distance_to_p < follow_distance && y >= obj_player.y - 31 || unconditional_follow) {
@@ -115,8 +114,8 @@ if (!attack_initialized) {
 }
 
 function enemy_mage_attack() {
-	if (!audio_is_playing(snd_e_slap_attack)) audio_play_sound(snd_e_slap_attack, 0, 0, 1, 0, random_range(0.6,0.7))
-        move_x = 0; 
+        if (!audio_is_playing(snd_e_slap_attack)) audio_play_sound(snd_e_slap_attack, 0, 0, 1, 0, random_range(0.6,0.7))
+		move_x = 0; 
         image_speed = 1;
         sprite_index = spr_mage_attack;
         mask_index = spr_mage_attack_hitbox;

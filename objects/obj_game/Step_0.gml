@@ -42,7 +42,7 @@ if(room_toggle = true){
     room = r_main_menu;
     }
     if keyboard_check(ord("Y")) {
-        room = r_test;
+        room = r_bossfight;
     }
     if(instance_exists(obj_player)){
         if keyboard_check(ord("X")){
@@ -65,7 +65,6 @@ if(room_toggle = true){
 	}
 }
 
-
 if (global.gamepaused && !global.player_is_alive) {
-	global.gamepaused = false;	
-}
+ 	global.gamepaused = false;	
+ }
