@@ -81,7 +81,6 @@
     {"$GMFolder":"","%Name":"hitbox","folderPath":"folders/Sprites/enemy/flower/hitbox.yy","name":"hitbox","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"mage","folderPath":"folders/Sprites/enemy/mage.yy","name":"mage","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"hitbox","folderPath":"folders/Sprites/enemy/mage/hitbox.yy","name":"hitbox","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"pickups","folderPath":"folders/Sprites/pickups.yy","name":"pickups","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"interactables","folderPath":"folders/Sprites/interactables.yy","name":"interactables","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"door","folderPath":"folders/Sprites/interactables/door.yy","name":"door","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"pickups","folderPath":"folders/Sprites/pickups.yy","name":"pickups","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -102,7 +101,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.4.1.152",
+    "IDEVersion":"2024.8.0.169",
   },
   "name":"NOID",
   "resources":[
