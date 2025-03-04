@@ -21,5 +21,15 @@ with(obj_boss){
 	}
 } 
 
+if (hitflash) {
+    if (hitflash_countdown <= 0) {
+        hitflash = false;
+    } else {
+        hitflash_countdown--;
+    }
+} else {
+	hitflash_countdown = 5
+}
+
 draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,1)
 

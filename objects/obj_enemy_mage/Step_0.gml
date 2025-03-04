@@ -20,6 +20,5 @@ if (hitflash) {
 } else {
 	hitflash_countdown = 5
 }
-
 enemy_mage_global();
 collision();
