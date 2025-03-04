@@ -1,6 +1,6 @@
 
 
-if(obj_swordfighter.radius >= 400){
+if(instance_exists(obj_swordfighter) && obj_swordfighter.radius >= 400){
 with(obj_orbmage) visible = false;
 with(obj_shocksweeper) visible = false;
 with(obj_swordfighter) visible = false;
@@ -67,7 +67,7 @@ if(boss_over){
 	global.player_score += 2;
 	view_h -= 1.5 * 0.5625;
 	view_w -= 1.5;
-	obj_camera.y = obj_player.y -12;
+	obj_camera.y = obj_player.y -14;
 	camera_set_view_size(cam,view_w,view_h);
 } 
 

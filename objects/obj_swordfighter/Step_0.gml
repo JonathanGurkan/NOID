@@ -24,3 +24,13 @@ with(obj_boss){
 	}
 } 
 
+if (hitflash) {
+    if (hitflash_countdown <= 0) {
+        hitflash = false;
+    } else {
+        hitflash_countdown--;
+    }
+} else {
+	hitflash_countdown = 5
+}
+

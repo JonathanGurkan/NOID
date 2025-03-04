@@ -376,6 +376,8 @@
     {"id":{"name":"spr_obj_platform","path":"sprites/spr_obj_platform/spr_obj_platform.yy",},},
     {"id":{"name":"spr_obj_spikes_flat","path":"sprites/spr_obj_spikes_flat/spr_obj_spikes_flat.yy",},},
     {"id":{"name":"spr_obj_wallclimb","path":"sprites/spr_obj_wallclimb/spr_obj_wallclimb.yy",},},
+    {"id":{"name":"spr_orbmage_attack_lazer_2_hitbox","path":"sprites/spr_orbmage_attack_lazer_2_hitbox/spr_orbmage_attack_lazer_2_hitbox.yy",},},
+    {"id":{"name":"spr_orbmage_attack_lazer_2","path":"sprites/spr_orbmage_attack_lazer_2/spr_orbmage_attack_lazer_2.yy",},},
     {"id":{"name":"spr_orbmage_attack_lazer_hitbox","path":"sprites/spr_orbmage_attack_lazer_hitbox/spr_orbmage_attack_lazer_hitbox.yy",},},
     {"id":{"name":"spr_orbmage_attack_lazer","path":"sprites/spr_orbmage_attack_lazer/spr_orbmage_attack_lazer.yy",},},
     {"id":{"name":"spr_orbmage_attack_sweep_hitbox","path":"sprites/spr_orbmage_attack_sweep_hitbox/spr_orbmage_attack_sweep_hitbox.yy",},},

@@ -70,8 +70,17 @@ if(!global.bossinit){
 	obj_boss.can_attack = false;
 	image_index = 0;
 	warp(409, 582);
-	sprite_index = spr_orbmage_attack_lazer;
-	mask_index = spr_orbmage_attack_lazer_hitbox;
+	var what_attack = round(random_range(0,1))
+	
+	if(what_attack = 1){
+		sprite_index = spr_orbmage_attack_lazer;
+		mask_index = spr_orbmage_attack_lazer_hitbox;
+	} else {
+		sprite_index = spr_orbmage_attack_lazer_2;
+		mask_index = spr_orbmage_attack_lazer_2_hitbox;
+	}
+	
+	
 	global.bossinit = true;
 }
 	 boss_attack();

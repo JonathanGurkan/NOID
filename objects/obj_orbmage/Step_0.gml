@@ -33,3 +33,13 @@ with(obj_boss){
 		can_attack = true;
 	}
 }
+
+if (hitflash) {
+    if (hitflash_countdown <= 0) {
+        hitflash = false;
+    } else {
+        hitflash_countdown--;
+    }
+} else {
+	hitflash_countdown = 5
+}
