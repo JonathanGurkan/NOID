@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.097143,
+  "duration":0.731429,
   "name":"snd_e_mage_dash",
   "parent":{
     "name":"mage",
