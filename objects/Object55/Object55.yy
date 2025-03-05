@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_door_tut",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"Object55",
+  "eventList":[],
   "managed":true,
-  "name":"obj_door_tut",
+  "name":"Object55",
   "overriddenProperties":[],
   "parent":{
-    "name":"interactables",
-    "path":"folders/Objects/interactables.yy",
+    "name":"roombuilding",
+    "path":"folders/Objects/colliders/roombuilding.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_door_closed",
-    "path":"sprites/spr_door_closed/spr_door_closed.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

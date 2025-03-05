@@ -21,6 +21,8 @@ global.cutscene_count = 0;
 global.cutscene = -1;
 global.last_interacted_id = -1;
 global.bossinit = false;
+global.checkpoint = r_tutorial_1;
+global.has_died = false;
 //surface_resize(application_surface, RESOLUTION_W, RESOLUTION_H);
 room_goto(ROOM_START);
 //debug or testing 

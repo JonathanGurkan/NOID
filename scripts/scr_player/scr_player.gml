@@ -5,13 +5,14 @@ function do_nothing() {
 function scr_p_global() {
     if (global.player_health <= 0 && on_ground) {
         state = PLAYERSTATE.DEATH;
+
     }
 }
 
 function scr_p_death() {
     sprite_index = spr_player_death;
     image_speed = 1;
-
+	global.has_died = true;
     if(animation_end()) {
         global.player_is_alive = false;
         image_speed = 0;
@@ -183,6 +184,7 @@ function scr_p_dash() {
 }
 	
 function scr_p_free() {
+
 	moving_platform_collision();
 	on_ground = place_meeting(x,y+1,collision_map);
 	//Movement x

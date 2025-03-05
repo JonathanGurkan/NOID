@@ -26,3 +26,6 @@ if (!global.gamepaused) {
 scr_p_global();
 
 if(room = r_end_end && keyboard_check(vk_enter)) room = r_main_menu;
+
+
+show_debug_message(global.has_died)
