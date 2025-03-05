@@ -11,7 +11,6 @@ if (!global.gamepaused) {
 
 
 on_ground = place_meeting(x,y+1,collision_map);
-
 if (hitflash) {
     if (hitflash_countdown <= 0) {
         hitflash = false;
@@ -21,5 +20,6 @@ if (hitflash) {
 } else {
 	hitflash_countdown = 5
 }
+
 
 enemy_bot_global();

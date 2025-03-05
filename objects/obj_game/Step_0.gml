@@ -1,3 +1,12 @@
+//sound
+if(room != r_main_menu) audio_stop_sound(snd_main_menu);
+if(room != r_main_menu ) audio_play_sound(snd_main,0,0.5);
+if(room != r_bossfight){
+audio_stop_sound(snd_boss_music);
+} else {
+audio_stop_sound(snd_main);
+}
+
 //fullscreen
 if(keyboard_check(vk_f11)){
     if window_get_fullscreen()
