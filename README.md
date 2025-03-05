@@ -1,12 +1,15 @@
 # Welcome to the NOID GitHub page!
-
+(Pronounced like void)
 NOID is a dungeon-crawling adventure game developed by **Karl Olma** and **Jonathan Gurkan** using GameMaker Studio 2. Dive into an action-packed world where you explore mysterious dungeons, defeat enemies, and capture Power Cards to upgrade your character's abilities.
 
 ## Lore
-This will be replaced when the lore is done
+This is not a story about you, you are only a cog in this world’s dark hollowed out machine. The machines have taken over, they do have souls, but they got corrupted. The never ending red string, The circle, floats above us. Its light corrupts the machines, makes them angry and jealous of real flesh and blood.
+The only feeling in your chest is revenge. Roaming through the caverns wanting to kill them all. That is your goal. It won’t make things better and you know that. Still you push on forward, push yourself through the caves, push your swords into the enemy. 
+Hoping to find peace
+
+Maybe there is still hope for our kind, even though we were the ones to shatter it.
 
 ## Features
-
 - **Dungeon:** Conquer dungeons filled with challenges.
 - **Combat System:** Engage in battles against enemies and powerful bosses.
 - **Upgrade System:** Collect Power Cards to enhance your character’s Health, Stamina, Strength, and Defense. Each category features up to six upgrades, allowing for strategic customization.
@@ -47,7 +50,6 @@ This will be replaced when the lore is done
 6. **Sound:** In NOID we want to use sounds that we'll be recording ourself, which could turn out to be great but also has a pretty big chance of failing hard, so we'll see how that will turn out
 
 ## Controls, Cheats and Extra's
-
 - **Controls**
   - Move with WASD
   - Attack with Left Mouse Button
@@ -68,25 +70,20 @@ This will be replaced when the lore is done
     - Around the game there are secret entrances that lead to different parts of the game
 
 ## Scheme of the game development
-
 In this GitHub Repository you can track the progress that we made up to the initial commit. Karl has done most of the logic and Jonathan contibuted after the foundation was set
 
 ## Requirements
-
 - GameMaker Studio 2 or higher (for developers).
 - PC or Mac for playing the game.
 
 ## Development Team
-
 - **Karl:** Developer
 - **Jonathan:** Developer
 
 ## Status
-
-NOID is currently in development. Stay tuned for updates, including new features, improvements, and bug fixes! We are planning to finish a playable version of the game on the 7th of February and the final version on March 6th. We're not sure if we will be working on this project after the school project is finished but if you want to contribute to the project, please reach out to us on our GitHub pages
+NOID is currently in development. Stay tuned for updates, including new features, improvements, and bug fixes! We are planning to finish a playable version of the game on the 7th of February and the final version on March 6th. We're not sure if we will be working on this project after the school project is finished but if you want to contribute to the project, please reach out to us on our GitHub pages. After the deadline has passed, we will continue to work on NOID as a hobby project
 
 ## Feedback
-
 We'd love to hear your feedback! Please share your thoughts and suggestions by contacting us at:
 
 - **Karl's Email:** s932051@cartesius.espritscholen.nl
