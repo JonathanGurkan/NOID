@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scr_enemy_flamethrower",
   "isCompatibility":false,
   "isDnD":false,

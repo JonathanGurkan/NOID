@@ -112,7 +112,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.0.169",
+    "IDEVersion":"2024.4.1.152",
   },
   "name":"NOID",
   "resources":[
@@ -428,7 +428,6 @@
     {"id":{"name":"spr_useportal","path":"sprites/spr_useportal/spr_useportal.yy",},},
     {"id":{"name":"spr_wallclimb","path":"sprites/spr_wallclimb/spr_wallclimb.yy",},},
     {"id":{"name":"Sprite123","path":"sprites/Sprite123/Sprite123.yy",},},
-    {"id":{"name":"Sprite165","path":"sprites/Sprite165/Sprite165.yy",},},
     {"id":{"name":"Sweep_with_VFX","path":"sprites/Sweep_with_VFX/Sweep_with_VFX.yy",},},
     {"id":{"name":"Sweep_without_VFX","path":"sprites/Sweep_without_VFX/Sweep_without_VFX.yy",},},
     {"id":{"name":"The_Circle_35x37","path":"sprites/The_Circle_35x37/The_Circle_35x37.yy",},},
