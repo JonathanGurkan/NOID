@@ -141,7 +141,6 @@
     {"id":{"name":"obj_damage","path":"objects/obj_damage/obj_damage.yy",},},
     {"id":{"name":"obj_door_tut","path":"objects/obj_door_tut/obj_door_tut.yy",},},
     {"id":{"name":"obj_dustparticle","path":"objects/obj_dustparticle/obj_dustparticle.yy",},},
-    {"id":{"name":"obj_edge_light","path":"objects/obj_edge_light/obj_edge_light.yy",},},
     {"id":{"name":"obj_enemy_bot","path":"objects/obj_enemy_bot/obj_enemy_bot.yy",},},
     {"id":{"name":"obj_enemy_flamethrower","path":"objects/obj_enemy_flamethrower/obj_enemy_flamethrower.yy",},},
     {"id":{"name":"obj_enemy_flashbang","path":"objects/obj_enemy_flashbang/obj_enemy_flashbang.yy",},},
