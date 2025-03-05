@@ -16,7 +16,6 @@ if (leading == OUT) {
     }
     percent = max(0, percent - transition_speed);
 		if(instance_exists(obj_checkpoint) && global.has_died){
-			show_debug_message("aaaaaaaa")
 		obj_player.x = obj_checkpoint.x;
 		obj_player.y = obj_checkpoint.y;
 		}

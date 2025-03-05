@@ -113,12 +113,20 @@
     {"name":"inst_ABD9620","path":"rooms/r_1/r_1.yy",},
     {"name":"inst_3CCA8311","path":"rooms/r_1/r_1.yy",},
     {"name":"inst_68D0EEAC","path":"rooms/r_1/r_1.yy",},
+    {"name":"inst_1BD8C327","path":"rooms/r_1/r_1.yy",},
+    {"name":"inst_1B460610","path":"rooms/r_1/r_1.yy",},
+    {"name":"inst_538D7279","path":"rooms/r_1/r_1.yy",},
+    {"name":"inst_BD4ED16","path":"rooms/r_1/r_1.yy",},
+    {"name":"inst_294E9345","path":"rooms/r_1/r_1.yy",},
+    {"name":"inst_55DD981C","path":"rooms/r_1/r_1.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRBackgroundLayer":"","%Name":"Background_1","animationFPS":15.0,"animationSpeedType":0,"colour":1511797555,"depth":-1100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background_1","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"player","depth":-1000,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"","%Name":"inst_79A040C_5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_79A040C_5","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1243.0,"y":80.0,},
+        {"$GMRInstance":"","%Name":"inst_1BD8C327","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1BD8C327","objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"x":665.0,"y":296.0,},
+        {"$GMRInstance":"","%Name":"inst_55DD981C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_55DD981C","objectId":{"name":"obj_dooropen","path":"objects/obj_dooropen/obj_dooropen.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":2.75,"x":552.0,"y":203.0,},
       ],"layers":[],"name":"player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"pickup","depth":-900,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"","%Name":"inst_7FF86F3C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7FF86F3C","objectId":{"name":"obj_heart","path":"objects/obj_heart/obj_heart.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":320.0,"y":100.0,},

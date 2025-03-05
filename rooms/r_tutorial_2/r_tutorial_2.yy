@@ -21,6 +21,7 @@
     {"name":"inst_23742841","path":"rooms/r_tutorial_2/r_tutorial_2.yy",},
     {"name":"inst_4CD11C0F","path":"rooms/r_tutorial_2/r_tutorial_2.yy",},
     {"name":"inst_7A7883A9","path":"rooms/r_tutorial_2/r_tutorial_2.yy",},
+    {"name":"inst_112AD5C4","path":"rooms/r_tutorial_2/r_tutorial_2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -67,6 +68,7 @@
         {"$GMRInstance":"","%Name":"inst_67D7B20F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_67D7B20F","objectId":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":6.0,"scaleY":1.0,"x":224.0,"y":96.0,},
         {"$GMRInstance":"","%Name":"inst_23742841","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_23742841","objectId":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.0,"x":192.0,"y":112.0,},
         {"$GMRInstance":"","%Name":"inst_4CD11C0F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4CD11C0F","objectId":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":12.0,"scaleY":2.0,"x":0.0,"y":112.0,},
+        {"$GMRInstance":"","%Name":"inst_112AD5C4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_112AD5C4","objectId":{"name":"obj_dooropen","path":"objects/obj_dooropen/obj_dooropen.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":3.625,"x":682.0,"y":155.0,},
       ],"layers":[],"name":"colliders","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"behind_player_tiles","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
         {"$GMRAssetLayer":"","%Name":"tut_text","assets":[
