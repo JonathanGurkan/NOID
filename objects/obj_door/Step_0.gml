@@ -21,7 +21,7 @@ if (dist_p < 10 && init && !is_open){
 }
 }
 	
-if(open && !is_open){
+if((open && !is_open)){
     if (!audio_is_playing(snd_r_door_open)) audio_play_sound(snd_r_door_open,0,0);
     sprite_index = spr_door_opening;
     if(animation_end()){
@@ -30,6 +30,10 @@ if(open && !is_open){
 	is_open = true;
     }
 }
+
+
+
+
 
 
 

@@ -6,3 +6,5 @@ global.checkpoint = room;
 }
 
 if(global.checkpoint != room) trigger = false;
+
+show_debug_message(string(trigger))
