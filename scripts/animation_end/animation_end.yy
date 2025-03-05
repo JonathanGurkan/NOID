@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"animation_end",
   "isCompatibility":false,
   "isDnD":false,

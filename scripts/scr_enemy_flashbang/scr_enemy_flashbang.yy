@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scr_enemy_flashbang",
   "isCompatibility":false,
   "isDnD":false,
