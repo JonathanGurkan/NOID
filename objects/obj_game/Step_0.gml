@@ -79,4 +79,12 @@ if(room_toggle = true){
 
 if (global.gamepaused && !global.player_is_alive) {
  	global.gamepaused = false;	
- }
+}
+
+if (keyboard_check_pressed(ord("M"))) {
+	global.sound_on = !global.sound_on
+}
+
+if (keyboard_check_pressed(ord("N"))) {
+	room_goto_next()
+}
