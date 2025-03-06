@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-repeat (9) {
-    image_alpha += 0.1
+
+// Inherit the parent event
+if (obj_gameinfo.y >= 32) {
+	obj_gameinfo.y -= 50
 }
+

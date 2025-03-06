@@ -28,6 +28,7 @@
   ],
   "isDnd":false,
   "layers":[
+    {"$GMRInstanceLayer":"","%Name":"F1","depth":-400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"F1","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"on_player_plants","depth":-300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"on_player_plants","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":48,"SerialiseWidth":86,"TileCompressedData":[
           -311,-2147483648,7,614,615,616,617,618,619,620,-44,-2147483648,10,541,542,543,544,545,546,547,548,549,
           550,-25,-2147483648,7,641,642,643,644,645,646,647,-44,-2147483648,10,568,569,570,571,572,573,574,575,

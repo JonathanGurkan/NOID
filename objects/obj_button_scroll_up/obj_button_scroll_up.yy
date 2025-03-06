@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_gameover",
+  "%Name":"obj_button_scroll_up",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_gameover",
+  "name":"obj_button_scroll_up",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"buttons",
+    "path":"folders/Objects/UI/buttons.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_button",
+    "path":"objects/par_button/par_button.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gameover",
-    "path":"sprites/spr_gameover/spr_gameover.yy",
+    "name":"spr_nav_arrow",
+    "path":"sprites/spr_nav_arrow/spr_nav_arrow.yy",
   },
   "spriteMaskId":null,
   "visible":true,
