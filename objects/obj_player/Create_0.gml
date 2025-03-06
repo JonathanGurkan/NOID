@@ -88,3 +88,6 @@ transit = false;
 wait = 0;
 wait_time = 40;
 init = false;
+active_f1 = false;
+scroll_y = 0;
+scroll_speed = 10;
