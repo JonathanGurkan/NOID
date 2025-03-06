@@ -184,12 +184,11 @@ function enemy_mage_dodge() {
 
 
 function enemy_mage_death() {
+	image_speed = 1;
     move_x = 0;
     is_dying = true
     sprite_index = spr_mage_death;
-    
     if (animation_end()) {
-        
         instance_destroy();
     }
 }
