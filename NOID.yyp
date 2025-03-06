@@ -346,6 +346,7 @@
     {"id":{"name":"spr_gameinfo","path":"sprites/spr_gameinfo/spr_gameinfo.yy",},},
     {"id":{"name":"spr_gameover","path":"sprites/spr_gameover/spr_gameover.yy",},},
     {"id":{"name":"spr_gametitle","path":"sprites/spr_gametitle/spr_gametitle.yy",},},
+    {"id":{"name":"spr_get_wallclimb","path":"sprites/spr_get_wallclimb/spr_get_wallclimb.yy",},},
     {"id":{"name":"spr_health","path":"sprites/spr_health/spr_health.yy",},},
     {"id":{"name":"spr_heart","path":"sprites/spr_heart/spr_heart.yy",},},
     {"id":{"name":"spr_jump","path":"sprites/spr_jump/spr_jump.yy",},},
