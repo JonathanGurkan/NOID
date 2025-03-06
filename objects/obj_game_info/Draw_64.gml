@@ -14,7 +14,7 @@ if (show_game_info) {
         var y_pos = draw_y + (i * line_height) - scroll_y;
         if (y_pos > draw_y - line_height && y_pos < draw_y + 700) { 
             draw_set_color(c_white);
-            draw_set_font(f_button_text);
+            draw_set_font(f_small_button_text);
             draw_set_halign(fa_center);
             draw_text(draw_x, y_pos, text_lines[i]);
         }
