@@ -1,16 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_boss",
+  "%Name":"obj_checkpoint",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_boss",
+  "name":"obj_checkpoint",
   "overriddenProperties":[],
   "parent":{
-    "name":"BOSS",
-    "path":"folders/Objects/enemy/BOSS.yy",
+    "name":"roombuilding",
+    "path":"folders/Objects/colliders/roombuilding.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,9 +32,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cutscene",
-    "path":"sprites/spr_cutscene/spr_cutscene.yy",
+    "name":"spr_player_idle",
+    "path":"sprites/spr_player_idle/spr_player_idle.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

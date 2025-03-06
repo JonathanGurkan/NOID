@@ -28,8 +28,6 @@ if(!init){
 
 
 if (timer_before_attackswitch >= 0) timer_before_attackswitch--;
-
-show_debug_message(string(attack_array) + "  " + string(random_pick));
 if(timer_before_attackswitch <= 0){
 if (random_pick = -1) {
 	can_attack = true;

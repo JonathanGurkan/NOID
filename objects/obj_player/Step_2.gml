@@ -74,12 +74,11 @@ if (global.gamepaused) {
     if(key_activate) {
         switch (death_option_selected) {
             case 0: {
-                state = PLAYERSTATE.FREE;
+				state = PLAYERSTATE.FREE;
                 global.player_is_alive = true;
                 global.player_health = global.player_max_health;
                 global.player_stamina = global.player_max_stamina;
-				
-                room_transition(TRANS_TYPE.FADE, room)
+                room_transition(TRANS_TYPE.FADE, global.checkpoint)
             } break;
             case 1: {
                 room_goto(r_main_menu);

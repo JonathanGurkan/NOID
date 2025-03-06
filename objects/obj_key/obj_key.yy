@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_boss",
+  "%Name":"obj_key",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_boss",
+  "name":"obj_key",
   "overriddenProperties":[],
   "parent":{
-    "name":"BOSS",
-    "path":"folders/Objects/enemy/BOSS.yy",
+    "name":"interactables",
+    "path":"folders/Objects/interactables.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,9 +30,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cutscene",
-    "path":"sprites/spr_cutscene/spr_cutscene.yy",
+    "name":"spr_key",
+    "path":"sprites/spr_key/spr_key.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

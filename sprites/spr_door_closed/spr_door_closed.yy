@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
   "%Name":"spr_door_closed",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":47,
   "bbox_left":17,
-  "bbox_right":23,
+  "bbox_right":20,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,

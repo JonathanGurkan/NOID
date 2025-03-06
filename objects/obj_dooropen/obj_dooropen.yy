@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player_d",
+  "%Name":"obj_dooropen",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_player_d",
+  "name":"obj_dooropen",
   "overriddenProperties":[],
   "parent":{
-    "name":"player",
-    "path":"folders/Objects/player.yy",
+    "name":"roombuilding",
+    "path":"folders/Objects/colliders/roombuilding.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -26,14 +26,16 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"link","filters":[],"listItems":[],"multiselect":false,"name":"link","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_death",
-    "path":"sprites/spr_player_death/spr_player_death.yy",
+    "name":"spr_dooropen",
+    "path":"sprites/spr_dooropen/spr_dooropen.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
