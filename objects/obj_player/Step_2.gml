@@ -30,9 +30,7 @@ if (global.gamepaused) {
  	            } break;
 
  	        }
- 		}
-
- 		if (pause_option == pause_menu_options) {
+ 		} else if (pause_option == pause_menu_options) {
  			switch (pause_option_selected) {
  	            case 0: { //Toggle Sound
  	               audio_play_sound(snd_menu_fw,0,0);
