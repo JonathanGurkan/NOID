@@ -26,3 +26,24 @@ if (!global.gamepaused) {
 scr_p_global();
 
 if(room = r_end_end && keyboard_check(vk_enter)) room = r_main_menu;
+
+// Toggle the info display with F1
+if (keyboard_check_pressed(vk_f1)) {
+    active_f1 = !active_f1;
+}
+
+// Process scrolling only if the info display is active
+if (active_f1) {
+    // Scroll down when pressing the down arrow
+    if (keyboard_check(vk_down)) {
+        scroll_y += scroll_speed;
+    }
+    // Scroll up when pressing the up arrow
+    if (keyboard_check(vk_up)) {
+        scroll_y -= scroll_speed;
+    }
+    
+    // Clamp scroll_y so you don't scroll past the sprite limits
+    var spr_h = sprite_get_height(spr_gameinfo);
+    scroll_y = clamp(scroll_y, 0, max(0, spr_h - room_height));
+}

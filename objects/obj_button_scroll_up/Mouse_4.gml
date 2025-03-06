@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-x = obj_player.x
-y = obj_player.y
-image_alpha = 0
+// Inherit the parent event
+if (obj_gameinfo.y <= -6400) {
+	obj_gameinfo.y += 50
+}
+
