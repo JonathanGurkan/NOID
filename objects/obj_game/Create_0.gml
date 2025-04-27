@@ -24,6 +24,7 @@ global.bossinit = false;
 global.checkpoint = r_tutorial_1;
 global.has_died = false;
 global.got_key = false;
+global.doublejump = false;
 //surface_resize(application_surface, RESOLUTION_W, RESOLUTION_H);
 room_goto(ROOM_START);
 //debug or testing 

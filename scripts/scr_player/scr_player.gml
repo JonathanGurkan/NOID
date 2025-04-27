@@ -63,6 +63,8 @@ function scr_p_animation() {
 
 	
 function scr_p_attack_1() {
+	collision()
+	if(on_ground) move_x = 0;
     if (!audio_is_playing(snd_p_attack_1) && global.player_stamina > 0) audio_play_sound(snd_p_attack_1,0,0,0.2,0,random_range(0.5,1));
 	  if (global.player_stamina > 0) {
 	   process_attack(spr_player_attack_1,spr_player_attack_1_hitbox)
@@ -83,6 +85,8 @@ function scr_p_attack_1() {
 }
 
 function scr_p_attack_2() {
+	collision()
+	if(on_ground) move_x = 0;
     if (!audio_is_playing(snd_p_attack_2)) audio_play_sound(snd_p_attack_2,0,0,0.7,0,random_range(0.5,1));
 	if (global.player_stamina > 0) {
 	   process_attack(spr_player_attack_2,spr_player_attack_2_hitbox);
@@ -102,6 +106,8 @@ function scr_p_attack_2() {
 }
 
 function scr_p_attack_3() {
+	collision()
+	if(on_ground) move_x = 0;
     if (!audio_is_playing(snd_p_attack_3)) audio_play_sound(snd_p_attack_3,0,0,0.7,0,random_range(0.5,1));
     process_attack(spr_player_attack_3,spr_player_attack_3_hitbox)
         
@@ -203,9 +209,14 @@ function scr_p_free() {
 
 	collision();
     
-	if (on_ground) {
-	    jump_buffer = 8;
+	if (on_ground || on_wall != 0) {
+	    if (global.doublejump){
+			jump_buffer = 100;
+		} else {
+			jump_buffer = 8;
+		}
 	}
+	show_debug_message(jump_buffer)
 	
 	//global.player_stamina logic
 	if (stamina_can_regen && global.player_stamina < 100 && global.player_stamina >= 0) {
