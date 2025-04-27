@@ -1,11 +1,6 @@
-function do_nothing() {
-//ye, just do nothing
-}
-	
 function scr_p_global() {
     if (global.player_health <= 0 && on_ground) {
         state = PLAYERSTATE.DEATH;
-
     }
 }
 
@@ -27,14 +22,9 @@ function scr_p_animation() {
         audio_stop_sound(snd_p_walk_1)
 	} else {
         if (!audio_is_playing(snd_p_walk_1)) audio_play_sound(snd_p_walk_1,0,1,0.4); 
-        if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift)) {
-        image_speed = 1;
-        sprite_index = spr_player_move_3;
-        } else {
 	    image_speed = 1;
 	    sprite_index =  spr_player_move;
         }
-	} 
 	
 	if (on_ground) {
         audio_stop_sound(snd_p_jump_fly);
@@ -65,16 +55,9 @@ function scr_p_animation() {
 	}
 	
 	
-	if(on_wall == 0){
-		dust = 0;
-		var angle = point_direction(x, y, mouse_x, mouse_y);
-        
-		// Constrain the angle between -90 and 90 degrees
-		if (angle > 90 && angle < 270) {
-		    image_xscale = -1;
-		} else {
-			    image_xscale = 1;
-		}
+	if(on_wall == 0) {
+		dust = 0; 
+		if (dir != 0) image_xscale = dir;
 	}
 }
 
@@ -149,43 +132,39 @@ function scr_p_attack_strong() {
 }
 	
 function scr_p_dash() { 
-    collision();
-    if (!audio_is_playing(snd_p_dash)) audio_play_sound(snd_p_dash,0,0,1,0,random_range(0.8,1));
+	collision()
+	if (!audio_is_playing(snd_p_dash)) audio_play_sound(snd_p_dash,0,0,1,0,random_range(0.8,1));
 	move_x = lengthdir_x(dash_speed,dash_direction)
-	move_y = 0;
-	with(instance_create_depth(x,y,depth+1,obj_trail)) {
-        var angle = point_direction(x, y, mouse_x, mouse_y);
-                if (angle > 90 && angle < 270) {
-                        image_xscale = -1;
-                    } else {
-                        image_xscale = 1;
-                    }
-	    sprite_index = other.sprite_index;
-	    image_blend = c_white;
-	    image_alpha = 0.7;
-	}
+	image_speed = 0
+	sprite_index = spr_player_dash;
 	dash_energy -= dash_speed
-	if (!place_meeting(x,y+1,collision_map)) {
-	    sprite_index = spr_player_dash;
-	} else {
-	    image_speed = 1
-	    sprite_index = spr_player_dash;
-	}
 	
-	if (dash_energy <= 0) {
-		move_x = 0;
+	
+	if(dash_energy >= 0){
+		with(instance_create_depth(x,y,depth+1,obj_trail)) {
+			image_xscale = other.image_xscale;
+		    sprite_index = other.sprite_index;
+		    image_blend = c_white;
+		    image_alpha = 0.7;
+		}
+	} else {
+		
+		image_speed = 1;
+		move_x = 1 * image_xscale;
 		move_y = 0;
-		can_dash  = true;
-		state = PLAYERSTATE.FREE;
-		last_state = PLAYERSTATE.DASH;
-		change_stamina(3);
-	}
+		if(animation_end()){
+			change_stamina(3);
+			can_dash  = true;
+			state = PLAYERSTATE.FREE;
+			last_state = PLAYERSTATE.DASH;	
+		}
  
+	}	
+
 }
 	
 function scr_p_free() {
 
-	moving_platform_collision();
 	on_ground = place_meeting(x,y+1,collision_map);
 	//Movement x
 	dir = key_right - key_left;
@@ -262,29 +241,17 @@ function scr_p_free() {
 	    --dash_cooldown;
 	}
      
-	if (can_dash && key_dash &&  move_x != 0 && global.player_stamina > 0) {
-	    dash_cooldown = dash_duration;
+	if (on_ground && can_dash && key_dash && global.player_stamina > 0) {
+	    dash_cooldown = dash_cool; 
 	    can_dash = false;
-	    dash_direction =  point_direction(0,0,key_right-key_left,0);
 	    dash_speed = dash_distance / dash_time;
 	    dash_energy = dash_distance;
+	    dash_direction = point_direction(0,0,image_xscale,0);
 	    state = PLAYERSTATE.DASH;
-        last_state = PLAYERSTATE.FREE;
+		image_index = 0;
 	}
-
     
-
-    if (on_ground) {
-      if (last_state = PLAYERSTATE.DASH && keyboard_check(vk_shift) && global.player_stamina >= 0 && move_x != 0) {
-        move_x_max_final = run_speed;
-        stamina_can_regen = false;
-		change_stamina(0.05);
-      } else {
-        move_x_max_final = walk_speed;
-      }       
-    }
-    
-	if (key_attack && can_attack && global.player_stamina > 10 && on_ground) {
+	if (key_attack && can_attack && global.player_stamina > 10) {
 		change_stamina(10);
 	    state = PLAYERSTATE.ATTACK_1;
 	    can_attack = false; 
@@ -372,31 +339,4 @@ function wallclimb() {
 	if (on_wall != 0) && (move_y > 0){
 	    move_y = grv_onwall;
 	}
-}
-
-function moving_platform_collision() {
-var rightWall = noone;
-var list = ds_list_create();
-var listSize = instance_place_list(x,y,obj_collision_move,list,false);
-
-// Loop through all colliding move platforms
-for (var i = 0; i < listSize; i++) {
-    var listInst = ds_list_find_value(list, i); // Fix: Use ds_list_find_value instead of list[i]
-
-    // If there are walls to the right of me, get the closest one
-    if (listInst.bbox_left - listInst.move_x >= bbox_right - 1) {
-        if (!instance_exists(rightWall) || listInst.bbox_left < rightWall.bbox_left) {
-            rightWall = listInst;
-        }
-    }
-}
-
-// Destroy the ds list to free memory
-ds_list_destroy(list);
-
-// Get out of the walls
-if (instance_exists(rightWall)) {
-    var rightDist = bbox_right - x;
-    x = rightWall.bbox_left - rightDist;
-}
 }

@@ -35,6 +35,7 @@ grv_onwall = 0.1;
 //movement speeds
 walk_speed = 2; // walking speed
 jump_speed = -6; // jump strength
+dash_speed = 0;
 walk_acc = 0.4;
 fric_ground_speed = 0.70;
 fric_air_speed = 0.3;
@@ -45,13 +46,13 @@ move_y_max = 4;
 move_x_max_final = walk_speed;
 //Dash variables
 can_dash = true;
-dash_distance = 64;
-dash_time = 10;
-dash_duration = 20;
+dash_cool = 20;
 dash_cooldown = 0;
-dash_cool_x = 12;
-dash_cool_y = 50;
+dash_direction = 0;
 dash_energy = 0;
+dash_distance = 48;
+dash_speed = 0;
+dash_time = 15;
 //Stamina
 stamina_timer = 120; //120/60 is 2 sec
 stamina_can_regen = false;

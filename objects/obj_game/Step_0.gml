@@ -1,3 +1,5 @@
+show_debug_overlay(true);
+
 //sound
 if(room != r_main_menu) { 
 	audio_stop_sound(snd_main_menu);
