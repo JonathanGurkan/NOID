@@ -176,39 +176,36 @@ function scr_p_dash() {
 }
 
 function scr_p_teleport() {
+	collision();
 	move_y = 0;
 	if(teleport_out){
+		if (on_ground) move_y = -1;
 		move_x = 0;
-		sprite_index = spr_player_move_3;
-		image_speed = 1;
-	if(image_index == 6)
-		image_speed = 0;
+		sprite_index = spr_player_teleport_in;
+	if(image_index = 6){
+		image_speed = 0
 		teleport_out = false;
-		teleport_time = 10;
+		teleport_time = 6;
+		move_y = 0;
+	}
 	} else {
 		if(teleport_time > 0){
 		--teleport_time;
-		move_x = 16;
+		move_x = 16 * image_xscale;
 		}
 
-	if(teleport_time <= 0){
-	move_x = 0;
-	sprite_index = spr_player_teleport_out;
-	
-	if(animation_end()){
-	state = PLAYERSTATE.FREE
+		if(teleport_time <= 0 && !teleport_out){
+		move_x = 0;
+		if (on_ground) move_y = 1;
+		image_speed = 1;
+		sprite_index = spr_player_teleport_out;
+		if(animation_end())state = PLAYERSTATE.FREE
+		}
 	}
-	}
-	}
-	
-
 }
-
 
 function scr_p_free() {
 	
-	
-
 	on_ground = place_meeting(x,y+1,collision_map);
 	//Movement x
 	dir = key_right - key_left;
@@ -300,7 +297,7 @@ function scr_p_free() {
 		}
 	}
 	 
-	if (on_ground && can_dash && global.player_stamina > 0 && regular_dash && !key_dash) or ( can_dash && key_dash && global.player_stamina > 0 && global.airdash) {
+	if (on_ground && can_dash && global.player_stamina > 0 && regular_dash && !key_dash) or (can_dash && global.player_stamina > 0 && regular_dash && !key_dash && global.airdash) {
 	    dash_cooldown = dash_cool; 
 	    can_dash = false;
 	    dash_speed = dash_distance / dash_time;

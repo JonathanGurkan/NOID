@@ -27,14 +27,3 @@ if (!global.gamepaused) {
 scr_p_global();
 
 if(room = r_end_end && keyboard_check(vk_enter)) room = r_main_menu;
-
- show_debug_message(
-        "move_x: " + string(move_x) + 
-        " | move_y: " + string(move_y) + 
-        " | teleport_out: " + string(teleport_out) + 
-        " | teleport_time: " + string(teleport_time) + 
-        " | sprite_index: " + string(sprite_index) + 
-        " | image_speed: " + string(image_speed) + 
-        " | image_index: " + string(image_index) + 
-        " | state: " + string(state)
-    );
