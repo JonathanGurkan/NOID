@@ -193,7 +193,6 @@ function scr_p_teleport() {
 		--teleport_time;
 		move_x = 16 * image_xscale;
 		}
-
 		if(teleport_time <= 0 && !teleport_out){
 		move_x = 0;
 		if (on_ground) move_y = 1;
@@ -205,7 +204,6 @@ function scr_p_teleport() {
 }
 
 function scr_p_free() {
-	
 	on_ground = place_meeting(x,y+1,collision_map);
 	//Movement x
 	dir = key_right - key_left;
@@ -288,7 +286,11 @@ function scr_p_free() {
      show_debug_message(string(dash_held))
 	
 	if(key_dash){
-		++dash_held;
+		if(global.teleport){
+			++dash_held;
+		} else {
+			regular_dash = true;
+		}
 		if(dash_held < 20){
 			regular_dash = true;
 		} else {

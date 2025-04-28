@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_doublejump",
-    "path":"sprites/spr_doublejump/spr_doublejump.yy",
+    "name":"spr_teleport",
+    "path":"sprites/spr_teleport/spr_teleport.yy",
   },
   "spriteMaskId":null,
   "visible":true,
