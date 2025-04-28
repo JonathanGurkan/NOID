@@ -2,7 +2,7 @@ key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(ord("Z"));
 key_jump_held = keyboard_check(ord("Z"));
-key_dash = keyboard_check_pressed(ord("C"));
+key_dash = keyboard_check(ord("C"));
 key_use = keyboard_check_pressed(ord("E"));
 key_attack = keyboard_check_pressed(ord("X"));
 key_attack_strong = mouse_check_button(mb_right);
@@ -19,10 +19,22 @@ if (!global.gamepaused) {
         case PLAYERSTATE.DASH: scr_p_dash(); break;
         case PLAYERSTATE.PARRY: scr_p_attack_strong(); break;
         case PLAYERSTATE.ENDTUT: scr_p_endtut(); break;
-		case PLAYERSTATE.DEATH: scr_p_death(); break
-		case PLAYERSTATE.LOCK: do_nothing(); break
+		case PLAYERSTATE.DEATH: scr_p_death(); break;
+		case PLAYERSTATE.LOCK: do_nothing(); break;
+		case PLAYERSTATE.TELEPORT: scr_p_teleport(); break;
     }
 }
 scr_p_global();
 
 if(room = r_end_end && keyboard_check(vk_enter)) room = r_main_menu;
+
+ show_debug_message(
+        "move_x: " + string(move_x) + 
+        " | move_y: " + string(move_y) + 
+        " | teleport_out: " + string(teleport_out) + 
+        " | teleport_time: " + string(teleport_time) + 
+        " | sprite_index: " + string(sprite_index) + 
+        " | image_speed: " + string(image_speed) + 
+        " | image_index: " + string(image_index) + 
+        " | state: " + string(state)
+    );

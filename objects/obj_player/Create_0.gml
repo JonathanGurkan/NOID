@@ -33,7 +33,7 @@ knockback_speed = 0;
 grv = 0.25;
 grv_onwall = 0.1;
 //movement speeds
-walk_speed = 2; // walking speed
+walk_speed = 3; // walking speed
 jump_speed = -6; // jump strength
 dash_speed = 0;
 walk_acc = 0.4;
@@ -52,7 +52,14 @@ dash_direction = 0;
 dash_energy = 0;
 dash_distance = 48;
 dash_speed = 0;
-dash_time = 15;
+dash_time = 12;
+dash_held = 0;
+regular_dash = false;
+//teleport vars
+teleport = false;
+teleport_direction = 0;
+teleport_time = 3;
+teleport_out = false;
 //Stamina
 stamina_timer = 120; //120/60 is 2 sec
 stamina_can_regen = false;

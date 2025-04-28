@@ -61,7 +61,6 @@ function scr_p_animation() {
 	}
 }
 
-	
 function scr_p_attack_1() {
 	collision()
 	if(on_ground) move_x = 0;
@@ -144,6 +143,7 @@ function scr_p_dash() {
 	image_speed = 0
 	sprite_index = spr_player_dash;
 	dash_energy -= dash_speed
+	if(global.airdash && !on_ground) move_y = 0;
 	
 	
 	if(dash_energy >= 0){
@@ -153,11 +153,17 @@ function scr_p_dash() {
 		    image_blend = c_white;
 		    image_alpha = 0.7;
 		}
-	} else {
-		
-		image_speed = 1;
+	} else 
+		if(global.airdash && !on_ground){
+			change_stamina(3);
+			can_dash  = true;
+			state = PLAYERSTATE.FREE;
+			last_state = PLAYERSTATE.DASH;	
+			
+		} else {
+		if (on_ground)image_speed = 1;
 		move_x = 1 * image_xscale;
-		move_y = 0;
+		
 		if(animation_end()){
 			change_stamina(3);
 			can_dash  = true;
@@ -166,10 +172,42 @@ function scr_p_dash() {
 		}
  
 	}	
+	
+}
+
+function scr_p_teleport() {
+	move_y = 0;
+	if(teleport_out){
+		move_x = 0;
+		sprite_index = spr_player_move_3;
+		image_speed = 1;
+	if(image_index == 6)
+		image_speed = 0;
+		teleport_out = false;
+		teleport_time = 10;
+	} else {
+		if(teleport_time > 0){
+		--teleport_time;
+		move_x = 16;
+		}
+
+	if(teleport_time <= 0){
+	move_x = 0;
+	sprite_index = spr_player_teleport_out;
+	
+	if(animation_end()){
+	state = PLAYERSTATE.FREE
+	}
+	}
+	}
+	
 
 }
-	
+
+
 function scr_p_free() {
+	
+	
 
 	on_ground = place_meeting(x,y+1,collision_map);
 	//Movement x
@@ -216,7 +254,6 @@ function scr_p_free() {
 			jump_buffer = 8;
 		}
 	}
-	show_debug_message(jump_buffer)
 	
 	//global.player_stamina logic
 	if (stamina_can_regen && global.player_stamina < 100 && global.player_stamina >= 0) {
@@ -251,8 +288,19 @@ function scr_p_free() {
 	    can_dash = false;
 	    --dash_cooldown;
 	}
-     
-	if (on_ground && can_dash && key_dash && global.player_stamina > 0) {
+     show_debug_message(string(dash_held))
+	
+	if(key_dash){
+		++dash_held;
+		if(dash_held < 20){
+			regular_dash = true;
+		} else {
+			teleport = true;
+			regular_dash = false;
+		}
+	}
+	 
+	if (on_ground && can_dash && global.player_stamina > 0 && regular_dash && !key_dash) or ( can_dash && key_dash && global.player_stamina > 0 && global.airdash) {
 	    dash_cooldown = dash_cool; 
 	    can_dash = false;
 	    dash_speed = dash_distance / dash_time;
@@ -260,6 +308,17 @@ function scr_p_free() {
 	    dash_direction = point_direction(0,0,image_xscale,0);
 	    state = PLAYERSTATE.DASH;
 		image_index = 0;
+		regular_dash = false;	
+		dash_held = 0;
+		}
+	
+	if(dash_held > 20){
+		state = PLAYERSTATE.TELEPORT;
+		image_index = 0;
+		teleport = false;
+		teleport_out = true;
+		teleport_direction = point_direction(0,0,image_xscale,0);
+		dash_held = 0;
 	}
     
 	if (key_attack && can_attack && global.player_stamina > 10) {
@@ -319,14 +378,13 @@ function process_attack(sprite, mask) {
 	    ds_list_destroy(hit_by_attack_now);
 	    mask_index = spr_player_idle;
 }
-
 	
 function scr_p_transition() {
 	scr_p_animation();
 	collision();
 }
 
-function scr_p_teleport() { 
+function scr_p_warp() { 
     global.target_room = target_room; 
     global.target_x = target_x;
     global.target_y = target_y;
@@ -336,7 +394,6 @@ function scr_p_teleport() {
     instance_destroy(); 
 }
 
-    ;
 function change_stamina(amount) {
 	global.player_stamina -= amount;
 }

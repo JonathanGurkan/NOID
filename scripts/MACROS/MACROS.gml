@@ -16,7 +16,8 @@ enum PLAYERSTATE{
 	HURT,
     ENDTUT,
     DEATH,
-	LOCK
+	LOCK,
+	TELEPORT
 }
 
 enum ENEMYSTATE{

@@ -10,6 +10,10 @@ if (timer = 1){
 }
 
 
+	   
+
+
+
 if (enemy_count <= 1 && distance_to_p < 20 && obj_player.key_use) trigger = true;
     
 if(trigger){
@@ -32,7 +36,7 @@ if(teleport){
     sprite_index = spr_portal_warp;
         if(animation_end()){
             image_speed = 0;
-            scr_p_teleport();
+            scr_p_warp();
         }
     with(obj_player) visible = false;
 }

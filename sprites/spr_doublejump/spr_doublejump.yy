@@ -4,8 +4,8 @@
   "bboxMode":0,
   "bbox_bottom":15,
   "bbox_left":0,
-  "bbox_right":14,
-  "bbox_top":1,
+  "bbox_right":15,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -14,8 +14,8 @@
   "frames":[
     {"$GMSpriteFrame":"","%Name":"37b36319-dd7a-4349-8409-5d7c586683de","name":"37b36319-dd7a-4349-8409-5d7c586683de","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
+  "gridX":8,
+  "gridY":8,
   "height":16,
   "HTile":false,
   "layers":[
@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"pickups",
-    "path":"folders/Sprites/pickups.yy",
+    "name":"abilities",
+    "path":"folders/Sprites/pickups/abilities.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
