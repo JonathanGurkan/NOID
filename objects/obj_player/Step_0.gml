@@ -6,6 +6,7 @@ key_dash = keyboard_check(ord("C"));
 key_use = keyboard_check_pressed(ord("E"));
 key_attack = keyboard_check_pressed(ord("X"));
 key_attack_strong = mouse_check_button(mb_right);
+key_throw = keyboard_check_pressed(ord("A"))
 on_ground = place_meeting(x,y+1,collision_map);
 on_wall = place_meeting(x+1,y,obj_collision) - place_meeting(x-1,y,obj_collision); 
 dist_to_wall = distance_to_object(obj_wall);
@@ -27,3 +28,6 @@ if (!global.gamepaused) {
 scr_p_global();
 
 if(room = r_end_end && keyboard_check(vk_enter)) room = r_main_menu;
+
+
+show_debug_message(jumps)

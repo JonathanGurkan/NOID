@@ -168,7 +168,6 @@ function scr_p_dash() {
 			change_stamina(3);
 			can_dash  = true;
 			state = PLAYERSTATE.FREE;
-			last_state = PLAYERSTATE.DASH;	
 		}
  
 	}	
@@ -177,6 +176,8 @@ function scr_p_dash() {
 
 function scr_p_teleport() {
 	collision();
+	can_dash = false;
+	dash_held = 0;
 	move_y = 0;
 	if(teleport_out){
 		if (on_ground) move_y = -1;
@@ -198,13 +199,17 @@ function scr_p_teleport() {
 		if (on_ground) move_y = 1;
 		image_speed = 1;
 		sprite_index = spr_player_teleport_out;
-		if(animation_end())state = PLAYERSTATE.FREE
+		if(animation_end()){
+			state = PLAYERSTATE.FREE
+			can_dash  = true;
+		}
 		}
 	}
 }
 
 function scr_p_free() {
 	on_ground = place_meeting(x,y+1,collision_map);
+	
 	//Movement x
 	dir = key_right - key_left;
 	move_x += dir * walk_acc;
@@ -221,11 +226,10 @@ function scr_p_free() {
 	if (global.wallclimb = true) wallclimb();
 	
 	//Movement y
-	if (jump_buffer > 0) {
-	    jump_buffer--;
+	if (jumps > 0){
 	    if (key_jump) {
-	        jump_buffer = 0;
 	        move_y = jump_speed;
+			jumps =- 1;
 	    }
 	}
    
@@ -242,11 +246,11 @@ function scr_p_free() {
 
 	collision();
     
-	if (on_ground || on_wall != 0) {
+	if (on_ground || (on_wall != 0 && global.doublejump)) {
 	    if (global.doublejump){
-			jump_buffer = 100;
+			jumps = 2;
 		} else {
-			jump_buffer = 8;
+			jumps = 1;
 		}
 	}
 	
@@ -291,7 +295,7 @@ function scr_p_free() {
 		} else {
 			regular_dash = true;
 		}
-		if(dash_held < 20){
+		if(dash_held < 50){
 			regular_dash = true;
 		} else {
 			teleport = true;
@@ -299,7 +303,7 @@ function scr_p_free() {
 		}
 	}
 	 
-	if (on_ground && can_dash && global.player_stamina > 0 && regular_dash && !key_dash) or (can_dash && global.player_stamina > 0 && regular_dash && !key_dash && global.airdash) {
+	if (on_ground && can_dash && global.player_stamina > 0 && regular_dash && !key_dash) or (can_dash && global.player_stamina > 0 && regular_dash && global.airdash) {
 	    dash_cooldown = dash_cool; 
 	    can_dash = false;
 	    dash_speed = dash_distance / dash_time;
@@ -311,7 +315,7 @@ function scr_p_free() {
 		dash_held = 0;
 		}
 	
-	if(dash_held > 20){
+	if(dash_held > 50){
 		state = PLAYERSTATE.TELEPORT;
 		image_index = 0;
 		teleport = false;
@@ -320,6 +324,10 @@ function scr_p_free() {
 		dash_held = 0;
 	}
     
+	if(key_throw) instance_create_layer(x,y-10,layer_create(0,"throw_layer"), obj_thrown_jump_orb)
+		
+	
+	
 	if (key_attack && can_attack && global.player_stamina > 10) {
 		change_stamina(10);
 	    state = PLAYERSTATE.ATTACK_1;

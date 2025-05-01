@@ -1,9 +1,9 @@
 in_jump_orb = place_meeting(x+1,y,obj_player);
-var key_jump = keyboard_check_pressed(vk_space) || keyboard_check(ord("W"));
+var key_jump = keyboard_check_pressed(vk_space) || keyboard_check(ord("C"));
 
 if (in_jump_orb) && (orb_time <= 0) && (key_jump) {
         orb_time = 10;
-        obj_player.jump_buffer = 6;
+        obj_player.jumps = 1;
 }
 
 if (orb_time > 0) {

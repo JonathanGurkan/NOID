@@ -17,6 +17,7 @@ key_jump_held = false;
 key_use = false;
 key_attack = false;
 key_attack_strong = false;
+key_throw = false;
 //Movement variables
 last_x = 0;
 last_y = 0;
@@ -24,7 +25,7 @@ move_x= 0;
 move_y = 0; 
 move_x_frac = 0;
 move_y_frac = 0;
-jump_buffer = 0;
+jumps = 0;
 on_ground = 0;
 dir =0;
 z = 0;
@@ -33,14 +34,13 @@ knockback_speed = 0;
 grv = 0.25;
 grv_onwall = 0.1;
 //movement speeds
-walk_speed = 3; // walking speed
+walk_speed = 2; // walking speed
 jump_speed = -6; // jump strength
 dash_speed = 0;
 walk_acc = 0.4;
 fric_ground_speed = 0.70;
 fric_air_speed = 0.3;
 //Max speed
-walk_speed = 2;
 run_speed = 3;
 move_y_max = 4;
 move_x_max_final = walk_speed;
@@ -52,7 +52,7 @@ dash_direction = 0;
 dash_energy = 0;
 dash_distance = 48;
 dash_speed = 0;
-dash_time = 12;
+dash_time = 10;
 dash_held = 0;
 regular_dash = false;
 //teleport vars
