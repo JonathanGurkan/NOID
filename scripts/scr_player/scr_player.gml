@@ -5,7 +5,6 @@ function do_nothing() {
 function scr_p_global() {
     if (global.player_health <= 0 && on_ground) {
         state = PLAYERSTATE.DEATH;
-
     }
 }
 
