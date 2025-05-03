@@ -225,11 +225,20 @@ function scr_p_free() {
 	
 	if (global.wallclimb = true) wallclimb();
 	
+	
 	//Movement y
-	if (jumps > 0){
+	if (on_ground  || (on_wall != 0 && global.doublejump)) {
+		if (global.doublejump){
+			jumps = 2;
+		} else {
+			jumps = 1;
+		}
+	}
+	
+	if ((jumps > 0 && on_ground) || (jumps > 0 &&  global.doublejump) ){
 	    if (key_jump) {
 	        move_y = jump_speed;
-			jumps =- 1;
+			jumps -= 1;
 	    }
 	}
    
@@ -246,13 +255,7 @@ function scr_p_free() {
 
 	collision();
     
-	if (on_ground || (on_wall != 0 && global.doublejump)) {
-	    if (global.doublejump){
-			jumps = 2;
-		} else {
-			jumps = 1;
-		}
-	}
+
 	
 	//global.player_stamina logic
 	if (stamina_can_regen && global.player_stamina < 100 && global.player_stamina >= 0) {

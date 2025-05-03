@@ -8,7 +8,7 @@ move_y_max = 10;
 grv = 0.25;
 in_jump_orb = false;
 orb_time = 0;
-
+thrown = false
 
 
 
