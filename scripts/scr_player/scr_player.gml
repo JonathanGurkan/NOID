@@ -255,8 +255,6 @@ function scr_p_free() {
 
 	collision();
     
-
-	
 	//global.player_stamina logic
 	if (stamina_can_regen && global.player_stamina < 100 && global.player_stamina >= 0) {
 		global.player_stamina += 0.32;
@@ -290,46 +288,34 @@ function scr_p_free() {
 	    can_dash = false;
 	    --dash_cooldown;
 	}
-     show_debug_message(string(dash_held))
 	
 	if(key_dash){
-		if(global.teleport){
-			++dash_held;
-		} else {
-			regular_dash = true;
-		}
-		if(dash_held < 50){
-			regular_dash = true;
-		} else {
-			teleport = true;
-			regular_dash = false;
-		}
+		if (on_ground && can_dash && global.player_stamina > 0) or (can_dash && global.player_stamina > 0 && global.airdash) {
+		    dash_cooldown = dash_cool; 
+		    can_dash = false;
+		    dash_speed = dash_distance / dash_time;
+		    dash_energy = dash_distance;
+		    dash_direction = point_direction(0,0,image_xscale,0);
+		    state = PLAYERSTATE.DASH;
+			image_index = 0;
+			regular_dash = false;	
+			dash_held = 0;
+			}
 	}
-	 
-	if (on_ground && can_dash && global.player_stamina > 0 && regular_dash && !key_dash) or (can_dash && global.player_stamina > 0 && regular_dash && global.airdash) {
-	    dash_cooldown = dash_cool; 
-	    can_dash = false;
-	    dash_speed = dash_distance / dash_time;
-	    dash_energy = dash_distance;
-	    dash_direction = point_direction(0,0,image_xscale,0);
-	    state = PLAYERSTATE.DASH;
-		image_index = 0;
-		regular_dash = false;	
-		dash_held = 0;
-		}
 	
-	if(dash_held > 50){
+	if (teleport_key) { //To be replaced
 		state = PLAYERSTATE.TELEPORT;
 		image_index = 0;
 		teleport = false;
 		teleport_out = true;
 		teleport_direction = point_direction(0,0,image_xscale,0);
 		dash_held = 0;
+		show_debug_message("aaaaaaaaaa")
 	}
     
 	if(key_throw) instance_create_layer(x,y-10,layer_create(0,"throw_layer"), obj_thrown_jump_orb)
 		
-	
+	if(key_orb_select) instance_create_layer(x,y-10,layer_create(0,"throw_layer"), obj_orb_wheel_controler)
 	
 	if (key_attack && can_attack && global.player_stamina > 10) {
 		change_stamina(10);

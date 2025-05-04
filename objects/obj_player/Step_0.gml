@@ -10,6 +10,9 @@ key_throw = keyboard_check_pressed(ord("A"))
 on_ground = place_meeting(x,y+1,collision_map);
 on_wall = place_meeting(x+1,y,obj_collision) - place_meeting(x-1,y,obj_collision); 
 dist_to_wall = distance_to_object(obj_wall);
+key_orb_select = keyboard_check_pressed(vk_tab);
+teleport_key = keyboard_check_pressed(ord("T"));
+
 
 if (!global.gamepaused) {
     switch (state) {

@@ -18,6 +18,8 @@ key_use = false;
 key_attack = false;
 key_attack_strong = false;
 key_throw = false;
+key_orb_select = false;
+teleport_key = false;
 //Movement variables
 last_x = 0;
 last_y = 0;
