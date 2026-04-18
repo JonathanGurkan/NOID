@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_player_cutscenes",
   "isCompatibility":false,
   "isDnD":false,

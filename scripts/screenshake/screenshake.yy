@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"screenshake",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_swordmaster_death",
   "bboxMode":0,
   "bbox_bottom":20,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"54c664fd-d6e7-4a5f-a78e-f3ba21dbe3cb","name":"54c664fd-d6e7-4a5f-a78e-f3ba21dbe3cb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8f9d82d0-98e8-4713-b915-5baf374821e8","name":"8f9d82d0-98e8-4713-b915-5baf374821e8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e9b876e7-a2f4-4bc4-b946-bf3517948ff0","name":"e9b876e7-a2f4-4bc4-b946-bf3517948ff0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a0c4481c-4443-4198-a811-294e939e38a1","name":"a0c4481c-4443-4198-a811-294e939e38a1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"81944efd-c40a-4d0c-9274-50d200a2a530","name":"81944efd-c40a-4d0c-9274-50d200a2a530","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8e19ce92-0583-4fad-9d1e-6bfa2f3cc27d","name":"8e19ce92-0583-4fad-9d1e-6bfa2f3cc27d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f6212ede-e96e-430c-b52e-b889792ce43a","name":"f6212ede-e96e-430c-b52e-b889792ce43a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d3c41c95-7a19-48bd-a626-62c591c989a1","name":"d3c41c95-7a19-48bd-a626-62c591c989a1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"54c664fd-d6e7-4a5f-a78e-f3ba21dbe3cb","name":"54c664fd-d6e7-4a5f-a78e-f3ba21dbe3cb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8f9d82d0-98e8-4713-b915-5baf374821e8","name":"8f9d82d0-98e8-4713-b915-5baf374821e8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e9b876e7-a2f4-4bc4-b946-bf3517948ff0","name":"e9b876e7-a2f4-4bc4-b946-bf3517948ff0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a0c4481c-4443-4198-a811-294e939e38a1","name":"a0c4481c-4443-4198-a811-294e939e38a1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"81944efd-c40a-4d0c-9274-50d200a2a530","name":"81944efd-c40a-4d0c-9274-50d200a2a530","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8e19ce92-0583-4fad-9d1e-6bfa2f3cc27d","name":"8e19ce92-0583-4fad-9d1e-6bfa2f3cc27d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f6212ede-e96e-430c-b52e-b889792ce43a","name":"f6212ede-e96e-430c-b52e-b889792ce43a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d3c41c95-7a19-48bd-a626-62c591c989a1","name":"d3c41c95-7a19-48bd-a626-62c591c989a1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -39,7 +39,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_swordmaster_death",
     "autoRecord":true,
     "backdropHeight":768,
@@ -75,30 +75,14 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"54c664fd-d6e7-4a5f-a78e-f3ba21dbe3cb","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"45909636-e4ef-4d12-a7d0-8c0ab003b0db","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8f9d82d0-98e8-4713-b915-5baf374821e8","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"31fcf8ba-bf39-4641-a711-8d345515b619","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e9b876e7-a2f4-4bc4-b946-bf3517948ff0","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9ca2a38c-3df1-4997-84ef-6c4b24fd1aa5","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a0c4481c-4443-4198-a811-294e939e38a1","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"94a140e8-530c-4ed3-910a-095e07322314","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"81944efd-c40a-4d0c-9274-50d200a2a530","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"05e48637-8b4c-495f-9f38-0f9a35ea459d","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8e19ce92-0583-4fad-9d1e-6bfa2f3cc27d","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"839bb248-9d6c-456b-8d30-a9556dadae98","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f6212ede-e96e-430c-b52e-b889792ce43a","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2750edd1-cb05-44a4-bb69-91c21a1a4943","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d3c41c95-7a19-48bd-a626-62c591c989a1","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b8b27e7c-f543-4dd6-ba5b-a48cdefabd60","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"54c664fd-d6e7-4a5f-a78e-f3ba21dbe3cb","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"45909636-e4ef-4d12-a7d0-8c0ab003b0db","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8f9d82d0-98e8-4713-b915-5baf374821e8","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"31fcf8ba-bf39-4641-a711-8d345515b619","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e9b876e7-a2f4-4bc4-b946-bf3517948ff0","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9ca2a38c-3df1-4997-84ef-6c4b24fd1aa5","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a0c4481c-4443-4198-a811-294e939e38a1","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"94a140e8-530c-4ed3-910a-095e07322314","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"81944efd-c40a-4d0c-9274-50d200a2a530","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"05e48637-8b4c-495f-9f38-0f9a35ea459d","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8e19ce92-0583-4fad-9d1e-6bfa2f3cc27d","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"839bb248-9d6c-456b-8d30-a9556dadae98","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f6212ede-e96e-430c-b52e-b889792ce43a","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2750edd1-cb05-44a4-bb69-91c21a1a4943","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d3c41c95-7a19-48bd-a626-62c591c989a1","path":"sprites/spr_swordmaster_death/spr_swordmaster_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b8b27e7c-f543-4dd6-ba5b-a48cdefabd60","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
